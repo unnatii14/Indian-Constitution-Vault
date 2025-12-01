@@ -3,7 +3,7 @@ from __future__ import annotations
 
 from typing import List, Optional
 
-from fastapi import FastAPI, HTTPException, Query
+from fastapi import Depends, FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 
 from .data_loader import ActRegistry, REGISTRY, SectionRecord
@@ -32,13 +32,17 @@ app.add_middleware(
 )
 
 
+def get_registry() -> ActRegistry:
+    return REGISTRY
+
+
 @app.get("/health")
 def healthcheck() -> dict[str, str]:
     return {"status": "ok"}
 
 
 @app.get("/acts", response_model=List[ActSummary])
-def list_acts(registry: ActRegistry = REGISTRY) -> List[ActSummary]:
+def list_acts(registry: ActRegistry = Depends(get_registry)) -> List[ActSummary]:
     payload: List[ActSummary] = []
     for act in registry.list_acts():
         payload.append(
@@ -53,7 +57,7 @@ def list_acts(registry: ActRegistry = REGISTRY) -> List[ActSummary]:
 
 
 @app.get("/acts/{act_id}", response_model=ActDetail)
-def get_act(act_id: str, registry: ActRegistry = REGISTRY) -> ActDetail:
+def get_act(act_id: str, registry: ActRegistry = Depends(get_registry)) -> ActDetail:
     act = registry.get_act(act_id)
     if not act:
         raise HTTPException(status_code=404, detail="Act not found")
@@ -76,7 +80,7 @@ def list_sections(
     act_id: str,
     offset: int = Query(0, ge=0),
     limit: int = Query(20, ge=1, le=200),
-    registry: ActRegistry = REGISTRY,
+    registry: ActRegistry = Depends(get_registry),
 ) -> PaginatedSections:
     act = registry.get_act(act_id)
     if not act:
@@ -96,7 +100,7 @@ def list_sections(
 def get_section(
     act_id: str,
     section_number: str,
-    registry: ActRegistry = REGISTRY,
+    registry: ActRegistry = Depends(get_registry),
 ) -> SectionDetail:
     section = registry.get_section(act_id, section_number)
     if not section:
@@ -109,7 +113,7 @@ def search_sections(
     q: str = Query(..., min_length=2, description="Full-text query string"),
     act_id: Optional[str] = Query(None, description="Limit search to a specific act"),
     limit: int = Query(20, ge=1, le=100),
-    registry: ActRegistry = REGISTRY,
+    registry: ActRegistry = Depends(get_registry),
 ) -> SearchResponse:
     results = registry.search(q, act_id=act_id, limit=limit)
     hits: List[SearchHit] = []
