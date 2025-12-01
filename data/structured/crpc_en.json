@@ -1,0 +1,4604 @@
+{
+  "act_id": "CRPC-1973",
+  "language": "en",
+  "sections": [
+    {
+      "section_number": "1",
+      "heading": "Short title, extent and commencement.",
+      "chapter": {
+        "code": "I",
+        "title": "PRELIMINARY"
+      },
+      "subheading": "SECTIONS"
+    },
+    {
+      "section_number": "2",
+      "heading": "Definitions.",
+      "chapter": {
+        "code": "I",
+        "title": "PRELIMINARY"
+      },
+      "subheading": "SECTIONS"
+    },
+    {
+      "section_number": "3",
+      "heading": "Construction of references.",
+      "chapter": {
+        "code": "I",
+        "title": "PRELIMINARY"
+      },
+      "subheading": "SECTIONS"
+    },
+    {
+      "section_number": "4",
+      "heading": "Trial of offences under the Indian Penal Code and other laws.",
+      "chapter": {
+        "code": "I",
+        "title": "PRELIMINARY"
+      },
+      "subheading": "SECTIONS"
+    },
+    {
+      "section_number": "5",
+      "heading": "Saving.",
+      "chapter": {
+        "code": "I",
+        "title": "PRELIMINARY"
+      },
+      "subheading": "SECTIONS"
+    },
+    {
+      "section_number": "6",
+      "heading": "Classes of Criminal Courts.",
+      "chapter": {
+        "code": "II",
+        "title": "CONSTITUTION OF CRIMINAL COURTS AND OFFICES"
+      }
+    },
+    {
+      "section_number": "7",
+      "heading": "Territorial divisions.",
+      "chapter": {
+        "code": "II",
+        "title": "CONSTITUTION OF CRIMINAL COURTS AND OFFICES"
+      }
+    },
+    {
+      "section_number": "8",
+      "heading": "Metropolitan areas.",
+      "chapter": {
+        "code": "II",
+        "title": "CONSTITUTION OF CRIMINAL COURTS AND OFFICES"
+      }
+    },
+    {
+      "section_number": "9",
+      "heading": "Court of Session.",
+      "chapter": {
+        "code": "II",
+        "title": "CONSTITUTION OF CRIMINAL COURTS AND OFFICES"
+      }
+    },
+    {
+      "section_number": "10",
+      "heading": "Subordination of Assistant Sessions Judges.",
+      "chapter": {
+        "code": "II",
+        "title": "CONSTITUTION OF CRIMINAL COURTS AND OFFICES"
+      }
+    },
+    {
+      "section_number": "11",
+      "heading": "Courts of Judicial Magistrates.",
+      "chapter": {
+        "code": "II",
+        "title": "CONSTITUTION OF CRIMINAL COURTS AND OFFICES"
+      }
+    },
+    {
+      "section_number": "12",
+      "heading": "Chief Judicial Magistrate and Additional Chief Judicial Magistrate, etc.",
+      "chapter": {
+        "code": "II",
+        "title": "CONSTITUTION OF CRIMINAL COURTS AND OFFICES"
+      }
+    },
+    {
+      "section_number": "13",
+      "heading": "Special Judicial Magistrates.",
+      "chapter": {
+        "code": "II",
+        "title": "CONSTITUTION OF CRIMINAL COURTS AND OFFICES"
+      }
+    },
+    {
+      "section_number": "14",
+      "heading": "Local jurisdiction of Judicial Magistrates.",
+      "chapter": {
+        "code": "II",
+        "title": "CONSTITUTION OF CRIMINAL COURTS AND OFFICES"
+      }
+    },
+    {
+      "section_number": "15",
+      "heading": "Subordination of Judicial Magistrates.",
+      "chapter": {
+        "code": "II",
+        "title": "CONSTITUTION OF CRIMINAL COURTS AND OFFICES"
+      }
+    },
+    {
+      "section_number": "16",
+      "heading": "Courts of Metropolitan Magistrates.",
+      "chapter": {
+        "code": "II",
+        "title": "CONSTITUTION OF CRIMINAL COURTS AND OFFICES"
+      }
+    },
+    {
+      "section_number": "17",
+      "heading": "Chief Metropolitan Magistrate and Additional Chief Metropolitan Magistrate.",
+      "chapter": {
+        "code": "II",
+        "title": "CONSTITUTION OF CRIMINAL COURTS AND OFFICES"
+      }
+    },
+    {
+      "section_number": "18",
+      "heading": "Special Metropolitan Magistrates.",
+      "chapter": {
+        "code": "II",
+        "title": "CONSTITUTION OF CRIMINAL COURTS AND OFFICES"
+      }
+    },
+    {
+      "section_number": "19",
+      "heading": "Subordination of Metropolitan Magistrates.",
+      "chapter": {
+        "code": "II",
+        "title": "CONSTITUTION OF CRIMINAL COURTS AND OFFICES"
+      }
+    },
+    {
+      "section_number": "20",
+      "heading": "Executive Magistrates.",
+      "chapter": {
+        "code": "II",
+        "title": "CONSTITUTION OF CRIMINAL COURTS AND OFFICES"
+      }
+    },
+    {
+      "section_number": "21",
+      "heading": "Special Executive Magistrates.",
+      "chapter": {
+        "code": "II",
+        "title": "CONSTITUTION OF CRIMINAL COURTS AND OFFICES"
+      }
+    },
+    {
+      "section_number": "22",
+      "heading": "Local Jurisdiction of Executive Magistrates.",
+      "chapter": {
+        "code": "II",
+        "title": "CONSTITUTION OF CRIMINAL COURTS AND OFFICES"
+      }
+    },
+    {
+      "section_number": "23",
+      "heading": "Subordination of Executive Magistrates.",
+      "chapter": {
+        "code": "II",
+        "title": "CONSTITUTION OF CRIMINAL COURTS AND OFFICES"
+      }
+    },
+    {
+      "section_number": "24",
+      "heading": "Public Prosecutors.",
+      "chapter": {
+        "code": "II",
+        "title": "CONSTITUTION OF CRIMINAL COURTS AND OFFICES"
+      }
+    },
+    {
+      "section_number": "25",
+      "heading": "Assistant Public Prosecutors.",
+      "chapter": {
+        "code": "II",
+        "title": "CONSTITUTION OF CRIMINAL COURTS AND OFFICES"
+      }
+    },
+    {
+      "section_number": "25A",
+      "heading": "Directorate of Prosecution.",
+      "chapter": {
+        "code": "II",
+        "title": "CONSTITUTION OF CRIMINAL COURTS AND OFFICES"
+      }
+    },
+    {
+      "section_number": "26",
+      "heading": "Courts by which offences are triable.",
+      "chapter": {
+        "code": "III",
+        "title": "POWER OF COURTS"
+      }
+    },
+    {
+      "section_number": "27",
+      "heading": "Jurisdiction in the case of juveniles.",
+      "chapter": {
+        "code": "III",
+        "title": "POWER OF COURTS"
+      },
+      "text": "SECTIONS",
+      "intro": "SECTIONS"
+    },
+    {
+      "section_number": "28",
+      "heading": "Sentences which High Courts and Sessions Judges may pass.",
+      "chapter": {
+        "code": "III",
+        "title": "POWER OF COURTS"
+      }
+    },
+    {
+      "section_number": "29",
+      "heading": "Sentences which Magistrates may pass.",
+      "chapter": {
+        "code": "III",
+        "title": "POWER OF COURTS"
+      }
+    },
+    {
+      "section_number": "30",
+      "heading": "Sentence of imprisonment in default of fine.",
+      "chapter": {
+        "code": "III",
+        "title": "POWER OF COURTS"
+      }
+    },
+    {
+      "section_number": "31",
+      "heading": "Sentence in cases of conviction of several offences at one trial.",
+      "chapter": {
+        "code": "III",
+        "title": "POWER OF COURTS"
+      }
+    },
+    {
+      "section_number": "32",
+      "heading": "Mode of conferring powers.",
+      "chapter": {
+        "code": "III",
+        "title": "POWER OF COURTS"
+      }
+    },
+    {
+      "section_number": "33",
+      "heading": "Powers of officers appointed.",
+      "chapter": {
+        "code": "III",
+        "title": "POWER OF COURTS"
+      }
+    },
+    {
+      "section_number": "34",
+      "heading": "Withdrawal of powers.",
+      "chapter": {
+        "code": "III",
+        "title": "POWER OF COURTS"
+      }
+    },
+    {
+      "section_number": "35",
+      "heading": "Powers of Judges and Magistrates exercisable by their successors-in-office.",
+      "chapter": {
+        "code": "III",
+        "title": "POWER OF COURTS"
+      }
+    },
+    {
+      "section_number": "36",
+      "heading": "Powers of superior officers of police.",
+      "chapter": {
+        "code": "IV",
+        "title": "A.–POWERS OF SUPERIOR OFFICERS OF POLICE"
+      },
+      "text": "B.–AID TO THE MAGISTRATES AND THE POLICE",
+      "intro": "B.–AID TO THE MAGISTRATES AND THE POLICE"
+    },
+    {
+      "section_number": "37",
+      "heading": "Public when to assist Magistrates and police.",
+      "chapter": {
+        "code": "IV",
+        "title": "A.–POWERS OF SUPERIOR OFFICERS OF POLICE"
+      }
+    },
+    {
+      "section_number": "38",
+      "heading": "Aid to person, other than police officer, executing warrant.",
+      "chapter": {
+        "code": "IV",
+        "title": "A.–POWERS OF SUPERIOR OFFICERS OF POLICE"
+      }
+    },
+    {
+      "section_number": "39",
+      "heading": "Public to give information of certain offences.",
+      "chapter": {
+        "code": "IV",
+        "title": "A.–POWERS OF SUPERIOR OFFICERS OF POLICE"
+      }
+    },
+    {
+      "section_number": "40",
+      "heading": "Duty of officers employed, in connection with the affairs of a village to make certain report.",
+      "chapter": {
+        "code": "IV",
+        "title": "A.–POWERS OF SUPERIOR OFFICERS OF POLICE"
+      }
+    },
+    {
+      "section_number": "41",
+      "heading": "When police may arrest without warrant.",
+      "chapter": {
+        "code": "V",
+        "title": "ARREST OF PERSONS"
+      }
+    },
+    {
+      "section_number": "41A",
+      "heading": "Notice of appearance before police officer.",
+      "chapter": {
+        "code": "V",
+        "title": "ARREST OF PERSONS"
+      }
+    },
+    {
+      "section_number": "41B",
+      "heading": "Procedure of arrest and duties of officer making arrest.",
+      "chapter": {
+        "code": "V",
+        "title": "ARREST OF PERSONS"
+      }
+    },
+    {
+      "section_number": "41C",
+      "heading": "Control room at districts.",
+      "chapter": {
+        "code": "V",
+        "title": "ARREST OF PERSONS"
+      }
+    },
+    {
+      "section_number": "41D",
+      "heading": "Right of arrested person to meet an advocate of his choice during interrogation.",
+      "chapter": {
+        "code": "V",
+        "title": "ARREST OF PERSONS"
+      }
+    },
+    {
+      "section_number": "42",
+      "heading": "Arrest on refusal to give name and residence.",
+      "chapter": {
+        "code": "V",
+        "title": "ARREST OF PERSONS"
+      }
+    },
+    {
+      "section_number": "43",
+      "heading": "Arrest by private person and procedure on such arrest.",
+      "chapter": {
+        "code": "V",
+        "title": "ARREST OF PERSONS"
+      }
+    },
+    {
+      "section_number": "44",
+      "heading": "Arrest by Magistrate.",
+      "chapter": {
+        "code": "V",
+        "title": "ARREST OF PERSONS"
+      }
+    },
+    {
+      "section_number": "45",
+      "heading": "Protection of members of the Armed Forces from arrest.",
+      "chapter": {
+        "code": "V",
+        "title": "ARREST OF PERSONS"
+      }
+    },
+    {
+      "section_number": "46",
+      "heading": "Arrest how made.",
+      "chapter": {
+        "code": "V",
+        "title": "ARREST OF PERSONS"
+      }
+    },
+    {
+      "section_number": "47",
+      "heading": "Search of place entered by person sought to be arrested.",
+      "chapter": {
+        "code": "V",
+        "title": "ARREST OF PERSONS"
+      }
+    },
+    {
+      "section_number": "48",
+      "heading": "Pursuit of offenders into other jurisdictions.",
+      "chapter": {
+        "code": "V",
+        "title": "ARREST OF PERSONS"
+      }
+    },
+    {
+      "section_number": "49",
+      "heading": "No unnecessary restraint.",
+      "chapter": {
+        "code": "V",
+        "title": "ARREST OF PERSONS"
+      }
+    },
+    {
+      "section_number": "50",
+      "heading": "Person arrested to be informed of grounds of arrest and of right to bail.",
+      "chapter": {
+        "code": "V",
+        "title": "ARREST OF PERSONS"
+      }
+    },
+    {
+      "section_number": "50A",
+      "heading": "Obligation of person making arrest to inform about the arrest, etc., to a nominated person.",
+      "chapter": {
+        "code": "V",
+        "title": "ARREST OF PERSONS"
+      }
+    },
+    {
+      "section_number": "51",
+      "heading": "Search of arrested person.",
+      "chapter": {
+        "code": "V",
+        "title": "ARREST OF PERSONS"
+      },
+      "text": "SECTIONS",
+      "intro": "SECTIONS"
+    },
+    {
+      "section_number": "52",
+      "heading": "Power to seize offensive weapons.",
+      "chapter": {
+        "code": "V",
+        "title": "ARREST OF PERSONS"
+      }
+    },
+    {
+      "section_number": "53",
+      "heading": "Examination of accused by medical practitioner at the request of police officer.",
+      "chapter": {
+        "code": "V",
+        "title": "ARREST OF PERSONS"
+      }
+    },
+    {
+      "section_number": "53A",
+      "heading": "Examination of person accused of rape by medical practitioner.",
+      "chapter": {
+        "code": "V",
+        "title": "ARREST OF PERSONS"
+      }
+    },
+    {
+      "section_number": "54",
+      "heading": "Examination of arrested person by medical officer.",
+      "chapter": {
+        "code": "V",
+        "title": "ARREST OF PERSONS"
+      }
+    },
+    {
+      "section_number": "54A",
+      "heading": "Identification of person arrested.",
+      "chapter": {
+        "code": "V",
+        "title": "ARREST OF PERSONS"
+      }
+    },
+    {
+      "section_number": "55",
+      "heading": "Procedure when police officer deputes subordinate to arrest without warrant.",
+      "chapter": {
+        "code": "V",
+        "title": "ARREST OF PERSONS"
+      }
+    },
+    {
+      "section_number": "55A",
+      "heading": "Health and safety of arrested person.",
+      "chapter": {
+        "code": "V",
+        "title": "ARREST OF PERSONS"
+      }
+    },
+    {
+      "section_number": "56",
+      "heading": "Person arrested to be taken before Magistrate or officer in charge of police station.",
+      "chapter": {
+        "code": "V",
+        "title": "ARREST OF PERSONS"
+      }
+    },
+    {
+      "section_number": "57",
+      "heading": "Person arrested not to be detained more than twenty-four hours.",
+      "chapter": {
+        "code": "V",
+        "title": "ARREST OF PERSONS"
+      }
+    },
+    {
+      "section_number": "58",
+      "heading": "Police to report apprehensions.",
+      "chapter": {
+        "code": "V",
+        "title": "ARREST OF PERSONS"
+      }
+    },
+    {
+      "section_number": "59",
+      "heading": "Discharge of person apprehended.",
+      "chapter": {
+        "code": "V",
+        "title": "ARREST OF PERSONS"
+      }
+    },
+    {
+      "section_number": "60",
+      "heading": "Power, on escape, to pursue and retake.",
+      "chapter": {
+        "code": "V",
+        "title": "ARREST OF PERSONS"
+      }
+    },
+    {
+      "section_number": "60A",
+      "heading": "Arrest to be made strictly according to the Code.",
+      "chapter": {
+        "code": "V",
+        "title": "ARREST OF PERSONS"
+      }
+    },
+    {
+      "section_number": "61",
+      "heading": "Form of summons.",
+      "chapter": {
+        "code": "VI",
+        "title": "PROCESSES TO COMPEL APPEARANCE"
+      }
+    },
+    {
+      "section_number": "62",
+      "heading": "Summons how served.",
+      "chapter": {
+        "code": "VI",
+        "title": "PROCESSES TO COMPEL APPEARANCE"
+      }
+    },
+    {
+      "section_number": "63",
+      "heading": "Service of summons on corporate bodies and societies.",
+      "chapter": {
+        "code": "VI",
+        "title": "PROCESSES TO COMPEL APPEARANCE"
+      }
+    },
+    {
+      "section_number": "64",
+      "heading": "Service when persons summoned cannot be found.",
+      "chapter": {
+        "code": "VI",
+        "title": "PROCESSES TO COMPEL APPEARANCE"
+      }
+    },
+    {
+      "section_number": "65",
+      "heading": "Procedure when service cannot be effected as before provided.",
+      "chapter": {
+        "code": "VI",
+        "title": "PROCESSES TO COMPEL APPEARANCE"
+      }
+    },
+    {
+      "section_number": "66",
+      "heading": "Service on Government servant.",
+      "chapter": {
+        "code": "VI",
+        "title": "PROCESSES TO COMPEL APPEARANCE"
+      }
+    },
+    {
+      "section_number": "67",
+      "heading": "Service of summons outside local limits.",
+      "chapter": {
+        "code": "VI",
+        "title": "PROCESSES TO COMPEL APPEARANCE"
+      }
+    },
+    {
+      "section_number": "68",
+      "heading": "Proof of service in such cases and when serving officer not present.",
+      "chapter": {
+        "code": "VI",
+        "title": "PROCESSES TO COMPEL APPEARANCE"
+      }
+    },
+    {
+      "section_number": "69",
+      "heading": "Service of summons on witness by post.",
+      "chapter": {
+        "code": "VI",
+        "title": "PROCESSES TO COMPEL APPEARANCE"
+      },
+      "text": "B.–Warrant of arrest",
+      "intro": "B.–Warrant of arrest"
+    },
+    {
+      "section_number": "70",
+      "heading": "Form of warrant of arrest and duration.",
+      "chapter": {
+        "code": "VI",
+        "title": "PROCESSES TO COMPEL APPEARANCE"
+      }
+    },
+    {
+      "section_number": "71",
+      "heading": "Power to direct security to be taken.",
+      "chapter": {
+        "code": "VI",
+        "title": "PROCESSES TO COMPEL APPEARANCE"
+      }
+    },
+    {
+      "section_number": "72",
+      "heading": "Warrants to whom directed.",
+      "chapter": {
+        "code": "VI",
+        "title": "PROCESSES TO COMPEL APPEARANCE"
+      }
+    },
+    {
+      "section_number": "73",
+      "heading": "Warrant may be directed to any person.",
+      "chapter": {
+        "code": "VI",
+        "title": "PROCESSES TO COMPEL APPEARANCE"
+      }
+    },
+    {
+      "section_number": "74",
+      "heading": "Warrant directed to police officer.",
+      "chapter": {
+        "code": "VI",
+        "title": "PROCESSES TO COMPEL APPEARANCE"
+      }
+    },
+    {
+      "section_number": "75",
+      "heading": "Notification of substance of warrant.",
+      "chapter": {
+        "code": "VI",
+        "title": "PROCESSES TO COMPEL APPEARANCE"
+      }
+    },
+    {
+      "section_number": "76",
+      "heading": "Person arrested to be brought before Court without delay.",
+      "chapter": {
+        "code": "VI",
+        "title": "PROCESSES TO COMPEL APPEARANCE"
+      }
+    },
+    {
+      "section_number": "77",
+      "heading": "Where warrant may be executed.",
+      "chapter": {
+        "code": "VI",
+        "title": "PROCESSES TO COMPEL APPEARANCE"
+      }
+    },
+    {
+      "section_number": "78",
+      "heading": "Warrant forwarded for execution outside jurisdiction.",
+      "chapter": {
+        "code": "VI",
+        "title": "PROCESSES TO COMPEL APPEARANCE"
+      }
+    },
+    {
+      "section_number": "79",
+      "heading": "Warrant directed to police officer for execution outside jurisdiction.",
+      "chapter": {
+        "code": "VI",
+        "title": "PROCESSES TO COMPEL APPEARANCE"
+      }
+    },
+    {
+      "section_number": "80",
+      "heading": "Procedure on arrest of person against whom warrant issued.",
+      "chapter": {
+        "code": "VI",
+        "title": "PROCESSES TO COMPEL APPEARANCE"
+      },
+      "text": "SECTIONS",
+      "intro": "SECTIONS"
+    },
+    {
+      "section_number": "81",
+      "heading": "Procedure by Magistrate before whom such person arrested is brought.",
+      "chapter": {
+        "code": "VI",
+        "title": "PROCESSES TO COMPEL APPEARANCE"
+      },
+      "text": "C.–Proclamation and attachment",
+      "intro": "C.–Proclamation and attachment"
+    },
+    {
+      "section_number": "82",
+      "heading": "Proclamation for person absconding.",
+      "chapter": {
+        "code": "VI",
+        "title": "PROCESSES TO COMPEL APPEARANCE"
+      }
+    },
+    {
+      "section_number": "83",
+      "heading": "Attachment of property of person absconding.",
+      "chapter": {
+        "code": "VI",
+        "title": "PROCESSES TO COMPEL APPEARANCE"
+      }
+    },
+    {
+      "section_number": "84",
+      "heading": "Claims and objections to attachment.",
+      "chapter": {
+        "code": "VI",
+        "title": "PROCESSES TO COMPEL APPEARANCE"
+      }
+    },
+    {
+      "section_number": "85",
+      "heading": "Release, sale and restoration of attached property.",
+      "chapter": {
+        "code": "VI",
+        "title": "PROCESSES TO COMPEL APPEARANCE"
+      }
+    },
+    {
+      "section_number": "86",
+      "heading": "Appeal from order rejecting application for restoration of attached property.",
+      "chapter": {
+        "code": "VI",
+        "title": "PROCESSES TO COMPEL APPEARANCE"
+      },
+      "text": "D.–Other rules regarding processes",
+      "intro": "D.–Other rules regarding processes"
+    },
+    {
+      "section_number": "87",
+      "heading": "Issue of warrant in lieu of, or in addition to, summons.",
+      "chapter": {
+        "code": "VI",
+        "title": "PROCESSES TO COMPEL APPEARANCE"
+      }
+    },
+    {
+      "section_number": "88",
+      "heading": "Power to take bond for appearance.",
+      "chapter": {
+        "code": "VI",
+        "title": "PROCESSES TO COMPEL APPEARANCE"
+      }
+    },
+    {
+      "section_number": "89",
+      "heading": "Arrest on breach of bond for appearance.",
+      "chapter": {
+        "code": "VI",
+        "title": "PROCESSES TO COMPEL APPEARANCE"
+      }
+    },
+    {
+      "section_number": "90",
+      "heading": "Provisions of this Chapter generally applicable to summonses and warrants of arrest.",
+      "chapter": {
+        "code": "VI",
+        "title": "PROCESSES TO COMPEL APPEARANCE"
+      }
+    },
+    {
+      "section_number": "91",
+      "heading": "Summons to produce document or other thing.",
+      "chapter": {
+        "code": "VII",
+        "title": "PROCESSES TO COMPEL THE PRODUCTION OF THINGS"
+      }
+    },
+    {
+      "section_number": "92",
+      "heading": "Procedure as to letters and telegrams.",
+      "chapter": {
+        "code": "VII",
+        "title": "PROCESSES TO COMPEL THE PRODUCTION OF THINGS"
+      },
+      "text": "B.–Search-warrants",
+      "intro": "B.–Search-warrants"
+    },
+    {
+      "section_number": "93",
+      "heading": "When search-warrant may be issued.",
+      "chapter": {
+        "code": "VII",
+        "title": "PROCESSES TO COMPEL THE PRODUCTION OF THINGS"
+      }
+    },
+    {
+      "section_number": "94",
+      "heading": "Search of place suspected to contain stolen property, forged documents, etc.",
+      "chapter": {
+        "code": "VII",
+        "title": "PROCESSES TO COMPEL THE PRODUCTION OF THINGS"
+      }
+    },
+    {
+      "section_number": "95",
+      "heading": "Power to declare certain publications forfeited and to issue search-warrants for the same.",
+      "chapter": {
+        "code": "VII",
+        "title": "PROCESSES TO COMPEL THE PRODUCTION OF THINGS"
+      }
+    },
+    {
+      "section_number": "96",
+      "heading": "Application to High Court to set aside declaration of forfeiture.",
+      "chapter": {
+        "code": "VII",
+        "title": "PROCESSES TO COMPEL THE PRODUCTION OF THINGS"
+      }
+    },
+    {
+      "section_number": "97",
+      "heading": "Search for persons wrongfully confined.",
+      "chapter": {
+        "code": "VII",
+        "title": "PROCESSES TO COMPEL THE PRODUCTION OF THINGS"
+      }
+    },
+    {
+      "section_number": "98",
+      "heading": "Power to compel restoration of abducted females.",
+      "chapter": {
+        "code": "VII",
+        "title": "PROCESSES TO COMPEL THE PRODUCTION OF THINGS"
+      },
+      "text": "C.–General provisions relating to searches",
+      "intro": "C.–General provisions relating to searches"
+    },
+    {
+      "section_number": "99",
+      "heading": "Direction, etc., of search-warrants.",
+      "chapter": {
+        "code": "VII",
+        "title": "PROCESSES TO COMPEL THE PRODUCTION OF THINGS"
+      }
+    },
+    {
+      "section_number": "100",
+      "heading": "Persons in charge of closed place to allow search.",
+      "chapter": {
+        "code": "VII",
+        "title": "PROCESSES TO COMPEL THE PRODUCTION OF THINGS"
+      }
+    },
+    {
+      "section_number": "101",
+      "heading": "Disposal of things found in search beyond jurisdiction.",
+      "chapter": {
+        "code": "VII",
+        "title": "PROCESSES TO COMPEL THE PRODUCTION OF THINGS"
+      },
+      "text": "D.–Miscellaneous",
+      "intro": "D.–Miscellaneous"
+    },
+    {
+      "section_number": "102",
+      "heading": "Power of police officer to seize certain property.",
+      "chapter": {
+        "code": "VII",
+        "title": "PROCESSES TO COMPEL THE PRODUCTION OF THINGS"
+      }
+    },
+    {
+      "section_number": "103",
+      "heading": "Magistrate may direct search in his presence.",
+      "chapter": {
+        "code": "VII",
+        "title": "PROCESSES TO COMPEL THE PRODUCTION OF THINGS"
+      }
+    },
+    {
+      "section_number": "104",
+      "heading": "Power to impound document, etc., produced.",
+      "chapter": {
+        "code": "VII",
+        "title": "PROCESSES TO COMPEL THE PRODUCTION OF THINGS"
+      }
+    },
+    {
+      "section_number": "105",
+      "heading": "Reciprocal arrangements regarding processes.",
+      "chapter": {
+        "code": "VII",
+        "title": "PROCESSES TO COMPEL THE PRODUCTION OF THINGS"
+      }
+    },
+    {
+      "section_number": "105A",
+      "heading": "Definitions.",
+      "chapter": {
+        "code": "VII",
+        "title": "RECIPROCAL ARRANGEMENTS FOR ASSISTANCE IN CERTAIN MATTERS AND PROCEDURE FOR"
+      },
+      "subheading": "ATTACHMENT AND FORFEITURE OF PROPERTY"
+    },
+    {
+      "section_number": "105B",
+      "heading": "Assistance in securing transfer of persons.",
+      "chapter": {
+        "code": "VII",
+        "title": "RECIPROCAL ARRANGEMENTS FOR ASSISTANCE IN CERTAIN MATTERS AND PROCEDURE FOR"
+      },
+      "subheading": "ATTACHMENT AND FORFEITURE OF PROPERTY",
+      "text": "SECTIONS",
+      "intro": "SECTIONS"
+    },
+    {
+      "section_number": "105C",
+      "heading": "Assistance in relation to orders of attachment or forfeiture of property.",
+      "chapter": {
+        "code": "VII",
+        "title": "RECIPROCAL ARRANGEMENTS FOR ASSISTANCE IN CERTAIN MATTERS AND PROCEDURE FOR"
+      },
+      "subheading": "ATTACHMENT AND FORFEITURE OF PROPERTY"
+    },
+    {
+      "section_number": "105D",
+      "heading": "Identifying unlawfully acquired property.",
+      "chapter": {
+        "code": "VII",
+        "title": "RECIPROCAL ARRANGEMENTS FOR ASSISTANCE IN CERTAIN MATTERS AND PROCEDURE FOR"
+      },
+      "subheading": "ATTACHMENT AND FORFEITURE OF PROPERTY"
+    },
+    {
+      "section_number": "105E",
+      "heading": "Seizure or attachment of property.",
+      "chapter": {
+        "code": "VII",
+        "title": "RECIPROCAL ARRANGEMENTS FOR ASSISTANCE IN CERTAIN MATTERS AND PROCEDURE FOR"
+      },
+      "subheading": "ATTACHMENT AND FORFEITURE OF PROPERTY"
+    },
+    {
+      "section_number": "105F",
+      "heading": "Management of properties seized or forfeited under this Chapter.",
+      "chapter": {
+        "code": "VII",
+        "title": "RECIPROCAL ARRANGEMENTS FOR ASSISTANCE IN CERTAIN MATTERS AND PROCEDURE FOR"
+      },
+      "subheading": "ATTACHMENT AND FORFEITURE OF PROPERTY"
+    },
+    {
+      "section_number": "105G",
+      "heading": "Notice of forfeiture of property.",
+      "chapter": {
+        "code": "VII",
+        "title": "RECIPROCAL ARRANGEMENTS FOR ASSISTANCE IN CERTAIN MATTERS AND PROCEDURE FOR"
+      },
+      "subheading": "ATTACHMENT AND FORFEITURE OF PROPERTY"
+    },
+    {
+      "section_number": "105H",
+      "heading": "Forfeiture of property in certain cases.",
+      "chapter": {
+        "code": "VII",
+        "title": "RECIPROCAL ARRANGEMENTS FOR ASSISTANCE IN CERTAIN MATTERS AND PROCEDURE FOR"
+      },
+      "subheading": "ATTACHMENT AND FORFEITURE OF PROPERTY",
+      "text": "105-I. Fine in lieu of forfeiture.",
+      "intro": "105-I. Fine in lieu of forfeiture."
+    },
+    {
+      "section_number": "105J",
+      "heading": "Certain transfers to be null and void.",
+      "chapter": {
+        "code": "VII",
+        "title": "RECIPROCAL ARRANGEMENTS FOR ASSISTANCE IN CERTAIN MATTERS AND PROCEDURE FOR"
+      },
+      "subheading": "ATTACHMENT AND FORFEITURE OF PROPERTY"
+    },
+    {
+      "section_number": "105K",
+      "heading": "Procedure in respect of letter of request.",
+      "chapter": {
+        "code": "VII",
+        "title": "RECIPROCAL ARRANGEMENTS FOR ASSISTANCE IN CERTAIN MATTERS AND PROCEDURE FOR"
+      },
+      "subheading": "ATTACHMENT AND FORFEITURE OF PROPERTY"
+    },
+    {
+      "section_number": "105L",
+      "heading": "Application of this Chapter.",
+      "chapter": {
+        "code": "VII",
+        "title": "RECIPROCAL ARRANGEMENTS FOR ASSISTANCE IN CERTAIN MATTERS AND PROCEDURE FOR"
+      },
+      "subheading": "ATTACHMENT AND FORFEITURE OF PROPERTY"
+    },
+    {
+      "section_number": "106",
+      "heading": "Security for keeping the peace on conviction.",
+      "chapter": {
+        "code": "VIII",
+        "title": "SECURITY FOR KEEPING THE PEACE AND FOR GOOD BEHAVIOUR"
+      }
+    },
+    {
+      "section_number": "107",
+      "heading": "Security for keeping the peace in other cases.",
+      "chapter": {
+        "code": "VIII",
+        "title": "SECURITY FOR KEEPING THE PEACE AND FOR GOOD BEHAVIOUR"
+      }
+    },
+    {
+      "section_number": "108",
+      "heading": "Security for good behaviour from persons disseminating seditious matters.",
+      "chapter": {
+        "code": "VIII",
+        "title": "SECURITY FOR KEEPING THE PEACE AND FOR GOOD BEHAVIOUR"
+      }
+    },
+    {
+      "section_number": "109",
+      "heading": "Security for good behaviour from suspected persons.",
+      "chapter": {
+        "code": "VIII",
+        "title": "SECURITY FOR KEEPING THE PEACE AND FOR GOOD BEHAVIOUR"
+      }
+    },
+    {
+      "section_number": "110",
+      "heading": "Security for good behaviour from habitual offenders.",
+      "chapter": {
+        "code": "VIII",
+        "title": "SECURITY FOR KEEPING THE PEACE AND FOR GOOD BEHAVIOUR"
+      }
+    },
+    {
+      "section_number": "111",
+      "heading": "Order to be made.",
+      "chapter": {
+        "code": "VIII",
+        "title": "SECURITY FOR KEEPING THE PEACE AND FOR GOOD BEHAVIOUR"
+      }
+    },
+    {
+      "section_number": "112",
+      "heading": "Procedure in respect of person present in Court.",
+      "chapter": {
+        "code": "VIII",
+        "title": "SECURITY FOR KEEPING THE PEACE AND FOR GOOD BEHAVIOUR"
+      }
+    },
+    {
+      "section_number": "113",
+      "heading": "Summons or warrant in case of person not so present.",
+      "chapter": {
+        "code": "VIII",
+        "title": "SECURITY FOR KEEPING THE PEACE AND FOR GOOD BEHAVIOUR"
+      }
+    },
+    {
+      "section_number": "114",
+      "heading": "Copy of order to accompany summons or warrant.",
+      "chapter": {
+        "code": "VIII",
+        "title": "SECURITY FOR KEEPING THE PEACE AND FOR GOOD BEHAVIOUR"
+      }
+    },
+    {
+      "section_number": "115",
+      "heading": "Power to dispense with personal attendance.",
+      "chapter": {
+        "code": "VIII",
+        "title": "SECURITY FOR KEEPING THE PEACE AND FOR GOOD BEHAVIOUR"
+      }
+    },
+    {
+      "section_number": "116",
+      "heading": "Inquiry as to truth of information.",
+      "chapter": {
+        "code": "VIII",
+        "title": "SECURITY FOR KEEPING THE PEACE AND FOR GOOD BEHAVIOUR"
+      }
+    },
+    {
+      "section_number": "117",
+      "heading": "Order to give security.",
+      "chapter": {
+        "code": "VIII",
+        "title": "SECURITY FOR KEEPING THE PEACE AND FOR GOOD BEHAVIOUR"
+      }
+    },
+    {
+      "section_number": "118",
+      "heading": "Discharge of person informed against.",
+      "chapter": {
+        "code": "VIII",
+        "title": "SECURITY FOR KEEPING THE PEACE AND FOR GOOD BEHAVIOUR"
+      }
+    },
+    {
+      "section_number": "119",
+      "heading": "Commencement of period for which security is required.",
+      "chapter": {
+        "code": "VIII",
+        "title": "SECURITY FOR KEEPING THE PEACE AND FOR GOOD BEHAVIOUR"
+      }
+    },
+    {
+      "section_number": "120",
+      "heading": "Contents of bond.",
+      "chapter": {
+        "code": "VIII",
+        "title": "SECURITY FOR KEEPING THE PEACE AND FOR GOOD BEHAVIOUR"
+      }
+    },
+    {
+      "section_number": "121",
+      "heading": "Power to reject sureties.",
+      "chapter": {
+        "code": "VIII",
+        "title": "SECURITY FOR KEEPING THE PEACE AND FOR GOOD BEHAVIOUR"
+      }
+    },
+    {
+      "section_number": "122",
+      "heading": "Imprisonment in default of security.",
+      "chapter": {
+        "code": "VIII",
+        "title": "SECURITY FOR KEEPING THE PEACE AND FOR GOOD BEHAVIOUR"
+      }
+    },
+    {
+      "section_number": "123",
+      "heading": "Power to release persons imprisoned for failing to give security.",
+      "chapter": {
+        "code": "VIII",
+        "title": "SECURITY FOR KEEPING THE PEACE AND FOR GOOD BEHAVIOUR"
+      }
+    },
+    {
+      "section_number": "124",
+      "heading": "Security for unexpired period of bond.",
+      "chapter": {
+        "code": "VIII",
+        "title": "SECURITY FOR KEEPING THE PEACE AND FOR GOOD BEHAVIOUR"
+      }
+    },
+    {
+      "section_number": "125",
+      "heading": "Order for maintenance of wives, children and parents.",
+      "chapter": {
+        "code": "IX",
+        "title": "ORDER FOR MAINTENANCE OF WIVES, CHILDREN AND PARENTS"
+      }
+    },
+    {
+      "section_number": "126",
+      "heading": "Procedure.",
+      "chapter": {
+        "code": "IX",
+        "title": "ORDER FOR MAINTENANCE OF WIVES, CHILDREN AND PARENTS"
+      }
+    },
+    {
+      "section_number": "127",
+      "heading": "Alteration in allowance.",
+      "chapter": {
+        "code": "IX",
+        "title": "ORDER FOR MAINTENANCE OF WIVES, CHILDREN AND PARENTS"
+      }
+    },
+    {
+      "section_number": "128",
+      "heading": "Enforcement of order of maintenance.",
+      "chapter": {
+        "code": "IX",
+        "title": "ORDER FOR MAINTENANCE OF WIVES, CHILDREN AND PARENTS"
+      }
+    },
+    {
+      "section_number": "129",
+      "heading": "Dispersal of assembly by use of civil force.",
+      "chapter": {
+        "code": "X",
+        "title": "MAINTENANCE OF PUBLIC ORDER AND TRANQUILLITY"
+      },
+      "subheading": "SECTIONS"
+    },
+    {
+      "section_number": "130",
+      "heading": "Use of armed forces to disperse assembly.",
+      "chapter": {
+        "code": "X",
+        "title": "MAINTENANCE OF PUBLIC ORDER AND TRANQUILLITY"
+      },
+      "subheading": "SECTIONS"
+    },
+    {
+      "section_number": "131",
+      "heading": "Power of certain armed force officers to disperse assembly.",
+      "chapter": {
+        "code": "X",
+        "title": "MAINTENANCE OF PUBLIC ORDER AND TRANQUILLITY"
+      },
+      "subheading": "SECTIONS"
+    },
+    {
+      "section_number": "132",
+      "heading": "Protection against prosecution for acts done under preceding sections.",
+      "chapter": {
+        "code": "X",
+        "title": "MAINTENANCE OF PUBLIC ORDER AND TRANQUILLITY"
+      },
+      "subheading": "SECTIONS",
+      "text": "B.–Public nuisances",
+      "intro": "B.–Public nuisances"
+    },
+    {
+      "section_number": "133",
+      "heading": "Conditional order for removal of nuisance.",
+      "chapter": {
+        "code": "X",
+        "title": "MAINTENANCE OF PUBLIC ORDER AND TRANQUILLITY"
+      },
+      "subheading": "SECTIONS"
+    },
+    {
+      "section_number": "134",
+      "heading": "Service or notification of order.",
+      "chapter": {
+        "code": "X",
+        "title": "MAINTENANCE OF PUBLIC ORDER AND TRANQUILLITY"
+      },
+      "subheading": "SECTIONS"
+    },
+    {
+      "section_number": "135",
+      "heading": "Person to whom order is addressed to obey or show cause.",
+      "chapter": {
+        "code": "X",
+        "title": "MAINTENANCE OF PUBLIC ORDER AND TRANQUILLITY"
+      },
+      "subheading": "SECTIONS"
+    },
+    {
+      "section_number": "136",
+      "heading": "Consequences of his failing to do so.",
+      "chapter": {
+        "code": "X",
+        "title": "MAINTENANCE OF PUBLIC ORDER AND TRANQUILLITY"
+      },
+      "subheading": "SECTIONS"
+    },
+    {
+      "section_number": "137",
+      "heading": "Procedure where existence of public right is denied.",
+      "chapter": {
+        "code": "X",
+        "title": "MAINTENANCE OF PUBLIC ORDER AND TRANQUILLITY"
+      },
+      "subheading": "SECTIONS"
+    },
+    {
+      "section_number": "138",
+      "heading": "Procedure where he appears to show cause.",
+      "chapter": {
+        "code": "X",
+        "title": "MAINTENANCE OF PUBLIC ORDER AND TRANQUILLITY"
+      },
+      "subheading": "SECTIONS"
+    },
+    {
+      "section_number": "139",
+      "heading": "Power of Magistrate to direct local investigation and examination of an expert.",
+      "chapter": {
+        "code": "X",
+        "title": "MAINTENANCE OF PUBLIC ORDER AND TRANQUILLITY"
+      },
+      "subheading": "SECTIONS"
+    },
+    {
+      "section_number": "140",
+      "heading": "Power of Magistrate to furnish written instructions, etc.",
+      "chapter": {
+        "code": "X",
+        "title": "MAINTENANCE OF PUBLIC ORDER AND TRANQUILLITY"
+      },
+      "subheading": "SECTIONS"
+    },
+    {
+      "section_number": "141",
+      "heading": "Procedure on order being made absolute and consequences of disobedience.",
+      "chapter": {
+        "code": "X",
+        "title": "MAINTENANCE OF PUBLIC ORDER AND TRANQUILLITY"
+      },
+      "subheading": "SECTIONS"
+    },
+    {
+      "section_number": "142",
+      "heading": "Injunction pending inquiry.",
+      "chapter": {
+        "code": "X",
+        "title": "MAINTENANCE OF PUBLIC ORDER AND TRANQUILLITY"
+      },
+      "subheading": "SECTIONS"
+    },
+    {
+      "section_number": "143",
+      "heading": "Magistrate may prohibit repetition or continuance of public nuisance.",
+      "chapter": {
+        "code": "X",
+        "title": "MAINTENANCE OF PUBLIC ORDER AND TRANQUILLITY"
+      },
+      "subheading": "SECTIONS",
+      "text": "C.–Urgent cases of nuisance or apprehended danger",
+      "intro": "C.–Urgent cases of nuisance or apprehended danger"
+    },
+    {
+      "section_number": "144",
+      "heading": "Power to issue order in urgent cases of nuisance or apprehended danger.",
+      "chapter": {
+        "code": "X",
+        "title": "MAINTENANCE OF PUBLIC ORDER AND TRANQUILLITY"
+      },
+      "subheading": "SECTIONS"
+    },
+    {
+      "section_number": "144A",
+      "heading": "Power to prohibit carrying arms in procession or mass drill or mass training with arms.",
+      "chapter": {
+        "code": "X",
+        "title": "MAINTENANCE OF PUBLIC ORDER AND TRANQUILLITY"
+      },
+      "subheading": "SECTIONS",
+      "text": "D.–Disputes as to immovable property",
+      "intro": "D.–Disputes as to immovable property"
+    },
+    {
+      "section_number": "145",
+      "heading": "Procedure where dispute concerning land or water is likely to cause breach of peace.",
+      "chapter": {
+        "code": "X",
+        "title": "MAINTENANCE OF PUBLIC ORDER AND TRANQUILLITY"
+      },
+      "subheading": "SECTIONS"
+    },
+    {
+      "section_number": "146",
+      "heading": "Power to attach subject of dispute and to appoint receiver.",
+      "chapter": {
+        "code": "X",
+        "title": "MAINTENANCE OF PUBLIC ORDER AND TRANQUILLITY"
+      },
+      "subheading": "SECTIONS"
+    },
+    {
+      "section_number": "147",
+      "heading": "Dispute concerning right of use of land or water.",
+      "chapter": {
+        "code": "X",
+        "title": "MAINTENANCE OF PUBLIC ORDER AND TRANQUILLITY"
+      },
+      "subheading": "SECTIONS"
+    },
+    {
+      "section_number": "148",
+      "heading": "Local inquiry.",
+      "chapter": {
+        "code": "X",
+        "title": "MAINTENANCE OF PUBLIC ORDER AND TRANQUILLITY"
+      },
+      "subheading": "SECTIONS"
+    },
+    {
+      "section_number": "149",
+      "heading": "Police to prevent cognizable offences.",
+      "chapter": {
+        "code": "XI",
+        "title": "PREVENTIVE ACTION OF THE POLICE"
+      }
+    },
+    {
+      "section_number": "150",
+      "heading": "Information of design to commit cognizable offences.",
+      "chapter": {
+        "code": "XI",
+        "title": "PREVENTIVE ACTION OF THE POLICE"
+      }
+    },
+    {
+      "section_number": "151",
+      "heading": "Arrest to prevent the commission of cognizable offences.",
+      "chapter": {
+        "code": "XI",
+        "title": "PREVENTIVE ACTION OF THE POLICE"
+      }
+    },
+    {
+      "section_number": "152",
+      "heading": "Prevention of injury to public property.",
+      "chapter": {
+        "code": "XI",
+        "title": "PREVENTIVE ACTION OF THE POLICE"
+      }
+    },
+    {
+      "section_number": "153",
+      "heading": "Inspection of weights and measures.",
+      "chapter": {
+        "code": "XI",
+        "title": "PREVENTIVE ACTION OF THE POLICE"
+      }
+    },
+    {
+      "section_number": "154",
+      "heading": "Information in cognizable cases.",
+      "chapter": {
+        "code": "XII",
+        "title": "INFORMATION TO THE POLICE AND THEIR POWERS TO INVESTIGATE"
+      }
+    },
+    {
+      "section_number": "155",
+      "heading": "Information as to non-cognizable cases and investigation of such cases.",
+      "chapter": {
+        "code": "XII",
+        "title": "INFORMATION TO THE POLICE AND THEIR POWERS TO INVESTIGATE"
+      },
+      "text": "SECTIONS",
+      "intro": "SECTIONS"
+    },
+    {
+      "section_number": "156",
+      "heading": "Police officer’s power to investigate cognizable case.",
+      "chapter": {
+        "code": "XII",
+        "title": "INFORMATION TO THE POLICE AND THEIR POWERS TO INVESTIGATE"
+      }
+    },
+    {
+      "section_number": "157",
+      "heading": "Procedure for investigation.",
+      "chapter": {
+        "code": "XII",
+        "title": "INFORMATION TO THE POLICE AND THEIR POWERS TO INVESTIGATE"
+      }
+    },
+    {
+      "section_number": "158",
+      "heading": "Report how submitted.",
+      "chapter": {
+        "code": "XII",
+        "title": "INFORMATION TO THE POLICE AND THEIR POWERS TO INVESTIGATE"
+      }
+    },
+    {
+      "section_number": "159",
+      "heading": "Power to hold investigation or preliminary inquiry.",
+      "chapter": {
+        "code": "XII",
+        "title": "INFORMATION TO THE POLICE AND THEIR POWERS TO INVESTIGATE"
+      }
+    },
+    {
+      "section_number": "160",
+      "heading": "Police officer’s power to require attendance of witnesses.",
+      "chapter": {
+        "code": "XII",
+        "title": "INFORMATION TO THE POLICE AND THEIR POWERS TO INVESTIGATE"
+      }
+    },
+    {
+      "section_number": "161",
+      "heading": "Examination of witnesses by police.",
+      "chapter": {
+        "code": "XII",
+        "title": "INFORMATION TO THE POLICE AND THEIR POWERS TO INVESTIGATE"
+      }
+    },
+    {
+      "section_number": "162",
+      "heading": "Statements to police not to be signed: Use of statements in evidence.",
+      "chapter": {
+        "code": "XII",
+        "title": "INFORMATION TO THE POLICE AND THEIR POWERS TO INVESTIGATE"
+      }
+    },
+    {
+      "section_number": "163",
+      "heading": "No inducement to be offered.",
+      "chapter": {
+        "code": "XII",
+        "title": "INFORMATION TO THE POLICE AND THEIR POWERS TO INVESTIGATE"
+      }
+    },
+    {
+      "section_number": "164",
+      "heading": "Recording of confessions and statements.",
+      "chapter": {
+        "code": "XII",
+        "title": "INFORMATION TO THE POLICE AND THEIR POWERS TO INVESTIGATE"
+      }
+    },
+    {
+      "section_number": "164A",
+      "heading": "Medical examination of the victim of rape.",
+      "chapter": {
+        "code": "XII",
+        "title": "INFORMATION TO THE POLICE AND THEIR POWERS TO INVESTIGATE"
+      }
+    },
+    {
+      "section_number": "165",
+      "heading": "Search by police officer.",
+      "chapter": {
+        "code": "XII",
+        "title": "INFORMATION TO THE POLICE AND THEIR POWERS TO INVESTIGATE"
+      }
+    },
+    {
+      "section_number": "166",
+      "heading": "When officer in charge of police station may require another to issue search-warrant.",
+      "chapter": {
+        "code": "XII",
+        "title": "INFORMATION TO THE POLICE AND THEIR POWERS TO INVESTIGATE"
+      }
+    },
+    {
+      "section_number": "166A",
+      "heading": "Letter of request to competent authority for investigation in a country or place outside India.",
+      "chapter": {
+        "code": "XII",
+        "title": "INFORMATION TO THE POLICE AND THEIR POWERS TO INVESTIGATE"
+      }
+    },
+    {
+      "section_number": "166B",
+      "heading": "Letter of request from a country or place outside India to a Court or an authority for",
+      "chapter": {
+        "code": "XII",
+        "title": "INFORMATION TO THE POLICE AND THEIR POWERS TO INVESTIGATE"
+      },
+      "text": "investigation in India.",
+      "intro": "investigation in India."
+    },
+    {
+      "section_number": "167",
+      "heading": "Procedure when investigation cannot be completed in twenty-four hours.",
+      "chapter": {
+        "code": "XII",
+        "title": "INFORMATION TO THE POLICE AND THEIR POWERS TO INVESTIGATE"
+      }
+    },
+    {
+      "section_number": "168",
+      "heading": "Report of investigation by subordinate police officer.",
+      "chapter": {
+        "code": "XII",
+        "title": "INFORMATION TO THE POLICE AND THEIR POWERS TO INVESTIGATE"
+      }
+    },
+    {
+      "section_number": "169",
+      "heading": "Release of accused when evidence deficient.",
+      "chapter": {
+        "code": "XII",
+        "title": "INFORMATION TO THE POLICE AND THEIR POWERS TO INVESTIGATE"
+      }
+    },
+    {
+      "section_number": "170",
+      "heading": "Cases to be sent to Magistrate, when evidence is sufficient.",
+      "chapter": {
+        "code": "XII",
+        "title": "INFORMATION TO THE POLICE AND THEIR POWERS TO INVESTIGATE"
+      }
+    },
+    {
+      "section_number": "171",
+      "heading": "Complainant and witnesses not to be required to accompany police officer and not to be",
+      "chapter": {
+        "code": "XII",
+        "title": "INFORMATION TO THE POLICE AND THEIR POWERS TO INVESTIGATE"
+      },
+      "text": "subjected to restraint.",
+      "intro": "subjected to restraint."
+    },
+    {
+      "section_number": "172",
+      "heading": "Diary of proceedings in investigation.",
+      "chapter": {
+        "code": "XII",
+        "title": "INFORMATION TO THE POLICE AND THEIR POWERS TO INVESTIGATE"
+      }
+    },
+    {
+      "section_number": "173",
+      "heading": "Report of police officer on completion of investigation.",
+      "chapter": {
+        "code": "XII",
+        "title": "INFORMATION TO THE POLICE AND THEIR POWERS TO INVESTIGATE"
+      }
+    },
+    {
+      "section_number": "174",
+      "heading": "Police to enquire and report on suicide, etc.",
+      "chapter": {
+        "code": "XII",
+        "title": "INFORMATION TO THE POLICE AND THEIR POWERS TO INVESTIGATE"
+      }
+    },
+    {
+      "section_number": "175",
+      "heading": "Power to summon persons.",
+      "chapter": {
+        "code": "XII",
+        "title": "INFORMATION TO THE POLICE AND THEIR POWERS TO INVESTIGATE"
+      }
+    },
+    {
+      "section_number": "176",
+      "heading": "Inquiry by Magistrate into cause of death.",
+      "chapter": {
+        "code": "XII",
+        "title": "INFORMATION TO THE POLICE AND THEIR POWERS TO INVESTIGATE"
+      }
+    },
+    {
+      "section_number": "177",
+      "heading": "Ordinary place of inquiry and trial.",
+      "chapter": {
+        "code": "XIII",
+        "title": "JURISDICTION OF THE CRIMINAL COURTS IN INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "178",
+      "heading": "Place of inquiry or trial.",
+      "chapter": {
+        "code": "XIII",
+        "title": "JURISDICTION OF THE CRIMINAL COURTS IN INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "179",
+      "heading": "Offence triable where act is done or consequence ensues.",
+      "chapter": {
+        "code": "XIII",
+        "title": "JURISDICTION OF THE CRIMINAL COURTS IN INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "180",
+      "heading": "Place of trial where act is an offence by reason of relation to other offence.",
+      "chapter": {
+        "code": "XIII",
+        "title": "JURISDICTION OF THE CRIMINAL COURTS IN INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "181",
+      "heading": "Place of trial in case of certain offences.",
+      "chapter": {
+        "code": "XIII",
+        "title": "JURISDICTION OF THE CRIMINAL COURTS IN INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "182",
+      "heading": "Offences committed by letters, etc.",
+      "chapter": {
+        "code": "XIII",
+        "title": "JURISDICTION OF THE CRIMINAL COURTS IN INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "183",
+      "heading": "Offence committed on journey or voyage.",
+      "chapter": {
+        "code": "XIII",
+        "title": "JURISDICTION OF THE CRIMINAL COURTS IN INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "184",
+      "heading": "Place of trial for offences triable together.",
+      "chapter": {
+        "code": "XIII",
+        "title": "JURISDICTION OF THE CRIMINAL COURTS IN INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "185",
+      "heading": "Power to order cases to be tried in different sessions divisions.",
+      "chapter": {
+        "code": "XIII",
+        "title": "JURISDICTION OF THE CRIMINAL COURTS IN INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "186",
+      "heading": "High Court to decide, in case of doubt, district where inquiry or trial shall take place.",
+      "chapter": {
+        "code": "XIII",
+        "title": "JURISDICTION OF THE CRIMINAL COURTS IN INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "187",
+      "heading": "Power to issue summons or warrant for offence committed beyond local jurisdiction.",
+      "chapter": {
+        "code": "XIII",
+        "title": "JURISDICTION OF THE CRIMINAL COURTS IN INQUIRIES AND TRIALS"
+      },
+      "text": "SECTIONS",
+      "intro": "SECTIONS"
+    },
+    {
+      "section_number": "188",
+      "heading": "Offence committed outside India.",
+      "chapter": {
+        "code": "XIII",
+        "title": "JURISDICTION OF THE CRIMINAL COURTS IN INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "189",
+      "heading": "Receipt of evidence relating to offences committed outside India.",
+      "chapter": {
+        "code": "XIII",
+        "title": "JURISDICTION OF THE CRIMINAL COURTS IN INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "190",
+      "heading": "Cognizance of offences by Magistrates.",
+      "chapter": {
+        "code": "XIV",
+        "title": "CONDITIONS REQUISITE FOR INITIATION OF PROCEEDINGS"
+      }
+    },
+    {
+      "section_number": "191",
+      "heading": "Transfer on application of the accused.",
+      "chapter": {
+        "code": "XIV",
+        "title": "CONDITIONS REQUISITE FOR INITIATION OF PROCEEDINGS"
+      }
+    },
+    {
+      "section_number": "192",
+      "heading": "Making over of cases to Magistrates.",
+      "chapter": {
+        "code": "XIV",
+        "title": "CONDITIONS REQUISITE FOR INITIATION OF PROCEEDINGS"
+      }
+    },
+    {
+      "section_number": "193",
+      "heading": "Cognizance of offences by Courts of Session.",
+      "chapter": {
+        "code": "XIV",
+        "title": "CONDITIONS REQUISITE FOR INITIATION OF PROCEEDINGS"
+      }
+    },
+    {
+      "section_number": "194",
+      "heading": "Additional and Assistant Sessions Judges to try cases made over to them.",
+      "chapter": {
+        "code": "XIV",
+        "title": "CONDITIONS REQUISITE FOR INITIATION OF PROCEEDINGS"
+      }
+    },
+    {
+      "section_number": "195",
+      "heading": "Prosecution for contempt of lawful authority of public servants, for offences against public",
+      "chapter": {
+        "code": "XIV",
+        "title": "CONDITIONS REQUISITE FOR INITIATION OF PROCEEDINGS"
+      },
+      "text": "justice and for offences relating to documents given in evidence.",
+      "intro": "justice and for offences relating to documents given in evidence."
+    },
+    {
+      "section_number": "195A",
+      "heading": "Procedure for witnesses in case of threatening, etc.",
+      "chapter": {
+        "code": "XIV",
+        "title": "CONDITIONS REQUISITE FOR INITIATION OF PROCEEDINGS"
+      }
+    },
+    {
+      "section_number": "196",
+      "heading": "Prosecution for offences against the State and for criminal conspiracy to commit such offence.",
+      "chapter": {
+        "code": "XIV",
+        "title": "CONDITIONS REQUISITE FOR INITIATION OF PROCEEDINGS"
+      }
+    },
+    {
+      "section_number": "197",
+      "heading": "Prosecution of Judges and public servants.",
+      "chapter": {
+        "code": "XIV",
+        "title": "CONDITIONS REQUISITE FOR INITIATION OF PROCEEDINGS"
+      }
+    },
+    {
+      "section_number": "198",
+      "heading": "Prosecution for offences against marriage.",
+      "chapter": {
+        "code": "XIV",
+        "title": "CONDITIONS REQUISITE FOR INITIATION OF PROCEEDINGS"
+      }
+    },
+    {
+      "section_number": "198A",
+      "heading": "Prosecution of offences under section 498A of the Indian Penal Code.",
+      "chapter": {
+        "code": "XIV",
+        "title": "CONDITIONS REQUISITE FOR INITIATION OF PROCEEDINGS"
+      }
+    },
+    {
+      "section_number": "198B",
+      "heading": "Cognizance of offence.",
+      "chapter": {
+        "code": "XIV",
+        "title": "CONDITIONS REQUISITE FOR INITIATION OF PROCEEDINGS"
+      }
+    },
+    {
+      "section_number": "199",
+      "heading": "Prosecution for defamation.",
+      "chapter": {
+        "code": "XIV",
+        "title": "CONDITIONS REQUISITE FOR INITIATION OF PROCEEDINGS"
+      }
+    },
+    {
+      "section_number": "200",
+      "heading": "Examination of complainant.",
+      "chapter": {
+        "code": "XV",
+        "title": "COMPLAINTS TO MAGISTRATES"
+      }
+    },
+    {
+      "section_number": "201",
+      "heading": "Procedure by Magistrate not competent to take cognizance of the case.",
+      "chapter": {
+        "code": "XV",
+        "title": "COMPLAINTS TO MAGISTRATES"
+      }
+    },
+    {
+      "section_number": "202",
+      "heading": "Postponement of issue of process.",
+      "chapter": {
+        "code": "XV",
+        "title": "COMPLAINTS TO MAGISTRATES"
+      }
+    },
+    {
+      "section_number": "203",
+      "heading": "Dismissal of complaint.",
+      "chapter": {
+        "code": "XV",
+        "title": "COMPLAINTS TO MAGISTRATES"
+      }
+    },
+    {
+      "section_number": "204",
+      "heading": "Issue of process.",
+      "chapter": {
+        "code": "XVI",
+        "title": "COMMENCEMENT OF PROCEEDINGS BEFORE MAGISTRATES"
+      }
+    },
+    {
+      "section_number": "205",
+      "heading": "Magistrate may dispense with personal attendance of accused.",
+      "chapter": {
+        "code": "XVI",
+        "title": "COMMENCEMENT OF PROCEEDINGS BEFORE MAGISTRATES"
+      }
+    },
+    {
+      "section_number": "206",
+      "heading": "Special summons in cases of petty offence.",
+      "chapter": {
+        "code": "XVI",
+        "title": "COMMENCEMENT OF PROCEEDINGS BEFORE MAGISTRATES"
+      }
+    },
+    {
+      "section_number": "207",
+      "heading": "Supply to the accused of copy of police report and other documents.",
+      "chapter": {
+        "code": "XVI",
+        "title": "COMMENCEMENT OF PROCEEDINGS BEFORE MAGISTRATES"
+      }
+    },
+    {
+      "section_number": "208",
+      "heading": "Supply of copies of statements and documents to accused in other cases triable by Court of",
+      "chapter": {
+        "code": "XVI",
+        "title": "COMMENCEMENT OF PROCEEDINGS BEFORE MAGISTRATES"
+      },
+      "text": "Session.",
+      "intro": "Session."
+    },
+    {
+      "section_number": "209",
+      "heading": "Commitment of case to Court of Session when offence is triable exclusively by it.",
+      "chapter": {
+        "code": "XVI",
+        "title": "COMMENCEMENT OF PROCEEDINGS BEFORE MAGISTRATES"
+      }
+    },
+    {
+      "section_number": "210",
+      "heading": "Procedure to be followed when there is a complaint case and police investigation in respect of",
+      "chapter": {
+        "code": "XVI",
+        "title": "COMMENCEMENT OF PROCEEDINGS BEFORE MAGISTRATES"
+      },
+      "text": "the same offence.",
+      "intro": "the same offence."
+    },
+    {
+      "section_number": "211",
+      "heading": "Contents of charge.",
+      "chapter": {
+        "code": "XVII",
+        "title": "THE CHARGE"
+      }
+    },
+    {
+      "section_number": "212",
+      "heading": "Particulars as to time, place and person.",
+      "chapter": {
+        "code": "XVII",
+        "title": "THE CHARGE"
+      },
+      "text": "SECTIONS",
+      "intro": "SECTIONS"
+    },
+    {
+      "section_number": "213",
+      "heading": "When manner of committing offence must be stated.",
+      "chapter": {
+        "code": "XVII",
+        "title": "THE CHARGE"
+      }
+    },
+    {
+      "section_number": "214",
+      "heading": "Words in charge taken in sense of law under which offence is punishable.",
+      "chapter": {
+        "code": "XVII",
+        "title": "THE CHARGE"
+      }
+    },
+    {
+      "section_number": "215",
+      "heading": "Effect of errors.",
+      "chapter": {
+        "code": "XVII",
+        "title": "THE CHARGE"
+      }
+    },
+    {
+      "section_number": "216",
+      "heading": "Court may alter charge.",
+      "chapter": {
+        "code": "XVII",
+        "title": "THE CHARGE"
+      }
+    },
+    {
+      "section_number": "217",
+      "heading": "Recall of witnesses when charge altered.",
+      "chapter": {
+        "code": "XVII",
+        "title": "THE CHARGE"
+      }
+    },
+    {
+      "section_number": "218",
+      "heading": "Separate charges for distinct offences.",
+      "chapter": {
+        "code": "XVII",
+        "title": "THE CHARGE"
+      }
+    },
+    {
+      "section_number": "219",
+      "heading": "Three offences of same kind within year may be charged together.",
+      "chapter": {
+        "code": "XVII",
+        "title": "THE CHARGE"
+      },
+      "text": "B.–Joinder of charges",
+      "intro": "B.–Joinder of charges"
+    },
+    {
+      "section_number": "220",
+      "heading": "Trial for more than one offence.",
+      "chapter": {
+        "code": "XVII",
+        "title": "THE CHARGE"
+      }
+    },
+    {
+      "section_number": "221",
+      "heading": "Where it is doubtful what offence has been committed.",
+      "chapter": {
+        "code": "XVII",
+        "title": "THE CHARGE"
+      }
+    },
+    {
+      "section_number": "222",
+      "heading": "When offence proved included in offence charged.",
+      "chapter": {
+        "code": "XVII",
+        "title": "THE CHARGE"
+      }
+    },
+    {
+      "section_number": "223",
+      "heading": "What persons may be charged jointly.",
+      "chapter": {
+        "code": "XVII",
+        "title": "THE CHARGE"
+      }
+    },
+    {
+      "section_number": "224",
+      "heading": "Withdrawal of remaining charges on conviction on one of several charges.",
+      "chapter": {
+        "code": "XVII",
+        "title": "THE CHARGE"
+      }
+    },
+    {
+      "section_number": "225",
+      "heading": "Trial to be conducted by Public Prosecutor.",
+      "chapter": {
+        "code": "XVIII",
+        "title": "TRIAL BEFORE A COURT OF SESSION"
+      }
+    },
+    {
+      "section_number": "226",
+      "heading": "Opening case for prosecution.",
+      "chapter": {
+        "code": "XVIII",
+        "title": "TRIAL BEFORE A COURT OF SESSION"
+      }
+    },
+    {
+      "section_number": "227",
+      "heading": "Discharge.",
+      "chapter": {
+        "code": "XVIII",
+        "title": "TRIAL BEFORE A COURT OF SESSION"
+      }
+    },
+    {
+      "section_number": "228",
+      "heading": "Framing of charge.",
+      "chapter": {
+        "code": "XVIII",
+        "title": "TRIAL BEFORE A COURT OF SESSION"
+      }
+    },
+    {
+      "section_number": "229",
+      "heading": "Conviction on plea of guilty.",
+      "chapter": {
+        "code": "XVIII",
+        "title": "TRIAL BEFORE A COURT OF SESSION"
+      }
+    },
+    {
+      "section_number": "230",
+      "heading": "Date for prosecution evidence.",
+      "chapter": {
+        "code": "XVIII",
+        "title": "TRIAL BEFORE A COURT OF SESSION"
+      }
+    },
+    {
+      "section_number": "231",
+      "heading": "Evidence for prosecution.",
+      "chapter": {
+        "code": "XVIII",
+        "title": "TRIAL BEFORE A COURT OF SESSION"
+      }
+    },
+    {
+      "section_number": "232",
+      "heading": "Acquittal.",
+      "chapter": {
+        "code": "XVIII",
+        "title": "TRIAL BEFORE A COURT OF SESSION"
+      }
+    },
+    {
+      "section_number": "233",
+      "heading": "Entering upon defence.",
+      "chapter": {
+        "code": "XVIII",
+        "title": "TRIAL BEFORE A COURT OF SESSION"
+      }
+    },
+    {
+      "section_number": "234",
+      "heading": "Arguments.",
+      "chapter": {
+        "code": "XVIII",
+        "title": "TRIAL BEFORE A COURT OF SESSION"
+      }
+    },
+    {
+      "section_number": "235",
+      "heading": "Judgment of acquittal or conviction.",
+      "chapter": {
+        "code": "XVIII",
+        "title": "TRIAL BEFORE A COURT OF SESSION"
+      }
+    },
+    {
+      "section_number": "236",
+      "heading": "Previous conviction.",
+      "chapter": {
+        "code": "XVIII",
+        "title": "TRIAL BEFORE A COURT OF SESSION"
+      }
+    },
+    {
+      "section_number": "237",
+      "heading": "Procedure in cases instituted under section 199(2).",
+      "chapter": {
+        "code": "XVIII",
+        "title": "TRIAL BEFORE A COURT OF SESSION"
+      }
+    },
+    {
+      "section_number": "238",
+      "heading": "Compliance with section 207.",
+      "chapter": {
+        "code": "XIX",
+        "title": "TRIAL OF WARRANT-CASES BY MAGISTRATES"
+      }
+    },
+    {
+      "section_number": "239",
+      "heading": "When accused shall be discharged.",
+      "chapter": {
+        "code": "XIX",
+        "title": "TRIAL OF WARRANT-CASES BY MAGISTRATES"
+      }
+    },
+    {
+      "section_number": "240",
+      "heading": "Framing of charge.",
+      "chapter": {
+        "code": "XIX",
+        "title": "TRIAL OF WARRANT-CASES BY MAGISTRATES"
+      }
+    },
+    {
+      "section_number": "241",
+      "heading": "Conviction on plea of guilty.",
+      "chapter": {
+        "code": "XIX",
+        "title": "TRIAL OF WARRANT-CASES BY MAGISTRATES"
+      }
+    },
+    {
+      "section_number": "242",
+      "heading": "Evidence for prosecution.",
+      "chapter": {
+        "code": "XIX",
+        "title": "TRIAL OF WARRANT-CASES BY MAGISTRATES"
+      }
+    },
+    {
+      "section_number": "243",
+      "heading": "Evidence for defence.",
+      "chapter": {
+        "code": "XIX",
+        "title": "TRIAL OF WARRANT-CASES BY MAGISTRATES"
+      },
+      "text": "SECTIONS\nB.–Cases instituted otherwise than on police report",
+      "intro": "SECTIONS\nB.–Cases instituted otherwise than on police report"
+    },
+    {
+      "section_number": "244",
+      "heading": "Evidence for prosecution.",
+      "chapter": {
+        "code": "XIX",
+        "title": "TRIAL OF WARRANT-CASES BY MAGISTRATES"
+      }
+    },
+    {
+      "section_number": "245",
+      "heading": "When accused shall be discharged.",
+      "chapter": {
+        "code": "XIX",
+        "title": "TRIAL OF WARRANT-CASES BY MAGISTRATES"
+      }
+    },
+    {
+      "section_number": "246",
+      "heading": "Procedure where accused is not discharged.",
+      "chapter": {
+        "code": "XIX",
+        "title": "TRIAL OF WARRANT-CASES BY MAGISTRATES"
+      }
+    },
+    {
+      "section_number": "247",
+      "heading": "Evidence for defence.",
+      "chapter": {
+        "code": "XIX",
+        "title": "TRIAL OF WARRANT-CASES BY MAGISTRATES"
+      },
+      "text": "C.–Conclusion of trial",
+      "intro": "C.–Conclusion of trial"
+    },
+    {
+      "section_number": "248",
+      "heading": "Acquittal or conviction.",
+      "chapter": {
+        "code": "XIX",
+        "title": "TRIAL OF WARRANT-CASES BY MAGISTRATES"
+      }
+    },
+    {
+      "section_number": "249",
+      "heading": "Absence of complainant.",
+      "chapter": {
+        "code": "XIX",
+        "title": "TRIAL OF WARRANT-CASES BY MAGISTRATES"
+      }
+    },
+    {
+      "section_number": "250",
+      "heading": "Compensation for accusation without reasonable cause.",
+      "chapter": {
+        "code": "XIX",
+        "title": "TRIAL OF WARRANT-CASES BY MAGISTRATES"
+      }
+    },
+    {
+      "section_number": "251",
+      "heading": "Substance of accusation to be stated.",
+      "chapter": {
+        "code": "XX",
+        "title": "TRIAL OF SUMMONS-CASES BY MAGISTRATES"
+      }
+    },
+    {
+      "section_number": "252",
+      "heading": "Conviction on plea of guilty.",
+      "chapter": {
+        "code": "XX",
+        "title": "TRIAL OF SUMMONS-CASES BY MAGISTRATES"
+      }
+    },
+    {
+      "section_number": "253",
+      "heading": "Conviction on plea of guilty in absence of accused in petty cases.",
+      "chapter": {
+        "code": "XX",
+        "title": "TRIAL OF SUMMONS-CASES BY MAGISTRATES"
+      }
+    },
+    {
+      "section_number": "254",
+      "heading": "Procedure when not convicted.",
+      "chapter": {
+        "code": "XX",
+        "title": "TRIAL OF SUMMONS-CASES BY MAGISTRATES"
+      }
+    },
+    {
+      "section_number": "255",
+      "heading": "Acquittal or conviction.",
+      "chapter": {
+        "code": "XX",
+        "title": "TRIAL OF SUMMONS-CASES BY MAGISTRATES"
+      }
+    },
+    {
+      "section_number": "256",
+      "heading": "Non-appearance or death of complainant.",
+      "chapter": {
+        "code": "XX",
+        "title": "TRIAL OF SUMMONS-CASES BY MAGISTRATES"
+      }
+    },
+    {
+      "section_number": "257",
+      "heading": "Withdrawal of complaint.",
+      "chapter": {
+        "code": "XX",
+        "title": "TRIAL OF SUMMONS-CASES BY MAGISTRATES"
+      }
+    },
+    {
+      "section_number": "258",
+      "heading": "Power to stop proceedings in certain cases.",
+      "chapter": {
+        "code": "XX",
+        "title": "TRIAL OF SUMMONS-CASES BY MAGISTRATES"
+      }
+    },
+    {
+      "section_number": "259",
+      "heading": "Power of Court to convert summons-cases into warrant-cases.",
+      "chapter": {
+        "code": "XX",
+        "title": "TRIAL OF SUMMONS-CASES BY MAGISTRATES"
+      }
+    },
+    {
+      "section_number": "260",
+      "heading": "Power to try summarily.",
+      "chapter": {
+        "code": "XXI",
+        "title": "SUMMARY TRIALS"
+      }
+    },
+    {
+      "section_number": "261",
+      "heading": "Summary trial by Magistrate of the second class.",
+      "chapter": {
+        "code": "XXI",
+        "title": "SUMMARY TRIALS"
+      }
+    },
+    {
+      "section_number": "262",
+      "heading": "Procedure for summary trials.",
+      "chapter": {
+        "code": "XXI",
+        "title": "SUMMARY TRIALS"
+      }
+    },
+    {
+      "section_number": "263",
+      "heading": "Record in summary trials.",
+      "chapter": {
+        "code": "XXI",
+        "title": "SUMMARY TRIALS"
+      }
+    },
+    {
+      "section_number": "264",
+      "heading": "Judgment in cases tried summarily.",
+      "chapter": {
+        "code": "XXI",
+        "title": "SUMMARY TRIALS"
+      }
+    },
+    {
+      "section_number": "265",
+      "heading": "Language of record and judgment.",
+      "chapter": {
+        "code": "XXI",
+        "title": "SUMMARY TRIALS"
+      }
+    },
+    {
+      "section_number": "265A",
+      "heading": "Application of the Chapter.",
+      "chapter": {
+        "code": "XXI",
+        "title": "PLEA BARGAINING"
+      }
+    },
+    {
+      "section_number": "265B",
+      "heading": "Application for plea bargaining.",
+      "chapter": {
+        "code": "XXI",
+        "title": "PLEA BARGAINING"
+      }
+    },
+    {
+      "section_number": "265C",
+      "heading": "Guidelines for mutually satisfactory disposition.",
+      "chapter": {
+        "code": "XXI",
+        "title": "PLEA BARGAINING"
+      }
+    },
+    {
+      "section_number": "265D",
+      "heading": "Report of the mutually satisfactory disposition to be submitted before the Court.",
+      "chapter": {
+        "code": "XXI",
+        "title": "PLEA BARGAINING"
+      }
+    },
+    {
+      "section_number": "265E",
+      "heading": "Disposal of the case.",
+      "chapter": {
+        "code": "XXI",
+        "title": "PLEA BARGAINING"
+      }
+    },
+    {
+      "section_number": "265F",
+      "heading": "Judgment of the Court.",
+      "chapter": {
+        "code": "XXI",
+        "title": "PLEA BARGAINING"
+      }
+    },
+    {
+      "section_number": "265G",
+      "heading": "Finality of the judgment.",
+      "chapter": {
+        "code": "XXI",
+        "title": "PLEA BARGAINING"
+      }
+    },
+    {
+      "section_number": "265H",
+      "heading": "Power of the Court in plea bargaining.",
+      "chapter": {
+        "code": "XXI",
+        "title": "PLEA BARGAINING"
+      },
+      "text": "SECTIONS\n265-I.  Period  of  detention  undergone  by  the  accused  to  be  set-off  against  the  sentence  of\nimprisonment.",
+      "intro": "SECTIONS\n265-I.  Period  of  detention  undergone  by  the  accused  to  be  set-off  against  the  sentence  of\nimprisonment."
+    },
+    {
+      "section_number": "265J",
+      "heading": "Savings.",
+      "chapter": {
+        "code": "XXI",
+        "title": "PLEA BARGAINING"
+      }
+    },
+    {
+      "section_number": "265K",
+      "heading": "Statements of accused not to be used.",
+      "chapter": {
+        "code": "XXI",
+        "title": "PLEA BARGAINING"
+      }
+    },
+    {
+      "section_number": "265L",
+      "heading": "Non-application of the Chapter.",
+      "chapter": {
+        "code": "XXI",
+        "title": "PLEA BARGAINING"
+      }
+    },
+    {
+      "section_number": "266",
+      "heading": "Definitions.",
+      "chapter": {
+        "code": "XXII",
+        "title": "ATTENDANCE OF PERSONS CONFINED OR DETAINED IN PRISONS"
+      }
+    },
+    {
+      "section_number": "267",
+      "heading": "Power to require attendance of prisoners.",
+      "chapter": {
+        "code": "XXII",
+        "title": "ATTENDANCE OF PERSONS CONFINED OR DETAINED IN PRISONS"
+      }
+    },
+    {
+      "section_number": "268",
+      "heading": "Power of State Government to exclude certain persons from operation of section 267.",
+      "chapter": {
+        "code": "XXII",
+        "title": "ATTENDANCE OF PERSONS CONFINED OR DETAINED IN PRISONS"
+      }
+    },
+    {
+      "section_number": "269",
+      "heading": "Officer in charge of prison to abstain from carrying out order in certain contingencies.",
+      "chapter": {
+        "code": "XXII",
+        "title": "ATTENDANCE OF PERSONS CONFINED OR DETAINED IN PRISONS"
+      }
+    },
+    {
+      "section_number": "270",
+      "heading": "Prisoner to be brought to Court in custody.",
+      "chapter": {
+        "code": "XXII",
+        "title": "ATTENDANCE OF PERSONS CONFINED OR DETAINED IN PRISONS"
+      }
+    },
+    {
+      "section_number": "271",
+      "heading": "Power to issue commission for examination of witness in prison.",
+      "chapter": {
+        "code": "XXII",
+        "title": "ATTENDANCE OF PERSONS CONFINED OR DETAINED IN PRISONS"
+      }
+    },
+    {
+      "section_number": "272",
+      "heading": "Language of Courts.",
+      "chapter": {
+        "code": "XXIII",
+        "title": "EVIDENCE IN INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "273",
+      "heading": "Evidence to be taken in presence of accused.",
+      "chapter": {
+        "code": "XXIII",
+        "title": "EVIDENCE IN INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "274",
+      "heading": "Record in summons-cases and inquiries.",
+      "chapter": {
+        "code": "XXIII",
+        "title": "EVIDENCE IN INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "275",
+      "heading": "Record in warrant-cases.",
+      "chapter": {
+        "code": "XXIII",
+        "title": "EVIDENCE IN INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "276",
+      "heading": "Record in trial before Court of Session.",
+      "chapter": {
+        "code": "XXIII",
+        "title": "EVIDENCE IN INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "277",
+      "heading": "Language of record of evidence.",
+      "chapter": {
+        "code": "XXIII",
+        "title": "EVIDENCE IN INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "278",
+      "heading": "Procedure in regard to such evidence when completed.",
+      "chapter": {
+        "code": "XXIII",
+        "title": "EVIDENCE IN INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "279",
+      "heading": "Interpretation of evidence to accused or his pleader.",
+      "chapter": {
+        "code": "XXIII",
+        "title": "EVIDENCE IN INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "280",
+      "heading": "Remarks respecting demeanour of witness.",
+      "chapter": {
+        "code": "XXIII",
+        "title": "EVIDENCE IN INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "281",
+      "heading": "Record of examination of accused.",
+      "chapter": {
+        "code": "XXIII",
+        "title": "EVIDENCE IN INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "282",
+      "heading": "Interpreter to be bound to interpret truthfully.",
+      "chapter": {
+        "code": "XXIII",
+        "title": "EVIDENCE IN INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "283",
+      "heading": "Record in High Court.",
+      "chapter": {
+        "code": "XXIII",
+        "title": "EVIDENCE IN INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "284",
+      "heading": "When attendance of witness may be dispensed with and commission issued.",
+      "chapter": {
+        "code": "XXIII",
+        "title": "EVIDENCE IN INQUIRIES AND TRIALS"
+      },
+      "text": "B.–Commissions for the examination of witnesses",
+      "intro": "B.–Commissions for the examination of witnesses"
+    },
+    {
+      "section_number": "285",
+      "heading": "Commission to whom to be issued.",
+      "chapter": {
+        "code": "XXIII",
+        "title": "EVIDENCE IN INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "286",
+      "heading": "Execution of commissions.",
+      "chapter": {
+        "code": "XXIII",
+        "title": "EVIDENCE IN INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "287",
+      "heading": "Parties may examine witnesses.",
+      "chapter": {
+        "code": "XXIII",
+        "title": "EVIDENCE IN INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "288",
+      "heading": "Return of commission.",
+      "chapter": {
+        "code": "XXIII",
+        "title": "EVIDENCE IN INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "289",
+      "heading": "Adjournment of proceeding.",
+      "chapter": {
+        "code": "XXIII",
+        "title": "EVIDENCE IN INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "290",
+      "heading": "Execution of foreign commissions.",
+      "chapter": {
+        "code": "XXIII",
+        "title": "EVIDENCE IN INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "291",
+      "heading": "Deposition of medical witness.",
+      "chapter": {
+        "code": "XXIII",
+        "title": "EVIDENCE IN INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "291A",
+      "heading": "Identification report of Magistrate.",
+      "chapter": {
+        "code": "XXIII",
+        "title": "EVIDENCE IN INQUIRIES AND TRIALS"
+      },
+      "text": "SECTIONS",
+      "intro": "SECTIONS"
+    },
+    {
+      "section_number": "292",
+      "heading": "Evidence of officers of the Mint.",
+      "chapter": {
+        "code": "XXIII",
+        "title": "EVIDENCE IN INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "293",
+      "heading": "Reports of certain Government scientific experts.",
+      "chapter": {
+        "code": "XXIII",
+        "title": "EVIDENCE IN INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "294",
+      "heading": "No formal proof of certain documents.",
+      "chapter": {
+        "code": "XXIII",
+        "title": "EVIDENCE IN INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "295",
+      "heading": "Affidavit in proof of conduct of public servants.",
+      "chapter": {
+        "code": "XXIII",
+        "title": "EVIDENCE IN INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "296",
+      "heading": "Evidence of formal character on affidavit.",
+      "chapter": {
+        "code": "XXIII",
+        "title": "EVIDENCE IN INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "297",
+      "heading": "Authorities before whom affidavits may be sworn.",
+      "chapter": {
+        "code": "XXIII",
+        "title": "EVIDENCE IN INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "298",
+      "heading": "Previous conviction or acquittal how proved.",
+      "chapter": {
+        "code": "XXIII",
+        "title": "EVIDENCE IN INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "299",
+      "heading": "Record of evidence in absence of accused.",
+      "chapter": {
+        "code": "XXIII",
+        "title": "EVIDENCE IN INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "300",
+      "heading": "Person once convicted or acquitted not to be tried for same offence.",
+      "chapter": {
+        "code": "XXIV",
+        "title": "GENERAL PROVISIONS AS TO INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "301",
+      "heading": "Appearance by Public Prosecutors.",
+      "chapter": {
+        "code": "XXIV",
+        "title": "GENERAL PROVISIONS AS TO INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "302",
+      "heading": "Permission to conduct prosecution.",
+      "chapter": {
+        "code": "XXIV",
+        "title": "GENERAL PROVISIONS AS TO INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "303",
+      "heading": "Right of person against whom proceedings are instituted to be defended.",
+      "chapter": {
+        "code": "XXIV",
+        "title": "GENERAL PROVISIONS AS TO INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "304",
+      "heading": "Legal aid to accused at State expense in certain cases.",
+      "chapter": {
+        "code": "XXIV",
+        "title": "GENERAL PROVISIONS AS TO INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "305",
+      "heading": "Procedure when corporation or registered society is an accused.",
+      "chapter": {
+        "code": "XXIV",
+        "title": "GENERAL PROVISIONS AS TO INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "306",
+      "heading": "Tender of pardon to accomplice.",
+      "chapter": {
+        "code": "XXIV",
+        "title": "GENERAL PROVISIONS AS TO INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "307",
+      "heading": "Power to direct tender of pardon.",
+      "chapter": {
+        "code": "XXIV",
+        "title": "GENERAL PROVISIONS AS TO INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "308",
+      "heading": "Trial of person not complying with conditions of pardon.",
+      "chapter": {
+        "code": "XXIV",
+        "title": "GENERAL PROVISIONS AS TO INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "309",
+      "heading": "Power to postpone or adjourn proceedings.",
+      "chapter": {
+        "code": "XXIV",
+        "title": "GENERAL PROVISIONS AS TO INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "310",
+      "heading": "Local inspection.",
+      "chapter": {
+        "code": "XXIV",
+        "title": "GENERAL PROVISIONS AS TO INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "311",
+      "heading": "Power to summon material witness, or examine person present.",
+      "chapter": {
+        "code": "XXIV",
+        "title": "GENERAL PROVISIONS AS TO INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "311A",
+      "heading": "Power of Magistrate to order person to give specimen signatures or handwriting.",
+      "chapter": {
+        "code": "XXIV",
+        "title": "GENERAL PROVISIONS AS TO INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "312",
+      "heading": "Expenses of complainants and witnesses.",
+      "chapter": {
+        "code": "XXIV",
+        "title": "GENERAL PROVISIONS AS TO INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "313",
+      "heading": "Power to examine the accused.",
+      "chapter": {
+        "code": "XXIV",
+        "title": "GENERAL PROVISIONS AS TO INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "314",
+      "heading": "Oral arguments and memorandum of arguments.",
+      "chapter": {
+        "code": "XXIV",
+        "title": "GENERAL PROVISIONS AS TO INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "315",
+      "heading": "Accused person to be competent witness.",
+      "chapter": {
+        "code": "XXIV",
+        "title": "GENERAL PROVISIONS AS TO INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "316",
+      "heading": "No influence to be used to induce disclosure.",
+      "chapter": {
+        "code": "XXIV",
+        "title": "GENERAL PROVISIONS AS TO INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "317",
+      "heading": "Provision for inquiries and trial being held in the absence of accused in certain cases.",
+      "chapter": {
+        "code": "XXIV",
+        "title": "GENERAL PROVISIONS AS TO INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "318",
+      "heading": "Procedure where accused does not understand proceedings.",
+      "chapter": {
+        "code": "XXIV",
+        "title": "GENERAL PROVISIONS AS TO INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "319",
+      "heading": "Power to proceed against other persons appearing to be guilty of offence.",
+      "chapter": {
+        "code": "XXIV",
+        "title": "GENERAL PROVISIONS AS TO INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "320",
+      "heading": "Compounding of offences.",
+      "chapter": {
+        "code": "XXIV",
+        "title": "GENERAL PROVISIONS AS TO INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "321",
+      "heading": "Withdrawal from prosecution.",
+      "chapter": {
+        "code": "XXIV",
+        "title": "GENERAL PROVISIONS AS TO INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "322",
+      "heading": "Procedure in cases which Magistrate cannot dispose of.",
+      "chapter": {
+        "code": "XXIV",
+        "title": "GENERAL PROVISIONS AS TO INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "323",
+      "heading": "Procedure when, after commencement of inquiry or trial, Magistrate finds case should be",
+      "chapter": {
+        "code": "XXIV",
+        "title": "GENERAL PROVISIONS AS TO INQUIRIES AND TRIALS"
+      },
+      "text": "committed.",
+      "intro": "committed."
+    },
+    {
+      "section_number": "324",
+      "heading": "Trial of persons previously convicted of offences against coinage, stamp-law or property.",
+      "chapter": {
+        "code": "XXIV",
+        "title": "GENERAL PROVISIONS AS TO INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "325",
+      "heading": "Procedure when Magistrate cannot pass sentence sufficiently severe.",
+      "chapter": {
+        "code": "XXIV",
+        "title": "GENERAL PROVISIONS AS TO INQUIRIES AND TRIALS"
+      },
+      "text": "SECTIONS",
+      "intro": "SECTIONS"
+    },
+    {
+      "section_number": "326",
+      "heading": "Conviction or commitment on evidence partly recorded by one Magistrate and partly by",
+      "chapter": {
+        "code": "XXIV",
+        "title": "GENERAL PROVISIONS AS TO INQUIRIES AND TRIALS"
+      },
+      "text": "another.",
+      "intro": "another."
+    },
+    {
+      "section_number": "327",
+      "heading": "Court to be open.",
+      "chapter": {
+        "code": "XXIV",
+        "title": "GENERAL PROVISIONS AS TO INQUIRIES AND TRIALS"
+      }
+    },
+    {
+      "section_number": "328",
+      "heading": "Procedure in case of accused being lunatic.",
+      "chapter": {
+        "code": "XXV",
+        "title": "PROVISIONS AS TO ACCUSED PERSONS OF UNSOUND MIND"
+      }
+    },
+    {
+      "section_number": "329",
+      "heading": "Procedure in case of person of unsound mind tried before Court.",
+      "chapter": {
+        "code": "XXV",
+        "title": "PROVISIONS AS TO ACCUSED PERSONS OF UNSOUND MIND"
+      }
+    },
+    {
+      "section_number": "330",
+      "heading": "Release of person of unsound mind pending investigation or trial.",
+      "chapter": {
+        "code": "XXV",
+        "title": "PROVISIONS AS TO ACCUSED PERSONS OF UNSOUND MIND"
+      }
+    },
+    {
+      "section_number": "331",
+      "heading": "Resumption of inquiry or trial.",
+      "chapter": {
+        "code": "XXV",
+        "title": "PROVISIONS AS TO ACCUSED PERSONS OF UNSOUND MIND"
+      }
+    },
+    {
+      "section_number": "332",
+      "heading": "Procedure on accused appearing before Magistrate or Court.",
+      "chapter": {
+        "code": "XXV",
+        "title": "PROVISIONS AS TO ACCUSED PERSONS OF UNSOUND MIND"
+      }
+    },
+    {
+      "section_number": "333",
+      "heading": "When accused appears to have been of sound mind.",
+      "chapter": {
+        "code": "XXV",
+        "title": "PROVISIONS AS TO ACCUSED PERSONS OF UNSOUND MIND"
+      }
+    },
+    {
+      "section_number": "334",
+      "heading": "Judgment of acquittal on ground of unsoundness of mind.",
+      "chapter": {
+        "code": "XXV",
+        "title": "PROVISIONS AS TO ACCUSED PERSONS OF UNSOUND MIND"
+      }
+    },
+    {
+      "section_number": "335",
+      "heading": "Person acquitted on such ground to be detained in safe custody.",
+      "chapter": {
+        "code": "XXV",
+        "title": "PROVISIONS AS TO ACCUSED PERSONS OF UNSOUND MIND"
+      }
+    },
+    {
+      "section_number": "336",
+      "heading": "Power of State Government to empower officer-in-charge to discharge.",
+      "chapter": {
+        "code": "XXV",
+        "title": "PROVISIONS AS TO ACCUSED PERSONS OF UNSOUND MIND"
+      }
+    },
+    {
+      "section_number": "337",
+      "heading": "Procedure where lunatic prisoner is reported capable of making his defence.",
+      "chapter": {
+        "code": "XXV",
+        "title": "PROVISIONS AS TO ACCUSED PERSONS OF UNSOUND MIND"
+      }
+    },
+    {
+      "section_number": "338",
+      "heading": "Procedure where lunatic detained is declared fit to be released.",
+      "chapter": {
+        "code": "XXV",
+        "title": "PROVISIONS AS TO ACCUSED PERSONS OF UNSOUND MIND"
+      }
+    },
+    {
+      "section_number": "339",
+      "heading": "Delivery of lunatic to care of relative or friend.",
+      "chapter": {
+        "code": "XXV",
+        "title": "PROVISIONS AS TO ACCUSED PERSONS OF UNSOUND MIND"
+      }
+    },
+    {
+      "section_number": "340",
+      "heading": "Procedure in cases mentioned in section 195.",
+      "chapter": {
+        "code": "XXVI",
+        "title": "PROVISIONS AS TO OFFENCES AFFECTING THE ADMINISTRATION OF JUSTICE"
+      }
+    },
+    {
+      "section_number": "341",
+      "heading": "Appeal.",
+      "chapter": {
+        "code": "XXVI",
+        "title": "PROVISIONS AS TO OFFENCES AFFECTING THE ADMINISTRATION OF JUSTICE"
+      }
+    },
+    {
+      "section_number": "342",
+      "heading": "Power to order costs.",
+      "chapter": {
+        "code": "XXVI",
+        "title": "PROVISIONS AS TO OFFENCES AFFECTING THE ADMINISTRATION OF JUSTICE"
+      }
+    },
+    {
+      "section_number": "343",
+      "heading": "Procedure of Magistrate taking cognizance.",
+      "chapter": {
+        "code": "XXVI",
+        "title": "PROVISIONS AS TO OFFENCES AFFECTING THE ADMINISTRATION OF JUSTICE"
+      }
+    },
+    {
+      "section_number": "344",
+      "heading": "Summary procedure for trial for giving false evidence.",
+      "chapter": {
+        "code": "XXVI",
+        "title": "PROVISIONS AS TO OFFENCES AFFECTING THE ADMINISTRATION OF JUSTICE"
+      }
+    },
+    {
+      "section_number": "345",
+      "heading": "Procedure in certain cases of contempt.",
+      "chapter": {
+        "code": "XXVI",
+        "title": "PROVISIONS AS TO OFFENCES AFFECTING THE ADMINISTRATION OF JUSTICE"
+      }
+    },
+    {
+      "section_number": "346",
+      "heading": "Procedure where Court considers that case should not be dealt with under section 345.",
+      "chapter": {
+        "code": "XXVI",
+        "title": "PROVISIONS AS TO OFFENCES AFFECTING THE ADMINISTRATION OF JUSTICE"
+      }
+    },
+    {
+      "section_number": "347",
+      "heading": "When Registrar or Sub-Registrar to be deemed a Civil Court.",
+      "chapter": {
+        "code": "XXVI",
+        "title": "PROVISIONS AS TO OFFENCES AFFECTING THE ADMINISTRATION OF JUSTICE"
+      }
+    },
+    {
+      "section_number": "348",
+      "heading": "Discharge of offender on submission of apology.",
+      "chapter": {
+        "code": "XXVI",
+        "title": "PROVISIONS AS TO OFFENCES AFFECTING THE ADMINISTRATION OF JUSTICE"
+      }
+    },
+    {
+      "section_number": "349",
+      "heading": "Imprisonment or committal of person refusing to answer or produce document.",
+      "chapter": {
+        "code": "XXVI",
+        "title": "PROVISIONS AS TO OFFENCES AFFECTING THE ADMINISTRATION OF JUSTICE"
+      }
+    },
+    {
+      "section_number": "350",
+      "heading": "Summary procedure for punishment for non-attendance by a witness in obedience to summons.",
+      "chapter": {
+        "code": "XXVI",
+        "title": "PROVISIONS AS TO OFFENCES AFFECTING THE ADMINISTRATION OF JUSTICE"
+      }
+    },
+    {
+      "section_number": "351",
+      "heading": "Appeals from convictions under sections 344, 345, 349 and 350.",
+      "chapter": {
+        "code": "XXVI",
+        "title": "PROVISIONS AS TO OFFENCES AFFECTING THE ADMINISTRATION OF JUSTICE"
+      }
+    },
+    {
+      "section_number": "352",
+      "heading": "Certain Judges and Magistrates not to try certain offences when committed before themselves.",
+      "chapter": {
+        "code": "XXVI",
+        "title": "PROVISIONS AS TO OFFENCES AFFECTING THE ADMINISTRATION OF JUSTICE"
+      }
+    },
+    {
+      "section_number": "353",
+      "heading": "Judgment.",
+      "chapter": {
+        "code": "XXVII",
+        "title": "THE JUDGMENT"
+      }
+    },
+    {
+      "section_number": "354",
+      "heading": "Language and contents of judgment.",
+      "chapter": {
+        "code": "XXVII",
+        "title": "THE JUDGMENT"
+      }
+    },
+    {
+      "section_number": "355",
+      "heading": "Metropolitan Magistrate's judgment.",
+      "chapter": {
+        "code": "XXVII",
+        "title": "THE JUDGMENT"
+      },
+      "text": "SECTIONS",
+      "intro": "SECTIONS"
+    },
+    {
+      "section_number": "356",
+      "heading": "Order for notifying address of previously convicted offender.",
+      "chapter": {
+        "code": "XXVII",
+        "title": "THE JUDGMENT"
+      }
+    },
+    {
+      "section_number": "357",
+      "heading": "Order to pay compensation.",
+      "chapter": {
+        "code": "XXVII",
+        "title": "THE JUDGMENT"
+      }
+    },
+    {
+      "section_number": "357A",
+      "heading": "Victim compensation scheme.",
+      "chapter": {
+        "code": "XXVII",
+        "title": "THE JUDGMENT"
+      }
+    },
+    {
+      "section_number": "357B",
+      "heading": "Compensation to be in addition to fine under section 326A or section 376D of Indian Penal Code.",
+      "chapter": {
+        "code": "XXVII",
+        "title": "THE JUDGMENT"
+      }
+    },
+    {
+      "section_number": "357C",
+      "heading": "Treatment of victims.",
+      "chapter": {
+        "code": "XXVII",
+        "title": "THE JUDGMENT"
+      }
+    },
+    {
+      "section_number": "358",
+      "heading": "Compensation to persons groundlessly arrested.",
+      "chapter": {
+        "code": "XXVII",
+        "title": "THE JUDGMENT"
+      }
+    },
+    {
+      "section_number": "359",
+      "heading": "Order to pay costs in non-cognizable cases.",
+      "chapter": {
+        "code": "XXVII",
+        "title": "THE JUDGMENT"
+      }
+    },
+    {
+      "section_number": "360",
+      "heading": "Order to release on probation of good conduct or after admonition.",
+      "chapter": {
+        "code": "XXVII",
+        "title": "THE JUDGMENT"
+      }
+    },
+    {
+      "section_number": "361",
+      "heading": "Special reasons to be recorded in certain cases.",
+      "chapter": {
+        "code": "XXVII",
+        "title": "THE JUDGMENT"
+      }
+    },
+    {
+      "section_number": "362",
+      "heading": "Court not to alter judgment.",
+      "chapter": {
+        "code": "XXVII",
+        "title": "THE JUDGMENT"
+      }
+    },
+    {
+      "section_number": "363",
+      "heading": "Copy of judgment to be given to the accused and other persons.",
+      "chapter": {
+        "code": "XXVII",
+        "title": "THE JUDGMENT"
+      }
+    },
+    {
+      "section_number": "364",
+      "heading": "Judgment when to be translated.",
+      "chapter": {
+        "code": "XXVII",
+        "title": "THE JUDGMENT"
+      }
+    },
+    {
+      "section_number": "365",
+      "heading": "Court of Session to send copy of finding and sentence to District Magistrate.",
+      "chapter": {
+        "code": "XXVII",
+        "title": "THE JUDGMENT"
+      }
+    },
+    {
+      "section_number": "366",
+      "heading": "Sentence of death to be submitted by Court of Session for confirmation.",
+      "chapter": {
+        "code": "XXVIII",
+        "title": "SUBMISSION OF DEATH SENTENCES FOR CONFIRMATION"
+      }
+    },
+    {
+      "section_number": "367",
+      "heading": "Power to direct further inquiry to be made or additional evidence to be taken.",
+      "chapter": {
+        "code": "XXVIII",
+        "title": "SUBMISSION OF DEATH SENTENCES FOR CONFIRMATION"
+      }
+    },
+    {
+      "section_number": "368",
+      "heading": "Power of High Court to confirm sentence or annul conviction.",
+      "chapter": {
+        "code": "XXVIII",
+        "title": "SUBMISSION OF DEATH SENTENCES FOR CONFIRMATION"
+      }
+    },
+    {
+      "section_number": "369",
+      "heading": "Confirmation or new sentence to be signed by two Judges.",
+      "chapter": {
+        "code": "XXVIII",
+        "title": "SUBMISSION OF DEATH SENTENCES FOR CONFIRMATION"
+      }
+    },
+    {
+      "section_number": "370",
+      "heading": "Procedure in case of difference of opinion.",
+      "chapter": {
+        "code": "XXVIII",
+        "title": "SUBMISSION OF DEATH SENTENCES FOR CONFIRMATION"
+      }
+    },
+    {
+      "section_number": "371",
+      "heading": "Procedure in cases submitted to High Court for confirmation.",
+      "chapter": {
+        "code": "XXVIII",
+        "title": "SUBMISSION OF DEATH SENTENCES FOR CONFIRMATION"
+      }
+    },
+    {
+      "section_number": "372",
+      "heading": "No appeal to lie unless otherwise provided.",
+      "chapter": {
+        "code": "XXIX",
+        "title": "APPEALS"
+      }
+    },
+    {
+      "section_number": "373",
+      "heading": "Appeal from orders requiring security or refusal to accept or rejecting surety for keeping peace",
+      "chapter": {
+        "code": "XXIX",
+        "title": "APPEALS"
+      },
+      "text": "or good behaviour.",
+      "intro": "or good behaviour."
+    },
+    {
+      "section_number": "374",
+      "heading": "Appeals from convictions.",
+      "chapter": {
+        "code": "XXIX",
+        "title": "APPEALS"
+      }
+    },
+    {
+      "section_number": "375",
+      "heading": "No appeal in certain cases when accused pleads guilty.",
+      "chapter": {
+        "code": "XXIX",
+        "title": "APPEALS"
+      }
+    },
+    {
+      "section_number": "376",
+      "heading": "No appeal in petty cases.",
+      "chapter": {
+        "code": "XXIX",
+        "title": "APPEALS"
+      }
+    },
+    {
+      "section_number": "377",
+      "heading": "Appeal by the State Government against sentence.",
+      "chapter": {
+        "code": "XXIX",
+        "title": "APPEALS"
+      }
+    },
+    {
+      "section_number": "378",
+      "heading": "Appeal in case of acquittal.",
+      "chapter": {
+        "code": "XXIX",
+        "title": "APPEALS"
+      }
+    },
+    {
+      "section_number": "379",
+      "heading": "Appeal against conviction by High Court in certain cases.",
+      "chapter": {
+        "code": "XXIX",
+        "title": "APPEALS"
+      }
+    },
+    {
+      "section_number": "380",
+      "heading": "Special right of appeal in certain cases.",
+      "chapter": {
+        "code": "XXIX",
+        "title": "APPEALS"
+      }
+    },
+    {
+      "section_number": "381",
+      "heading": "Appeal to Court of Session how heard.",
+      "chapter": {
+        "code": "XXIX",
+        "title": "APPEALS"
+      }
+    },
+    {
+      "section_number": "382",
+      "heading": "Petition of appeal.",
+      "chapter": {
+        "code": "XXIX",
+        "title": "APPEALS"
+      }
+    },
+    {
+      "section_number": "383",
+      "heading": "Procedure when appellant in jail.",
+      "chapter": {
+        "code": "XXIX",
+        "title": "APPEALS"
+      }
+    },
+    {
+      "section_number": "384",
+      "heading": "Summary dismissal of appeal.",
+      "chapter": {
+        "code": "XXIX",
+        "title": "APPEALS"
+      }
+    },
+    {
+      "section_number": "385",
+      "heading": "Procedure for hearing appeals not dismissed summarily.",
+      "chapter": {
+        "code": "XXIX",
+        "title": "APPEALS"
+      }
+    },
+    {
+      "section_number": "386",
+      "heading": "Powers of the Appellate Court.",
+      "chapter": {
+        "code": "XXIX",
+        "title": "APPEALS"
+      }
+    },
+    {
+      "section_number": "387",
+      "heading": "Judgments of Subordinate Appellate Court.",
+      "chapter": {
+        "code": "XXIX",
+        "title": "APPEALS"
+      }
+    },
+    {
+      "section_number": "388",
+      "heading": "Order of High Court on appeal to be certified to lower Court.",
+      "chapter": {
+        "code": "XXIX",
+        "title": "APPEALS"
+      },
+      "text": "SECTIONS",
+      "intro": "SECTIONS"
+    },
+    {
+      "section_number": "389",
+      "heading": "Suspension of sentence pending the appeal; release of appellant on bail.",
+      "chapter": {
+        "code": "XXIX",
+        "title": "APPEALS"
+      }
+    },
+    {
+      "section_number": "390",
+      "heading": "Arrest of accused in appeal from acquittal.",
+      "chapter": {
+        "code": "XXIX",
+        "title": "APPEALS"
+      }
+    },
+    {
+      "section_number": "391",
+      "heading": "Appellate Court may take further evidence or direct it to be taken.",
+      "chapter": {
+        "code": "XXIX",
+        "title": "APPEALS"
+      }
+    },
+    {
+      "section_number": "392",
+      "heading": "Procedure where Judges of Court of Appeal are equally divided.",
+      "chapter": {
+        "code": "XXIX",
+        "title": "APPEALS"
+      }
+    },
+    {
+      "section_number": "393",
+      "heading": "Finality of judgments and orders on appeal.",
+      "chapter": {
+        "code": "XXIX",
+        "title": "APPEALS"
+      }
+    },
+    {
+      "section_number": "394",
+      "heading": "Abatement of appeals.",
+      "chapter": {
+        "code": "XXIX",
+        "title": "APPEALS"
+      }
+    },
+    {
+      "section_number": "395",
+      "heading": "Reference to High Court.",
+      "chapter": {
+        "code": "XXX",
+        "title": "REFERENCE AND REVISION"
+      }
+    },
+    {
+      "section_number": "396",
+      "heading": "Disposal of case according to decision of High Court.",
+      "chapter": {
+        "code": "XXX",
+        "title": "REFERENCE AND REVISION"
+      }
+    },
+    {
+      "section_number": "397",
+      "heading": "Calling for records to exercise powers of revision.",
+      "chapter": {
+        "code": "XXX",
+        "title": "REFERENCE AND REVISION"
+      }
+    },
+    {
+      "section_number": "398",
+      "heading": "Power to order inquiry.",
+      "chapter": {
+        "code": "XXX",
+        "title": "REFERENCE AND REVISION"
+      }
+    },
+    {
+      "section_number": "399",
+      "heading": "Sessions Judge's powers of revision.",
+      "chapter": {
+        "code": "XXX",
+        "title": "REFERENCE AND REVISION"
+      }
+    },
+    {
+      "section_number": "400",
+      "heading": "Power of Additional Sessions Judge.",
+      "chapter": {
+        "code": "XXX",
+        "title": "REFERENCE AND REVISION"
+      }
+    },
+    {
+      "section_number": "401",
+      "heading": "High Court's powers of revision.",
+      "chapter": {
+        "code": "XXX",
+        "title": "REFERENCE AND REVISION"
+      }
+    },
+    {
+      "section_number": "402",
+      "heading": "Power of High Court to withdraw or transfer revision cases.",
+      "chapter": {
+        "code": "XXX",
+        "title": "REFERENCE AND REVISION"
+      }
+    },
+    {
+      "section_number": "403",
+      "heading": "Option of Court to hear parties.",
+      "chapter": {
+        "code": "XXX",
+        "title": "REFERENCE AND REVISION"
+      }
+    },
+    {
+      "section_number": "404",
+      "heading": "Statement by Metropolitan Magistrate of ground of his decision to be considered by High Court.",
+      "chapter": {
+        "code": "XXX",
+        "title": "REFERENCE AND REVISION"
+      }
+    },
+    {
+      "section_number": "405",
+      "heading": "High Court's order to be certified to lower Court.",
+      "chapter": {
+        "code": "XXX",
+        "title": "REFERENCE AND REVISION"
+      }
+    },
+    {
+      "section_number": "406",
+      "heading": "Power of Supreme Court to transfer cases and appeals.",
+      "chapter": {
+        "code": "XXXI",
+        "title": "TRANSFER OF CRIMINAL CASES"
+      }
+    },
+    {
+      "section_number": "407",
+      "heading": "Power of High Court to transfer cases and appeals.",
+      "chapter": {
+        "code": "XXXI",
+        "title": "TRANSFER OF CRIMINAL CASES"
+      }
+    },
+    {
+      "section_number": "408",
+      "heading": "Power of Sessions Judge to transfer cases and appeals.",
+      "chapter": {
+        "code": "XXXI",
+        "title": "TRANSFER OF CRIMINAL CASES"
+      }
+    },
+    {
+      "section_number": "409",
+      "heading": "Withdrawal of cases and appeals by Sessions Judges.",
+      "chapter": {
+        "code": "XXXI",
+        "title": "TRANSFER OF CRIMINAL CASES"
+      }
+    },
+    {
+      "section_number": "410",
+      "heading": "Withdrawal of cases by Judicial Magistrate.",
+      "chapter": {
+        "code": "XXXI",
+        "title": "TRANSFER OF CRIMINAL CASES"
+      }
+    },
+    {
+      "section_number": "411",
+      "heading": "Making over or withdrawal of cases by Executive Magistrates.",
+      "chapter": {
+        "code": "XXXI",
+        "title": "TRANSFER OF CRIMINAL CASES"
+      }
+    },
+    {
+      "section_number": "412",
+      "heading": "Reasons to be recorded.",
+      "chapter": {
+        "code": "XXXI",
+        "title": "TRANSFER OF CRIMINAL CASES"
+      }
+    },
+    {
+      "section_number": "413",
+      "heading": "Execution of order passed under section 368.",
+      "chapter": {
+        "code": "XXXII",
+        "title": "EXECUTION, SUSPENSION, REMISSION AND COMMUTATION OF SENTENCES"
+      },
+      "text": "A.–Death Sentences",
+      "intro": "A.–Death Sentences"
+    },
+    {
+      "section_number": "414",
+      "heading": "Execution of sentence of death passed by High Court.",
+      "chapter": {
+        "code": "XXXII",
+        "title": "EXECUTION, SUSPENSION, REMISSION AND COMMUTATION OF SENTENCES"
+      }
+    },
+    {
+      "section_number": "415",
+      "heading": "Postponement of execution of sentence of death in case of appeal to Supreme Court.",
+      "chapter": {
+        "code": "XXXII",
+        "title": "EXECUTION, SUSPENSION, REMISSION AND COMMUTATION OF SENTENCES"
+      }
+    },
+    {
+      "section_number": "416",
+      "heading": "Postponement of capital sentence on pregnant woman.",
+      "chapter": {
+        "code": "XXXII",
+        "title": "EXECUTION, SUSPENSION, REMISSION AND COMMUTATION OF SENTENCES"
+      },
+      "text": "SECTIONS\nB.–Imprisonment",
+      "intro": "SECTIONS\nB.–Imprisonment"
+    },
+    {
+      "section_number": "417",
+      "heading": "Power to appoint place of imprisonment.",
+      "chapter": {
+        "code": "XXXII",
+        "title": "EXECUTION, SUSPENSION, REMISSION AND COMMUTATION OF SENTENCES"
+      }
+    },
+    {
+      "section_number": "418",
+      "heading": "Execution of sentence of imprisonment.",
+      "chapter": {
+        "code": "XXXII",
+        "title": "EXECUTION, SUSPENSION, REMISSION AND COMMUTATION OF SENTENCES"
+      }
+    },
+    {
+      "section_number": "419",
+      "heading": "Direction of warrant for execution.",
+      "chapter": {
+        "code": "XXXII",
+        "title": "EXECUTION, SUSPENSION, REMISSION AND COMMUTATION OF SENTENCES"
+      }
+    },
+    {
+      "section_number": "420",
+      "heading": "Warrant with whom to be lodged.",
+      "chapter": {
+        "code": "XXXII",
+        "title": "EXECUTION, SUSPENSION, REMISSION AND COMMUTATION OF SENTENCES"
+      }
+    },
+    {
+      "section_number": "421",
+      "heading": "Warrant for levy of fine.",
+      "chapter": {
+        "code": "XXXII",
+        "title": "EXECUTION, SUSPENSION, REMISSION AND COMMUTATION OF SENTENCES"
+      },
+      "text": "C.–Levy of fine",
+      "intro": "C.–Levy of fine"
+    },
+    {
+      "section_number": "422",
+      "heading": "Effect of such warrant.",
+      "chapter": {
+        "code": "XXXII",
+        "title": "EXECUTION, SUSPENSION, REMISSION AND COMMUTATION OF SENTENCES"
+      }
+    },
+    {
+      "section_number": "423",
+      "heading": "Warrant for levy of fine issued by a Court in any territory to which this Code does not extend.",
+      "chapter": {
+        "code": "XXXII",
+        "title": "EXECUTION, SUSPENSION, REMISSION AND COMMUTATION OF SENTENCES"
+      }
+    },
+    {
+      "section_number": "424",
+      "heading": "Suspension of execution of sentence of imprisonment.",
+      "chapter": {
+        "code": "XXXII",
+        "title": "EXECUTION, SUSPENSION, REMISSION AND COMMUTATION OF SENTENCES"
+      },
+      "text": "D.–General provisions regarding execution",
+      "intro": "D.–General provisions regarding execution"
+    },
+    {
+      "section_number": "425",
+      "heading": "Who may issue warrant.",
+      "chapter": {
+        "code": "XXXII",
+        "title": "EXECUTION, SUSPENSION, REMISSION AND COMMUTATION OF SENTENCES"
+      }
+    },
+    {
+      "section_number": "426",
+      "heading": "Sentence on escaped convict when to take effect.",
+      "chapter": {
+        "code": "XXXII",
+        "title": "EXECUTION, SUSPENSION, REMISSION AND COMMUTATION OF SENTENCES"
+      }
+    },
+    {
+      "section_number": "427",
+      "heading": "Sentence on offender already sentenced for another offence.",
+      "chapter": {
+        "code": "XXXII",
+        "title": "EXECUTION, SUSPENSION, REMISSION AND COMMUTATION OF SENTENCES"
+      }
+    },
+    {
+      "section_number": "428",
+      "heading": "Period of detention undergone by the accused to be set off against the sentence of",
+      "chapter": {
+        "code": "XXXII",
+        "title": "EXECUTION, SUSPENSION, REMISSION AND COMMUTATION OF SENTENCES"
+      },
+      "text": "imprisonment.",
+      "intro": "imprisonment."
+    },
+    {
+      "section_number": "429",
+      "heading": "Saving.",
+      "chapter": {
+        "code": "XXXII",
+        "title": "EXECUTION, SUSPENSION, REMISSION AND COMMUTATION OF SENTENCES"
+      }
+    },
+    {
+      "section_number": "430",
+      "heading": "Return of warrant on execution of sentence.",
+      "chapter": {
+        "code": "XXXII",
+        "title": "EXECUTION, SUSPENSION, REMISSION AND COMMUTATION OF SENTENCES"
+      }
+    },
+    {
+      "section_number": "431",
+      "heading": "Money ordered to be paid recoverable as a fine.",
+      "chapter": {
+        "code": "XXXII",
+        "title": "EXECUTION, SUSPENSION, REMISSION AND COMMUTATION OF SENTENCES"
+      },
+      "text": "E.–Suspension, remission and commutation of sentences",
+      "intro": "E.–Suspension, remission and commutation of sentences"
+    },
+    {
+      "section_number": "432",
+      "heading": "Power to suspend or remit sentences.",
+      "chapter": {
+        "code": "XXXII",
+        "title": "EXECUTION, SUSPENSION, REMISSION AND COMMUTATION OF SENTENCES"
+      }
+    },
+    {
+      "section_number": "433",
+      "heading": "Power to commute sentence.",
+      "chapter": {
+        "code": "XXXII",
+        "title": "EXECUTION, SUSPENSION, REMISSION AND COMMUTATION OF SENTENCES"
+      }
+    },
+    {
+      "section_number": "433A",
+      "heading": "Restriction on powers of remission or commutation in certain cases.",
+      "chapter": {
+        "code": "XXXII",
+        "title": "EXECUTION, SUSPENSION, REMISSION AND COMMUTATION OF SENTENCES"
+      }
+    },
+    {
+      "section_number": "434",
+      "heading": "Concurrent power of Central Government in case of death sentences.",
+      "chapter": {
+        "code": "XXXII",
+        "title": "EXECUTION, SUSPENSION, REMISSION AND COMMUTATION OF SENTENCES"
+      }
+    },
+    {
+      "section_number": "435",
+      "heading": "State Government to act after consultation with Central Government in certain cases.",
+      "chapter": {
+        "code": "XXXII",
+        "title": "EXECUTION, SUSPENSION, REMISSION AND COMMUTATION OF SENTENCES"
+      }
+    },
+    {
+      "section_number": "436",
+      "heading": "In what cases bail to be taken.",
+      "chapter": {
+        "code": "XXXIII",
+        "title": "PROVISIONS AS TO BAIL AND BONDS"
+      }
+    },
+    {
+      "section_number": "436A",
+      "heading": "Maximum period for which an undertrial prisoner can be detained.",
+      "chapter": {
+        "code": "XXXIII",
+        "title": "PROVISIONS AS TO BAIL AND BONDS"
+      }
+    },
+    {
+      "section_number": "437",
+      "heading": "When bail may be taken in case of non-bailable offence.",
+      "chapter": {
+        "code": "XXXIII",
+        "title": "PROVISIONS AS TO BAIL AND BONDS"
+      }
+    },
+    {
+      "section_number": "437A",
+      "heading": "Bail to require accused to appear before next appellate Court.",
+      "chapter": {
+        "code": "XXXIII",
+        "title": "PROVISIONS AS TO BAIL AND BONDS"
+      }
+    },
+    {
+      "section_number": "438",
+      "heading": "Direction for grant of bail to person apprehending arrest.",
+      "chapter": {
+        "code": "XXXIII",
+        "title": "PROVISIONS AS TO BAIL AND BONDS"
+      }
+    },
+    {
+      "section_number": "439",
+      "heading": "Special powers of High Court or Court of Session regarding bail.",
+      "chapter": {
+        "code": "XXXIII",
+        "title": "PROVISIONS AS TO BAIL AND BONDS"
+      }
+    },
+    {
+      "section_number": "440",
+      "heading": "Amount of bond and reduction thereof.",
+      "chapter": {
+        "code": "XXXIII",
+        "title": "PROVISIONS AS TO BAIL AND BONDS"
+      }
+    },
+    {
+      "section_number": "441",
+      "heading": "Bond of accused and sureties.",
+      "chapter": {
+        "code": "XXXIII",
+        "title": "PROVISIONS AS TO BAIL AND BONDS"
+      }
+    },
+    {
+      "section_number": "441A",
+      "heading": "Declaration by sureties.",
+      "chapter": {
+        "code": "XXXIII",
+        "title": "PROVISIONS AS TO BAIL AND BONDS"
+      }
+    },
+    {
+      "section_number": "442",
+      "heading": "Discharge from custody.",
+      "chapter": {
+        "code": "XXXIII",
+        "title": "PROVISIONS AS TO BAIL AND BONDS"
+      },
+      "text": "SECTIONS",
+      "intro": "SECTIONS"
+    },
+    {
+      "section_number": "443",
+      "heading": "Power to order sufficient bail when that first taken is insufficient.",
+      "chapter": {
+        "code": "XXXIII",
+        "title": "PROVISIONS AS TO BAIL AND BONDS"
+      }
+    },
+    {
+      "section_number": "444",
+      "heading": "Discharge of sureties.",
+      "chapter": {
+        "code": "XXXIII",
+        "title": "PROVISIONS AS TO BAIL AND BONDS"
+      }
+    },
+    {
+      "section_number": "445",
+      "heading": "Deposit instead of recognizance.",
+      "chapter": {
+        "code": "XXXIII",
+        "title": "PROVISIONS AS TO BAIL AND BONDS"
+      }
+    },
+    {
+      "section_number": "446",
+      "heading": "Procedure when bond has been forfeited.",
+      "chapter": {
+        "code": "XXXIII",
+        "title": "PROVISIONS AS TO BAIL AND BONDS"
+      }
+    },
+    {
+      "section_number": "446A",
+      "heading": "Cancellation of bond and bail bond.",
+      "chapter": {
+        "code": "XXXIII",
+        "title": "PROVISIONS AS TO BAIL AND BONDS"
+      }
+    },
+    {
+      "section_number": "447",
+      "heading": "Procedure in case of insolvency of death of surety or when a bond is forfeited.",
+      "chapter": {
+        "code": "XXXIII",
+        "title": "PROVISIONS AS TO BAIL AND BONDS"
+      }
+    },
+    {
+      "section_number": "448",
+      "heading": "Bond required from minor.",
+      "chapter": {
+        "code": "XXXIII",
+        "title": "PROVISIONS AS TO BAIL AND BONDS"
+      }
+    },
+    {
+      "section_number": "449",
+      "heading": "Appeal from orders under section 446.",
+      "chapter": {
+        "code": "XXXIII",
+        "title": "PROVISIONS AS TO BAIL AND BONDS"
+      }
+    },
+    {
+      "section_number": "450",
+      "heading": "Power to direct levy of amount due on certain recognizances.",
+      "chapter": {
+        "code": "XXXIII",
+        "title": "PROVISIONS AS TO BAIL AND BONDS"
+      }
+    },
+    {
+      "section_number": "451",
+      "heading": "Order for custody and disposal of property pending trial in certain cases.",
+      "chapter": {
+        "code": "XXXIV",
+        "title": "DISPOSAL OF PROPERTY"
+      }
+    },
+    {
+      "section_number": "452",
+      "heading": "Order for disposal of property at conclusion of trial.",
+      "chapter": {
+        "code": "XXXIV",
+        "title": "DISPOSAL OF PROPERTY"
+      }
+    },
+    {
+      "section_number": "453",
+      "heading": "Payment to innocent purchaser of money found on accused.",
+      "chapter": {
+        "code": "XXXIV",
+        "title": "DISPOSAL OF PROPERTY"
+      }
+    },
+    {
+      "section_number": "454",
+      "heading": "Appeal against orders under section 452 or section 453.",
+      "chapter": {
+        "code": "XXXIV",
+        "title": "DISPOSAL OF PROPERTY"
+      }
+    },
+    {
+      "section_number": "455",
+      "heading": "Destruction of libellous and other matter.",
+      "chapter": {
+        "code": "XXXIV",
+        "title": "DISPOSAL OF PROPERTY"
+      }
+    },
+    {
+      "section_number": "456",
+      "heading": "Power to restore possession of immovable property.",
+      "chapter": {
+        "code": "XXXIV",
+        "title": "DISPOSAL OF PROPERTY"
+      }
+    },
+    {
+      "section_number": "457",
+      "heading": "Procedure by police upon seizure of property.",
+      "chapter": {
+        "code": "XXXIV",
+        "title": "DISPOSAL OF PROPERTY"
+      }
+    },
+    {
+      "section_number": "458",
+      "heading": "Procedure where no claimant appears within six months.",
+      "chapter": {
+        "code": "XXXIV",
+        "title": "DISPOSAL OF PROPERTY"
+      }
+    },
+    {
+      "section_number": "459",
+      "heading": "Power to sell perishable property.",
+      "chapter": {
+        "code": "XXXIV",
+        "title": "DISPOSAL OF PROPERTY"
+      }
+    },
+    {
+      "section_number": "460",
+      "heading": "Irregularities which do not vitiate proceedings.",
+      "chapter": {
+        "code": "XXXV",
+        "title": "IRREGULAR PROCEEDINGS"
+      }
+    },
+    {
+      "section_number": "461",
+      "heading": "Irregularities which vitiate proceedings.",
+      "chapter": {
+        "code": "XXXV",
+        "title": "IRREGULAR PROCEEDINGS"
+      }
+    },
+    {
+      "section_number": "462",
+      "heading": "Proceedings in wrong place.",
+      "chapter": {
+        "code": "XXXV",
+        "title": "IRREGULAR PROCEEDINGS"
+      }
+    },
+    {
+      "section_number": "463",
+      "heading": "Non-compliance with provisions of section 164 or section 281.",
+      "chapter": {
+        "code": "XXXV",
+        "title": "IRREGULAR PROCEEDINGS"
+      }
+    },
+    {
+      "section_number": "464",
+      "heading": "Effect of omission to frame, or absence of, or error in, charge.",
+      "chapter": {
+        "code": "XXXV",
+        "title": "IRREGULAR PROCEEDINGS"
+      }
+    },
+    {
+      "section_number": "465",
+      "heading": "Finding or sentence when reversible by reason of error, omission or irregularity.",
+      "chapter": {
+        "code": "XXXV",
+        "title": "IRREGULAR PROCEEDINGS"
+      }
+    },
+    {
+      "section_number": "466",
+      "heading": "Defect or error not to make attachment unlawful.",
+      "chapter": {
+        "code": "XXXV",
+        "title": "IRREGULAR PROCEEDINGS"
+      }
+    },
+    {
+      "section_number": "467",
+      "heading": "Definitions.",
+      "chapter": {
+        "code": "XXXVI",
+        "title": "LIMITATION FOR TAKING COGNIZANCE OF CERTAIN OFFENCES"
+      },
+      "subheading": "SECTIONS"
+    },
+    {
+      "section_number": "468",
+      "heading": "Bar to taking cognizance after lapse of the period of limitation.",
+      "chapter": {
+        "code": "XXXVI",
+        "title": "LIMITATION FOR TAKING COGNIZANCE OF CERTAIN OFFENCES"
+      },
+      "subheading": "SECTIONS"
+    },
+    {
+      "section_number": "469",
+      "heading": "Commencement of the period of limitation.",
+      "chapter": {
+        "code": "XXXVI",
+        "title": "LIMITATION FOR TAKING COGNIZANCE OF CERTAIN OFFENCES"
+      },
+      "subheading": "SECTIONS"
+    },
+    {
+      "section_number": "470",
+      "heading": "Exclusion of time in certain cases.",
+      "chapter": {
+        "code": "XXXVI",
+        "title": "LIMITATION FOR TAKING COGNIZANCE OF CERTAIN OFFENCES"
+      },
+      "subheading": "SECTIONS"
+    },
+    {
+      "section_number": "471",
+      "heading": "Exclusion of date on which Court is closed.",
+      "chapter": {
+        "code": "XXXVI",
+        "title": "LIMITATION FOR TAKING COGNIZANCE OF CERTAIN OFFENCES"
+      },
+      "subheading": "SECTIONS"
+    },
+    {
+      "section_number": "472",
+      "heading": "Continuing offence.",
+      "chapter": {
+        "code": "XXXVI",
+        "title": "LIMITATION FOR TAKING COGNIZANCE OF CERTAIN OFFENCES"
+      },
+      "subheading": "SECTIONS"
+    },
+    {
+      "section_number": "473",
+      "heading": "Extension of period of limitation in certain cases.",
+      "chapter": {
+        "code": "XXXVI",
+        "title": "LIMITATION FOR TAKING COGNIZANCE OF CERTAIN OFFENCES"
+      },
+      "subheading": "SECTIONS"
+    },
+    {
+      "section_number": "474",
+      "heading": "Trials before High Courts.",
+      "chapter": {
+        "code": "XXXVII",
+        "title": "MISCELLANEOUS"
+      }
+    },
+    {
+      "section_number": "475",
+      "heading": "Delivery to commanding officers of persons liable to be tried by Court-martial.",
+      "chapter": {
+        "code": "XXXVII",
+        "title": "MISCELLANEOUS"
+      }
+    },
+    {
+      "section_number": "476",
+      "heading": "Forms.",
+      "chapter": {
+        "code": "XXXVII",
+        "title": "MISCELLANEOUS"
+      }
+    },
+    {
+      "section_number": "477",
+      "heading": "Power of High Court to make rules.",
+      "chapter": {
+        "code": "XXXVII",
+        "title": "MISCELLANEOUS"
+      }
+    },
+    {
+      "section_number": "478",
+      "heading": "Power to alter functions allocated to Executive Magistrate in certain cases.",
+      "chapter": {
+        "code": "XXXVII",
+        "title": "MISCELLANEOUS"
+      }
+    },
+    {
+      "section_number": "479",
+      "heading": "Case in which Judge or Magistrate is personally interested.",
+      "chapter": {
+        "code": "XXXVII",
+        "title": "MISCELLANEOUS"
+      }
+    },
+    {
+      "section_number": "480",
+      "heading": "Practising pleader not to sit as Magistrate in certain Courts.",
+      "chapter": {
+        "code": "XXXVII",
+        "title": "MISCELLANEOUS"
+      }
+    },
+    {
+      "section_number": "481",
+      "heading": "Public servant concerned in sale not to purchase or bid for property.",
+      "chapter": {
+        "code": "XXXVII",
+        "title": "MISCELLANEOUS"
+      }
+    },
+    {
+      "section_number": "482",
+      "heading": "Saving of inherent power of High Court.",
+      "chapter": {
+        "code": "XXXVII",
+        "title": "MISCELLANEOUS"
+      }
+    },
+    {
+      "section_number": "483",
+      "heading": "Duty of High Court to exercise continuous superintendence over Courts of Judicial Magistrates.",
+      "chapter": {
+        "code": "XXXVII",
+        "title": "MISCELLANEOUS"
+      }
+    },
+    {
+      "section_number": "484",
+      "heading": "Repeal and savings.",
+      "chapter": {
+        "code": "XXXVII",
+        "title": "MISCELLANEOUS"
+      },
+      "text": "THE FIRST SCHEDULE.–CLASSIFICATION OF OFFENCES.\nTHE SECOND SCHEDULE.–FORMS.\nFORM NO. 1.—Summons to an accused person.\nFORM NO. 2.—Warrant of arrest.\nFORM NO. 3.—Bond and bail-bond after arrest under a warrant.\nFORM NO. 4.—Proclamation requiring the appearance of a person accused.\nFORM NO. 5.—Proclamation requiring the attendance of a witness.\nFORM NO. 6.—Order of attachment to compel the attendance of a witness.\nFORM NO. 7.—Order of attachment to compel the appearance of a person accused.\nFORM NO. 8.—Order authorising an attachment by the District Magistrate or Collector.\nFORM NO. 9.—Warrant in the first instance to bring up a witness.\nFORM NO. 10.—Warrant to search after information of a particular offence.\nFORM NO. 11.—Warrant to search suspected place of deposit.\nFORM NO. 12.—Bond to keep the peace.\nFORM NO. 13.—Bond for good behaviour.\nFORM NO. 14.—Summons on information of a probable breach of the peace.\nFORM NO. 15.—Warrant of commitment on failure to find security to keep the peace.\nFORM NO. 16.—Warrant of commitment on failure to find security for good behaviour.\nFORM NO. 17.—Warrant to discharge a person imprisoned on failure to give security.\nFORM NO. 18.—Warrant of imprisonment on failure to pay maintenance.\nFORM NO. 19.—Warrant to enforce the payment of maintenance by attachment and sale.\nFORM NO. 20.—Order for the removal of nuisances.\nFORM NO. 21.—Magistrate’s notice and peremptory order.\nFORM NO. 22.—Injunction to provide against imminent danger pending inquiry.\nFORM NO. 23.—Magistrate’s order prohibiting the repetition, etc., of a nuisance.\nFORM NO. 24.—Magistrate’s order to prevent obstruction, riot, etc.\nFORM  NO.  25.—Magistrate’s  order  declaring  party  entitled  to  retain  possession  of  land,\netc., in dispute.\nFORM  NO.  26.—Warrant  of  attachment  in  the  case  of  a  dispute  as  to  the  possession  of\nland, etc.\nFORM NO. 27.—Magistrate’s order prohibiting the doing of anything on land or water.\nFORM NO. 28.—Bond and bail-bond on a preliminary inquiry before a Police Officer.\nFORM NO. 29.—Bond to prosecute or give evidence.\nFORM NO. 30.—Special summons to a person accused of a petty offence.\nFORM NO. 31.—Notice of commitment by Magistrate to Public Prosecutor.\nFORM NO. 32.—Charges.\nI. Charges with one-head.\nII. Charges with two or more heads.\nIII. Charges for theft after previous conviction.\nFORM NO. 33.—Summons to witness.\nFORM NO. 34.—Warrant of commitment on a sentence of imprisonment or fine if passed\nby a Court.\nFORM NO. 35.—Warrant of imprisonment on failure to pay compensation.\nFORM NO. 36.—Order requiring production in Court of person in prison for answering to\ncharge of offence.\nFORM  NO.  37.—Order  requiring  production  in  Court  of  person  in  prison  for  giving\nevidence.\nFORM  NO.  38.—Warrant  of  commitment  in  certain  cases  of  contempt  when  a  fine  is\nimposed.\nFORM  NO.  39.—Magistrate’s  or  Judge’s  warrant  of  commitment  of  witness  refusing  to\nanswer or to produce document.\nFORM NO. 40.—Warrant of commitment under sentence of death.\nFORM NO. 41.—Warrant after a commutation of a sentence.\nFORM NO. 42.—Warrant of execution of a sentence of death.\nFORM NO. 43.—Warrant to levy a fine by attachment and Sale.\nFORM NO. 44.—Warrant for recovery of fine.\nFORM NO. 44A.—Bond for appearance of offender released pending realisation of fine.\nFORM NO. 45.—Bond and bail-bond for attendance before officer in charge of police\nstation or Court.\nFORM NO. 46.—Warrant to discharge a person imprisoned on failure to give security.\nFORM NO. 47.—Warrant of attachment to enforce a bond.\nFORM NO. 48.—Notice to surety on breach of a bond.\nFORM NO. 49.—Notice to surety of forfeiture of bond for good behaviour.\nFORM NO. 50.—Warrant of attachment against a surety.\nFORM NO. 51.—Warrant of commitment of the surety of an accused person admitted to\nbail.\nFORM NO. 52.—Notice to the principal of forfeiture of bond to keep the peace.\nFORM NO. 53.—Warrant to attach the property of the principal on breach of a bond to\nkeep the peace.\nFORM NO. 54.—Warrant of imprisonment on breach of a bond to keep the peace.\nFORM NO. 55.—Warrant of attachment and sale on forfeiture of bond for good behaviour.\nFORM NO. 56.—Warrant of imprisonment on forfeiture of bond for good behaviour.\nAPPENDIX  I.—[Extracts  from  the  Code  of  Criminal  Procedure  (Amendment)  Act,  2005  (25  of\n2005).]\nTHE CODE OF CRIMINAL PROCEDURE, 1973\nACT NO. 2 OF 1974\n[25th January, 1974.]\nAn Act to consolidate and amend the law relating to Criminal Procedure.\nBE it enacted by Parliament in the twenty-fourth Year of the Republic of India as follows:—",
+      "intro": "THE FIRST SCHEDULE.–CLASSIFICATION OF OFFENCES.\nTHE SECOND SCHEDULE.–FORMS.\nFORM NO. 1.—Summons to an accused person.\nFORM NO. 2.—Warrant of arrest.\nFORM NO. 3.—Bond and bail-bond after arrest under a warrant.\nFORM NO. 4.—Proclamation requiring the appearance of a person accused.\nFORM NO. 5.—Proclamation requiring the attendance of a witness.\nFORM NO. 6.—Order of attachment to compel the attendance of a witness.\nFORM NO. 7.—Order of attachment to compel the appearance of a person accused.\nFORM NO. 8.—Order authorising an attachment by the District Magistrate or Collector.\nFORM NO. 9.—Warrant in the first instance to bring up a witness.\nFORM NO. 10.—Warrant to search after information of a particular offence.\nFORM NO. 11.—Warrant to search suspected place of deposit.\nFORM NO. 12.—Bond to keep the peace.\nFORM NO. 13.—Bond for good behaviour.\nFORM NO. 14.—Summons on information of a probable breach of the peace.\nFORM NO. 15.—Warrant of commitment on failure to find security to keep the peace.\nFORM NO. 16.—Warrant of commitment on failure to find security for good behaviour.\nFORM NO. 17.—Warrant to discharge a person imprisoned on failure to give security.\nFORM NO. 18.—Warrant of imprisonment on failure to pay maintenance.\nFORM NO. 19.—Warrant to enforce the payment of maintenance by attachment and sale.\nFORM NO. 20.—Order for the removal of nuisances.\nFORM NO. 21.—Magistrate’s notice and peremptory order.\nFORM NO. 22.—Injunction to provide against imminent danger pending inquiry.\nFORM NO. 23.—Magistrate’s order prohibiting the repetition, etc., of a nuisance.\nFORM NO. 24.—Magistrate’s order to prevent obstruction, riot, etc.\nFORM  NO.  25.—Magistrate’s  order  declaring  party  entitled  to  retain  possession  of  land,\netc., in dispute.\nFORM  NO.  26.—Warrant  of  attachment  in  the  case  of  a  dispute  as  to  the  possession  of\nland, etc.\nFORM NO. 27.—Magistrate’s order prohibiting the doing of anything on land or water.\nFORM NO. 28.—Bond and bail-bond on a preliminary inquiry before a Police Officer.\nFORM NO. 29.—Bond to prosecute or give evidence.\nFORM NO. 30.—Special summons to a person accused of a petty offence.\nFORM NO. 31.—Notice of commitment by Magistrate to Public Prosecutor.\nFORM NO. 32.—Charges.\nI. Charges with one-head.\nII. Charges with two or more heads.\nIII. Charges for theft after previous conviction.\nFORM NO. 33.—Summons to witness.\nFORM NO. 34.—Warrant of commitment on a sentence of imprisonment or fine if passed\nby a Court.\nFORM NO. 35.—Warrant of imprisonment on failure to pay compensation.\nFORM NO. 36.—Order requiring production in Court of person in prison for answering to\ncharge of offence.\nFORM  NO.  37.—Order  requiring  production  in  Court  of  person  in  prison  for  giving\nevidence.\nFORM  NO.  38.—Warrant  of  commitment  in  certain  cases  of  contempt  when  a  fine  is\nimposed.\nFORM  NO.  39.—Magistrate’s  or  Judge’s  warrant  of  commitment  of  witness  refusing  to\nanswer or to produce document.\nFORM NO. 40.—Warrant of commitment under sentence of death.\nFORM NO. 41.—Warrant after a commutation of a sentence.\nFORM NO. 42.—Warrant of execution of a sentence of death.\nFORM NO. 43.—Warrant to levy a fine by attachment and Sale.\nFORM NO. 44.—Warrant for recovery of fine.\nFORM NO. 44A.—Bond for appearance of offender released pending realisation of fine.\nFORM NO. 45.—Bond and bail-bond for attendance before officer in charge of police\nstation or Court.\nFORM NO. 46.—Warrant to discharge a person imprisoned on failure to give security.\nFORM NO. 47.—Warrant of attachment to enforce a bond.\nFORM NO. 48.—Notice to surety on breach of a bond.\nFORM NO. 49.—Notice to surety of forfeiture of bond for good behaviour.\nFORM NO. 50.—Warrant of attachment against a surety.\nFORM NO. 51.—Warrant of commitment of the surety of an accused person admitted to\nbail.\nFORM NO. 52.—Notice to the principal of forfeiture of bond to keep the peace.\nFORM NO. 53.—Warrant to attach the property of the principal on breach of a bond to\nkeep the peace.\nFORM NO. 54.—Warrant of imprisonment on breach of a bond to keep the peace.\nFORM NO. 55.—Warrant of attachment and sale on forfeiture of bond for good behaviour.\nFORM NO. 56.—Warrant of imprisonment on forfeiture of bond for good behaviour.\nAPPENDIX  I.—[Extracts  from  the  Code  of  Criminal  Procedure  (Amendment)  Act,  2005  (25  of\n2005).]\nTHE CODE OF CRIMINAL PROCEDURE, 1973\nACT NO. 2 OF 1974\n[25th January, 1974.]\nAn Act to consolidate and amend the law relating to Criminal Procedure.\nBE it enacted by Parliament in the twenty-fourth Year of the Republic of India as follows:—"
+    },
+    {
+      "section_number": "484",
+      "heading": "Repeal and savings.—(1) The Code of Criminal Procedure, 1898 (5 of 1898), is hereby repealed.",
+      "chapter": {
+        "code": "XXXVII",
+        "title": "MISCELLANEOUS"
+      },
+      "subheading": "Every High Court shall so exercise its superintendence over the Courts of Judicial Magistrates subordinate to it as to",
+      "text": "(2) Notwithstanding such repeal—\n(a) if, immediately before the date on which this Code comes into force, there is any appeal, application,\ntrial,  inquiry  or  investigation  pending,  then,  such  appeal,  application,  trial,  inquiry  or  investigation  shall  be\ndisposed  of,  continued,  held  or  made,  as  the  case  may  be,  in  accordance  with  the  provisions  of  the  Code  of\nCriminal Procedure, 1898 (5 of 1898), as in force immediately before such commencement (hereinafter referred\nto as the old Code), as if this Code had not come into force:\nProvided that every inquiry under Chapter XVIII of the Old Code, which is pending at the commencement\nof this Code, shall be dealt with and disposed of in accordance with the provisions of this Code;\n(b) all notifications published, proclamations issued, powers conferred, forms prescribed, local jurisdictions\ndefined, sentences passed and orders, rules and appointments, not being appointments as Special Magistrates,\nmade under the Old Code and which are in force immediately before the commencement of this Code, shall be\ndeemed, respectively, to have been published, issued, conferred, prescribed, defined, passed or made under the\ncorresponding provisions of this Code;\n(c) any sanction accorded or consent given under the Old Code in pursuance of which no proceeding was\ncommenced  under  that  Code,  shall  be  deemed  to  have  been  accorded  or  given  under  the  corresponding\nprovisions of this Code and proceedings may be commenced under this Code in pursuance of such sanction of\nconsent;\n(d) the provisions of the Old Code shall continue to apply in relation to every prosecution against a Ruler\nwithin the  meaning of article 363 of the Constitution.\n(3) Where the period prescribed for an application or other proceeding under the Old Code had expired on or\nbefore the commencement of this Code, nothing in this Code shall be construed as enabling any such application to\nbe made or proceeding to be commenced under this Code by reason only of the fact that a longer period therefor is\nprescribed by this Code or provisions are made in this Code for the extension of time.\nTHE FIRST SCHEDULE\nCLASSIFICATION OF OFFENCES\nEXPLANATORY NOTES:\n(1)   In regard to offences under the Indian Penal Code, the entries in the second and\nthird columns against a section the number of which is given in the first column are\nnot intended as the definition of, and the punishment prescribed for, the offence  in\nthe Indian Penal Code, but merely as indication of the substance of the section.\n(2)   In  this  Schedule,  (i)  the  expression  “Magistrate  of  the  first  class”  and  “Any\nMagistrate” include Metropolitan Magistrates but not Executive Magistrates; (ii) the\nword “cognizable” stands for “a police officer may arrest without warrant”; and (iii)\nthe  word  “non-cognizable”  stands  for  “a  police  officer  shall  not  arrest  without\nwarrant”.\nI.–OFFENCES UNDER THE INDIAN PENAL CODE\nSection\nOffence\nPunishment\nCognizable or non-\ncognizable\nBailable or Non-\nbailable\nBy what\nCourt triable",
+      "clauses": [
+        {
+          "type": "numeric",
+          "label": "2",
+          "children": [
+            {
+              "type": "alpha_lower",
+              "label": "a",
+              "text": "if, immediately before the date on which this Code comes into force, there is any appeal, application,\ntrial,  inquiry  or  investigation  pending,  then,  such  appeal,  application,  trial,  inquiry  or  investigation  shall  be\ndisposed  of,  continued,  held  or  made,  as  the  case  may  be,  in  accordance  with  the  provisions  of  the  Code  of\nCriminal Procedure, 1898 (5 of 1898), as in force immediately before such commencement (hereinafter referred\nto as the old Code), as if this Code had not come into force:\nProvided that every inquiry under Chapter XVIII of the Old Code, which is pending at the commencement\nof this Code, shall be dealt with and disposed of in accordance with the provisions of this Code;"
+            },
+            {
+              "type": "alpha_lower",
+              "label": "b",
+              "text": "all notifications published, proclamations issued, powers conferred, forms prescribed, local jurisdictions\ndefined, sentences passed and orders, rules and appointments, not being appointments as Special Magistrates,\nmade under the Old Code and which are in force immediately before the commencement of this Code, shall be\ndeemed, respectively, to have been published, issued, conferred, prescribed, defined, passed or made under the\ncorresponding provisions of this Code;"
+            },
+            {
+              "type": "alpha_lower",
+              "label": "c",
+              "text": "any sanction accorded or consent given under the Old Code in pursuance of which no proceeding was\ncommenced  under  that  Code,  shall  be  deemed  to  have  been  accorded  or  given  under  the  corresponding\nprovisions of this Code and proceedings may be commenced under this Code in pursuance of such sanction of\nconsent;"
+            },
+            {
+              "type": "alpha_lower",
+              "label": "d",
+              "text": "the provisions of the Old Code shall continue to apply in relation to every prosecution against a Ruler\nwithin the  meaning of article 363 of the Constitution."
+            }
+          ],
+          "text": "Notwithstanding such repeal—"
+        },
+        {
+          "type": "numeric",
+          "label": "3",
+          "text": "Where the period prescribed for an application or other proceeding under the Old Code had expired on or\nbefore the commencement of this Code, nothing in this Code shall be construed as enabling any such application to\nbe made or proceeding to be commenced under this Code by reason only of the fact that a longer period therefor is\nprescribed by this Code or provisions are made in this Code for the extension of time.\nTHE FIRST SCHEDULE\nCLASSIFICATION OF OFFENCES\nEXPLANATORY NOTES:"
+        },
+        {
+          "type": "numeric",
+          "label": "1",
+          "text": "In regard to offences under the Indian Penal Code, the entries in the second and\nthird columns against a section the number of which is given in the first column are\nnot intended as the definition of, and the punishment prescribed for, the offence  in\nthe Indian Penal Code, but merely as indication of the substance of the section."
+        },
+        {
+          "type": "numeric",
+          "label": "2",
+          "text": "In  this  Schedule,  (i)  the  expression  “Magistrate  of  the  first  class”  and  “Any\nMagistrate” include Metropolitan Magistrates but not Executive Magistrates; (ii) the\nword “cognizable” stands for “a police officer may arrest without warrant”; and (iii)\nthe  word  “non-cognizable”  stands  for  “a  police  officer  shall  not  arrest  without\nwarrant”.\nI.–OFFENCES UNDER THE INDIAN PENAL CODE\nSection\nOffence\nPunishment\nCognizable or non-\ncognizable\nBailable or Non-\nbailable\nBy what\nCourt triable"
+        }
+      ]
+    }
+  ],
+  "chapters": [
+    {
+      "code": "I",
+      "title": "PRELIMINARY"
+    },
+    {
+      "code": "II",
+      "title": "CONSTITUTION OF CRIMINAL COURTS AND OFFICES"
+    },
+    {
+      "code": "III",
+      "title": "POWER OF COURTS"
+    },
+    {
+      "code": "IV",
+      "title": "A.—POWERS OF SUPERIOR OFFICERS OF POLICE"
+    },
+    {
+      "code": "V",
+      "title": "Same as for abetment of"
+    },
+    {
+      "code": "VI",
+      "title": "Death, or imprisonment"
+    },
+    {
+      "code": "VII",
+      "title": "Imprisonment for life, or"
+    },
+    {
+      "code": "VIII",
+      "title": "Cognizable"
+    },
+    {
+      "code": "IX",
+      "title": "Imprisonment for 1 year or"
+    },
+    {
+      "code": "X",
+      "title": "Absconding to avoid service of summons or"
+    },
+    {
+      "code": "XI",
+      "title": "Giving or fabricating false evidence in a"
+    },
+    {
+      "code": "XII",
+      "title": "The Court in which the"
+    },
+    {
+      "code": "XIII",
+      "title": "Fraudulent use of false instrument for weighing."
+    },
+    {
+      "code": "XIV",
+      "title": "Negligently doing any act known to be likely to"
+    },
+    {
+      "code": "XV",
+      "title": "Destroying, damaging or defiling a place of"
+    },
+    {
+      "code": "XVI",
+      "title": "Any"
+    },
+    {
+      "code": "XVII",
+      "title": "Cognizable"
+    },
+    {
+      "code": "XVIII",
+      "title": "Forgery"
+    },
+    {
+      "code": "XIX",
+      "title": "Non-cognizable"
+    },
+    {
+      "code": "XX",
+      "title": "493 A man by deceit causing a woman not"
+    },
+    {
+      "code": "XXI",
+      "title": "Simple imprisonment for 2 years,"
+    },
+    {
+      "code": "XXII",
+      "title": "Insult intended to provoke breach of the"
+    },
+    {
+      "code": "XXIII",
+      "title": "511 Attempting"
+    },
+    {
+      "code": "XXIV",
+      "title": "GENERAL PROVISIONS AS TO INQUIRIES AND TRIALS"
+    },
+    {
+      "code": "XXV",
+      "title": "PROVISIONS AS TO ACCUSED PERSONS OF UNSOUND MIND"
+    },
+    {
+      "code": "XXVI",
+      "title": "not committed in a"
+    },
+    {
+      "code": "XXVII",
+      "title": "THE JUDGMENT"
+    },
+    {
+      "code": "XXVIII",
+      "title": "SUBMISSION OF DEATH SENTENCES FOR CONFIRMATION"
+    },
+    {
+      "code": "XXIX",
+      "title": "APPEALS"
+    },
+    {
+      "code": "XXX",
+      "title": "REFERENCE AND REVISION"
+    },
+    {
+      "code": "XXXI",
+      "title": "TRANSFER OF CRIMINAL CASES"
+    },
+    {
+      "code": "XXXII",
+      "title": "EXECUTION, SUSPENSION, REMISSION AND COMMUTATION OF SENTENCES"
+    },
+    {
+      "code": "XXXIII",
+      "title": "PROVISIONS AS TO BAIL AND BONDS"
+    },
+    {
+      "code": "XXXIV",
+      "title": "DISPOSAL OF PROPERTY"
+    },
+    {
+      "code": "XXXV",
+      "title": "IRREGULAR PROCEEDINGS"
+    },
+    {
+      "code": "XXXVI",
+      "title": "LIMITATION FOR TAKING COGNIZANCE OF CERTAIN OFFENCES"
+    },
+    {
+      "code": "XXXVII",
+      "title": "MISCELLANEOUS"
+    }
+  ]
+}

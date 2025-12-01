@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+.venv/
+.env
+.env.*
+
+# Tooling
+.pytest_cache/
+.mypy_cache/
+coverage/
+.vscode/
+.idea/
+
+# Data & artifacts
+/data/raw/
+/data/processed/
+/data/logs/
+/data/qa/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,2128 @@
+generated_at: '2025-11-29T18:36:22+00:00'
+sources:
+- data\structured\constitution_en.json
+articles:
+- article_number: '1'
+  references:
+    schedule:
+    - FIRST
+- article_number: '3'
+  references:
+    part:
+    - I
+- article_number: '4'
+  references:
+    article:
+    - '2'
+    - '3'
+    - '368'
+    schedule:
+    - FIRST
+    - FOURTH
+- article_number: '6'
+  references:
+    article:
+    - '5'
+    part:
+    - II
+- article_number: '7'
+  references:
+    article:
+    - '6'
+- article_number: '8'
+  references:
+    article:
+    - '5'
+- article_number: '9'
+  references:
+    article:
+    - '5'
+    - '6'
+    - '8'
+- article_number: '13'
+  references:
+    article:
+    - '368'
+- article_number: '14'
+  references:
+    part:
+    - III
+- article_number: '15'
+  references:
+    article:
+    - '19'
+    - '29'
+    - '30'
+- article_number: '16'
+  references:
+    part:
+    - III
+- article_number: '18'
+  references:
+    part:
+    - III
+- article_number: '19'
+  references:
+    part:
+    - III
+- article_number: '21'
+  references:
+    part:
+    - III
+- article_number: '22'
+  references:
+    article:
+    - '22'
+    part:
+    - III
+- article_number: '26'
+  references:
+    part:
+    - III
+- article_number: '28'
+  references:
+    part:
+    - I
+- article_number: '30'
+  references:
+    part:
+    - III
+- article_number: '31'
+  references:
+    article:
+    - '13'
+    - '14'
+    - '19'
+    - '31'
+    - 31A
+    part:
+    - III
+    - IV
+    schedule:
+    - NINTH
+- article_number: '32'
+  references:
+    part:
+    - I
+- article_number: '34'
+  references:
+    part:
+    - I
+- article_number: '35'
+  references:
+    article:
+    - '16'
+    - '32'
+    - '33'
+    - '34'
+    - '35'
+    - '372'
+    part:
+    - III
+- article_number: '36'
+  references:
+    part:
+    - III
+- article_number: '39'
+  references:
+    part:
+    - IV
+- article_number: '43'
+  references:
+    part:
+    - IV
+- article_number: '48'
+  references:
+    part:
+    - IV
+- article_number: '51'
+  references:
+    part:
+    - IVA
+- article_number: '54'
+  references:
+    article:
+    - '55'
+    part:
+    - V
+- article_number: '55'
+  references:
+    part:
+    - V
+- article_number: '56'
+  references:
+    article:
+    - '61'
+- article_number: '58'
+  references:
+    part:
+    - V
+- article_number: '59'
+  references:
+    schedule:
+    - SECOND
+- article_number: '60'
+  references:
+    part:
+    - V
+- article_number: '62'
+  references:
+    article:
+    - '56'
+    part:
+    - V
+- article_number: '64'
+  references:
+    article:
+    - '65'
+    - '97'
+- article_number: '65'
+  references:
+    schedule:
+    - SECOND
+- article_number: '66'
+  references:
+    part:
+    - V
+- article_number: '67'
+  references:
+    part:
+    - V
+- article_number: '68'
+  references:
+    article:
+    - '67'
+- article_number: '70'
+  references:
+    part:
+    - V
+- article_number: '72'
+  references:
+    part:
+    - V
+- article_number: '74'
+  references:
+    part:
+    - V
+    schedule:
+    - FIRST
+- article_number: '75'
+  references:
+    schedule:
+    - SECOND
+    - THIRD
+- article_number: '76'
+  references:
+    part:
+    - V
+- article_number: '78'
+  references:
+    part:
+    - V
+- article_number: '80'
+  references:
+    article:
+    - '331'
+    - '81'
+    part:
+    - V
+    schedule:
+    - FOURTH
+    - TENTH
+- article_number: '83'
+  references:
+    part:
+    - V
+- article_number: '86'
+  references:
+    part:
+    - V
+- article_number: '88'
+  references:
+    part:
+    - I
+- article_number: '90'
+  references:
+    part:
+    - V
+- article_number: '92'
+  references:
+    article:
+    - '100'
+    - '91'
+    part:
+    - I
+- article_number: '93'
+  references:
+    part:
+    - V
+- article_number: '96'
+  references:
+    article:
+    - '100'
+    - '95'
+    part:
+    - I
+    - V
+- article_number: '97'
+  references:
+    schedule:
+    - SECOND
+- article_number: '98'
+  references:
+    part:
+    - V
+- article_number: '99'
+  references:
+    schedule:
+    - THIRD
+- article_number: '100'
+  references:
+    part:
+    - I
+- article_number: '101'
+  references:
+    article:
+    - '101'
+    - '102'
+    part:
+    - V
+    schedule:
+    - FIRST
+- article_number: '102'
+  references:
+    article:
+    - '102'
+    - '99'
+    part:
+    - V
+    schedule:
+    - TENTH
+- article_number: '104'
+  references:
+    article:
+    - '99'
+- article_number: '105'
+  references:
+    part:
+    - I
+    - V
+- article_number: '107'
+  references:
+    article:
+    - '108'
+- article_number: '108'
+  references:
+    article:
+    - '108'
+    part:
+    - V
+- article_number: '109'
+  references:
+    part:
+    - V
+- article_number: '110'
+  references:
+    article:
+    - '109'
+    - '111'
+    part:
+    - V
+- article_number: '112'
+  references:
+    article:
+    - '112'
+    part:
+    - V
+    schedule:
+    - FIRST
+- article_number: '114'
+  references:
+    article:
+    - '113'
+    part:
+    - V
+- article_number: '115'
+  references:
+    article:
+    - '114'
+- article_number: '116'
+  references:
+    article:
+    - '113'
+    - '114'
+    part:
+    - V
+- article_number: '117'
+  references:
+    article:
+    - '110'
+    part:
+    - V
+- article_number: '119'
+  references:
+    article:
+    - '118'
+    part:
+    - V
+- article_number: '120'
+  references:
+    part:
+    - XVII
+    article:
+    - '348'
+- article_number: '123'
+  references:
+    part:
+    - V
+- article_number: '124'
+  references:
+    article:
+    - '124'
+    part:
+    - V
+    schedule:
+    - THIRD
+- article_number: '125'
+  references:
+    schedule:
+    - SECOND
+- article_number: '126'
+  references:
+    part:
+    - V
+- article_number: '128'
+  references:
+    part:
+    - V
+- article_number: '132'
+  references:
+    article:
+    - 134A
+    part:
+    - V
+- article_number: '133'
+  references:
+    article:
+    - '132'
+    - 134A
+    part:
+    - V
+- article_number: '134'
+  references:
+    article:
+    - '132'
+    - '133'
+    - '134'
+    - 134A
+    - '145'
+    part:
+    - V
+- article_number: '135'
+  references:
+    article:
+    - '133'
+    - '134'
+- article_number: '137'
+  references:
+    article:
+    - '145'
+- article_number: '139'
+  references:
+    article:
+    - '32'
+    part:
+    - V
+- article_number: '142'
+  references:
+    part:
+    - V
+- article_number: '143'
+  references:
+    article:
+    - '131'
+- article_number: '145'
+  references:
+    article:
+    - '132'
+    - '134'
+    - 139A
+    - '143'
+    - '317'
+    part:
+    - III
+    - V
+- article_number: '146'
+  references:
+    part:
+    - V
+- article_number: '147'
+  references:
+    part:
+    - VI
+- article_number: '148'
+  references:
+    part:
+    - V
+    schedule:
+    - SECOND
+    - THIRD
+- article_number: '149'
+  references:
+    part:
+    - V
+- article_number: '156'
+  references:
+    part:
+    - VI
+    schedule:
+    - FIRST
+- article_number: '158'
+  references:
+    schedule:
+    - FIRST
+    - SECOND
+- article_number: '159'
+  references:
+    part:
+    - VI
+- article_number: '163'
+  references:
+    part:
+    - VI
+- article_number: '164'
+  references:
+    part:
+    - VI
+    schedule:
+    - SECOND
+    - TENTH
+    - THIRD
+- article_number: '166'
+  references:
+    part:
+    - VI
+- article_number: '168'
+  references:
+    part:
+    - VI
+- article_number: '169'
+  references:
+    article:
+    - '168'
+    - '333'
+    - '368'
+    part:
+    - VI
+- article_number: '171'
+  references:
+    article:
+    - '171'
+    part:
+    - VI
+- article_number: '173'
+  references:
+    part:
+    - VI
+- article_number: '177'
+  references:
+    part:
+    - I
+    - VI
+- article_number: '180'
+  references:
+    part:
+    - VI
+- article_number: '181'
+  references:
+    article:
+    - '180'
+    - '189'
+    part:
+    - I
+- article_number: '183'
+  references:
+    part:
+    - VI
+- article_number: '185'
+  references:
+    article:
+    - '184'
+    - '189'
+    part:
+    - I
+    - VI
+- article_number: '186'
+  references:
+    schedule:
+    - SECOND
+- article_number: '188'
+  references:
+    schedule:
+    - THIRD
+- article_number: '189'
+  references:
+    part:
+    - I
+    - VI
+- article_number: '190'
+  references:
+    article:
+    - '191'
+    part:
+    - VI
+    schedule:
+    - FIRST
+- article_number: '191'
+  references:
+    article:
+    - '191'
+    part:
+    - VI
+    schedule:
+    - FIRST
+    - TENTH
+- article_number: '193'
+  references:
+    article:
+    - '188'
+    part:
+    - VI
+- article_number: '194'
+  references:
+    part:
+    - I
+- article_number: '195'
+  references:
+    part:
+    - VI
+- article_number: '197'
+  references:
+    part:
+    - VI
+- article_number: '198'
+  references:
+    part:
+    - VI
+- article_number: '199'
+  references:
+    article:
+    - '198'
+    - '200'
+    part:
+    - VI
+- article_number: '200'
+  references:
+    part:
+    - VI
+- article_number: '201'
+  references:
+    article:
+    - '200'
+- article_number: '202'
+  references:
+    part:
+    - VI
+- article_number: '203'
+  references:
+    part:
+    - VI
+- article_number: '204'
+  references:
+    article:
+    - '203'
+- article_number: '205'
+  references:
+    article:
+    - '204'
+    part:
+    - VI
+- article_number: '206'
+  references:
+    article:
+    - '203'
+    - '204'
+    part:
+    - VI
+- article_number: '207'
+  references:
+    article:
+    - '199'
+- article_number: '208'
+  references:
+    part:
+    - VI
+- article_number: '209'
+  references:
+    article:
+    - '208'
+- article_number: '210'
+  references:
+    part:
+    - VI
+    - XVII
+    article:
+    - '348'
+- article_number: '213'
+  references:
+    article:
+    - '213'
+    part:
+    - VI
+- article_number: '216'
+  references:
+    article:
+    - '217'
+    part:
+    - VI
+- article_number: '217'
+  references:
+    article:
+    - '124'
+    - '224'
+    part:
+    - VI
+- article_number: '218'
+  references:
+    part:
+    - VI
+- article_number: '219'
+  references:
+    schedule:
+    - FIRST
+    - THIRD
+- article_number: '221'
+  references:
+    schedule:
+    - SECOND
+- article_number: '222'
+  references:
+    part:
+    - VI
+- article_number: '223'
+  references:
+    part:
+    - VI
+- article_number: '225'
+  references:
+    article:
+    - 131A
+    - 226A
+    - '32'
+    part:
+    - III
+    - VI
+- article_number: '227'
+  references:
+    part:
+    - VI
+- article_number: '229'
+  references:
+    article:
+    - 131A
+    - '227'
+    part:
+    - VI
+- article_number: '231'
+  references:
+    article:
+    - '217'
+    - '227'
+    part:
+    - VI
+- article_number: 232A
+  references:
+    article:
+    - '32'
+    part:
+    - III
+- article_number: '233'
+  references:
+    article:
+    - '233'
+    - '235'
+    part:
+    - VI
+- article_number: '236'
+  references:
+    part:
+    - VI
+- article_number: '237'
+  references:
+    part:
+    - C
+    - VI
+    - VII
+    schedule:
+    - FIRST
+    article:
+    - '239'
+    - 239A
+    - 239B
+    - '368'
+- article_number: '240'
+  references:
+    article:
+    - 239A
+    part:
+    - VI
+- article_number: '241'
+  references:
+    article:
+    - '214'
+    part:
+    - C
+    - VI
+    schedule:
+    - FIRST
+- article_number: '242'
+  references:
+    part:
+    - IX
+- article_number: '243'
+  references:
+    article:
+    - 243B
+- article_number: 243B
+  references:
+    part:
+    - IX
+- article_number: 243C
+  references:
+    part:
+    - IX
+- article_number: 243D
+  references:
+    article:
+    - '334'
+    part:
+    - IX
+- article_number: 243E
+  references:
+    part:
+    - IX
+- article_number: 243G
+  references:
+    part:
+    - IX
+    schedule:
+    - ELEVENTH
+- article_number: 243H
+  references:
+    part:
+    - IX
+- article_number: 243K
+  references:
+    part:
+    - IX
+- article_number: 243L
+  references:
+    article:
+    - '239'
+- article_number: 243M
+  references:
+    article:
+    - 243D
+    - '244'
+    - '368'
+    part:
+    - IX
+- article_number: 243N
+  references:
+    part:
+    - IX
+    - IXA
+    article:
+    - 243K
+- article_number: 243P
+  references:
+    article:
+    - 243B
+    - 243Q
+    - 243S
+- article_number: 243Q
+  references:
+    part:
+    - IXA
+- article_number: 243R
+  references:
+    article:
+    - 243S
+    part:
+    - IXA
+- article_number: 243T
+  references:
+    part:
+    - IXA
+    article:
+    - '334'
+- article_number: 243U
+  references:
+    part:
+    - IXA
+- article_number: 243W
+  references:
+    part:
+    - IXA
+    schedule:
+    - TWELFTH
+- article_number: 243Y
+  references:
+    article:
+    - '243'
+    part:
+    - IXA
+- article_number: 243Z
+  references:
+    article:
+    - '239'
+    - 243K
+    - 243Z
+    - '244'
+    - '368'
+    part:
+    - IXA
+- article_number: '244'
+  references:
+    schedule:
+    - FIFTH
+    - FIRST
+    - SIXTH
+    article:
+    - 244A
+    - '368'
+    part:
+    - I
+    - X
+- article_number: '246'
+  references:
+    part:
+    - XI
+    schedule:
+    - FIRST
+    - SEVENTH
+- article_number: '249'
+  references:
+    part:
+    - XI
+- article_number: '252'
+  references:
+    part:
+    - XI
+- article_number: '254'
+  references:
+    part:
+    - XI
+    schedule:
+    - FIRST
+- article_number: '257'
+  references:
+    part:
+    - XI
+    schedule:
+    - FIRST
+- article_number: '258'
+  references:
+    part:
+    - XI
+- article_number: '261'
+  references:
+    part:
+    - XI
+- article_number: '263'
+  references:
+    article:
+    - '280'
+- article_number: '266'
+  references:
+    article:
+    - '267'
+    part:
+    - XII
+- article_number: '267'
+  references:
+    article:
+    - '115'
+    - '116'
+    - '205'
+    - '206'
+- article_number: '268'
+  references:
+    part:
+    - XII
+- article_number: '269'
+  references:
+    article:
+    - '271'
+    part:
+    - XII
+- article_number: '273'
+  references:
+    article:
+    - '270'
+- article_number: '274'
+  references:
+    part:
+    - XII
+- article_number: '275'
+  references:
+    article:
+    - 244A
+    - '275'
+    part:
+    - I
+    - XII
+- article_number: '276'
+  references:
+    article:
+    - '246'
+- article_number: '278'
+  references:
+    part:
+    - XII
+- article_number: '280'
+  references:
+    part:
+    - XII
+- article_number: '283'
+  references:
+    part:
+    - XII
+- article_number: '285'
+  references:
+    part:
+    - XII
+- article_number: '286'
+  references:
+    article:
+    - '366'
+- article_number: '287'
+  references:
+    part:
+    - XII
+- article_number: '289'
+  references:
+    part:
+    - XII
+- article_number: '290'
+  references:
+    part:
+    - I
+    - XII
+- article_number: '293'
+  references:
+    article:
+    - '292'
+    part:
+    - XII
+- article_number: '295'
+  references:
+    part:
+    - XII
+    schedule:
+    - FIRST
+- article_number: '296'
+  references:
+    article:
+    - '363'
+    part:
+    - XII
+- article_number: '299'
+  references:
+    part:
+    - XII
+- article_number: '303'
+  references:
+    article:
+    - '302'
+- article_number: '304'
+  references:
+    article:
+    - '19'
+    - '301'
+    part:
+    - XIII
+- article_number: '306'
+  references:
+    schedule:
+    - FIRST
+- article_number: '310'
+  references:
+    part:
+    - XIV
+    schedule:
+    - FIRST
+- article_number: '311'
+  references:
+    part:
+    - XIV
+- article_number: '312'
+  references:
+    part:
+    - VI
+    - XI
+    - XIV
+    article:
+    - '2'
+    - '236'
+    - '314'
+    - '368'
+- article_number: '315'
+  references:
+    part:
+    - XIV
+- article_number: '316'
+  references:
+    part:
+    - XIV
+    article:
+    - '317'
+- article_number: '317'
+  references:
+    article:
+    - '145'
+    - '317'
+    part:
+    - XIV
+- article_number: '319'
+  references:
+    part:
+    - XIV
+- article_number: '320'
+  references:
+    article:
+    - '16'
+    - '320'
+    - '335'
+    part:
+    - XIV
+- article_number: '323'
+  references:
+    part:
+    - XIVA
+- article_number: 323A
+  references:
+    article:
+    - '136'
+    - 371D
+    part:
+    - XIVA
+- article_number: 323B
+  references:
+    article:
+    - '136'
+    - 31A
+    - 323B
+    - '329'
+    - 329A
+    part:
+    - XI
+    - XIVA
+- article_number: '324'
+  references:
+    part:
+    - XV
+- article_number: '326'
+  references:
+    part:
+    - XV
+- article_number: '329'
+  references:
+    article:
+    - '327'
+    - '328'
+- article_number: '330'
+  references:
+    article:
+    - '332'
+    part:
+    - XVI
+- article_number: '331'
+  references:
+    article:
+    - '81'
+- article_number: '332'
+  references:
+    article:
+    - '170'
+    - '332'
+    part:
+    - XVI
+    schedule:
+    - FIRST
+- article_number: '333'
+  references:
+    article:
+    - '170'
+- article_number: '334'
+  references:
+    part:
+    - XVI
+- article_number: '337'
+  references:
+    part:
+    - XVI
+- article_number: '338'
+  references:
+    article:
+    - '338'
+    - 338A
+    - '340'
+    part:
+    - XVI
+- article_number: '339'
+  references:
+    part:
+    - XVI
+    schedule:
+    - FIRST
+- article_number: '341'
+  references:
+    part:
+    - XVI
+- article_number: '342'
+  references:
+    schedule:
+    - FIRST
+- article_number: '344'
+  references:
+    article:
+    - '343'
+    - '344'
+    - '348'
+    part:
+    - XVII
+    schedule:
+    - EIGHTH
+- article_number: '348'
+  references:
+    article:
+    - '1956'
+    - '348'
+    part:
+    - XVII
+- article_number: '349'
+  references:
+    article:
+    - '344'
+    - '348'
+- article_number: '351'
+  references:
+    article:
+    - '351'
+    part:
+    - XVII
+    schedule:
+    - EIGHTH
+- article_number: '352'
+  references:
+    article:
+    - '352'
+    - '75'
+    part:
+    - XVIII
+- article_number: '354'
+  references:
+    part:
+    - XVIII
+- article_number: '356'
+  references:
+    article:
+    - '356'
+    part:
+    - XVIII
+- article_number: '356'
+  references:
+    article:
+    - '19'
+    - '356'
+    part:
+    - XVIII
+- article_number: '357'
+  references:
+    article:
+    - '356'
+- article_number: '358'
+  references:
+    article:
+    - '19'
+    part:
+    - III
+    - XVIII
+- article_number: '359'
+  references:
+    part:
+    - C
+    - III
+    - XVIII
+- article_number: '360'
+  references:
+    article:
+    - '207'
+    - '360'
+    part:
+    - XVIII
+- article_number: '361'
+  references:
+    article:
+    - '61'
+    part:
+    - XIX
+    schedule:
+    - TENTH
+- article_number: '363'
+  references:
+    article:
+    - '143'
+    part:
+    - XIX
+- article_number: '364'
+  references:
+    part:
+    - XIX
+- article_number: '366'
+  references:
+    article:
+    - '341'
+    - '342'
+    - '352'
+    - '366'
+    part:
+    - XIX
+    schedule:
+    - FIRST
+- article_number: '367'
+  references:
+    article:
+    - '372'
+- article_number: '368'
+  references:
+    article:
+    - '13'
+    - '162'
+    - '2'
+    - '241'
+    - '3'
+    - '368'
+    - '54'
+    - '55'
+    - '73'
+    part:
+    - III
+    - V
+    - VI
+    - XI
+    - XX
+    schedule:
+    - FIRST
+    - SEVENTH
+- article_number: '369'
+  references:
+    article:
+    - '1'
+    - '170'
+    - '238'
+    - '370'
+    - 371A
+    - 371D
+    - '80'
+    part:
+    - I
+    - XXI
+    schedule:
+    - SIXTH
+- article_number: 371E
+  references:
+    article:
+    - '143'
+    - '172'
+    - 371F
+    part:
+    - XXI
+- article_number: '372'
+  references:
+    article:
+    - '372'
+    - '382'
+    - '395'
+    part:
+    - II
+    - XXI
+- article_number: '373'
+  references:
+    article:
+    - '22'
+    - '373'
+    part:
+    - XXI
+- article_number: '374'
+  references:
+    article:
+    - '125'
+    part:
+    - XXI
+- article_number: '376'
+  references:
+    article:
+    - '217'
+    - '221'
+    - '376'
+    part:
+    - XXI
+    schedule:
+    - FIRST
+- article_number: '377'
+  references:
+    article:
+    - '148'
+- article_number: '378'
+  references:
+    article:
+    - '172'
+    - '316'
+    - 378A
+    part:
+    - XXI
+- article_number: '392'
+  references:
+    part:
+    - V
+    article:
+    - '324'
+    - '367'
+    - '391'
+- article_number: '394'
+  references:
+    part:
+    - XXII
+- article_number: 2226A
+  references:
+    article:
+    - '226'
+- article_number: 4144A
+  references:
+    article:
+    - '145'
+    part:
+    - V
+targets:
+  schedule:
+    FIRST:
+    - '1'
+    - '101'
+    - '112'
+    - '156'
+    - '158'
+    - '190'
+    - '191'
+    - '219'
+    - '237'
+    - '241'
+    - '244'
+    - '246'
+    - '254'
+    - '257'
+    - '295'
+    - '306'
+    - '310'
+    - '332'
+    - '339'
+    - '342'
+    - '366'
+    - '368'
+    - '376'
+    - '4'
+    - '74'
+    FOURTH:
+    - '4'
+    - '80'
+    NINTH:
+    - '31'
+    SECOND:
+    - '125'
+    - '148'
+    - '158'
+    - '164'
+    - '186'
+    - '221'
+    - '59'
+    - '65'
+    - '75'
+    - '97'
+    THIRD:
+    - '124'
+    - '148'
+    - '164'
+    - '188'
+    - '219'
+    - '75'
+    - '99'
+    TENTH:
+    - '102'
+    - '164'
+    - '191'
+    - '361'
+    - '80'
+    ELEVENTH:
+    - 243G
+    TWELFTH:
+    - 243W
+    FIFTH:
+    - '244'
+    SIXTH:
+    - '244'
+    - '369'
+    SEVENTH:
+    - '246'
+    - '368'
+    EIGHTH:
+    - '344'
+    - '351'
+  part:
+    I:
+    - '100'
+    - '105'
+    - '177'
+    - '181'
+    - '185'
+    - '189'
+    - '194'
+    - '244'
+    - '275'
+    - '28'
+    - '290'
+    - '3'
+    - '32'
+    - '34'
+    - '369'
+    - '88'
+    - '92'
+    - '96'
+    II:
+    - '372'
+    - '6'
+    III:
+    - '14'
+    - '145'
+    - '16'
+    - '18'
+    - '19'
+    - '21'
+    - '22'
+    - '225'
+    - 232A
+    - '26'
+    - '30'
+    - '31'
+    - '35'
+    - '358'
+    - '359'
+    - '36'
+    - '368'
+    IV:
+    - '31'
+    - '39'
+    - '43'
+    - '48'
+    IVA:
+    - '51'
+    V:
+    - '101'
+    - '102'
+    - '105'
+    - '108'
+    - '109'
+    - '110'
+    - '112'
+    - '114'
+    - '116'
+    - '117'
+    - '119'
+    - '123'
+    - '124'
+    - '126'
+    - '128'
+    - '132'
+    - '133'
+    - '134'
+    - '139'
+    - '142'
+    - '145'
+    - '146'
+    - '148'
+    - '149'
+    - '368'
+    - '392'
+    - 4144A
+    - '54'
+    - '55'
+    - '58'
+    - '60'
+    - '62'
+    - '66'
+    - '67'
+    - '70'
+    - '72'
+    - '74'
+    - '76'
+    - '78'
+    - '80'
+    - '83'
+    - '86'
+    - '90'
+    - '93'
+    - '96'
+    - '98'
+    XVII:
+    - '120'
+    - '210'
+    - '344'
+    - '348'
+    - '351'
+    VI:
+    - '147'
+    - '156'
+    - '159'
+    - '163'
+    - '164'
+    - '166'
+    - '168'
+    - '169'
+    - '171'
+    - '173'
+    - '177'
+    - '180'
+    - '183'
+    - '185'
+    - '189'
+    - '190'
+    - '191'
+    - '193'
+    - '195'
+    - '197'
+    - '198'
+    - '199'
+    - '200'
+    - '202'
+    - '203'
+    - '205'
+    - '206'
+    - '208'
+    - '210'
+    - '213'
+    - '216'
+    - '217'
+    - '218'
+    - '222'
+    - '223'
+    - '225'
+    - '227'
+    - '229'
+    - '231'
+    - '233'
+    - '236'
+    - '237'
+    - '240'
+    - '241'
+    - '312'
+    - '368'
+    C:
+    - '237'
+    - '241'
+    - '359'
+    VII:
+    - '237'
+    IX:
+    - '242'
+    - 243B
+    - 243C
+    - 243D
+    - 243E
+    - 243G
+    - 243H
+    - 243K
+    - 243M
+    - 243N
+    IXA:
+    - 243N
+    - 243Q
+    - 243R
+    - 243T
+    - 243U
+    - 243W
+    - 243Y
+    - 243Z
+    X:
+    - '244'
+    XI:
+    - '246'
+    - '249'
+    - '252'
+    - '254'
+    - '257'
+    - '258'
+    - '261'
+    - '312'
+    - 323B
+    - '368'
+    XII:
+    - '266'
+    - '268'
+    - '269'
+    - '274'
+    - '275'
+    - '278'
+    - '280'
+    - '283'
+    - '285'
+    - '287'
+    - '289'
+    - '290'
+    - '293'
+    - '295'
+    - '296'
+    - '299'
+    XIII:
+    - '304'
+    XIV:
+    - '310'
+    - '311'
+    - '312'
+    - '315'
+    - '316'
+    - '317'
+    - '319'
+    - '320'
+    XIVA:
+    - '323'
+    - 323A
+    - 323B
+    XV:
+    - '324'
+    - '326'
+    XVI:
+    - '330'
+    - '332'
+    - '334'
+    - '337'
+    - '338'
+    - '339'
+    - '341'
+    XVIII:
+    - '352'
+    - '354'
+    - '356'
+    - '358'
+    - '359'
+    - '360'
+    XIX:
+    - '361'
+    - '363'
+    - '364'
+    - '366'
+    XX:
+    - '368'
+    XXI:
+    - '369'
+    - 371E
+    - '372'
+    - '373'
+    - '374'
+    - '376'
+    - '378'
+    XXII:
+    - '394'
+  article:
+    '2':
+    - '312'
+    - '368'
+    - '4'
+    '3':
+    - '368'
+    - '4'
+    '368':
+    - '13'
+    - '169'
+    - '237'
+    - 243M
+    - 243Z
+    - '244'
+    - '312'
+    - '368'
+    - '4'
+    '5':
+    - '6'
+    - '8'
+    - '9'
+    '6':
+    - '7'
+    - '9'
+    '8':
+    - '9'
+    '19':
+    - '15'
+    - '304'
+    - '31'
+    - '356'
+    - '358'
+    '29':
+    - '15'
+    '30':
+    - '15'
+    '22':
+    - '22'
+    - '373'
+    '13':
+    - '31'
+    - '368'
+    '14':
+    - '31'
+    '31':
+    - '31'
+    31A:
+    - '31'
+    - 323B
+    '32':
+    - '139'
+    - '225'
+    - 232A
+    - '35'
+    '16':
+    - '320'
+    - '35'
+    '33':
+    - '35'
+    '34':
+    - '35'
+    '35':
+    - '35'
+    '372':
+    - '35'
+    - '367'
+    - '372'
+    '55':
+    - '368'
+    - '54'
+    '61':
+    - '361'
+    - '56'
+    '56':
+    - '62'
+    '65':
+    - '64'
+    '97':
+    - '64'
+    '67':
+    - '68'
+    '331':
+    - '80'
+    '81':
+    - '331'
+    - '80'
+    '100':
+    - '92'
+    - '96'
+    '91':
+    - '92'
+    '95':
+    - '96'
+    '101':
+    - '101'
+    '102':
+    - '101'
+    - '102'
+    '99':
+    - '102'
+    - '104'
+    '108':
+    - '107'
+    - '108'
+    '109':
+    - '110'
+    '111':
+    - '110'
+    '112':
+    - '112'
+    '113':
+    - '114'
+    - '116'
+    '114':
+    - '115'
+    - '116'
+    '110':
+    - '117'
+    '118':
+    - '119'
+    '348':
+    - '120'
+    - '210'
+    - '344'
+    - '348'
+    - '349'
+    '124':
+    - '124'
+    - '217'
+    134A:
+    - '132'
+    - '133'
+    - '134'
+    '132':
+    - '133'
+    - '134'
+    - '145'
+    '133':
+    - '134'
+    - '135'
+    '134':
+    - '134'
+    - '135'
+    - '145'
+    '145':
+    - '134'
+    - '137'
+    - '317'
+    - 4144A
+    '131':
+    - '143'
+    139A:
+    - '145'
+    '143':
+    - '145'
+    - '363'
+    - 371E
+    '317':
+    - '145'
+    - '316'
+    - '317'
+    '168':
+    - '169'
+    '333':
+    - '169'
+    '171':
+    - '171'
+    '180':
+    - '181'
+    '189':
+    - '181'
+    - '185'
+    '184':
+    - '185'
+    '191':
+    - '190'
+    - '191'
+    '188':
+    - '193'
+    '198':
+    - '199'
+    '200':
+    - '199'
+    - '201'
+    '203':
+    - '204'
+    - '206'
+    '204':
+    - '205'
+    - '206'
+    '199':
+    - '207'
+    '208':
+    - '209'
+    '213':
+    - '213'
+    '217':
+    - '216'
+    - '231'
+    - '376'
+    '224':
+    - '217'
+    131A:
+    - '225'
+    - '229'
+    226A:
+    - '225'
+    '226':
+    - 2226A
+    '227':
+    - '229'
+    - '231'
+    '233':
+    - '233'
+    '235':
+    - '233'
+    '239':
+    - '237'
+    - 243L
+    - 243Z
+    239A:
+    - '237'
+    - '240'
+    239B:
+    - '237'
+    '214':
+    - '241'
+    243B:
+    - '243'
+    - 243P
+    '334':
+    - 243D
+    - 243T
+    243D:
+    - 243M
+    '244':
+    - 243M
+    - 243Z
+    243K:
+    - 243N
+    - 243Z
+    243Q:
+    - 243P
+    243S:
+    - 243P
+    - 243R
+    '243':
+    - 243Y
+    243Z:
+    - 243Z
+    244A:
+    - '244'
+    - '275'
+    '280':
+    - '263'
+    '267':
+    - '266'
+    '115':
+    - '267'
+    '116':
+    - '267'
+    '205':
+    - '267'
+    '206':
+    - '267'
+    '271':
+    - '269'
+    '270':
+    - '273'
+    '275':
+    - '275'
+    '246':
+    - '276'
+    '366':
+    - '286'
+    - '366'
+    '292':
+    - '293'
+    '363':
+    - '296'
+    '302':
+    - '303'
+    '301':
+    - '304'
+    '236':
+    - '312'
+    '314':
+    - '312'
+    '320':
+    - '320'
+    '335':
+    - '320'
+    '136':
+    - 323A
+    - 323B
+    371D:
+    - 323A
+    - '369'
+    323B:
+    - 323B
+    '329':
+    - 323B
+    329A:
+    - 323B
+    '327':
+    - '329'
+    '328':
+    - '329'
+    '332':
+    - '330'
+    - '332'
+    '170':
+    - '332'
+    - '333'
+    - '369'
+    '338':
+    - '338'
+    338A:
+    - '338'
+    '340':
+    - '338'
+    '343':
+    - '344'
+    '344':
+    - '344'
+    - '349'
+    '1956':
+    - '348'
+    '351':
+    - '351'
+    '352':
+    - '352'
+    - '366'
+    '75':
+    - '352'
+    '356':
+    - '356'
+    - '357'
+    '207':
+    - '360'
+    '360':
+    - '360'
+    '341':
+    - '366'
+    '342':
+    - '366'
+    '162':
+    - '368'
+    '241':
+    - '368'
+    '54':
+    - '368'
+    '73':
+    - '368'
+    '1':
+    - '369'
+    '238':
+    - '369'
+    '370':
+    - '369'
+    371A:
+    - '369'
+    '80':
+    - '369'
+    '172':
+    - 371E
+    - '378'
+    371F:
+    - 371E
+    '382':
+    - '372'
+    '395':
+    - '372'
+    '373':
+    - '373'
+    '125':
+    - '374'
+    '221':
+    - '376'
+    '376':
+    - '376'
+    '148':
+    - '377'
+    '316':
+    - '378'
+    378A:
+    - '378'
+    '324':
+    - '392'
+    '367':
+    - '392'
+    '391':
+    - '392'
