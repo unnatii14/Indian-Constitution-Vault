@@ -50,6 +50,9 @@ def healthcheck() -> dict[str, str]:
 def list_acts(registry: ActRegistry = Depends(get_registry)) -> List[ActSummary]:
     payload: List[ActSummary] = []
     for act in registry.list_acts():
+        # Skip acts with no sections (like CONST-1950, CRPC-1973, IPC-1860 which have 0 sections)
+        if len(act.sections) == 0:
+            continue
         payload.append(
             ActSummary(
                 act_id=act.act_id,

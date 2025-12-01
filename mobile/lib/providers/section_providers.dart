@@ -11,5 +11,5 @@ final sectionsProvider = FutureProvider.family<List<SectionSummary>, String>((
   actId,
 ) async {
   final apiService = ref.watch(apiServiceProvider);
-  return apiService.getActSections(actId, limit: 1000);
+  return apiService.getActSections(actId, limit: 200);
 });

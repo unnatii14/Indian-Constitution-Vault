@@ -3,6 +3,7 @@ import 'package:http/http.dart' as http;
 import '../models/act_summary.dart';
 import '../models/section_summary.dart';
 import '../models/section_detail.dart';
+import '../models/ai_explanation.dart';
 import '../config/app_config.dart';
 
 class ApiService {
@@ -99,6 +100,56 @@ class ApiService {
       return List<Map<String, dynamic>>.from(data['items']);
     } else {
       throw Exception('Search failed: ${response.statusCode}');
+    }
+  }
+
+  // AI Explanation
+  Future<AiExplanation> explainSection({
+    required String sectionText,
+    String language = 'en',
+    bool includeExamples = true,
+  }) async {
+    final response = await _client.post(
+      Uri.parse('$baseUrl/api/explain'),
+      headers: {'Content-Type': 'application/json'},
+      body: jsonEncode({
+        'section_text': sectionText,
+        'language': language,
+        'include_examples': includeExamples,
+      }),
+    );
+
+    if (response.statusCode == 200) {
+      return AiExplanation.fromJson(jsonDecode(response.body));
+    } else {
+      throw Exception('AI explanation failed: ${response.statusCode}');
+    }
+  }
+
+  // AI Chat
+  Future<Map<String, String>> chatQuery({
+    required String question,
+    String language = 'en',
+    String? context,
+  }) async {
+    final response = await _client.post(
+      Uri.parse('$baseUrl/api/chat'),
+      headers: {'Content-Type': 'application/json'},
+      body: jsonEncode({
+        'question': question,
+        'language': language,
+        if (context != null) 'context': context,
+      }),
+    );
+
+    if (response.statusCode == 200) {
+      final data = jsonDecode(response.body);
+      return {
+        'answer': data['answer'] as String,
+        'disclaimer': data['disclaimer'] as String,
+      };
+    } else {
+      throw Exception('Chat query failed: ${response.statusCode}');
     }
   }
 

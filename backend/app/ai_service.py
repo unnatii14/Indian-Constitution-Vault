@@ -11,10 +11,11 @@ from typing import Dict, Optional
 # Load environment variables from .env file
 load_dotenv()
 
-# Configure Gemini API
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "AIzaSyCAIVglJb8NOYh77OrE-euTlrGQE4W513U")
-if GEMINI_API_KEY:
-    genai.configure(api_key=GEMINI_API_KEY)
+# Configure Gemini API - MUST be set in .env file
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+if not GEMINI_API_KEY:
+    raise ValueError("GEMINI_API_KEY environment variable is required! Add it to backend/.env file")
+genai.configure(api_key=GEMINI_API_KEY)
 
 
 class LegalExplainerAI:

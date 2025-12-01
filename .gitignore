@@ -8,6 +8,11 @@ __pycache__/
 .env
 .env.*
 
+# Test files
+test_*.py
+check_*.py
+list_*.py
+
 # Tooling
 .pytest_cache/
 .mypy_cache/
@@ -25,3 +30,15 @@ coverage/
 # OS
 .DS_Store
 Thumbs.db
+
+# Flutter
+mobile/.dart_tool/
+mobile/build/
+mobile/.flutter-plugins
+mobile/.flutter-plugins-dependencies
+mobile/.packages
+mobile/pubspec.lock
+
+# Unnecessary docs
+AI_SETUP.md
+MIGRATION_*.md
