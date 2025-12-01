@@ -21,11 +21,14 @@ SectionDetail _$SectionDetailFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$SectionDetail {
+  @JsonKey(name: 'act_id')
   String get actId => throw _privateConstructorUsedError;
+  @JsonKey(name: 'section_number')
   String get sectionNumber => throw _privateConstructorUsedError;
   String get heading => throw _privateConstructorUsedError;
-  String get textEn => throw _privateConstructorUsedError;
-  String? get textHi => throw _privateConstructorUsedError;
+  String get content => throw _privateConstructorUsedError;
+  @JsonKey(name: 'content_hi')
+  String? get contentHi => throw _privateConstructorUsedError;
 
   /// Serializes this SectionDetail to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -45,11 +48,11 @@ abstract class $SectionDetailCopyWith<$Res> {
   ) = _$SectionDetailCopyWithImpl<$Res, SectionDetail>;
   @useResult
   $Res call({
-    String actId,
-    String sectionNumber,
+    @JsonKey(name: 'act_id') String actId,
+    @JsonKey(name: 'section_number') String sectionNumber,
     String heading,
-    String textEn,
-    String? textHi,
+    String content,
+    @JsonKey(name: 'content_hi') String? contentHi,
   });
 }
 
@@ -71,8 +74,8 @@ class _$SectionDetailCopyWithImpl<$Res, $Val extends SectionDetail>
     Object? actId = null,
     Object? sectionNumber = null,
     Object? heading = null,
-    Object? textEn = null,
-    Object? textHi = freezed,
+    Object? content = null,
+    Object? contentHi = freezed,
   }) {
     return _then(
       _value.copyWith(
@@ -88,13 +91,13 @@ class _$SectionDetailCopyWithImpl<$Res, $Val extends SectionDetail>
                 ? _value.heading
                 : heading // ignore: cast_nullable_to_non_nullable
                       as String,
-            textEn: null == textEn
-                ? _value.textEn
-                : textEn // ignore: cast_nullable_to_non_nullable
+            content: null == content
+                ? _value.content
+                : content // ignore: cast_nullable_to_non_nullable
                       as String,
-            textHi: freezed == textHi
-                ? _value.textHi
-                : textHi // ignore: cast_nullable_to_non_nullable
+            contentHi: freezed == contentHi
+                ? _value.contentHi
+                : contentHi // ignore: cast_nullable_to_non_nullable
                       as String?,
           )
           as $Val,
@@ -112,11 +115,11 @@ abstract class _$$SectionDetailImplCopyWith<$Res>
   @override
   @useResult
   $Res call({
-    String actId,
-    String sectionNumber,
+    @JsonKey(name: 'act_id') String actId,
+    @JsonKey(name: 'section_number') String sectionNumber,
     String heading,
-    String textEn,
-    String? textHi,
+    String content,
+    @JsonKey(name: 'content_hi') String? contentHi,
   });
 }
 
@@ -137,8 +140,8 @@ class __$$SectionDetailImplCopyWithImpl<$Res>
     Object? actId = null,
     Object? sectionNumber = null,
     Object? heading = null,
-    Object? textEn = null,
-    Object? textHi = freezed,
+    Object? content = null,
+    Object? contentHi = freezed,
   }) {
     return _then(
       _$SectionDetailImpl(
@@ -154,13 +157,13 @@ class __$$SectionDetailImplCopyWithImpl<$Res>
             ? _value.heading
             : heading // ignore: cast_nullable_to_non_nullable
                   as String,
-        textEn: null == textEn
-            ? _value.textEn
-            : textEn // ignore: cast_nullable_to_non_nullable
+        content: null == content
+            ? _value.content
+            : content // ignore: cast_nullable_to_non_nullable
                   as String,
-        textHi: freezed == textHi
-            ? _value.textHi
-            : textHi // ignore: cast_nullable_to_non_nullable
+        contentHi: freezed == contentHi
+            ? _value.contentHi
+            : contentHi // ignore: cast_nullable_to_non_nullable
                   as String?,
       ),
     );
@@ -171,30 +174,33 @@ class __$$SectionDetailImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$SectionDetailImpl implements _SectionDetail {
   const _$SectionDetailImpl({
-    required this.actId,
-    required this.sectionNumber,
+    @JsonKey(name: 'act_id') required this.actId,
+    @JsonKey(name: 'section_number') required this.sectionNumber,
     required this.heading,
-    required this.textEn,
-    this.textHi,
+    required this.content,
+    @JsonKey(name: 'content_hi') this.contentHi,
   });
 
   factory _$SectionDetailImpl.fromJson(Map<String, dynamic> json) =>
       _$$SectionDetailImplFromJson(json);
 
   @override
+  @JsonKey(name: 'act_id')
   final String actId;
   @override
+  @JsonKey(name: 'section_number')
   final String sectionNumber;
   @override
   final String heading;
   @override
-  final String textEn;
+  final String content;
   @override
-  final String? textHi;
+  @JsonKey(name: 'content_hi')
+  final String? contentHi;
 
   @override
   String toString() {
-    return 'SectionDetail(actId: $actId, sectionNumber: $sectionNumber, heading: $heading, textEn: $textEn, textHi: $textHi)';
+    return 'SectionDetail(actId: $actId, sectionNumber: $sectionNumber, heading: $heading, content: $content, contentHi: $contentHi)';
   }
 
   @override
@@ -206,14 +212,21 @@ class _$SectionDetailImpl implements _SectionDetail {
             (identical(other.sectionNumber, sectionNumber) ||
                 other.sectionNumber == sectionNumber) &&
             (identical(other.heading, heading) || other.heading == heading) &&
-            (identical(other.textEn, textEn) || other.textEn == textEn) &&
-            (identical(other.textHi, textHi) || other.textHi == textHi));
+            (identical(other.content, content) || other.content == content) &&
+            (identical(other.contentHi, contentHi) ||
+                other.contentHi == contentHi));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, actId, sectionNumber, heading, textEn, textHi);
+  int get hashCode => Object.hash(
+    runtimeType,
+    actId,
+    sectionNumber,
+    heading,
+    content,
+    contentHi,
+  );
 
   /// Create a copy of SectionDetail
   /// with the given fields replaced by the non-null parameter values.
@@ -231,26 +244,29 @@ class _$SectionDetailImpl implements _SectionDetail {
 
 abstract class _SectionDetail implements SectionDetail {
   const factory _SectionDetail({
-    required final String actId,
-    required final String sectionNumber,
+    @JsonKey(name: 'act_id') required final String actId,
+    @JsonKey(name: 'section_number') required final String sectionNumber,
     required final String heading,
-    required final String textEn,
-    final String? textHi,
+    required final String content,
+    @JsonKey(name: 'content_hi') final String? contentHi,
   }) = _$SectionDetailImpl;
 
   factory _SectionDetail.fromJson(Map<String, dynamic> json) =
       _$SectionDetailImpl.fromJson;
 
   @override
+  @JsonKey(name: 'act_id')
   String get actId;
   @override
+  @JsonKey(name: 'section_number')
   String get sectionNumber;
   @override
   String get heading;
   @override
-  String get textEn;
+  String get content;
   @override
-  String? get textHi;
+  @JsonKey(name: 'content_hi')
+  String? get contentHi;
 
   /// Create a copy of SectionDetail
   /// with the given fields replaced by the non-null parameter values.

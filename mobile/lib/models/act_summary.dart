@@ -6,9 +6,9 @@ part 'act_summary.g.dart';
 @freezed
 class ActSummary with _$ActSummary {
   const factory ActSummary({
-    required String actId,
+    @JsonKey(name: 'act_id') required String actId,
     required String title,
-    required int sectionCount,
+    @JsonKey(name: 'section_count') required int sectionCount,
     required List<String> languages,
   }) = _ActSummary;
 

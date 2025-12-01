@@ -8,18 +8,18 @@ part of 'section_detail.dart';
 
 _$SectionDetailImpl _$$SectionDetailImplFromJson(Map<String, dynamic> json) =>
     _$SectionDetailImpl(
-      actId: json['actId'] as String,
-      sectionNumber: json['sectionNumber'] as String,
+      actId: json['act_id'] as String,
+      sectionNumber: json['section_number'] as String,
       heading: json['heading'] as String,
-      textEn: json['textEn'] as String,
-      textHi: json['textHi'] as String?,
+      content: json['content'] as String,
+      contentHi: json['content_hi'] as String?,
     );
 
 Map<String, dynamic> _$$SectionDetailImplToJson(_$SectionDetailImpl instance) =>
     <String, dynamic>{
-      'actId': instance.actId,
-      'sectionNumber': instance.sectionNumber,
+      'act_id': instance.actId,
+      'section_number': instance.sectionNumber,
       'heading': instance.heading,
-      'textEn': instance.textEn,
-      'textHi': instance.textHi,
+      'content': instance.content,
+      'content_hi': instance.contentHi,
     };

@@ -21,6 +21,7 @@ SectionSummary _$SectionSummaryFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$SectionSummary {
+  @JsonKey(name: 'section_number')
   String get sectionNumber => throw _privateConstructorUsedError;
   String get heading => throw _privateConstructorUsedError;
   String? get preview => throw _privateConstructorUsedError;
@@ -42,7 +43,11 @@ abstract class $SectionSummaryCopyWith<$Res> {
     $Res Function(SectionSummary) then,
   ) = _$SectionSummaryCopyWithImpl<$Res, SectionSummary>;
   @useResult
-  $Res call({String sectionNumber, String heading, String? preview});
+  $Res call({
+    @JsonKey(name: 'section_number') String sectionNumber,
+    String heading,
+    String? preview,
+  });
 }
 
 /// @nodoc
@@ -93,7 +98,11 @@ abstract class _$$SectionSummaryImplCopyWith<$Res>
   ) = __$$SectionSummaryImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String sectionNumber, String heading, String? preview});
+  $Res call({
+    @JsonKey(name: 'section_number') String sectionNumber,
+    String heading,
+    String? preview,
+  });
 }
 
 /// @nodoc
@@ -137,7 +146,7 @@ class __$$SectionSummaryImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$SectionSummaryImpl implements _SectionSummary {
   const _$SectionSummaryImpl({
-    required this.sectionNumber,
+    @JsonKey(name: 'section_number') required this.sectionNumber,
     required this.heading,
     this.preview,
   });
@@ -146,6 +155,7 @@ class _$SectionSummaryImpl implements _SectionSummary {
       _$$SectionSummaryImplFromJson(json);
 
   @override
+  @JsonKey(name: 'section_number')
   final String sectionNumber;
   @override
   final String heading;
@@ -191,7 +201,7 @@ class _$SectionSummaryImpl implements _SectionSummary {
 
 abstract class _SectionSummary implements SectionSummary {
   const factory _SectionSummary({
-    required final String sectionNumber,
+    @JsonKey(name: 'section_number') required final String sectionNumber,
     required final String heading,
     final String? preview,
   }) = _$SectionSummaryImpl;
@@ -200,6 +210,7 @@ abstract class _SectionSummary implements SectionSummary {
       _$SectionSummaryImpl.fromJson;
 
   @override
+  @JsonKey(name: 'section_number')
   String get sectionNumber;
   @override
   String get heading;

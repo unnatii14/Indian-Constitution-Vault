@@ -10,12 +10,17 @@ from .data_loader import ActRegistry, REGISTRY, SectionRecord
 from .models import (
     ActDetail,
     ActSummary,
+    ChatRequest,
+    ChatResponse,
+    ExplainRequest,
+    ExplainResponse,
     PaginatedSections,
     SearchHit,
     SearchResponse,
     SectionDetail,
     SectionSummary,
 )
+from .ai_service import legal_ai
 
 app = FastAPI(
     title="Constitution Acts API",
@@ -130,6 +135,38 @@ def search_sections(
     return SearchResponse(query=q, total=len(results), items=hits)
 
 
+@app.post("/api/explain", response_model=ExplainResponse)
+def explain_section(request: ExplainRequest) -> ExplainResponse:
+    """Convert complex legal text to simple language using AI."""
+    result = legal_ai.explain_section(
+        section_text=request.section_text,
+        language=request.language,
+        include_examples=request.include_examples
+    )
+    return ExplainResponse(
+        simple_explanation=result.get("simple_explanation", ""),
+        examples=result.get("examples")
+    )
+
+
+@app.post("/api/chat", response_model=ChatResponse)
+def chat_query(request: ChatRequest) -> ChatResponse:
+    """Answer user's legal questions using AI."""
+    answer = legal_ai.chat_query(
+        user_question=request.question,
+        language=request.language,
+        context=request.context
+    )
+    
+    disclaimer = (
+        "यह केवल शैक्षिक जानकारी है, कानूनी सलाह नहीं। गंभीर मामलों में वकील से परामर्श करें।"
+        if request.language == "hi"
+        else "This is educational information only, not legal advice. Consult a lawyer for serious matters."
+    )
+    
+    return ChatResponse(answer=answer, disclaimer=disclaimer)
+
+
 # ---------------------------------------------------------------------------
 
 def _to_section_summary(act_id: str, record: Optional[SectionRecord]) -> Optional[SectionSummary]:
@@ -147,6 +184,6 @@ def _to_section_detail(act_id: str, record: SectionRecord) -> SectionDetail:
         act_id=act_id,
         section_number=record.number,
         heading=record.heading,
-        text_en=record.text_en,
-        text_hi=record.text_hi,
+        content=record.text_en,
+        content_hi=record.text_hi,
     )

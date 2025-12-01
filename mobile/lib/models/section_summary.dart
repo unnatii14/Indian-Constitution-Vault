@@ -6,7 +6,7 @@ part 'section_summary.g.dart';
 @freezed
 class SectionSummary with _$SectionSummary {
   const factory SectionSummary({
-    required String sectionNumber,
+    @JsonKey(name: 'section_number') required String sectionNumber,
     required String heading,
     String? preview,
   }) = _SectionSummary;

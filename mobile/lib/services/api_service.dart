@@ -3,13 +3,15 @@ import 'package:http/http.dart' as http;
 import '../models/act_summary.dart';
 import '../models/section_summary.dart';
 import '../models/section_detail.dart';
+import '../config/app_config.dart';
 
 class ApiService {
   final String baseUrl;
   final http.Client _client;
 
-  ApiService({this.baseUrl = 'http://127.0.0.1:8000', http.Client? client})
-    : _client = client ?? http.Client();
+  ApiService({String? baseUrl, http.Client? client})
+    : baseUrl = baseUrl ?? AppConfig.apiBaseUrl,
+      _client = client ?? http.Client();
 
   // Health check
   Future<bool> checkHealth() async {

@@ -8,7 +8,7 @@ part of 'section_summary.dart';
 
 _$SectionSummaryImpl _$$SectionSummaryImplFromJson(Map<String, dynamic> json) =>
     _$SectionSummaryImpl(
-      sectionNumber: json['sectionNumber'] as String,
+      sectionNumber: json['section_number'] as String,
       heading: json['heading'] as String,
       preview: json['preview'] as String?,
     );
@@ -16,7 +16,7 @@ _$SectionSummaryImpl _$$SectionSummaryImplFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$$SectionSummaryImplToJson(
   _$SectionSummaryImpl instance,
 ) => <String, dynamic>{
-  'sectionNumber': instance.sectionNumber,
+  'section_number': instance.sectionNumber,
   'heading': instance.heading,
   'preview': instance.preview,
 };

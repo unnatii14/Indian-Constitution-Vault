@@ -19,8 +19,8 @@ class SectionDetail(BaseModel):
     act_id: str
     section_number: str
     heading: str
-    text_en: str
-    text_hi: Optional[str] = None
+    content: str = Field(..., description="English content")
+    content_hi: Optional[str] = Field(None, description="Hindi content")
 
 
 class ActSummary(BaseModel):
@@ -53,3 +53,25 @@ class SearchResponse(BaseModel):
     query: str
     total: int
     items: List[SearchHit]
+
+
+class ExplainRequest(BaseModel):
+    section_text: str = Field(..., description="Legal text to explain")
+    language: str = Field("en", description="Language: 'en' or 'hi'")
+    include_examples: bool = Field(True, description="Include real-world examples")
+
+
+class ExplainResponse(BaseModel):
+    simple_explanation: str
+    examples: Optional[str] = None
+
+
+class ChatRequest(BaseModel):
+    question: str = Field(..., description="User's legal question")
+    language: str = Field("en", description="Language: 'en' or 'hi'")
+    context: Optional[str] = Field(None, description="Previous conversation context")
+
+
+class ChatResponse(BaseModel):
+    answer: str
+    disclaimer: str

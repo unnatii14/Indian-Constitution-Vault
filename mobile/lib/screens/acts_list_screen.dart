@@ -32,13 +32,7 @@ class ActsListScreen extends ConsumerWidget {
                 trailing: const Icon(Icons.arrow_forward_ios, size: 16),
                 onTap: () {
                   ref.read(selectedActProvider.notifier).state = act.actId;
-                  // TODO: Navigate to sections list
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(
-                      content: Text('Selected: ${act.title}'),
-                      duration: const Duration(seconds: 1),
-                    ),
-                  );
+                  context.go('/acts/${act.actId}/sections');
                 },
               ),
             );

@@ -59,10 +59,10 @@ class SectionDetailScreen extends ConsumerWidget {
               ),
               const SizedBox(height: 8),
               Text(
-                section.textEn,
+                section.content,
                 style: Theme.of(context).textTheme.bodyLarge,
               ),
-              if (section.textHi != null) ...[
+              if (section.contentHi != null) ...[
                 const SizedBox(height: 24),
                 const Divider(),
                 const SizedBox(height: 16),
@@ -74,7 +74,7 @@ class SectionDetailScreen extends ConsumerWidget {
                 ),
                 const SizedBox(height: 8),
                 Text(
-                  section.textHi!,
+                  section.contentHi!,
                   style: Theme.of(context).textTheme.bodyLarge,
                 ),
               ],

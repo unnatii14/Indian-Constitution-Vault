@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'screens/home_screen.dart';
 import 'screens/acts_list_screen.dart';
+import 'screens/sections_list_screen.dart';
 import 'screens/section_detail_screen.dart';
 
 void main() {
@@ -18,6 +19,13 @@ final goRouterProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: '/acts',
         builder: (context, state) => const ActsListScreen(),
+      ),
+      GoRoute(
+        path: '/acts/:actId/sections',
+        builder: (context, state) {
+          final actId = state.pathParameters['actId']!;
+          return SectionsListScreen(actId: actId);
+        },
       ),
       GoRoute(
         path: '/acts/:actId/sections/:sectionNumber',

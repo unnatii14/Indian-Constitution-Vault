@@ -21,8 +21,10 @@ ActSummary _$ActSummaryFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ActSummary {
+  @JsonKey(name: 'act_id')
   String get actId => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
+  @JsonKey(name: 'section_count')
   int get sectionCount => throw _privateConstructorUsedError;
   List<String> get languages => throw _privateConstructorUsedError;
 
@@ -44,9 +46,9 @@ abstract class $ActSummaryCopyWith<$Res> {
   ) = _$ActSummaryCopyWithImpl<$Res, ActSummary>;
   @useResult
   $Res call({
-    String actId,
+    @JsonKey(name: 'act_id') String actId,
     String title,
-    int sectionCount,
+    @JsonKey(name: 'section_count') int sectionCount,
     List<String> languages,
   });
 }
@@ -105,9 +107,9 @@ abstract class _$$ActSummaryImplCopyWith<$Res>
   @override
   @useResult
   $Res call({
-    String actId,
+    @JsonKey(name: 'act_id') String actId,
     String title,
-    int sectionCount,
+    @JsonKey(name: 'section_count') int sectionCount,
     List<String> languages,
   });
 }
@@ -158,9 +160,9 @@ class __$$ActSummaryImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$ActSummaryImpl implements _ActSummary {
   const _$ActSummaryImpl({
-    required this.actId,
+    @JsonKey(name: 'act_id') required this.actId,
     required this.title,
-    required this.sectionCount,
+    @JsonKey(name: 'section_count') required this.sectionCount,
     required final List<String> languages,
   }) : _languages = languages;
 
@@ -168,10 +170,12 @@ class _$ActSummaryImpl implements _ActSummary {
       _$$ActSummaryImplFromJson(json);
 
   @override
+  @JsonKey(name: 'act_id')
   final String actId;
   @override
   final String title;
   @override
+  @JsonKey(name: 'section_count')
   final int sectionCount;
   final List<String> _languages;
   @override
@@ -227,9 +231,9 @@ class _$ActSummaryImpl implements _ActSummary {
 
 abstract class _ActSummary implements ActSummary {
   const factory _ActSummary({
-    required final String actId,
+    @JsonKey(name: 'act_id') required final String actId,
     required final String title,
-    required final int sectionCount,
+    @JsonKey(name: 'section_count') required final int sectionCount,
     required final List<String> languages,
   }) = _$ActSummaryImpl;
 
@@ -237,10 +241,12 @@ abstract class _ActSummary implements ActSummary {
       _$ActSummaryImpl.fromJson;
 
   @override
+  @JsonKey(name: 'act_id')
   String get actId;
   @override
   String get title;
   @override
+  @JsonKey(name: 'section_count')
   int get sectionCount;
   @override
   List<String> get languages;

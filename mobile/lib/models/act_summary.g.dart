@@ -8,9 +8,9 @@ part of 'act_summary.dart';
 
 _$ActSummaryImpl _$$ActSummaryImplFromJson(Map<String, dynamic> json) =>
     _$ActSummaryImpl(
-      actId: json['actId'] as String,
+      actId: json['act_id'] as String,
       title: json['title'] as String,
-      sectionCount: (json['sectionCount'] as num).toInt(),
+      sectionCount: (json['section_count'] as num).toInt(),
       languages: (json['languages'] as List<dynamic>)
           .map((e) => e as String)
           .toList(),
@@ -18,8 +18,8 @@ _$ActSummaryImpl _$$ActSummaryImplFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$ActSummaryImplToJson(_$ActSummaryImpl instance) =>
     <String, dynamic>{
-      'actId': instance.actId,
+      'act_id': instance.actId,
       'title': instance.title,
-      'sectionCount': instance.sectionCount,
+      'section_count': instance.sectionCount,
       'languages': instance.languages,
     };
