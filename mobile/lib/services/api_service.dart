@@ -153,6 +153,16 @@ class ApiService {
     }
   }
 
+  // Simplified chat method
+  Future<String> chatWithAI({
+    required String question,
+    String language = 'english',
+  }) async {
+    final langCode = language.toLowerCase() == 'hindi' ? 'hi' : 'en';
+    final result = await chatQuery(question: question, language: langCode);
+    return result['answer'] ?? 'Sorry, I could not generate a response.';
+  }
+
   void dispose() {
     _client.close();
   }

@@ -138,7 +138,7 @@ Avoid complex legal terminology. Use everyday language.
         context: Optional[str] = None
     ) -> str:
         """
-        Answer a user's legal question in natural language.
+        Answer a user's legal question in natural language with ethical constraints.
 
         Args:
             user_question: The question asked by user
@@ -146,36 +146,65 @@ Avoid complex legal terminology. Use everyday language.
             context: Optional context (e.g., previous conversation)
 
         Returns:
-            AI-generated answer
+            AI-generated answer with safety guidelines
         """
         if not self.model:
             return "AI service unavailable" if language == "en" else "AI सेवा उपलब्ध नहीं"
 
         if language == "hi":
             system_prompt = """
-आप एक कानूनी सहायक हैं जो भारतीय कानून के बारे में सवालों का जवाब देते हैं।
-बहुत सरल हिंदी में जवाब दें। जटिल कानूनी शब्दों से बचें।
-हमेशा संबंधित धाराओं का उल्लेख करें।
+आप एक शैक्षिक कानूनी सहायक हैं। आप भारतीय कानून की जानकारी सरल भाषा में देते हैं।
 
-महत्वपूर्ण: यह केवल शैक्षिक जानकारी है, कानूनी सलाह नहीं। गंभीर मामलों में वकील से परामर्श करें।
+✔️ आप क्या कर सकते हैं:
+- कानूनी अवधारणाओं और धाराओं को समझाना
+- सामान्य कानूनी अधिकारों की जानकारी देना
+- कानून को सरल भाषा में बताना
+
+❌ आप क्या नहीं कर सकते:
+- व्यक्तिगत कानूनी सलाह देना
+- किसी को क्या करना चाहिए बताना
+- FIR या कानूनी दस्तावेज़ तैयार करना
+- राजनीतिक राय देना
+
+महत्वपूर्ण: यह केवल शैक्षिक जानकारी है। व्यक्तिगत मामलों के लिए वकील से संपर्क करें।
 """
         else:
             system_prompt = """
-You are a legal assistant answering questions about Indian law.
-Answer in very simple English. Avoid complex legal terminology.
-Always mention relevant sections.
+You are an educational legal assistant. You provide information about Indian law in simple language.
 
-Important: This is educational information only, not legal advice. Consult a lawyer for serious matters.
+✔️ What you CAN do:
+- Explain legal concepts and sections
+- Provide general information about legal rights
+- Simplify legal language
+
+❌ What you CANNOT do:
+- Provide personalized legal advice
+- Tell someone what action to take
+- Draft FIRs or legal documents
+- Express political opinions
+
+Important: This is educational information only. Consult a lawyer for personal matters.
+
+Always include this reminder in your responses when appropriate:
+"💡 Note: This is educational information. Consult a qualified lawyer for personalized advice."
 """
 
         full_prompt = f"{system_prompt}\n\n"
         if context:
             full_prompt += f"Previous context: {context}\n\n"
-        full_prompt += f"Question: {user_question}\n\nAnswer:"
+        full_prompt += f"User question: {user_question}\n\nProvide an educational response following the ethical guidelines above:"
 
         try:
             response = self.model.generate_content(full_prompt)
-            return response.text
+            answer = response.text
+            
+            # Add safety disclaimer if not already present
+            if language == "en" and "consult" not in answer.lower() and len(answer) > 100:
+                answer += "\n\n💡 Note: This is educational information. Consult a qualified lawyer for personalized advice."
+            elif language == "hi" and "वकील" not in answer and len(answer) > 100:
+                answer += "\n\n💡 नोट: यह शैक्षिक जानकारी है। व्यक्तिगत सलाह के लिए वकील से संपर्क करें।"
+            
+            return answer
         except Exception as e:
             print(f"Chat query error: {e}")
             return "Error generating response" if language == "en" else "जवाब बनाने में त्रुटि"

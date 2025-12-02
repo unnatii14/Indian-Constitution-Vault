@@ -4,10 +4,13 @@ import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'screens/splash_screen.dart';
 import 'screens/onboarding_screen.dart';
+import 'screens/main_navigation_screen.dart';
 import 'screens/acts_list_screen.dart';
 import 'screens/sections_list_screen.dart';
 import 'screens/section_detail_screen.dart';
 import 'screens/ai_explanation_screen.dart';
+import 'screens/chatbot_screen.dart';
+import 'screens/about_constitution_screen.dart';
 
 void main() {
   runApp(const ProviderScope(child: IndianConstitutionApp()));
@@ -32,10 +35,21 @@ final goRouterProvider = Provider<GoRouter>((ref) {
         path: '/onboarding',
         builder: (context, state) => const OnboardingScreen(),
       ),
-      GoRoute(path: '/', builder: (context, state) => const ActsListScreen()),
+      GoRoute(
+        path: '/',
+        builder: (context, state) => const MainNavigationScreen(),
+      ),
       GoRoute(
         path: '/acts',
         builder: (context, state) => const ActsListScreen(),
+      ),
+      GoRoute(
+        path: '/chatbot',
+        builder: (context, state) => const ChatbotScreen(),
+      ),
+      GoRoute(
+        path: '/about-constitution',
+        builder: (context, state) => const AboutConstitutionScreen(),
       ),
       GoRoute(
         path: '/acts/:actId/sections',
