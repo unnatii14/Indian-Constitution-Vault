@@ -6,9 +6,10 @@
     <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
     
     <application
-        android:label="indian_constitution_vault"
+        android:label="Constitution Vault"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
             android:exported="true"

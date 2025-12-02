@@ -129,5 +129,5 @@ flutter_launcher_icons:
   android: true
   ios: true
   image_path: "assets/icon/app_icon.jpg"
-  adaptive_icon_background: "#FFFFFF"
-  adaptive_icon_foreground: "assets/icon/app_icon.jpg"
+  # No adaptive icon - use full image as-is to avoid text cutoff
+  min_sdk_android: 21  # Android 5.0 and above

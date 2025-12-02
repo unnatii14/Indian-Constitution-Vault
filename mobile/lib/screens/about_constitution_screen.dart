@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class AboutConstitutionScreen extends StatefulWidget {
   const AboutConstitutionScreen({super.key});
@@ -20,47 +21,31 @@ class _AboutConstitutionScreenState extends State<AboutConstitutionScreen> {
           SliverAppBar(
             expandedHeight: 200,
             pinned: true,
+            leading: IconButton(
+              icon: const Icon(Icons.arrow_back),
+              onPressed: () => context.go('/'),
+            ),
             actions: [
-              Padding(
-                padding: const EdgeInsets.only(right: 8.0),
-                child: Center(
-                  child: SegmentedButton<bool>(
-                    segments: const [
-                      ButtonSegment<bool>(
-                        value: false,
-                        label: Text('English', style: TextStyle(fontSize: 12)),
+              IconButton(
+                icon: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Icon(Icons.translate, size: 20),
+                    SizedBox(width: 4),
+                    Text(
+                      _isHindi ? 'हिं' : 'EN',
+                      style: TextStyle(
+                        fontSize: 12,
+                        fontWeight: FontWeight.bold,
                       ),
-                      ButtonSegment<bool>(
-                        value: true,
-                        label: Text('हिंदी', style: TextStyle(fontSize: 12)),
-                      ),
-                    ],
-                    selected: {_isHindi},
-                    onSelectionChanged: (Set<bool> selection) {
-                      setState(() {
-                        _isHindi = selection.first;
-                      });
-                    },
-                    style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.resolveWith((
-                        states,
-                      ) {
-                        if (states.contains(MaterialState.selected)) {
-                          return Colors.white;
-                        }
-                        return Colors.white.withOpacity(0.3);
-                      }),
-                      foregroundColor: MaterialStateProperty.resolveWith((
-                        states,
-                      ) {
-                        if (states.contains(MaterialState.selected)) {
-                          return Colors.orange.shade700;
-                        }
-                        return Colors.white;
-                      }),
                     ),
-                  ),
+                  ],
                 ),
+                onPressed: () {
+                  setState(() {
+                    _isHindi = !_isHindi;
+                  });
+                },
               ),
             ],
             flexibleSpace: FlexibleSpaceBar(
