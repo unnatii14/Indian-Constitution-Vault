@@ -12,11 +12,11 @@ A beautiful, bilingual (English & Hindi) mobile application powered by AI that s
 
 <div align="center">
 
-| Main Navigation | Indian Law Guide | About Constitution |
+| Indian Law Guide | Main Navigation | Section Details |
 |:---:|:---:|:---:|
 | ![Main Screen](app_ss/main_screen.jpg) | ![About](app_ss/about.jpg) | ![Law Guide](app_ss/law_guide.jpg) | 
 
-| Section Details | AI Chat Assistant |
+| AI Chat Assistant | About Constitution |
 |:---:|:---:|
 | ![Section](app_ss/section.jpg) | ![Chat](app_ss/chat.jpg) |
 
