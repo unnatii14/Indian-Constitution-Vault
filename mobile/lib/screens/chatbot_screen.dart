@@ -1,3 +1,5 @@
+import 'dart:io' show Platform;
+import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:speech_to_text/speech_to_text.dart' as stt;
@@ -61,29 +63,90 @@ class _ChatbotScreenState extends ConsumerState<ChatbotScreen> {
     _speech = stt.SpeechToText();
     _flutterTts = FlutterTts();
 
-    // Configure TTS
-    await _flutterTts.setLanguage("en-US");
-    await _flutterTts.setSpeechRate(0.5);
-    await _flutterTts.setVolume(1.0);
-    await _flutterTts.setPitch(1.0);
+    try {
+      // Platform-specific TTS configuration
+      if (!kIsWeb) {
+        if (Platform.isIOS) {
+          await _flutterTts.setSharedInstance(true);
+          await _flutterTts
+              .setIosAudioCategory(IosTextToSpeechAudioCategory.playback, [
+                IosTextToSpeechAudioCategoryOptions.allowBluetooth,
+                IosTextToSpeechAudioCategoryOptions.allowBluetoothA2DP,
+                IosTextToSpeechAudioCategoryOptions.mixWithOthers,
+                IosTextToSpeechAudioCategoryOptions.defaultToSpeaker,
+              ]);
+        } else if (Platform.isAndroid) {
+          await _flutterTts.awaitSpeakCompletion(true);
+        }
+      }
 
-    _flutterTts.setStartHandler(() {
-      setState(() {
-        _isSpeaking = true;
-      });
-    });
+      // Configure TTS for clear male voice
+      await _flutterTts.setLanguage("en-US");
+      await _flutterTts.setSpeechRate(0.45); // Slightly slower for clarity
+      await _flutterTts.setVolume(1.0);
+      await _flutterTts.setPitch(0.8); // Lower pitch for male voice
 
-    _flutterTts.setCompletionHandler(() {
-      setState(() {
-        _isSpeaking = false;
+      // Set handlers
+      _flutterTts.setStartHandler(() {
+        if (mounted) {
+          setState(() {
+            _isSpeaking = true;
+          });
+        }
       });
-    });
 
-    _flutterTts.setErrorHandler((msg) {
-      setState(() {
-        _isSpeaking = false;
+      _flutterTts.setCompletionHandler(() {
+        if (mounted) {
+          setState(() {
+            _isSpeaking = false;
+          });
+        }
       });
-    });
+
+      _flutterTts.setErrorHandler((msg) {
+        if (mounted) {
+          setState(() {
+            _isSpeaking = false;
+          });
+          print('TTS Error: $msg');
+        }
+      });
+
+      _flutterTts.setCancelHandler(() {
+        if (mounted) {
+          setState(() {
+            _isSpeaking = false;
+          });
+        }
+      });
+
+      // Get available languages
+      List<dynamic> languages = await _flutterTts.getLanguages;
+      print('Available TTS languages: $languages');
+
+      // Check if Hindi is available
+      bool hindiAvailable = languages.any(
+        (lang) =>
+            lang.toString().toLowerCase().contains('hi') ||
+            lang.toString().toLowerCase().contains('hindi'),
+      );
+      print('Hindi TTS available: $hindiAvailable');
+    } catch (e) {
+      print('Error initializing TTS: $e');
+    }
+  }
+
+  Future<bool> _isLanguageAvailable(String languageCode) async {
+    try {
+      List<dynamic> languages = await _flutterTts.getLanguages;
+      return languages.any(
+        (lang) =>
+            lang.toString().toLowerCase().contains(languageCode.toLowerCase()),
+      );
+    } catch (e) {
+      print('Error checking language availability: $e');
+      return false;
+    }
   }
 
   @override
@@ -177,22 +240,75 @@ class _ChatbotScreenState extends ConsumerState<ChatbotScreen> {
   }
 
   Future<void> _speak(String text, {String? language}) async {
-    await _flutterTts.stop();
+    try {
+      await _flutterTts.stop();
 
-    // Detect language if not provided
-    final isHindi =
-        language == 'hindi' || language == 'hi' || _containsHindi(text);
+      // Detect language if not provided
+      final isHindi =
+          language == 'hindi' || language == 'hi' || _containsHindi(text);
 
-    // Set appropriate language for TTS
-    if (isHindi) {
-      await _flutterTts.setLanguage('hi-IN'); // Hindi
-      await _flutterTts.setSpeechRate(0.4); // Slower for Hindi
-    } else {
-      await _flutterTts.setLanguage('en-US'); // English
-      await _flutterTts.setSpeechRate(0.5);
+      print(
+        'Speaking in ${isHindi ? "Hindi" : "English"}: ${text.substring(0, text.length > 50 ? 50 : text.length)}...',
+      );
+
+      // Set appropriate language for TTS with fallback
+      if (isHindi) {
+        // Check if Hindi is available
+        bool hindiAvailable = await _isLanguageAvailable('hi');
+
+        if (hindiAvailable) {
+          await _flutterTts.setLanguage('hi-IN'); // Hindi
+          await _flutterTts.setSpeechRate(0.35); // Slower for Hindi clarity
+          await _flutterTts.setPitch(0.85); // Slightly lower for male voice
+          print('Using Hindi TTS (hi-IN)');
+        } else {
+          // Fallback to English if Hindi not available
+          print('Hindi TTS not available, falling back to English');
+          await _flutterTts.setLanguage('en-US');
+          await _flutterTts.setSpeechRate(0.45);
+          await _flutterTts.setPitch(0.8);
+
+          if (mounted) {
+            ScaffoldMessenger.of(context).showSnackBar(
+              const SnackBar(
+                content: Text(
+                  'Hindi voice not available on this device. Playing in English.',
+                ),
+                backgroundColor: Colors.orange,
+                duration: Duration(seconds: 3),
+              ),
+            );
+          }
+        }
+      } else {
+        await _flutterTts.setLanguage('en-US'); // English
+        await _flutterTts.setSpeechRate(0.45); // Clear speech rate
+        await _flutterTts.setPitch(0.8); // Lower pitch for male voice
+      }
+
+      await _flutterTts.setVolume(1.0);
+
+      var result = await _flutterTts.speak(text);
+      print('TTS speak result: $result');
+
+      if (result == 0) {
+        print('TTS failed to start');
+        if (mounted) {
+          setState(() => _isSpeaking = false);
+        }
+      }
+    } catch (e) {
+      print('Error in _speak: $e');
+      if (mounted) {
+        setState(() => _isSpeaking = false);
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('Audio playback error: $e'),
+            backgroundColor: Colors.red,
+          ),
+        );
+      }
     }
-
-    await _flutterTts.speak(text);
   }
 
   Future<void> _stopSpeaking() async {
@@ -648,57 +764,151 @@ class _ChatBubbleState extends State<_ChatBubble> {
   }
 
   Future<void> _configureTts() async {
-    await _tts.setLanguage("en-US");
-    await _tts.setSpeechRate(0.5);
-    await _tts.setVolume(1.0);
-    await _tts.setPitch(1.0);
-
-    _tts.setStartHandler(() {
-      if (mounted) {
-        setState(() => _isSpeaking = true);
+    try {
+      // Platform-specific TTS configuration
+      if (!kIsWeb) {
+        if (Platform.isIOS) {
+          await _tts.setSharedInstance(true);
+          await _tts
+              .setIosAudioCategory(IosTextToSpeechAudioCategory.playback, [
+                IosTextToSpeechAudioCategoryOptions.allowBluetooth,
+                IosTextToSpeechAudioCategoryOptions.allowBluetoothA2DP,
+                IosTextToSpeechAudioCategoryOptions.mixWithOthers,
+                IosTextToSpeechAudioCategoryOptions.defaultToSpeaker,
+              ]);
+        } else if (Platform.isAndroid) {
+          await _tts.awaitSpeakCompletion(true);
+        }
       }
-    });
 
-    _tts.setCompletionHandler(() {
-      if (mounted) {
-        setState(() => _isSpeaking = false);
-      }
-    });
+      await _tts.setLanguage("en-US");
+      await _tts.setSpeechRate(0.45); // Clear speech
+      await _tts.setVolume(1.0);
+      await _tts.setPitch(0.8); // Lower pitch for male voice
 
-    _tts.setErrorHandler((msg) {
-      if (mounted) {
-        setState(() => _isSpeaking = false);
-      }
-    });
+      _tts.setStartHandler(() {
+        if (mounted) {
+          setState(() => _isSpeaking = true);
+        }
+      });
+
+      _tts.setCompletionHandler(() {
+        if (mounted) {
+          setState(() => _isSpeaking = false);
+        }
+      });
+
+      _tts.setErrorHandler((msg) {
+        if (mounted) {
+          setState(() => _isSpeaking = false);
+        }
+        print('Chat bubble TTS Error: $msg');
+      });
+
+      _tts.setCancelHandler(() {
+        if (mounted) {
+          setState(() => _isSpeaking = false);
+        }
+      });
+    } catch (e) {
+      print('Error configuring chat bubble TTS: $e');
+    }
   }
 
   bool _containsHindi(String text) {
     // Check if text contains Devanagari script (Hindi)
-    final hindiPattern = RegExp(r'[\\u0900-\\u097F]');
+    final hindiPattern = RegExp(r'[\u0900-\u097F]');
     return hindiPattern.hasMatch(text);
   }
 
+  Future<bool> _isLanguageAvailable(String languageCode) async {
+    try {
+      List<dynamic> languages = await _tts.getLanguages;
+      return languages.any(
+        (lang) =>
+            lang.toString().toLowerCase().contains(languageCode.toLowerCase()),
+      );
+    } catch (e) {
+      print('Error checking language availability: $e');
+      return false;
+    }
+  }
+
   Future<void> _toggleSpeech() async {
-    if (_isSpeaking) {
-      await _tts.stop();
-      setState(() => _isSpeaking = false);
-    } else {
-      // Detect language from message text or use stored language
-      final isHindi =
-          widget.message.language == 'hindi' ||
-          widget.message.language == 'hi' ||
-          _containsHindi(widget.message.text);
-
-      // Set appropriate language for TTS
-      if (isHindi) {
-        await _tts.setLanguage('hi-IN'); // Hindi
-        await _tts.setSpeechRate(0.4); // Slower for Hindi
+    try {
+      if (_isSpeaking) {
+        await _tts.stop();
+        setState(() => _isSpeaking = false);
       } else {
-        await _tts.setLanguage('en-US'); // English
-        await _tts.setSpeechRate(0.5);
-      }
+        // Detect language from message text or use stored language
+        final isHindi =
+            widget.message.language == 'hindi' ||
+            widget.message.language == 'hi' ||
+            _containsHindi(widget.message.text);
 
-      await _tts.speak(widget.message.text);
+        print('Chat bubble speaking in ${isHindi ? "Hindi" : "English"}');
+
+        // Set appropriate language for TTS with fallback
+        if (isHindi) {
+          // Check if Hindi is available
+          bool hindiAvailable = await _isLanguageAvailable('hi');
+
+          if (hindiAvailable) {
+            await _tts.setLanguage('hi-IN'); // Hindi
+            await _tts.setSpeechRate(0.35); // Slower for Hindi clarity
+            await _tts.setPitch(0.85); // Slightly lower for male voice
+            print('Chat bubble using Hindi TTS (hi-IN)');
+          } else {
+            // Fallback to English if Hindi not available
+            print(
+              'Hindi TTS not available in chat bubble, falling back to English',
+            );
+            await _tts.setLanguage('en-US');
+            await _tts.setSpeechRate(0.45);
+            await _tts.setPitch(0.8);
+
+            if (mounted) {
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(
+                  content: Text(
+                    'Hindi voice not available. Playing in English.',
+                  ),
+                  backgroundColor: Colors.orange,
+                  duration: Duration(seconds: 2),
+                ),
+              );
+            }
+          }
+        } else {
+          await _tts.setLanguage('en-US'); // English
+          await _tts.setSpeechRate(0.45); // Clear speech rate
+          await _tts.setPitch(0.8); // Lower pitch for male voice
+        }
+
+        await _tts.setVolume(1.0);
+
+        var result = await _tts.speak(widget.message.text);
+        print('Chat bubble TTS result: $result');
+
+        if (result == 0) {
+          print('Chat bubble TTS failed to start');
+          if (mounted) {
+            setState(() => _isSpeaking = false);
+          }
+        }
+      }
+    } catch (e) {
+      print('Error in chat bubble toggle speech: $e');
+      if (mounted) {
+        setState(() => _isSpeaking = false);
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('Speech error: ${e.toString()}'),
+            backgroundColor: Colors.red,
+            duration: const Duration(seconds: 2),
+          ),
+        );
+      }
     }
   }
 
