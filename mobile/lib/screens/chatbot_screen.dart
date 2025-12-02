@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:speech_to_text/speech_to_text.dart' as stt;
+import 'package:flutter_tts/flutter_tts.dart';
+import 'package:permission_handler/permission_handler.dart';
 import '../services/api_service.dart';
 import '../providers/act_providers.dart';
 
@@ -29,9 +32,17 @@ class _ChatbotScreenState extends ConsumerState<ChatbotScreen> {
   bool _isLoading = false;
   bool _showDisclaimer = true;
 
+  // Voice features
+  late stt.SpeechToText _speech;
+  late FlutterTts _flutterTts;
+  bool _isListening = false;
+  bool _isSpeaking = false;
+  String _recognizedText = '';
+
   @override
   void initState() {
     super.initState();
+    _initializeVoiceFeatures();
     // Add welcome message
     _messages.add(
       ChatMessage(
@@ -43,10 +54,40 @@ class _ChatbotScreenState extends ConsumerState<ChatbotScreen> {
     );
   }
 
+  Future<void> _initializeVoiceFeatures() async {
+    _speech = stt.SpeechToText();
+    _flutterTts = FlutterTts();
+
+    // Configure TTS
+    await _flutterTts.setLanguage("en-US");
+    await _flutterTts.setSpeechRate(0.5);
+    await _flutterTts.setVolume(1.0);
+    await _flutterTts.setPitch(1.0);
+
+    _flutterTts.setStartHandler(() {
+      setState(() {
+        _isSpeaking = true;
+      });
+    });
+
+    _flutterTts.setCompletionHandler(() {
+      setState(() {
+        _isSpeaking = false;
+      });
+    });
+
+    _flutterTts.setErrorHandler((msg) {
+      setState(() {
+        _isSpeaking = false;
+      });
+    });
+  }
+
   @override
   void dispose() {
     _messageController.dispose();
     _scrollController.dispose();
+    _flutterTts.stop();
     super.dispose();
   }
 
@@ -60,6 +101,80 @@ class _ChatbotScreenState extends ConsumerState<ChatbotScreen> {
         );
       }
     });
+  }
+
+  Future<void> _startListening() async {
+    // Request microphone permission
+    var status = await Permission.microphone.request();
+    if (!status.isGranted) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('Microphone permission is required for voice input'),
+          backgroundColor: Colors.red,
+        ),
+      );
+      return;
+    }
+
+    bool available = await _speech.initialize(
+      onStatus: (status) {
+        if (status == 'done' || status == 'notListening') {
+          setState(() => _isListening = false);
+        }
+      },
+      onError: (error) {
+        setState(() => _isListening = false);
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('Error: ${error.errorMsg}'),
+            backgroundColor: Colors.red,
+          ),
+        );
+      },
+    );
+
+    if (available) {
+      setState(() {
+        _isListening = true;
+        _recognizedText = '';
+      });
+
+      _speech.listen(
+        onResult: (result) {
+          setState(() {
+            _recognizedText = result.recognizedWords;
+            _messageController.text = _recognizedText;
+          });
+        },
+        listenFor: const Duration(seconds: 30),
+        pauseFor: const Duration(seconds: 3),
+        partialResults: true,
+        cancelOnError: true,
+        listenMode: stt.ListenMode.confirmation,
+      );
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('Speech recognition not available'),
+          backgroundColor: Colors.red,
+        ),
+      );
+    }
+  }
+
+  Future<void> _stopListening() async {
+    await _speech.stop();
+    setState(() => _isListening = false);
+  }
+
+  Future<void> _speak(String text) async {
+    await _flutterTts.stop();
+    await _flutterTts.speak(text);
+  }
+
+  Future<void> _stopSpeaking() async {
+    await _flutterTts.stop();
+    setState(() => _isSpeaking = false);
   }
 
   Future<void> _sendMessage() async {
@@ -112,6 +227,9 @@ class _ChatbotScreenState extends ConsumerState<ChatbotScreen> {
         _isLoading = false;
       });
       _scrollToBottom();
+
+      // Automatically speak the response
+      await _speak(_formatSafeResponse(response));
     } catch (e) {
       setState(() {
         _messages.add(
@@ -251,6 +369,24 @@ class _ChatbotScreenState extends ConsumerState<ChatbotScreen> {
             child: SafeArea(
               child: Row(
                 children: [
+                  // Voice input button
+                  CircleAvatar(
+                    backgroundColor: _isListening
+                        ? Colors.red.shade600
+                        : Colors.green.shade600,
+                    radius: 24,
+                    child: IconButton(
+                      icon: Icon(
+                        _isListening ? Icons.mic : Icons.mic_none,
+                        color: Colors.white,
+                        size: 20,
+                      ),
+                      onPressed: _isListening
+                          ? _stopListening
+                          : _startListening,
+                    ),
+                  ),
+                  const SizedBox(width: 12),
                   Expanded(
                     child: TextField(
                       controller: _messageController,
@@ -259,10 +395,17 @@ class _ChatbotScreenState extends ConsumerState<ChatbotScreen> {
                         fontSize: 15,
                       ),
                       decoration: InputDecoration(
-                        hintText: 'Ask about laws, rights, sections...',
+                        hintText: _isListening
+                            ? 'Listening...'
+                            : 'Ask about laws, rights, sections...',
                         hintStyle: TextStyle(
-                          color: Colors.grey.shade500,
+                          color: _isListening
+                              ? Colors.red.shade400
+                              : Colors.grey.shade500,
                           fontSize: 15,
+                          fontStyle: _isListening
+                              ? FontStyle.italic
+                              : FontStyle.normal,
                         ),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(24),
@@ -390,22 +533,77 @@ class _ChatbotScreenState extends ConsumerState<ChatbotScreen> {
   }
 }
 
-class _ChatBubble extends StatelessWidget {
+class _ChatBubble extends StatefulWidget {
   final ChatMessage message;
 
   const _ChatBubble({required this.message});
+
+  @override
+  State<_ChatBubble> createState() => _ChatBubbleState();
+}
+
+class _ChatBubbleState extends State<_ChatBubble> {
+  late FlutterTts _tts;
+  bool _isSpeaking = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _tts = FlutterTts();
+    _configureTts();
+  }
+
+  Future<void> _configureTts() async {
+    await _tts.setLanguage("en-US");
+    await _tts.setSpeechRate(0.5);
+    await _tts.setVolume(1.0);
+    await _tts.setPitch(1.0);
+
+    _tts.setStartHandler(() {
+      if (mounted) {
+        setState(() => _isSpeaking = true);
+      }
+    });
+
+    _tts.setCompletionHandler(() {
+      if (mounted) {
+        setState(() => _isSpeaking = false);
+      }
+    });
+
+    _tts.setErrorHandler((msg) {
+      if (mounted) {
+        setState(() => _isSpeaking = false);
+      }
+    });
+  }
+
+  Future<void> _toggleSpeech() async {
+    if (_isSpeaking) {
+      await _tts.stop();
+      setState(() => _isSpeaking = false);
+    } else {
+      await _tts.speak(widget.message.text);
+    }
+  }
+
+  @override
+  void dispose() {
+    _tts.stop();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),
       child: Row(
-        mainAxisAlignment: message.isUser
+        mainAxisAlignment: widget.message.isUser
             ? MainAxisAlignment.end
             : MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          if (!message.isUser) ...[
+          if (!widget.message.isUser) ...[
             CircleAvatar(
               backgroundColor: Colors.green.shade100,
               radius: 16,
@@ -418,37 +616,94 @@ class _ChatBubble extends StatelessWidget {
             const SizedBox(width: 8),
           ],
           Flexible(
-            child: Container(
-              padding: const EdgeInsets.all(14),
-              decoration: BoxDecoration(
-                color: message.isUser
-                    ? Colors.green.shade600
-                    : Colors.grey.shade100,
-                borderRadius: BorderRadius.circular(16).copyWith(
-                  topLeft: message.isUser
-                      ? const Radius.circular(16)
-                      : const Radius.circular(4),
-                  topRight: message.isUser
-                      ? const Radius.circular(4)
-                      : const Radius.circular(16),
+            child: Column(
+              crossAxisAlignment: widget.message.isUser
+                  ? CrossAxisAlignment.end
+                  : CrossAxisAlignment.start,
+              children: [
+                Container(
+                  padding: const EdgeInsets.all(14),
+                  decoration: BoxDecoration(
+                    color: widget.message.isUser
+                        ? Colors.green.shade600
+                        : Colors.grey.shade100,
+                    borderRadius: BorderRadius.circular(16).copyWith(
+                      topLeft: widget.message.isUser
+                          ? const Radius.circular(16)
+                          : const Radius.circular(4),
+                      topRight: widget.message.isUser
+                          ? const Radius.circular(4)
+                          : const Radius.circular(16),
+                    ),
+                  ),
+                  child: Text(
+                    widget.message.text,
+                    style: TextStyle(
+                      color: widget.message.isUser
+                          ? Colors.white
+                          : Colors.black87,
+                      fontSize: 15,
+                      height: 1.4,
+                    ),
+                  ),
                 ),
-              ),
-              child: Text(
-                message.text,
-                style: TextStyle(
-                  color: message.isUser ? Colors.white : Colors.black87,
-                  fontSize: 15,
-                  height: 1.4,
-                ),
-              ),
+                // Speaker button for AI messages
+                if (!widget.message.isUser) ...[
+                  const SizedBox(height: 4),
+                  InkWell(
+                    onTap: _toggleSpeech,
+                    borderRadius: BorderRadius.circular(20),
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 12,
+                        vertical: 6,
+                      ),
+                      decoration: BoxDecoration(
+                        color: _isSpeaking
+                            ? Colors.red.shade50
+                            : Colors.green.shade50,
+                        borderRadius: BorderRadius.circular(20),
+                        border: Border.all(
+                          color: _isSpeaking
+                              ? Colors.red.shade200
+                              : Colors.green.shade200,
+                        ),
+                      ),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Icon(
+                            _isSpeaking ? Icons.volume_off : Icons.volume_up,
+                            size: 14,
+                            color: _isSpeaking
+                                ? Colors.red.shade700
+                                : Colors.green.shade700,
+                          ),
+                          const SizedBox(width: 4),
+                          Text(
+                            _isSpeaking ? 'Stop' : 'Listen',
+                            style: TextStyle(
+                              fontSize: 11,
+                              fontWeight: FontWeight.w600,
+                              color: _isSpeaking
+                                  ? Colors.red.shade700
+                                  : Colors.green.shade700,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ],
             ),
           ),
-          if (message.isUser) ...[
+          if (widget.message.isUser) ...[
             const SizedBox(width: 8),
             CircleAvatar(
               backgroundColor: Colors.green.shade600,
               radius: 16,
-              child: Icon(Icons.person, color: Colors.white, size: 18),
+              child: const Icon(Icons.person, color: Colors.white, size: 18),
             ),
           ],
         ],
