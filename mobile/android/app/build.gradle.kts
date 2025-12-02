@@ -8,7 +8,7 @@ plugins {
 android {
     namespace = "com.indianlaw.indian_constitution_vault"
     compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
+    // ndkVersion removed to use default NDK
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
