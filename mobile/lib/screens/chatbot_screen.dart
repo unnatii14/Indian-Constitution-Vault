@@ -10,11 +10,13 @@ class ChatMessage {
   final String text;
   final bool isUser;
   final DateTime timestamp;
+  final String? language;
 
   ChatMessage({
     required this.text,
     required this.isUser,
     required this.timestamp,
+    this.language,
   });
 }
 
@@ -38,6 +40,7 @@ class _ChatbotScreenState extends ConsumerState<ChatbotScreen> {
   bool _isListening = false;
   bool _isSpeaking = false;
   String _recognizedText = '';
+  String _selectedLanguage = 'english'; // 'english' or 'hindi'
 
   @override
   void initState() {
@@ -167,8 +170,28 @@ class _ChatbotScreenState extends ConsumerState<ChatbotScreen> {
     setState(() => _isListening = false);
   }
 
-  Future<void> _speak(String text) async {
+  bool _containsHindi(String text) {
+    // Check if text contains Devanagari script (Hindi)
+    final hindiPattern = RegExp(r'[\u0900-\u097F]');
+    return hindiPattern.hasMatch(text);
+  }
+
+  Future<void> _speak(String text, {String? language}) async {
     await _flutterTts.stop();
+
+    // Detect language if not provided
+    final isHindi =
+        language == 'hindi' || language == 'hi' || _containsHindi(text);
+
+    // Set appropriate language for TTS
+    if (isHindi) {
+      await _flutterTts.setLanguage('hi-IN'); // Hindi
+      await _flutterTts.setSpeechRate(0.4); // Slower for Hindi
+    } else {
+      await _flutterTts.setLanguage('en-US'); // English
+      await _flutterTts.setSpeechRate(0.5);
+    }
+
     await _flutterTts.speak(text);
   }
 
@@ -213,23 +236,26 @@ class _ChatbotScreenState extends ConsumerState<ChatbotScreen> {
       final apiService = ref.read(apiServiceProvider);
       final response = await apiService.chatWithAI(
         question: message,
-        language: 'english',
+        language: _selectedLanguage,
       );
+
+      final formattedResponse = _formatSafeResponse(response);
 
       setState(() {
         _messages.add(
           ChatMessage(
-            text: _formatSafeResponse(response),
+            text: formattedResponse,
             isUser: false,
             timestamp: DateTime.now(),
+            language: _selectedLanguage,
           ),
         );
         _isLoading = false;
       });
       _scrollToBottom();
 
-      // Automatically speak the response
-      await _speak(_formatSafeResponse(response));
+      // Automatically speak the response in correct language
+      await _speak(formattedResponse, language: _selectedLanguage);
     } catch (e) {
       setState(() {
         _messages.add(
@@ -292,6 +318,74 @@ class _ChatbotScreenState extends ConsumerState<ChatbotScreen> {
         foregroundColor: Colors.white,
         elevation: 0,
         actions: [
+          // Language selector
+          PopupMenuButton<String>(
+            icon: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Icon(Icons.language, color: Colors.white, size: 20),
+                const SizedBox(width: 4),
+                Text(
+                  _selectedLanguage == 'hindi' ? 'हिं' : 'EN',
+                  style: const TextStyle(
+                    fontSize: 12,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
+              ],
+            ),
+            onSelected: (String value) {
+              setState(() {
+                _selectedLanguage = value;
+              });
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: Text(
+                    value == 'hindi'
+                        ? 'भाषा हिंदी में बदल दी गई'
+                        : 'Language changed to English',
+                  ),
+                  duration: const Duration(seconds: 2),
+                  backgroundColor: Colors.green.shade600,
+                ),
+              );
+            },
+            itemBuilder: (BuildContext context) => [
+              PopupMenuItem(
+                value: 'english',
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.check,
+                      size: 18,
+                      color: _selectedLanguage == 'english'
+                          ? Colors.green.shade600
+                          : Colors.transparent,
+                    ),
+                    const SizedBox(width: 8),
+                    const Text('English'),
+                  ],
+                ),
+              ),
+              PopupMenuItem(
+                value: 'hindi',
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.check,
+                      size: 18,
+                      color: _selectedLanguage == 'hindi'
+                          ? Colors.green.shade600
+                          : Colors.transparent,
+                    ),
+                    const SizedBox(width: 8),
+                    const Text('हिंदी (Hindi)'),
+                  ],
+                ),
+              ),
+            ],
+          ),
           IconButton(
             icon: const Icon(Icons.info_outline),
             onPressed: () => _showGuidelinesDialog(),
@@ -578,11 +672,32 @@ class _ChatBubbleState extends State<_ChatBubble> {
     });
   }
 
+  bool _containsHindi(String text) {
+    // Check if text contains Devanagari script (Hindi)
+    final hindiPattern = RegExp(r'[\\u0900-\\u097F]');
+    return hindiPattern.hasMatch(text);
+  }
+
   Future<void> _toggleSpeech() async {
     if (_isSpeaking) {
       await _tts.stop();
       setState(() => _isSpeaking = false);
     } else {
+      // Detect language from message text or use stored language
+      final isHindi =
+          widget.message.language == 'hindi' ||
+          widget.message.language == 'hi' ||
+          _containsHindi(widget.message.text);
+
+      // Set appropriate language for TTS
+      if (isHindi) {
+        await _tts.setLanguage('hi-IN'); // Hindi
+        await _tts.setSpeechRate(0.4); // Slower for Hindi
+      } else {
+        await _tts.setLanguage('en-US'); // English
+        await _tts.setSpeechRate(0.5);
+      }
+
       await _tts.speak(widget.message.text);
     }
   }
