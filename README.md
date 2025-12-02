@@ -14,7 +14,7 @@ A beautiful, bilingual (English & Hindi) mobile application powered by AI that s
 
 | Main Navigation | Indian Law Guide | About Constitution |
 |:---:|:---:|:---:|
-| ![Main Screen](app_ss/main_screen.jpg) | ![Law Guide](app_ss/law_guide.jpg) | ![About](app_ss/about.jpg) |
+| ![Main Screen](app_ss/main_screen.jpg) | ![About](app_ss/about.jpg) | ![Law Guide](app_ss/law_guide.jpg) | 
 
 | Section Details | AI Chat Assistant |
 |:---:|:---:|
