@@ -16,9 +16,9 @@ A beautiful, bilingual (English & Hindi) mobile application powered by AI that s
 |:---:|:---:|:---:|
 | ![Main Screen](app_ss/main_screen.jpg) | ![Law Guide](app_ss/law_guide.jpg) | ![About](app_ss/about.jpg) |
 
-| Section Details | AI Chat Assistant | Voice Features |
-|:---:|:---:|:---:|
-| ![Section](app_ss/section.jpg) | ![Chat](app_ss/chat.jpg) | ![Voice](app_ss/voice.jpg) |
+| Section Details | AI Chat Assistant |
+|:---:|:---:|
+| ![Section](app_ss/section.jpg) | ![Chat](app_ss/chat.jpg) |
 
 </div>
 
@@ -114,11 +114,6 @@ Constitution_app/
 - [x] Material Design 3 UI
 - [x] Voice-to-voice interaction (TTS + STT)
 - [x] 2000+ legal sections database
-- [ ] Offline mode with caching
-- [ ] Bookmarks & favorites
-- [ ] Regional language support
-- [ ] Supreme Court judgments
-- [ ] Constitution articles
 
 ## 🤝 Contributing
 
