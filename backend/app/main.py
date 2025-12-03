@@ -26,7 +26,7 @@ from .ai_service import legal_ai
 
 app = FastAPI(
     title="Constitution Acts API",
-    version="0.1.0",
+    version="0.1.1",
     description="REST API to browse BNS, BNSS, and BSA structured datasets.",
 )
 
