@@ -9,8 +9,12 @@ final apiServiceProvider = Provider<ApiService>((ref) {
 
 // Acts List Provider
 final actsProvider = FutureProvider<List<ActSummary>>((ref) async {
+  print('[PROVIDER] actsProvider called');
   final apiService = ref.watch(apiServiceProvider);
-  return apiService.listActs();
+  print('[PROVIDER] apiService obtained: ${apiService.baseUrl}');
+  final result = await apiService.listActs();
+  print('[PROVIDER] Acts loaded: ${result.length}');
+  return result;
 });
 
 // Selected Act Provider

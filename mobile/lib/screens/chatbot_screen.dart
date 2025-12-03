@@ -390,10 +390,13 @@ class _ChatbotScreenState extends ConsumerState<ChatbotScreen> {
       }
 
       final apiService = ref.read(apiServiceProvider);
+      print('[CHATBOT] Sending message to API: $message');
+      print('[CHATBOT] API Base URL: ${apiService.baseUrl}');
       final response = await apiService.chatWithAI(
         question: message,
         language: _selectedLanguage,
       );
+      print('[CHATBOT] Got response from API');
 
       final formattedResponse = _formatSafeResponse(response);
 

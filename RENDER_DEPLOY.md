@@ -76,12 +76,12 @@ ls Dockerfile render.yaml requirements.txt
 
    ```
    Key: GEMINI_API_KEY
-   Value: AIzaSyCsI7BLfgoHotq2UpP09aqptp-bl-LzP4w
+   Value: <Your Gemini API key from https://aistudio.google.com/apikey>
    ```
 
    ```
    Key: APP_API_KEY
-   Value: r_yMTVAe20WCVEogqOAgFgLkN-NSL79Gw8YMscfAysA
+   Value: <Generate with: python -c "import secrets; print(secrets.token_urlsafe(32))">
    ```
 
 6. **Create Web Service**
@@ -127,7 +127,7 @@ ls Dockerfile render.yaml requirements.txt
    ```bash
    curl -X POST https://constitution-vault-api.onrender.com/api/chat \
      -H "Content-Type: application/json" \
-     -H "X-API-Key: r_yMTVAe20WCVEogqOAgFgLkN-NSL79Gw8YMscfAysA" \
+     -H "X-API-Key: YOUR_APP_API_KEY" \
      -d '{"question":"What is BNS?","language":"en"}'
    ```
 

@@ -1,24 +1,22 @@
 class AppConfig {
-  // For Android device: Use your computer's local IP (check with ipconfig)
-  // For Android emulator: Use 10.0.2.2
-  // For iOS simulator: Use localhost
-  static const String apiBaseUrl = String.fromEnvironment(
-    'API_BASE_URL',
-    defaultValue:
-        'http://192.168.0.102:8000', // Your local IP for physical device
-  );
+  // Production API Configuration
+  // IMPORTANT: This is the live backend URL deployed on Render.com
+  static const String apiBaseUrl =
+      'https://constitution-vault-api.onrender.com';
 
   // API Key for backend authentication
-  // IMPORTANT: Change this to match your backend's APP_API_KEY
-  // For production, use environment variables or secure storage
-  static const String apiKey = String.fromEnvironment(
-    'API_KEY',
-    defaultValue: 'your-api-key-here-change-in-production',
-  );
+  // This key must match the APP_API_KEY environment variable on Render
+  static const String apiKey = 'r_yMTVAe20WCVEogqOAgFgLkN-NSL79Gw8YMscfAysA';
 
-  // Alternative: Use your computer's local IP for physical device
-  // Find your IP with: ipconfig (Windows) or ifconfig (Mac/Linux)
-  // Example: 'http://192.168.1.100:8000'
+  // For local development, temporarily change apiBaseUrl to:
+  // - Android device: 'http://YOUR_PC_IP:8000' (find IP with ipconfig)
+  // - Android emulator: 'http://10.0.2.2:8000'
+  // - iOS simulator: 'http://localhost:8000'
+
+  // For local development, temporarily change apiBaseUrl to:
+  // - Android device: 'http://YOUR_PC_IP:8000' (find IP with ipconfig)
+  // - Android emulator: 'http://10.0.2.2:8000'
+  // - iOS simulator: 'http://localhost:8000'
 
   static const bool isDebug = bool.fromEnvironment('dart.vm.product') == false;
 }

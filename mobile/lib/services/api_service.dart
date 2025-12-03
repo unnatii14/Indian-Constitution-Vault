@@ -35,13 +35,22 @@ class ApiService {
 
   // List all acts
   Future<List<ActSummary>> listActs() async {
-    final response = await _client.get(Uri.parse('$baseUrl/acts'));
+    print('[API] Fetching acts from: $baseUrl/acts');
+    try {
+      final response = await _client.get(Uri.parse('$baseUrl/acts'));
+      print('[API] Acts response: ${response.statusCode}');
 
-    if (response.statusCode == 200) {
-      final List<dynamic> data = jsonDecode(response.body);
-      return data.map((json) => ActSummary.fromJson(json)).toList();
-    } else {
-      throw Exception('Failed to load acts: ${response.statusCode}');
+      if (response.statusCode == 200) {
+        final List<dynamic> data = jsonDecode(response.body);
+        print('[API] Acts loaded: ${data.length} items');
+        return data.map((json) => ActSummary.fromJson(json)).toList();
+      } else {
+        print('[API] Failed to load acts: ${response.statusCode}');
+        throw Exception('Failed to load acts: ${response.statusCode}');
+      }
+    } catch (e) {
+      print('[API] Error loading acts: $e');
+      rethrow;
     }
   }
 
@@ -137,24 +146,37 @@ class ApiService {
     String language = 'en',
     String? context,
   }) async {
-    final response = await _client.post(
-      Uri.parse('$baseUrl/api/chat'),
-      headers: _getHeaders(),
-      body: jsonEncode({
-        'question': question,
-        'language': language,
-        if (context != null) 'context': context,
-      }),
-    );
+    print('[API] Sending chat request to: $baseUrl/api/chat');
+    print('[API] Question: $question');
+    print('[API] Headers: ${_getHeaders()}');
 
-    if (response.statusCode == 200) {
-      final data = jsonDecode(response.body);
-      return {
-        'answer': data['answer'] as String,
-        'disclaimer': data['disclaimer'] as String,
-      };
-    } else {
-      throw Exception('Chat query failed: ${response.statusCode}');
+    try {
+      final response = await _client.post(
+        Uri.parse('$baseUrl/api/chat'),
+        headers: _getHeaders(),
+        body: jsonEncode({
+          'question': question,
+          'language': language,
+          if (context != null) 'context': context,
+        }),
+      );
+
+      print('[API] Chat response: ${response.statusCode}');
+
+      if (response.statusCode == 200) {
+        final data = jsonDecode(response.body);
+        print('[API] Chat successful');
+        return {
+          'answer': data['answer'] as String,
+          'disclaimer': data['disclaimer'] as String,
+        };
+      } else {
+        print('[API] Chat failed: ${response.statusCode} - ${response.body}');
+        throw Exception('Chat query failed: ${response.statusCode}');
+      }
+    } catch (e) {
+      print('[API] Error in chat: $e');
+      rethrow;
     }
   }
 
