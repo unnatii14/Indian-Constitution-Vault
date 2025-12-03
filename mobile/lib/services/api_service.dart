@@ -14,6 +14,11 @@ class ApiService {
     : baseUrl = baseUrl ?? AppConfig.apiBaseUrl,
       _client = client ?? http.Client();
 
+  // Helper method to get headers with API key
+  Map<String, String> _getHeaders() {
+    return {'Content-Type': 'application/json', 'X-API-Key': AppConfig.apiKey};
+  }
+
   // Health check
   Future<bool> checkHealth() async {
     try {
@@ -111,7 +116,7 @@ class ApiService {
   }) async {
     final response = await _client.post(
       Uri.parse('$baseUrl/api/explain'),
-      headers: {'Content-Type': 'application/json'},
+      headers: _getHeaders(),
       body: jsonEncode({
         'section_text': sectionText,
         'language': language,
@@ -134,7 +139,7 @@ class ApiService {
   }) async {
     final response = await _client.post(
       Uri.parse('$baseUrl/api/chat'),
-      headers: {'Content-Type': 'application/json'},
+      headers: _getHeaders(),
       body: jsonEncode({
         'question': question,
         'language': language,

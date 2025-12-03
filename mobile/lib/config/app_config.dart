@@ -8,6 +8,12 @@ class AppConfig {
         'http://192.168.0.102:8000', // Your local IP for physical device
   );
 
+  // API Key for backend authentication
+  static const String apiKey = String.fromEnvironment(
+    'API_KEY',
+    defaultValue: 'constitution-vault-secret-key-2025',
+  );
+
   // Alternative: Use your computer's local IP for physical device
   // Find your IP with: ipconfig (Windows) or ifconfig (Mac/Linux)
   // Example: 'http://192.168.1.100:8000'

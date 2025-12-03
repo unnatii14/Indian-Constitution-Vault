@@ -2,9 +2,11 @@
 from __future__ import annotations
 
 from typing import List, Optional
+import os
 
-from fastapi import Depends, FastAPI, HTTPException, Query
+from fastapi import Depends, FastAPI, HTTPException, Query, Request, status
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.security import APIKeyHeader
 
 from .data_loader import ActRegistry, REGISTRY, SectionRecord
 from .models import (
@@ -35,6 +37,23 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# API Key Authentication
+API_KEY_NAME = "X-API-Key"
+api_key_header = APIKeyHeader(name=API_KEY_NAME, auto_error=False)
+
+# Load API key from environment variable
+VALID_API_KEY = os.getenv("APP_API_KEY", "constitution-vault-secret-key-2025")
+
+
+async def verify_api_key(api_key: str = Depends(api_key_header)):
+    """Verify the API key for protected endpoints."""
+    if api_key != VALID_API_KEY:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Invalid or missing API key"
+        )
+    return api_key
 
 
 def get_registry() -> ActRegistry:
@@ -139,7 +158,7 @@ def search_sections(
 
 
 @app.post("/api/explain", response_model=ExplainResponse)
-def explain_section(request: ExplainRequest) -> ExplainResponse:
+def explain_section(request: ExplainRequest, api_key: str = Depends(verify_api_key)) -> ExplainResponse:
     """Convert complex legal text to simple language using AI."""
     result = legal_ai.explain_section(
         section_text=request.section_text,
@@ -153,7 +172,7 @@ def explain_section(request: ExplainRequest) -> ExplainResponse:
 
 
 @app.post("/api/chat", response_model=ChatResponse)
-def chat_query(request: ChatRequest) -> ChatResponse:
+def chat_query(request: ChatRequest, api_key: str = Depends(verify_api_key)) -> ChatResponse:
     """Answer user's legal questions using AI."""
     answer = legal_ai.chat_query(
         user_question=request.question,
