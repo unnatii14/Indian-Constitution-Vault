@@ -9,9 +9,11 @@ class AppConfig {
   );
 
   // API Key for backend authentication
+  // IMPORTANT: Change this to match your backend's APP_API_KEY
+  // For production, use environment variables or secure storage
   static const String apiKey = String.fromEnvironment(
     'API_KEY',
-    defaultValue: 'constitution-vault-secret-key-2025',
+    defaultValue: 'your-api-key-here-change-in-production',
   );
 
   // Alternative: Use your computer's local IP for physical device
