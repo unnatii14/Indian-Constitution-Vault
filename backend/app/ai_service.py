@@ -24,7 +24,7 @@ class LegalExplainerAI:
     def __init__(self):
         self.model = None
         if GEMINI_API_KEY:
-            self.model = genai.GenerativeModel('gemini-2.5-flash')
+            self.model = genai.GenerativeModel('gemini-1.5-flash')
 
     def explain_section(
         self,
@@ -206,7 +206,10 @@ Always include this reminder in your responses when appropriate:
             
             return answer
         except Exception as e:
-            print(f"Chat query error: {e}")
+            print(f"❌ Chat query error: {e}")
+            print(f"❌ Error type: {type(e).__name__}")
+            import traceback
+            traceback.print_exc()
             return "Error generating response" if language == "en" else "जवाब बनाने में त्रुटि"
 
 
