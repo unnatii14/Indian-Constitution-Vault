@@ -76,7 +76,13 @@ A beautiful, bilingual (English & Hindi) mobile application powered by AI that s
 ```bash
 cd backend
 pip install -r requirements.txt
-echo "GEMINI_API_KEY=your_key_here" > .env
+
+# Copy .env.example to .env and add your keys
+cp .env.example .env
+# Edit .env and add:
+# GEMINI_API_KEY=your_gemini_key
+# APP_API_KEY=generate_secure_key (see SECURITY.md)
+
 python -m uvicorn app.main:app --reload
 ```
 
@@ -84,9 +90,13 @@ python -m uvicorn app.main:app --reload
 ```bash
 cd mobile
 flutter pub get
+
+# Update lib/config/app_config.dart with your backend URL and API key
 dart run build_runner build --delete-conflicting-outputs
 flutter run
 ```
+
+**⚠️ Important:** See [SECURITY.md](SECURITY.md) for API authentication setup before deploying to production.
 
 ## 📐 Architecture
 
