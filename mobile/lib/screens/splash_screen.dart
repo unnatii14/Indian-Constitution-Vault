@@ -69,112 +69,147 @@ class _SplashScreenState extends State<SplashScreen>
     final screenHeight = MediaQuery.of(context).size.height;
     final screenWidth = MediaQuery.of(context).size.width;
 
-    return Scaffold(
-      body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [
-              Colors.orange.shade800,
-              Colors.deepOrange.shade600,
-              Colors.orange.shade900,
-            ],
+    return WillPopScope(
+      onWillPop: () async => false, // Disable back button on splash
+      child: Scaffold(
+        body: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [
+                Colors.orange.shade800,
+                Colors.deepOrange.shade600,
+                Colors.orange.shade900,
+              ],
+            ),
           ),
-        ),
-        child: Center(
-          child: AnimatedBuilder(
-            animation: _controller,
-            builder: (context, child) {
-              return FadeTransition(
-                opacity: _fadeAnimation,
-                child: ScaleTransition(
-                  scale: _scaleAnimation,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      // Netflix-style large logo
-                      Container(
-                        width: screenWidth * 0.5, // 50% of screen width
-                        height: screenWidth * 0.5,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(40),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black.withOpacity(0.3),
-                              blurRadius: 30,
-                              spreadRadius: 10,
-                            ),
-                          ],
-                        ),
-                        child: Icon(
-                          Icons.gavel,
-                          size: screenWidth * 0.3, // Scales with screen
-                          color: Colors.deepOrange.shade700,
-                        ),
-                      ),
-                      SizedBox(height: screenHeight * 0.05),
-                      // App title
-                      const Text(
-                        'Indian Law Guide',
-                        style: TextStyle(
-                          fontSize: 38,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                          letterSpacing: 2,
-                          shadows: [
-                            Shadow(
-                              color: Colors.black26,
-                              offset: Offset(2, 2),
-                              blurRadius: 4,
-                            ),
-                          ],
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                      const SizedBox(height: 12),
-                      // Subtitle
-                      const Text(
-                        'भारतीय कानून गाइड',
-                        style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.w500,
-                          color: Colors.white90,
-                          letterSpacing: 1,
-                        ),
-                      ),
-                      const SizedBox(height: 24),
-                      // Tagline
-                      Container(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 24,
-                          vertical: 12,
-                        ),
-                        decoration: BoxDecoration(
-                          color: Colors.white.withOpacity(0.1),
-                          borderRadius: BorderRadius.circular(20),
-                          border: Border.all(
-                            color: Colors.white.withOpacity(0.3),
-                            width: 1,
+          child: Center(
+            child: AnimatedBuilder(
+              animation: _controller,
+              builder: (context, child) {
+                return FadeTransition(
+                  opacity: _fadeAnimation,
+                  child: ScaleTransition(
+                    scale: _scaleAnimation,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        // Extra large Netflix-style logo
+                        Container(
+                          width:
+                              screenWidth * 0.65, // Bigger: 65% of screen width
+                          height: screenWidth * 0.65,
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(50),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black.withOpacity(0.4),
+                                blurRadius: 40,
+                                spreadRadius: 15,
+                              ),
+                            ],
+                          ),
+                          child: Icon(
+                            Icons.gavel,
+                            size: screenWidth * 0.4, // Bigger icon
+                            color: Colors.deepOrange.shade700,
                           ),
                         ),
-                        child: const Text(
-                          'Constitution • Rights • Laws • Judgments',
+                        SizedBox(height: screenHeight * 0.06),
+                        // App title with glow effect
+                        Text(
+                          'Indian Law Guide',
                           style: TextStyle(
-                            fontSize: 14,
+                            fontSize: 42,
+                            fontWeight: FontWeight.bold,
                             color: Colors.white,
-                            letterSpacing: 0.8,
-                            fontWeight: FontWeight.w400,
+                            letterSpacing: 2.5,
+                            shadows: [
+                              Shadow(
+                                color: Colors.orange.shade300,
+                                offset: const Offset(0, 0),
+                                blurRadius: 20,
+                              ),
+                              const Shadow(
+                                color: Colors.black26,
+                                offset: Offset(2, 2),
+                                blurRadius: 4,
+                              ),
+                            ],
                           ),
                           textAlign: TextAlign.center,
                         ),
-                      ),
-                    ],
+                        const SizedBox(height: 16),
+                        // Hindi subtitle with glow
+                        Text(
+                          'भारतीय कानून गाइड',
+                          style: TextStyle(
+                            fontSize: 24,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.white,
+                            letterSpacing: 1.5,
+                            shadows: [
+                              Shadow(
+                                color: Colors.orange.shade200,
+                                offset: const Offset(0, 0),
+                                blurRadius: 15,
+                              ),
+                            ],
+                          ),
+                        ),
+                        const SizedBox(height: 28),
+                        // Enhanced tagline
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 28,
+                            vertical: 14,
+                          ),
+                          decoration: BoxDecoration(
+                            color: Colors.white.withOpacity(0.15),
+                            borderRadius: BorderRadius.circular(25),
+                            border: Border.all(
+                              color: Colors.white.withOpacity(0.4),
+                              width: 2,
+                            ),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black.withOpacity(0.2),
+                                blurRadius: 10,
+                                spreadRadius: 2,
+                              ),
+                            ],
+                          ),
+                          child: const Text(
+                            'Constitution • Rights • Laws • Justice',
+                            style: TextStyle(
+                              fontSize: 15,
+                              color: Colors.white,
+                              letterSpacing: 1.2,
+                              fontWeight: FontWeight.w500,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                        SizedBox(height: screenHeight * 0.05),
+                        // Loading indicator
+                        SizedBox(
+                          width: 40,
+                          height: 40,
+                          child: CircularProgressIndicator(
+                            strokeWidth: 3,
+                            valueColor: AlwaysStoppedAnimation<Color>(
+                              Colors.white.withOpacity(0.7),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-              );
-            },
+                );
+              },
+            ),
           ),
         ),
       ),
