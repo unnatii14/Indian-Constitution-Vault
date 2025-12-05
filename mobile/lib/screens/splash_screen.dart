@@ -39,22 +39,29 @@ class _SplashScreenState extends State<SplashScreen>
 
     _controller.forward();
 
-    // Navigate after animation
-    Future.delayed(const Duration(milliseconds: 3000), () async {
-      if (mounted) {
-        final prefs = await SharedPreferences.getInstance();
-        final seenOnboarding = prefs.getBool('seen_onboarding') ?? false;
-        if (mounted) {
-          context.go(seenOnboarding ? '/' : '/onboarding');
-        }
-      }
-    });
+    // Navigate after animation - ALWAYS show splash on app launch
+    _checkFirstTimeAndNavigate();
   }
 
   @override
   void dispose() {
     _controller.dispose();
     super.dispose();
+  }
+
+  Future<void> _checkFirstTimeAndNavigate() async {
+    // Wait for animation to complete
+    await Future.delayed(const Duration(milliseconds: 3000));
+
+    if (!mounted) return;
+
+    final prefs = await SharedPreferences.getInstance();
+    final seenOnboarding = prefs.getBool('seen_onboarding') ?? false;
+
+    if (!mounted) return;
+
+    // Navigate to onboarding for first-time users, home for returning users
+    context.go(seenOnboarding ? '/' : '/onboarding');
   }
 
   @override
