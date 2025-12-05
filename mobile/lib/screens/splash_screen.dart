@@ -59,16 +59,19 @@ class _SplashScreenState extends State<SplashScreen>
 
   @override
   Widget build(BuildContext context) {
+    final screenHeight = MediaQuery.of(context).size.height;
+    final screenWidth = MediaQuery.of(context).size.width;
+
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
             colors: [
-              Colors.orange.shade700,
-              Colors.deepOrange.shade500,
-              Colors.red.shade400,
+              Colors.orange.shade800,
+              Colors.deepOrange.shade600,
+              Colors.orange.shade900,
             ],
           ),
         ),
@@ -83,43 +86,81 @@ class _SplashScreenState extends State<SplashScreen>
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
+                      // Netflix-style large logo
                       Container(
-                        width: 120,
-                        height: 120,
+                        width: screenWidth * 0.5, // 50% of screen width
+                        height: screenWidth * 0.5,
                         decoration: BoxDecoration(
                           color: Colors.white,
-                          borderRadius: BorderRadius.circular(30),
+                          borderRadius: BorderRadius.circular(40),
                           boxShadow: [
                             BoxShadow(
-                              color: Colors.black.withOpacity(0.2),
-                              blurRadius: 20,
-                              spreadRadius: 5,
+                              color: Colors.black.withOpacity(0.3),
+                              blurRadius: 30,
+                              spreadRadius: 10,
                             ),
                           ],
                         ),
-                        child: const Icon(
+                        child: Icon(
                           Icons.gavel,
-                          size: 70,
-                          color: Colors.deepOrange,
+                          size: screenWidth * 0.3, // Scales with screen
+                          color: Colors.deepOrange.shade700,
                         ),
                       ),
-                      const SizedBox(height: 30),
+                      SizedBox(height: screenHeight * 0.05),
+                      // App title
                       const Text(
                         'Indian Law Guide',
                         style: TextStyle(
-                          fontSize: 32,
+                          fontSize: 38,
                           fontWeight: FontWeight.bold,
                           color: Colors.white,
-                          letterSpacing: 1.2,
+                          letterSpacing: 2,
+                          shadows: [
+                            Shadow(
+                              color: Colors.black26,
+                              offset: Offset(2, 2),
+                              blurRadius: 4,
+                            ),
+                          ],
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                      const SizedBox(height: 12),
+                      // Subtitle
+                      const Text(
+                        'भारतीय कानून गाइड',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.white90,
+                          letterSpacing: 1,
                         ),
                       ),
-                      const SizedBox(height: 10),
-                      const Text(
-                        'Constitution, Rights, Laws & Judgments',
-                        style: TextStyle(
-                          fontSize: 14,
-                          color: Colors.white70,
-                          letterSpacing: 0.5,
+                      const SizedBox(height: 24),
+                      // Tagline
+                      Container(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 24,
+                          vertical: 12,
+                        ),
+                        decoration: BoxDecoration(
+                          color: Colors.white.withOpacity(0.1),
+                          borderRadius: BorderRadius.circular(20),
+                          border: Border.all(
+                            color: Colors.white.withOpacity(0.3),
+                            width: 1,
+                          ),
+                        ),
+                        child: const Text(
+                          'Constitution • Rights • Laws • Judgments',
+                          style: TextStyle(
+                            fontSize: 14,
+                            color: Colors.white,
+                            letterSpacing: 0.8,
+                            fontWeight: FontWeight.w400,
+                          ),
+                          textAlign: TextAlign.center,
                         ),
                       ),
                     ],
