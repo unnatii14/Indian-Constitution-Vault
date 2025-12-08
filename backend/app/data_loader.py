@@ -17,6 +17,9 @@ ACT_TITLES = {
     "BSA-2023": "Bharatiya Sakshya Adhiniyam, 2023",
 }
 
+# Only load acts with complete content (CRPC and IPC have incomplete extraction)
+ALLOWED_ACTS = {"BNS-2023", "BNSS-2023", "BSA-2023"}
+
 
 @dataclass
 class SectionRecord:
@@ -64,6 +67,11 @@ class ActRegistry:
             with en_path.open("r", encoding="utf-8") as handle:
                 payload = json.load(handle)
             act_id = (payload.get("act_id") or en_path.stem.split("_", 1)[0]).upper()
+            
+            # Skip acts that don't have complete content
+            if act_id not in ALLOWED_ACTS:
+                continue
+                
             title = ACT_TITLES.get(act_id, act_id)
             act = ActRecord(act_id=act_id, title=title)
 

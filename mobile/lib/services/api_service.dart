@@ -64,14 +64,11 @@ class ApiService {
       queryParameters: {'offset': offset.toString(), 'limit': limit.toString()},
     );
 
-    print('[API] Fetching sections for $actId: $uri');
     final response = await _client.get(uri);
-    print('[API] Sections response: ${response.statusCode}');
 
     if (response.statusCode == 200) {
       final data = jsonDecode(response.body);
       final List<dynamic> items = data['items'];
-      print('[API] Sections loaded: ${items.length} items');
       return items.map((json) => SectionSummary.fromJson(json)).toList();
     } else {
       throw Exception('Failed to load sections: ${response.statusCode}');

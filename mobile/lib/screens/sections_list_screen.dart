@@ -13,9 +13,6 @@ class SectionsListScreen extends ConsumerWidget {
     if (actId.contains('BNS')) return Icons.balance;
     if (actId.contains('BNSS')) return Icons.security;
     if (actId.contains('BSA')) return Icons.description;
-    if (actId.contains('CONST')) return Icons.account_balance;
-    if (actId.contains('CRPC')) return Icons.gavel;
-    if (actId.contains('IPC')) return Icons.policy;
     return Icons.article;
   }
 
@@ -23,9 +20,6 @@ class SectionsListScreen extends ConsumerWidget {
     if (actId.contains('BNS')) return Colors.orange.shade700;
     if (actId.contains('BNSS')) return Colors.green.shade700;
     if (actId.contains('BSA')) return Colors.blue.shade700;
-    if (actId.contains('CONST')) return Colors.purple.shade700;
-    if (actId.contains('CRPC')) return Colors.red.shade700;
-    if (actId.contains('IPC')) return Colors.cyan.shade700;
     return Colors.grey.shade700;
   }
 
