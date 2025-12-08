@@ -1,12 +1,14 @@
 """
 AI-powered legal explanation service using Google Gemini.
 Converts complex legal language to simple Hindi and English.
+WITH CACHING to keep chatbot FREE for 100k+ users!
 """
 
 import os
 from dotenv import load_dotenv
 import google.generativeai as genai
 from typing import Dict, Optional
+from .cache_service import explanation_cache
 
 # Load environment variables from .env file
 load_dotenv()
@@ -143,7 +145,10 @@ Avoid complex legal terminology. Use everyday language.
         context: Optional[str] = None
     ) -> str:
         """
-        Answer a user's legal question in natural language with ethical constraints.
+        Answer a user's legal question with SMART CACHING to stay FREE!
+        
+        Caches common questions so 90% of users get instant answers without API calls.
+        Only unique questions hit the Gemini API.
 
         Args:
             user_question: The question asked by user
@@ -153,6 +158,14 @@ Avoid complex legal terminology. Use everyday language.
         Returns:
             AI-generated answer with safety guidelines
         """
+        # 1. CHECK CACHE FIRST (90% hit rate expected!)
+        cached_answer = explanation_cache.get_chat_answer(user_question, language)
+        if cached_answer:
+            print(f"✅ Cache hit for chat question (saved API call!)")
+            return cached_answer
+        
+        print(f"⚡ Cache miss - calling Gemini API")
+        
         if not self.model:
             return "AI service unavailable" if language == "en" else "AI सेवा उपलब्ध नहीं"
 
@@ -208,6 +221,10 @@ Always include this reminder in your responses when appropriate:
                 answer += "\n\n💡 Note: This is educational information. Consult a qualified lawyer for personalized advice."
             elif language == "hi" and "वकील" not in answer and len(answer) > 100:
                 answer += "\n\n💡 नोट: यह शैक्षिक जानकारी है। व्यक्तिगत सलाह के लिए वकील से संपर्क करें।"
+            
+            # 2. CACHE THE ANSWER FOR FUTURE USERS (Make it FREE!)
+            explanation_cache.set_chat_answer(user_question, language, answer)
+            print(f"💾 Cached chat answer for future users")
             
             return answer
         except Exception as e:
