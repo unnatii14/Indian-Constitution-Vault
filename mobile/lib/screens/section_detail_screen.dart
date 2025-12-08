@@ -79,7 +79,7 @@ class SectionDetailScreen extends ConsumerWidget {
                     ),
                     child: IconButton(
                       icon: const Icon(Icons.arrow_back, color: Colors.black87),
-                      onPressed: () => context.pop(),
+                      onPressed: () => context.go('/acts/$actId/sections'),
                       padding: EdgeInsets.zero,
                     ),
                   ),

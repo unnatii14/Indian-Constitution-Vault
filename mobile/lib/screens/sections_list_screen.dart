@@ -77,7 +77,7 @@ class SectionsListScreen extends ConsumerWidget {
                           ),
                           child: IconButton(
                             icon: const Icon(Icons.arrow_back),
-                            onPressed: () => context.pop(),
+                            onPressed: () => context.go('/'),
                           ),
                         ),
                         const SizedBox(width: 16),
