@@ -63,6 +63,26 @@ class SectionDetailScreen extends ConsumerWidget {
                   expandedHeight: 140,
                   pinned: true,
                   backgroundColor: actColor,
+                  automaticallyImplyLeading: true,
+                  leading: Container(
+                    margin: const EdgeInsets.all(8),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(12),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.1),
+                          blurRadius: 8,
+                          offset: const Offset(0, 2),
+                        ),
+                      ],
+                    ),
+                    child: IconButton(
+                      icon: const Icon(Icons.arrow_back, color: Colors.black87),
+                      onPressed: () => context.pop(),
+                      padding: EdgeInsets.zero,
+                    ),
+                  ),
                   flexibleSpace: FlexibleSpaceBar(
                     title: Text(
                       'Section $sectionNumber',
