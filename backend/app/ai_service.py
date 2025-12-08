@@ -24,7 +24,12 @@ class LegalExplainerAI:
     def __init__(self):
         self.model = None
         if GEMINI_API_KEY:
-            self.model = genai.GenerativeModel('gemini-2.5-flash')
+            try:
+                self.model = genai.GenerativeModel('gemini-1.5-flash')
+                print(f"✅ Gemini AI initialized successfully")
+            except Exception as e:
+                print(f"❌ Failed to initialize Gemini: {e}")
+                self.model = None
 
     def explain_section(
         self,
