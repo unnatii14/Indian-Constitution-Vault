@@ -28,13 +28,25 @@ android {
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
+        ndk {
+            abiFilters.clear()
+            abiFilters.addAll(listOf("armeabi-v7a", "arm64-v8a"))
+        }
+    }
+
+    signingConfigs {
+        create("release") {
+            keyAlias = "upload"
+            keyPassword = "App_P@sswOrd!K3y_20*25"
+            storeFile = file("../../../upload-keystore.jks")
+            storePassword = "App_P@sswOrd!K3y_20*25"
+        }
     }
 
     buildTypes {
         release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
-            signingConfig = signingConfigs.getByName("debug")
+            signingConfig = signingConfigs.getByName("release")
+            // Signing with the release keys
         }
     }
 }

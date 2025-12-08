@@ -413,8 +413,8 @@ class _ChatbotScreenState extends ConsumerState<ChatbotScreen> {
       });
       _scrollToBottom();
 
-      // Automatically speak the response in correct language
-      await _speak(formattedResponse, language: _selectedLanguage);
+      // Don't auto-play audio - user can click listen button
+      // await _speak(formattedResponse, language: _selectedLanguage);
     } catch (e) {
       setState(() {
         _messages.add(

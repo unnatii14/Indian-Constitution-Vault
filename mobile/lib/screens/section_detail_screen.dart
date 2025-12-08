@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 import '../services/api_service.dart';
 import '../models/section_detail.dart';
+import '../providers/section_providers.dart';
 import 'ai_explanation_screen.dart';
 
 // Provider for fetching section detail
@@ -417,6 +419,15 @@ class SectionDetailScreen extends ConsumerWidget {
                         ],
 
                         const SizedBox(height: 32),
+
+                        // Navigation buttons
+                        _NavigationButtons(
+                          actId: actId,
+                          currentSectionNumber: sectionNumber,
+                          actColor: actColor,
+                        ),
+
+                        const SizedBox(height: 24),
                       ],
                     ),
                   ),
@@ -473,6 +484,150 @@ class SectionDetailScreen extends ConsumerWidget {
           ),
         ),
       ),
+    );
+  }
+}
+
+// Navigation buttons widget
+class _NavigationButtons extends ConsumerWidget {
+  final String actId;
+  final String currentSectionNumber;
+  final Color actColor;
+
+  const _NavigationButtons({
+    required this.actId,
+    required this.currentSectionNumber,
+    required this.actColor,
+  });
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final sectionsAsync = ref.watch(sectionsProvider(actId));
+
+    return sectionsAsync.when(
+      data: (sections) {
+        if (sections.isEmpty) return const SizedBox();
+
+        // Find current section index
+        final currentIndex = sections.indexWhere(
+          (s) => s.sectionNumber == currentSectionNumber,
+        );
+
+        if (currentIndex == -1) return const SizedBox();
+
+        final hasPrevious = currentIndex > 0;
+        final hasNext = currentIndex < sections.length - 1;
+        final previousSection = hasPrevious ? sections[currentIndex - 1] : null;
+        final nextSection = hasNext ? sections[currentIndex + 1] : null;
+
+        return Container(
+          padding: const EdgeInsets.all(16),
+          decoration: BoxDecoration(
+            color: actColor.withOpacity(0.05),
+            borderRadius: BorderRadius.circular(16),
+            border: Border.all(color: actColor.withOpacity(0.2), width: 1),
+          ),
+          child: Row(
+            children: [
+              // Previous button
+              if (hasPrevious)
+                Expanded(
+                  child: ElevatedButton.icon(
+                    onPressed: () {
+                      context.go(
+                        '/acts/$actId/sections/${previousSection!.sectionNumber}',
+                      );
+                    },
+                    icon: const Icon(Icons.arrow_back, size: 18),
+                    label: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        const Text('Previous', style: TextStyle(fontSize: 12)),
+                        Text(
+                          'Sec ${previousSection!.sectionNumber}',
+                          style: const TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.white,
+                      foregroundColor: actColor,
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 16,
+                        vertical: 12,
+                      ),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                        side: BorderSide(color: actColor.withOpacity(0.3)),
+                      ),
+                    ),
+                  ),
+                )
+              else
+                const Expanded(child: SizedBox()),
+
+              if (hasPrevious && hasNext) const SizedBox(width: 12),
+
+              // Next button
+              if (hasNext)
+                Expanded(
+                  child: ElevatedButton(
+                    onPressed: () {
+                      context.go(
+                        '/acts/$actId/sections/${nextSection!.sectionNumber}',
+                      );
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: actColor,
+                      foregroundColor: Colors.white,
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 16,
+                        vertical: 12,
+                      ),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              const Text(
+                                'Next',
+                                style: TextStyle(fontSize: 12),
+                              ),
+                              Text(
+                                'Sec ${nextSection!.sectionNumber}',
+                                style: const TextStyle(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        const SizedBox(width: 8),
+                        const Icon(Icons.arrow_forward, size: 18),
+                      ],
+                    ),
+                  ),
+                )
+              else
+                const Expanded(child: SizedBox()),
+            ],
+          ),
+        );
+      },
+      loading: () => const SizedBox(),
+      error: (_, __) => const SizedBox(),
     );
   }
 }
