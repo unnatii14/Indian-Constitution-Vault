@@ -10,6 +10,9 @@ final sectionsProvider = FutureProvider.family<List<SectionSummary>, String>((
   ref,
   actId,
 ) async {
+  print('[PROVIDER] sectionsProvider called for $actId');
   final apiService = ref.watch(apiServiceProvider);
-  return apiService.getActSections(actId, limit: 200);
+  final sections = await apiService.getActSections(actId, limit: 200);
+  print('[PROVIDER] Sections loaded: ${sections.length}');
+  return sections;
 });
