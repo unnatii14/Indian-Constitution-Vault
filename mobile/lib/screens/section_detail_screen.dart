@@ -368,14 +368,46 @@ class SectionDetailScreen extends ConsumerWidget {
                                 ],
                               ),
                               const SizedBox(height: 16),
-                              Text(
-                                section.content,
-                                style: const TextStyle(
-                                  fontSize: 15,
-                                  height: 1.6,
-                                  color: Colors.black87,
+                              if (section.content.isEmpty)
+                                Container(
+                                  padding: const EdgeInsets.all(20),
+                                  decoration: BoxDecoration(
+                                    color: Colors.orange.shade50,
+                                    borderRadius: BorderRadius.circular(12),
+                                    border: Border.all(
+                                      color: Colors.orange.shade200,
+                                    ),
+                                  ),
+                                  child: Row(
+                                    children: [
+                                      Icon(
+                                        Icons.info_outline,
+                                        color: Colors.orange.shade700,
+                                        size: 24,
+                                      ),
+                                      const SizedBox(width: 12),
+                                      Expanded(
+                                        child: Text(
+                                          'Content for this section is not yet available in the database. This is a backend data issue that needs to be resolved.',
+                                          style: TextStyle(
+                                            fontSize: 14,
+                                            color: Colors.orange.shade900,
+                                            height: 1.5,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                )
+                              else
+                                Text(
+                                  section.content,
+                                  style: const TextStyle(
+                                    fontSize: 15,
+                                    height: 1.6,
+                                    color: Colors.black87,
+                                  ),
                                 ),
-                              ),
                             ],
                           ),
                         ),
