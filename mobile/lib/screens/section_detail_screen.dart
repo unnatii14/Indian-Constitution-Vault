@@ -279,8 +279,8 @@ class SectionDetailScreen extends ConsumerWidget {
                             ),
                           ),
 
-                          // Hindi Content
-                          if (section.contentHi != null) ...[
+                          // Hindi content removed
+                          if (false && section.contentHi != null) ...[
                             const SizedBox(height: 20),
                             Container(
                               padding: const EdgeInsets.all(20),

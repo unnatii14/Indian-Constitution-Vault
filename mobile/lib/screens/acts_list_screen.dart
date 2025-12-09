@@ -81,14 +81,6 @@ class ActsListScreen extends ConsumerWidget {
                                     color: Colors.black87,
                                   ),
                                 ),
-                                Text(
-                                  'सरल भाषा में कानून',
-                                  style: TextStyle(
-                                    fontSize: 14,
-                                    color: Colors.black54,
-                                    fontStyle: FontStyle.italic,
-                                  ),
-                                ),
                               ],
                             ),
                           ),
@@ -287,29 +279,6 @@ class _ActCard extends StatelessWidget {
                                 ),
                               ),
                             ),
-                            const SizedBox(width: 6),
-                            if (act.languages.contains('hi'))
-                              Flexible(
-                                fit: FlexFit.loose,
-                                child: Container(
-                                  padding: const EdgeInsets.symmetric(
-                                    horizontal: 8,
-                                    vertical: 4,
-                                  ),
-                                  decoration: BoxDecoration(
-                                    color: Colors.white.withOpacity(0.3),
-                                    borderRadius: BorderRadius.circular(20),
-                                  ),
-                                  child: const Text(
-                                    'हिंदी',
-                                    style: TextStyle(
-                                      fontSize: 11,
-                                      fontWeight: FontWeight.w600,
-                                      color: Colors.white,
-                                    ),
-                                  ),
-                                ),
-                              ),
                           ],
                         ),
                       ],
