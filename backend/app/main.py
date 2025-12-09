@@ -106,7 +106,7 @@ def get_act(act_id: str, registry: ActRegistry = Depends(get_registry)) -> ActDe
 def list_sections(
     act_id: str,
     offset: int = Query(0, ge=0),
-    limit: int = Query(20, ge=1, le=200),
+    limit: int = Query(20, ge=1, le=1000),
     registry: ActRegistry = Depends(get_registry),
 ) -> PaginatedSections:
     act = registry.get_act(act_id)

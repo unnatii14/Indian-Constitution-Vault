@@ -34,9 +34,13 @@ class ExplanationCache:
                     simple_explanation TEXT NOT NULL,
                     examples TEXT,
                     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-                    hit_count INTEGER DEFAULT 0,
-                    INDEX idx_hash (section_text_hash)
+                    hit_count INTEGER DEFAULT 0
                 )
+            """)
+            
+            conn.execute("""
+                CREATE INDEX IF NOT EXISTS idx_hash 
+                ON ai_explanations(section_text_hash)
             """)
             
             conn.execute("""
@@ -46,10 +50,15 @@ class ExplanationCache:
                     language TEXT NOT NULL,
                     answer TEXT NOT NULL,
                     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-                    hit_count INTEGER DEFAULT 0,
-                    INDEX idx_question (question_hash)
+                    hit_count INTEGER DEFAULT 0
                 )
             """)
+            
+            conn.execute("""
+                CREATE INDEX IF NOT EXISTS idx_question 
+                ON ai_chat_cache(question_hash)
+            """)
+            
             conn.commit()
 
     def _generate_key(self, text: str, language: str, include_examples: bool = False) -> str:
