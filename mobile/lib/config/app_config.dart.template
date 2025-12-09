@@ -9,6 +9,26 @@ class AppConfig {
   // TO USE: Copy this file to app_config.dart and add your actual API key
   static const String apiKey = 'YOUR_API_KEY_HERE';
 
+  // Validate configuration at startup
+  static bool isConfigured() {
+    return apiKey.isNotEmpty && 
+           apiKey != 'YOUR_API_KEY_HERE' && 
+           apiKey.length > 10;
+  }
+
+  // Get error message if not configured
+  static String? getConfigError() {
+    if (apiKey.isEmpty || apiKey == 'YOUR_API_KEY_HERE') {
+      return '⚠️ API key not configured!\n\n'
+             'Please create mobile/lib/config/app_config.dart from template.\n'
+             'See CONFIG_SETUP.md for instructions.';
+    }
+    if (apiKey.length < 10) {
+      return 'Invalid API key format. Check your configuration.';
+    }
+    return null;
+  }
+
   // For local development, temporarily change apiBaseUrl to:
   // - Android device: 'http://YOUR_PC_IP:8000' (find IP with ipconfig)
   // - Android emulator: 'http://10.0.2.2:8000'

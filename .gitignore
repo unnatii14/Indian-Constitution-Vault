@@ -12,6 +12,12 @@ __pycache__/
 LOCAL_CONFIG.md
 mobile/lib/config/app_config.dart
 
+# Android signing keys (NEVER commit these!)
+*.jks
+*.keystore
+upload-keystore.jks
+key.properties
+
 # Test files
 test_*.py
 check_*.py
