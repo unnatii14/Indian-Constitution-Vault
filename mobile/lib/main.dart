@@ -8,8 +8,7 @@ import 'screens/main_navigation_screen.dart';
 import 'screens/acts_list_screen.dart';
 import 'screens/sections_list_screen.dart';
 import 'screens/section_detail_screen.dart';
-import 'screens/ai_explanation_screen.dart';
-import 'screens/chatbot_screen.dart';
+import 'screens/law_finder_screen.dart';
 import 'screens/about_constitution_screen.dart';
 
 void main() {
@@ -44,8 +43,8 @@ final goRouterProvider = Provider<GoRouter>((ref) {
         builder: (context, state) => const ActsListScreen(),
       ),
       GoRoute(
-        path: '/chatbot',
-        builder: (context, state) => const ChatbotScreen(),
+        path: '/law-finder',
+        builder: (context, state) => const LawFinderScreen(),
       ),
       GoRoute(
         path: '/about-constitution',
@@ -66,17 +65,6 @@ final goRouterProvider = Provider<GoRouter>((ref) {
           return SectionDetailScreen(
             actId: actId,
             sectionNumber: sectionNumber,
-          );
-        },
-      ),
-      GoRoute(
-        path: '/explain',
-        builder: (context, state) {
-          final extra = state.extra as Map<String, dynamic>;
-          return AiExplanationScreen(
-            sectionText: extra['sectionContent'] as String,
-            heading: extra['sectionTitle'] as String,
-            language: extra['language'] as String,
           );
         },
       ),

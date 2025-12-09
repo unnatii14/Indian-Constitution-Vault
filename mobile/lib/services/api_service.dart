@@ -3,7 +3,6 @@ import 'package:http/http.dart' as http;
 import '../models/act_summary.dart';
 import '../models/section_summary.dart';
 import '../models/section_detail.dart';
-import '../models/ai_explanation.dart';
 import '../config/app_config.dart';
 
 class ApiService {
@@ -115,79 +114,6 @@ class ApiService {
     } else {
       throw Exception('Search failed: ${response.statusCode}');
     }
-  }
-
-  // AI Explanation
-  Future<AiExplanation> explainSection({
-    required String sectionText,
-    String language = 'en',
-    bool includeExamples = true,
-  }) async {
-    final response = await _client.post(
-      Uri.parse('$baseUrl/api/explain'),
-      headers: _getHeaders(),
-      body: jsonEncode({
-        'section_text': sectionText,
-        'language': language,
-        'include_examples': includeExamples,
-      }),
-    );
-
-    if (response.statusCode == 200) {
-      return AiExplanation.fromJson(jsonDecode(response.body));
-    } else {
-      throw Exception('AI explanation failed: ${response.statusCode}');
-    }
-  }
-
-  // AI Chat
-  Future<Map<String, String>> chatQuery({
-    required String question,
-    String language = 'en',
-    String? context,
-  }) async {
-    print('[API] Sending chat request to: $baseUrl/api/chat');
-    print('[API] Question: $question');
-    print('[API] Headers: ${_getHeaders()}');
-
-    try {
-      final response = await _client.post(
-        Uri.parse('$baseUrl/api/chat'),
-        headers: _getHeaders(),
-        body: jsonEncode({
-          'question': question,
-          'language': language,
-          if (context != null) 'context': context,
-        }),
-      );
-
-      print('[API] Chat response: ${response.statusCode}');
-
-      if (response.statusCode == 200) {
-        final data = jsonDecode(response.body);
-        print('[API] Chat successful');
-        return {
-          'answer': data['answer'] as String,
-          'disclaimer': data['disclaimer'] as String,
-        };
-      } else {
-        print('[API] Chat failed: ${response.statusCode} - ${response.body}');
-        throw Exception('Chat query failed: ${response.statusCode}');
-      }
-    } catch (e) {
-      print('[API] Error in chat: $e');
-      rethrow;
-    }
-  }
-
-  // Simplified chat method
-  Future<String> chatWithAI({
-    required String question,
-    String language = 'english',
-  }) async {
-    final langCode = language.toLowerCase() == 'hindi' ? 'hi' : 'en';
-    final result = await chatQuery(question: question, language: langCode);
-    return result['answer'] ?? 'Sorry, I could not generate a response.';
   }
 
   void dispose() {

@@ -10,6 +10,7 @@ __pycache__/
 
 # Local configuration (contains secrets)
 LOCAL_CONFIG.md
+mobile/lib/config/app_config.dart
 
 # Test files
 test_*.py

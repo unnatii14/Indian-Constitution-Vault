@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
 
 class MainNavigationScreen extends StatelessWidget {
@@ -6,109 +7,137 @@ class MainNavigationScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            colors: [Colors.orange.shade400, Colors.deepOrange.shade600],
-          ),
-        ),
-        child: SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.all(24.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                const SizedBox(height: 32),
-                // App Title
-                const Text(
-                  '⚖️ Legal Rights',
-                  style: TextStyle(
-                    fontSize: 32,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                  ),
-                  textAlign: TextAlign.center,
+    return PopScope(
+      canPop: false,
+      onPopInvokedWithResult: (didPop, result) {
+        if (!didPop) {
+          // Show exit confirmation dialog
+          showDialog(
+            context: context,
+            builder: (context) => AlertDialog(
+              title: const Text('Exit App'),
+              content: const Text('Are you sure you want to exit?'),
+              actions: [
+                TextButton(
+                  onPressed: () => Navigator.pop(context),
+                  child: const Text('Cancel'),
                 ),
-                const SizedBox(height: 8),
-                const Text(
-                  'Simplifying Indian Laws',
-                  style: TextStyle(fontSize: 16, color: Colors.white70),
-                  textAlign: TextAlign.center,
-                ),
-                const SizedBox(height: 32),
-
-                // Option 1: Browse Laws
-                Expanded(
-                  child: _NavigationCard(
-                    icon: Icons.library_books_rounded,
-                    title: 'Browse Laws',
-                    description: 'Explore Indian legal acts and sections',
-                    gradient: LinearGradient(
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                      colors: [Colors.blue.shade400, Colors.blue.shade700],
-                    ),
-                    onTap: () => context.go('/acts'),
-                  ),
-                ),
-                const SizedBox(height: 12),
-
-                // Option 2: AI Legal Assistant
-                Expanded(
-                  child: _NavigationCard(
-                    icon: Icons.chat_bubble_outline_rounded,
-                    title: 'AI Legal Assistant',
-                    description: 'Chat with AI about legal concepts',
-                    gradient: LinearGradient(
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                      colors: [Colors.green.shade400, Colors.green.shade700],
-                    ),
-                    onTap: () => context.go('/chatbot'),
-                  ),
-                ),
-                const SizedBox(height: 12),
-
-                // Option 3: About Constitution
-                Expanded(
-                  child: _NavigationCard(
-                    icon: Icons.account_balance_rounded,
-                    title: 'About Constitution',
-                    description: 'Learn about India\'s supreme law',
-                    gradient: LinearGradient(
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                      colors: [Colors.purple.shade400, Colors.purple.shade700],
-                    ),
-                    onTap: () => context.go('/about-constitution'),
-                  ),
-                ),
-                const SizedBox(height: 24),
-
-                // Disclaimer
-                Container(
-                  padding: const EdgeInsets.all(16),
-                  decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.2),
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  child: Row(
-                    children: [
-                      Icon(Icons.info_outline, color: Colors.white, size: 20),
-                      const SizedBox(width: 12),
-                      Expanded(
-                        child: Text(
-                          'Educational purposes only. Not legal advice.',
-                          style: TextStyle(color: Colors.white, fontSize: 12),
-                        ),
-                      ),
-                    ],
-                  ),
+                TextButton(
+                  onPressed: () => SystemNavigator.pop(),
+                  child: const Text('Exit'),
                 ),
               ],
+            ),
+          );
+        }
+      },
+      child: Scaffold(
+        body: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: [Colors.orange.shade400, Colors.deepOrange.shade600],
+            ),
+          ),
+          child: SafeArea(
+            child: Padding(
+              padding: const EdgeInsets.all(24.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  const SizedBox(height: 32),
+                  // App Title
+                  const Text(
+                    '⚖️ Legal Rights',
+                    style: TextStyle(
+                      fontSize: 32,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(height: 8),
+                  const Text(
+                    'Simplifying Indian Laws',
+                    style: TextStyle(fontSize: 16, color: Colors.white70),
+                    textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(height: 32),
+
+                  // Option 1: Browse Laws
+                  Expanded(
+                    child: _NavigationCard(
+                      icon: Icons.library_books_rounded,
+                      title: 'Browse Laws',
+                      description: 'Explore Indian legal acts and sections',
+                      gradient: LinearGradient(
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                        colors: [Colors.blue.shade400, Colors.blue.shade700],
+                      ),
+                      onTap: () => context.go('/acts'),
+                    ),
+                  ),
+                  const SizedBox(height: 12),
+
+                  // Option 2: Law Finder
+                  Expanded(
+                    child: _NavigationCard(
+                      icon: Icons.search_rounded,
+                      title: 'Law Finder',
+                      description: 'Find laws by category & topic',
+                      gradient: LinearGradient(
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                        colors: [Colors.green.shade400, Colors.green.shade700],
+                      ),
+                      onTap: () => context.go('/law-finder'),
+                    ),
+                  ),
+                  const SizedBox(height: 12),
+
+                  // Option 3: About Constitution
+                  Expanded(
+                    child: _NavigationCard(
+                      icon: Icons.account_balance_rounded,
+                      title: 'About Constitution',
+                      description: 'Learn about India\'s supreme law',
+                      gradient: LinearGradient(
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                        colors: [
+                          Colors.purple.shade400,
+                          Colors.purple.shade700,
+                        ],
+                      ),
+                      onTap: () => context.go('/about-constitution'),
+                    ),
+                  ),
+                  const SizedBox(height: 24),
+
+                  // Disclaimer
+                  Container(
+                    padding: const EdgeInsets.all(16),
+                    decoration: BoxDecoration(
+                      color: Colors.white.withOpacity(0.2),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Row(
+                      children: [
+                        Icon(Icons.info_outline, color: Colors.white, size: 20),
+                        const SizedBox(width: 12),
+                        Expanded(
+                          child: Text(
+                            'Educational purposes only. Not legal advice.',
+                            style: TextStyle(color: Colors.white, fontSize: 12),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ),

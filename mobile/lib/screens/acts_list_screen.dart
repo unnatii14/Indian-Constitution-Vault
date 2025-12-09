@@ -10,167 +10,146 @@ class ActsListScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final actsAsync = ref.watch(actsProvider);
 
-    return Scaffold(
-      body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [Colors.orange.shade50, Colors.white],
+    return PopScope(
+      canPop: false,
+      onPopInvokedWithResult: (didPop, result) {
+        if (!didPop) {
+          context.go('/');
+        }
+      },
+      child: Scaffold(
+        body: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [Colors.orange.shade50, Colors.white],
+            ),
           ),
-        ),
-        child: SafeArea(
-          child: Column(
-            children: [
-              // Header
-              Container(
-                padding: const EdgeInsets.all(24),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      children: [
-                        // Back button
-                        Container(
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(12),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black.withOpacity(0.1),
-                                blurRadius: 8,
-                                offset: const Offset(0, 2),
-                              ),
-                            ],
-                          ),
-                          child: IconButton(
-                            icon: const Icon(Icons.arrow_back),
-                            onPressed: () => context.go('/'),
-                          ),
-                        ),
-                        const SizedBox(width: 12),
-                        Container(
-                          padding: const EdgeInsets.all(12),
-                          decoration: BoxDecoration(
-                            color: Colors.orange.shade100,
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                          child: Icon(
-                            Icons.gavel,
-                            color: Colors.orange.shade700,
-                            size: 28,
-                          ),
-                        ),
-                        const SizedBox(width: 16),
-                        const Expanded(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Indian Law Guide',
-                                style: TextStyle(
-                                  fontSize: 24,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.black87,
-                                ),
-                              ),
-                              Text(
-                                'सरल भाषा में कानून',
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  color: Colors.black54,
-                                  fontStyle: FontStyle.italic,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(height: 16),
-                    Container(
-                      padding: const EdgeInsets.all(16),
-                      decoration: BoxDecoration(
-                        color: Colors.blue.shade50,
-                        borderRadius: BorderRadius.circular(12),
-                        border: Border.all(color: Colors.blue.shade200),
-                      ),
-                      child: Row(
+          child: SafeArea(
+            child: Column(
+              children: [
+                // Header
+                Container(
+                  padding: const EdgeInsets.all(24),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
                         children: [
-                          Icon(
-                            Icons.auto_awesome,
-                            color: Colors.blue.shade700,
-                            size: 20,
+                          // Back button
+                          Container(
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(12),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black.withOpacity(0.1),
+                                  blurRadius: 8,
+                                  offset: const Offset(0, 2),
+                                ),
+                              ],
+                            ),
+                            child: IconButton(
+                              icon: const Icon(Icons.arrow_back),
+                              onPressed: () => context.go('/'),
+                            ),
                           ),
                           const SizedBox(width: 12),
+                          Container(
+                            padding: const EdgeInsets.all(12),
+                            decoration: BoxDecoration(
+                              color: Colors.orange.shade100,
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                            child: Icon(
+                              Icons.gavel,
+                              color: Colors.orange.shade700,
+                              size: 28,
+                            ),
+                          ),
+                          const SizedBox(width: 16),
                           const Expanded(
-                            child: Text(
-                              'AI-powered explanations in simple Hindi & English',
-                              style: TextStyle(
-                                fontSize: 13,
-                                color: Colors.black87,
-                                fontWeight: FontWeight.w500,
-                              ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Indian Law Guide',
+                                  style: TextStyle(
+                                    fontSize: 24,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black87,
+                                  ),
+                                ),
+                                Text(
+                                  'सरल भाषा में कानून',
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    color: Colors.black54,
+                                    fontStyle: FontStyle.italic,
+                                  ),
+                                ),
+                              ],
                             ),
                           ),
                         ],
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
-              ),
 
-              // Acts List
-              Expanded(
-                child: actsAsync.when(
-                  data: (acts) {
-                    if (acts.isEmpty) {
-                      return const Center(child: Text('No acts available'));
-                    }
-                    return ListView.builder(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 16,
-                        vertical: 8,
+                // Acts List
+                Expanded(
+                  child: actsAsync.when(
+                    data: (acts) {
+                      if (acts.isEmpty) {
+                        return const Center(child: Text('No acts available'));
+                      }
+                      return ListView.builder(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 16,
+                          vertical: 8,
+                        ),
+                        itemCount: acts.length,
+                        itemBuilder: (context, index) {
+                          final act = acts[index];
+                          return _ActCard(
+                            act: act,
+                            onTap: () {
+                              ref.read(selectedActProvider.notifier).state =
+                                  act.actId;
+                              context.push('/acts/${act.actId}/sections');
+                            },
+                          );
+                        },
+                      );
+                    },
+                    loading: () =>
+                        const Center(child: CircularProgressIndicator()),
+                    error: (error, stack) => Center(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const Icon(
+                            Icons.error_outline,
+                            size: 64,
+                            color: Colors.red,
+                          ),
+                          const SizedBox(height: 16),
+                          Text('Failed to load acts: $error'),
+                          const SizedBox(height: 16),
+                          ElevatedButton.icon(
+                            onPressed: () => ref.invalidate(actsProvider),
+                            icon: const Icon(Icons.refresh),
+                            label: const Text('Retry'),
+                          ),
+                        ],
                       ),
-                      itemCount: acts.length,
-                      itemBuilder: (context, index) {
-                        final act = acts[index];
-                        return _ActCard(
-                          act: act,
-                          onTap: () {
-                            ref.read(selectedActProvider.notifier).state =
-                                act.actId;
-                            context.push('/acts/${act.actId}/sections');
-                          },
-                        );
-                      },
-                    );
-                  },
-                  loading: () =>
-                      const Center(child: CircularProgressIndicator()),
-                  error: (error, stack) => Center(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        const Icon(
-                          Icons.error_outline,
-                          size: 64,
-                          color: Colors.red,
-                        ),
-                        const SizedBox(height: 16),
-                        Text('Failed to load acts: $error'),
-                        const SizedBox(height: 16),
-                        ElevatedButton.icon(
-                          onPressed: () => ref.invalidate(actsProvider),
-                          icon: const Icon(Icons.refresh),
-                          label: const Text('Retry'),
-                        ),
-                      ],
                     ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
