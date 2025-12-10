@@ -22,9 +22,13 @@ Available on:
 
 <div align="center">
 
-| Main Navigation | Law Finder | Browse Acts |
-|:---:|:---:|:---:|
-| ![Main Screen](app_ss/main_screen.jpg) | ![Law Finder](app_ss/law_guide.jpg) | ![About](app_ss/about.jpg) |
+| Main Navigation | Law Finder |
+|:---:|:---:|
+| ![Main Screen](app_ss/main_screen.jpg) | ![Law Finder](app_ss/law_guide.jpg) |
+
+| Browse Acts | About Constitution |
+|:---:|:---:|
+| ![Browse Acts](app_ss/section.jpg) | ![About](app_ss/about.jpg) |
 
 </div>
 
