@@ -65,6 +65,10 @@ A beautiful, bilingual (English & Hindi) mobile application powered by AI that s
 
 ## 🚀 Quick Start
 
+### Platforms
+- **📱 Mobile**: Android & iOS
+- **🌐 Web**: Deploy to Netlify, Vercel, Firebase Hosting, etc.
+
 ### Prerequisites
 - Flutter SDK 3.32.5+
 - Python 3.10+
@@ -95,6 +99,21 @@ flutter pub get
 dart run build_runner build --delete-conflicting-outputs
 flutter run
 ```
+
+**3. Web Deployment:**
+```bash
+cd mobile
+flutter pub get
+flutter build web --release
+
+# Deploy to Netlify (see QUICK_START_NETLIFY.md for detailed guide)
+```
+
+📖 **Web Deployment Guides:**
+- [🚀 Quick Start Guide](QUICK_START_NETLIFY.md) - Deploy in 2 minutes
+- [📘 Detailed Deployment](NETLIFY_DEPLOYMENT.md) - Complete instructions
+- [✅ Deployment Checklist](DEPLOYMENT_CHECKLIST.md) - Step-by-step checklist
+- [📊 Conversion Summary](CONVERSION_SUMMARY.md) - What was converted
 
 **⚠️ Important:** See [SECURITY.md](SECURITY.md) for API authentication setup before deploying to production.
 

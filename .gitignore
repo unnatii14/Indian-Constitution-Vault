@@ -49,6 +49,17 @@ mobile/.flutter-plugins-dependencies
 mobile/.packages
 mobile/pubspec.lock
 
+# Platform-specific build folders (keep source, ignore builds)
+mobile/android/app/build/
+mobile/ios/build/
+mobile/macos/build/
+mobile/linux/build/
+mobile/windows/build/
+
+# Netlify (keep config files, ignore build outputs and local cache)
+.netlify/
+mobile/.netlify/
+
 # Unnecessary docs
 AI_SETUP.md
 MIGRATION_*.md

@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-import 'screens/splash_screen.dart';
-import 'screens/onboarding_screen.dart';
 import 'screens/main_navigation_screen.dart';
 import 'screens/acts_list_screen.dart';
 import 'screens/sections_list_screen.dart';
@@ -15,25 +12,11 @@ void main() {
   runApp(const ProviderScope(child: IndianConstitutionApp()));
 }
 
-// Provider to check if onboarding is complete
-final onboardingCompleteProvider = FutureProvider<bool>((ref) async {
-  final prefs = await SharedPreferences.getInstance();
-  return prefs.getBool('onboarding_complete') ?? false;
-});
-
 // Router configuration
 final goRouterProvider = Provider<GoRouter>((ref) {
   return GoRouter(
-    initialLocation: '/splash',
+    initialLocation: '/',
     routes: [
-      GoRoute(
-        path: '/splash',
-        builder: (context, state) => const SplashScreen(),
-      ),
-      GoRoute(
-        path: '/onboarding',
-        builder: (context, state) => const OnboardingScreen(),
-      ),
       GoRoute(
         path: '/',
         builder: (context, state) => const MainNavigationScreen(),

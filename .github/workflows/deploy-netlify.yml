@@ -1,0 +1,55 @@
+name: Build and Deploy to Netlify
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Setup Flutter
+      uses: subosito/flutter-action@v2
+      with:
+        flutter-version: '3.8.1'
+        channel: 'stable'
+        cache: true
+    
+    - name: Verify Flutter installation
+      run: |
+        flutter --version
+        flutter doctor -v
+    
+    - name: Install dependencies
+      working-directory: ./mobile
+      run: flutter pub get
+    
+    - name: Build Flutter web app
+      working-directory: ./mobile
+      run: flutter build web --release
+    
+    - name: Copy _redirects to build output
+      working-directory: ./mobile
+      run: cp _redirects build/web/_redirects
+    
+    - name: Deploy to Netlify
+      uses: nwtgck/actions-netlify@v3.0
+      with:
+        publish-dir: './mobile/build/web'
+        production-branch: main
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        deploy-message: "Deploy from GitHub Actions - ${{ github.event.head_commit.message }}"
+        enable-pull-request-comment: true
+        enable-commit-comment: true
+        overwrites-pull-request-comment: true
+      env:
+        NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+      timeout-minutes: 10

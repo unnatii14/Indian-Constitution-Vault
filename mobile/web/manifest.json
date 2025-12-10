@@ -1,12 +1,12 @@
 {
-    "name": "indian_constitution_vault",
-    "short_name": "indian_constitution_vault",
-    "start_url": ".",
+    "name": "Indian Law Guide",
+    "short_name": "Law Guide",
+    "start_url": "/",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
-    "orientation": "portrait-primary",
+    "background_color": "#ff9800",
+    "theme_color": "#ff9800",
+    "description": "A bilingual legal companion for India - Constitution & 2023 criminal codes (BNS, BNSS, BSA)",
+    "orientation": "any",
     "prefer_related_applications": false,
     "icons": [
         {
