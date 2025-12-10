@@ -11,7 +11,7 @@ A beautiful, bilingual (English & Hindi) mobile and web application that helps y
 
 ## 🌐 Live Demo
 
-**Try it now:** [https://enchanting-queijadas-bcd393.netlify.app/](https://enchanting-queijadas-bcd393.netlify.app/)
+**Try it now:** [https://indian-constitution-vault.netlify.app/](https://indian-constitution-vault.netlify.app/)
 
 Available on:
 - 🌐 **Web**: Access instantly in your browser
