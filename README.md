@@ -2,11 +2,21 @@
 
 **Making Indian Law Accessible to Every Citizen**
 
-A beautiful, bilingual (English & Hindi) mobile application powered by AI that simplifies Indian laws for common people. Built with Flutter and FastAPI, featuring voice interaction, ethical AI chatbot, and comprehensive legal database.
+A beautiful, bilingual (English & Hindi) mobile and web application powered by AI that simplifies Indian laws for common people. Built with Flutter and FastAPI, featuring voice interaction, ethical AI chatbot, and comprehensive legal database.
 
 [![Flutter](https://img.shields.io/badge/Flutter-3.32.5-blue.svg)](https://flutter.dev/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115.0-green.svg)](https://fastapi.tiangolo.com/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Netlify-00C7B7?logo=netlify)](https://enchanting-queijadas-bcd393.netlify.app/)
+
+## 🌐 Live Demo
+
+**Try it now:** [https://enchanting-queijadas-bcd393.netlify.app/](https://enchanting-queijadas-bcd393.netlify.app/)
+
+Available on:
+- 🌐 **Web**: Access instantly in your browser
+- 📱 **Android**: Download from releases
+- 🍎 **iOS**: Coming soon
 
 ## 📱 Screenshots
 
