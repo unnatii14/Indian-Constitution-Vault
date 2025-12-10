@@ -2,7 +2,7 @@
 
 **Making Indian Law Accessible to Every Citizen**
 
-A beautiful, bilingual (English & Hindi) mobile and web application powered by AI that simplifies Indian laws for common people. Built with Flutter and FastAPI, featuring voice interaction, ethical AI chatbot, and comprehensive legal database.
+A beautiful, bilingual (English & Hindi) mobile and web application that helps you explore Indian laws easily. Built with Flutter and FastAPI, featuring categorized law finder, comprehensive legal database, and intuitive navigation.
 
 [![Flutter](https://img.shields.io/badge/Flutter-3.32.5-blue.svg)](https://flutter.dev/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115.0-green.svg)](https://fastapi.tiangolo.com/)
@@ -22,13 +22,9 @@ Available on:
 
 <div align="center">
 
-| Indian Law Guide | Main Navigation | Section Details |
+| Main Navigation | Law Finder | Browse Acts |
 |:---:|:---:|:---:|
-| ![Main Screen](app_ss/main_screen.jpg) | ![About](app_ss/about.jpg) | ![Law Guide](app_ss/law_guide.jpg) | 
-
-| AI Chat Assistant | About Constitution |
-|:---:|:---:|
-| ![Section](app_ss/section.jpg) | ![Chat](app_ss/chat.jpg) |
+| ![Main Screen](app_ss/main_screen.jpg) | ![Law Finder](app_ss/law_guide.jpg) | ![About](app_ss/about.jpg) |
 
 </div>
 
@@ -36,11 +32,11 @@ Available on:
 
 ### 🎯 Core Capabilities
 - **📚 Comprehensive Legal Database** - 5 major Indian legal acts with 2000+ sections
-- **🤖 AI-Powered Explanations** - Complex legal text simplified using Google Gemini AI
-- **💬 Ethical Chatbot** - Smart legal assistant with built-in safety guardrails
-- **🎤 Voice Interaction** - Speech-to-text input and text-to-speech output in English & Hindi
+- **🔍 Law Finder** - Browse laws by categories (Criminal Law, Property Rights, Women's Rights, Cyber Crime, Consumer Rights, etc.)
+- **📖 Browse Acts** - Explore all acts and their sections systematically
 - **🌐 Bilingual Support** - Complete interface and content in English and Hindi
 - **🎨 Beautiful UI** - Material Design 3 with gradient cards and smooth animations
+- **🌐 Web & Mobile** - Access on any device - desktop, tablet, or mobile
 
 ### 📖 Legal Acts Covered
 | Act | Year | Sections | Languages |
@@ -51,27 +47,32 @@ Available on:
 | Code of Criminal Procedure (CRPC) | 1973 | 533 | EN |
 | Indian Penal Code (IPC) | 1860 | 515 | EN |
 
-### 🛡️ Ethical AI Design
-- ✅ Educational information only, not personalized legal advice
-- ✅ Automatic filtering of prohibited questions
-- ✅ Clear disclaimers on every interaction
-- ✅ Politically neutral and unbiased
-- ✅ Encourages professional legal consultation
-- ✅ No storage of personal information
+### 🎯 Law Categories
+- **⚖️ Criminal Law** - Offences, punishments & criminal procedures
+- **🏠 Property Rights** - Land, property and ownership laws
+- **♀️ Women's Rights** - Laws protecting women
+- **💻 Cyber Crime** - Online and digital offences
+- **🛒 Consumer Rights** - Shopping and consumer protection
+- **📄 Documentation** - Legal documents and procedures
+- **👨‍👩‍👧 Family Law** - Marriage, divorce and family matters
+- **💼 Employment** - Labor laws and workplace rights
 
 ## 🛠️ Tech Stack
 
 **Frontend:**
-- Flutter 3.32.5 - Cross-platform framework
+- Flutter 3.32.5 - Cross-platform framework (Web, Android, iOS)
 - Riverpod - State management
-- GoRouter - Navigation
-- flutter_tts - Text-to-speech
-- speech_to_text - Voice input
+- GoRouter - Navigation and routing
+- Material Design 3 - Modern UI components
 
 **Backend:**
 - FastAPI - Modern Python web framework
-- Google Gemini AI - AI explanations
+- JSON Database - Structured legal data
 - Uvicorn - ASGI server
+
+**Deployment:**
+- Netlify - Web hosting with CDN
+- Render - Backend API hosting
 
 ## 🚀 Quick Start
 
@@ -81,8 +82,8 @@ Available on:
 
 ### Prerequisites
 - Flutter SDK 3.32.5+
-- Python 3.10+
-- Google Gemini API Key ([Get here](https://aistudio.google.com/app/apikey))
+- Python 3.10+ (for backend)
+- Git
 
 ### Setup
 
@@ -90,13 +91,6 @@ Available on:
 ```bash
 cd backend
 pip install -r requirements.txt
-
-# Copy .env.example to .env and add your keys
-cp .env.example .env
-# Edit .env and add:
-# GEMINI_API_KEY=your_gemini_key
-# APP_API_KEY=generate_secure_key (see SECURITY.md)
-
 python -m uvicorn app.main:app --reload
 ```
 
@@ -130,29 +124,35 @@ flutter build web --release
 ## 📐 Architecture
 
 ```
-Constitution_app/
+Constitution_Website/
 ├── backend/
 │   ├── app/
-│   │   ├── main.py         # API routes
-│   │   ├── ai_service.py   # Gemini integration
+│   │   ├── main.py         # FastAPI routes
+│   │   ├── data_loader.py  # Load legal data
 │   │   └── models.py       # Data models
-│   └── data/structured/    # Legal JSON data
-└── mobile/
-    └── lib/
-        ├── screens/        # UI screens
-        ├── providers/      # State management
-        ├── models/         # Data models
-        └── services/       # API services
+│   └── data/structured/    # Legal JSON database
+├── mobile/
+│   ├── lib/
+│   │   ├── screens/        # UI screens (Law Finder, Acts, Sections)
+│   │   ├── providers/      # State management
+│   │   ├── models/         # Data models
+│   │   └── services/       # API services
+│   └── web/                # Web-specific files
+└── .github/workflows/      # CI/CD for Netlify
 ```
 
 ## 🌍 Roadmap
 
-- [x] AI-powered explanations with Google Gemini
-- [x] Ethical chatbot with safety constraints
+- [x] Comprehensive legal database with 2000+ sections
+- [x] Law Finder with categorized search
 - [x] Bilingual support (English & Hindi)
 - [x] Material Design 3 UI
-- [x] Voice-to-voice interaction (TTS + STT)
-- [x] 2000+ legal sections database
+- [x] Web application deployed on Netlify
+- [ ] Search functionality across all acts
+- [ ] Bookmarks and favorites
+- [ ] Dark mode
+- [ ] Download sections as PDF
+- [ ] Share sections via social media
 
 ## 🤝 Contributing
 
@@ -169,10 +169,11 @@ This project is licensed under the MIT License - see [LICENSE](LICENSE) for deta
 
 ## 🙏 Acknowledgments
 
-- Legal data from official government sources
-- AI powered by Google Gemini 2.5 Flash
+- Legal data from official Indian government sources
+- Built with Flutter & FastAPI
 - Icons from Material Design
-- Flutter & FastAPI communities
+- Hosted on Netlify & Render
+- Open source contribution from the community
 
 ---
 
