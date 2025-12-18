@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+// Warm up backend API on app launch to reduce cold-start delay
+import '../services/api_service.dart';
+
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 
@@ -14,10 +17,15 @@ class _SplashScreenState extends State<SplashScreen>
   late AnimationController _controller;
   late Animation<double> _fadeAnimation;
   late Animation<double> _scaleAnimation;
+  late final ApiService _apiService;
 
   @override
   void initState() {
     super.initState();
+
+    // Initialise API service once
+    _apiService = ApiService();
+
     _controller = AnimationController(
       duration: const Duration(milliseconds: 2000),
       vsync: this,
@@ -39,14 +47,27 @@ class _SplashScreenState extends State<SplashScreen>
 
     _controller.forward();
 
+    // Fire-and-forget backend warm-up; do not block UI
+    _warmUpBackend();
+
     // Navigate after animation - ALWAYS show splash on app launch
     _checkFirstTimeAndNavigate();
   }
 
   @override
   void dispose() {
+    _apiService.dispose();
     _controller.dispose();
     super.dispose();
+  }
+
+  // Ping /health once on app launch so Render free-tier backend wakes up
+  Future<void> _warmUpBackend() async {
+    try {
+      await _apiService.checkHealth();
+    } catch (_) {
+      // Ignore errors here; main flows will handle real failures
+    }
   }
 
   Future<void> _checkFirstTimeAndNavigate() async {
