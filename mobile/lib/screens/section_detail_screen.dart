@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import '../services/api_service.dart';
 import '../models/section_detail.dart';
 import '../providers/section_providers.dart';
 
@@ -11,11 +10,12 @@ final sectionDetailProvider =
       SectionDetail,
       ({String actId, String sectionNumber})
     >((ref, params) async {
-      final apiService = ref.watch(apiServiceProvider);
-      return apiService.getSectionDetail(params.actId, params.sectionNumber);
+      final localDataService = ref.watch(localDataServiceProvider);
+      return localDataService.getSectionDetail(
+        params.actId,
+        params.sectionNumber,
+      );
     });
-
-final apiServiceProvider = Provider<ApiService>((ref) => ApiService());
 
 class SectionDetailScreen extends ConsumerWidget {
   final String actId;

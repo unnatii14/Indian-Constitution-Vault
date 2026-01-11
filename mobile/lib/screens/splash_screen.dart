@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-// Warm up backend API on app launch to reduce cold-start delay
-import '../services/api_service.dart';
+// Initialize local data on app launch
+import '../services/local_data_service.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -17,14 +17,14 @@ class _SplashScreenState extends State<SplashScreen>
   late AnimationController _controller;
   late Animation<double> _fadeAnimation;
   late Animation<double> _scaleAnimation;
-  late final ApiService _apiService;
+  late final LocalDataService _localDataService;
 
   @override
   void initState() {
     super.initState();
 
-    // Initialise API service once
-    _apiService = ApiService();
+    // Initialize local data service
+    _localDataService = LocalDataService();
 
     _controller = AnimationController(
       duration: const Duration(milliseconds: 2000),
@@ -56,15 +56,14 @@ class _SplashScreenState extends State<SplashScreen>
 
   @override
   void dispose() {
-    _apiService.dispose();
     _controller.dispose();
     super.dispose();
   }
 
-  // Ping /health once on app launch so Render free-tier backend wakes up
+  // Initialize local data on app launch
   Future<void> _warmUpBackend() async {
     try {
-      await _apiService.checkHealth();
+      await _localDataService.initialize();
     } catch (_) {
       // Ignore errors here; main flows will handle real failures
     }

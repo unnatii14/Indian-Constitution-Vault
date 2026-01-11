@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+
 import 'screens/main_navigation_screen.dart';
 import 'screens/acts_list_screen.dart';
 import 'screens/sections_list_screen.dart';
 import 'screens/section_detail_screen.dart';
 import 'screens/law_finder_screen.dart';
 import 'screens/about_constitution_screen.dart';
+import 'screens/splash_screen.dart';
+import 'screens/onboarding_screen.dart';
 
 void main() {
   runApp(const ProviderScope(child: IndianConstitutionApp()));
@@ -15,8 +18,17 @@ void main() {
 // Router configuration
 final goRouterProvider = Provider<GoRouter>((ref) {
   return GoRouter(
-    initialLocation: '/',
+    // Start with splash so we can warm up backend and show onboarding
+    initialLocation: '/splash',
     routes: [
+      GoRoute(
+        path: '/splash',
+        builder: (context, state) => const SplashScreen(),
+      ),
+      GoRoute(
+        path: '/onboarding',
+        builder: (context, state) => const OnboardingScreen(),
+      ),
       GoRoute(
         path: '/',
         builder: (context, state) => const MainNavigationScreen(),
