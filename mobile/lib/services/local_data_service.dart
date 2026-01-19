@@ -11,7 +11,7 @@ class LocalDataService {
   final Map<String, Map<String, dynamic>> _dataCache = {};
   bool _isInitialized = false;
 
-  // Act metadata
+  // Act metadata - Only acts with complete content
   static const List<Map<String, dynamic>> _actMetadata = [
     {
       'act_id': 'bns',
@@ -29,24 +29,6 @@ class LocalDataService {
       'act_id': 'bsa',
       'title': 'Bharatiya Sakshya Adhiniyam, 2023 (BSA)',
       'file': 'assets/data/bsa_en.json',
-      'languages': ['en'],
-    },
-    {
-      'act_id': 'constitution',
-      'title': 'Constitution of India',
-      'file': 'assets/data/constitution_en.json',
-      'languages': ['en'],
-    },
-    {
-      'act_id': 'ipc',
-      'title': 'Indian Penal Code, 1860 (IPC) - Legacy',
-      'file': 'assets/data/ipc_en.json',
-      'languages': ['en'],
-    },
-    {
-      'act_id': 'crpc',
-      'title': 'Code of Criminal Procedure, 1973 (CrPC) - Legacy',
-      'file': 'assets/data/crpc_en.json',
       'languages': ['en'],
     },
   ];
