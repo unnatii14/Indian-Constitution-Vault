@@ -2,7 +2,7 @@
 
 **Making Indian Law Accessible to Every Citizen - Now 100% Offline!**
 
-A beautiful, bilingual (English & Hindi) mobile and web application that helps you explore Indian laws easily. The mobile app is **fully offline** - all data is bundled locally for instant access without internet. Built with Flutter and FastAPI, featuring categorized law finder, comprehensive legal database, and intuitive navigation.
+A beautiful mobile and web application that helps you explore Indian laws easily. The mobile app is **fully offline** - all data is bundled locally for instant access without internet. Built with Flutter, featuring categorized law finder, comprehensive legal database, and intuitive navigation.
 
 [![Flutter](https://img.shields.io/badge/Flutter-3.32.5-blue.svg)](https://flutter.dev/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115.0-green.svg)](https://fastapi.tiangolo.com/)
@@ -19,11 +19,16 @@ The mobile app now works **completely offline** with no internet required:
 - 🔒 **Complete privacy** - All data stays on your device
 - 📦 **Small size** - Only ~40MB with all data included
 
-📖 **[Read the offline implementation guide →](OFFLINE_IMPLEMENTATION.md)**
-
 ## 🌐 Live Demo
 
-**Try it now:** [https://indian-constitution-vault.netlify.app/](https://indian-constitution-vault.netlify.app/)
+**Try it now:** 
+(Join on Android
+Testers can join your test using Google Play on Android
+https://play.google.com/store/apps/details?id=com.indianlaw.indian_constitution_vault 
+
+Join on the web
+Testers can join your test on the web
+https://play.google.com/apps/testing/com.indianlaw.indian_constitution_vault)
 
 Available on:
 - 📱 **Android**: Fully offline app - Download from releases
@@ -55,13 +60,11 @@ Available on:
 - **🌐 Web & Mobile** - Access on any device - desktop, tablet, or mobile
 
 ### 📖 Legal Acts Covered
-| Act | Year | Sections | Languages |
-|-----|------|----------|-----------|
-| Bharatiya Nyaya Sanhita (BNS) | 2023 | 358 | EN + हिंदी |
-| Bharatiya Nagarik Suraksha Sanhita (BNSS) | 2023 | 532 | EN + हिंदी |
-| Bharatiya Sakshya Adhiniyam (BSA) | 2023 | 170 | EN + हिंदी |
-| Code of Criminal Procedure (CRPC) | 1973 | 533 | EN |
-| Indian Penal Code (IPC) | 1860 | 515 | EN |
+| Act | Year | Sections |
+|-----|------|----------|
+| Bharatiya Nyaya Sanhita (BNS) | 2023 | 358 |
+| Bharatiya Nagarik Suraksha Sanhita (BNSS) | 2023 | 532 |
+| Bharatiya Sakshya Adhiniyam (BSA) | 2023 | 170 |
 
 ### 🎯 Law Categories
 - **⚖️ Criminal Law** - Offences, punishments & criminal procedures
@@ -82,13 +85,11 @@ Available on:
 - Material Design 3 - Modern UI components
 
 **Backend:**
-- FastAPI - Modern Python web framework
 - JSON Database - Structured legal data
 - Uvicorn - ASGI server
 
 **Deployment:**
 - Netlify - Web hosting with CDN
-- Render - Backend API hosting
 
 ## 🚀 Quick Start
 
@@ -129,14 +130,6 @@ flutter build web --release
 # Deploy to Netlify (see QUICK_START_NETLIFY.md for detailed guide)
 ```
 
-📖 **Web Deployment Guides:**
-- [🚀 Quick Start Guide](QUICK_START_NETLIFY.md) - Deploy in 2 minutes
-- [📘 Detailed Deployment](NETLIFY_DEPLOYMENT.md) - Complete instructions
-- [✅ Deployment Checklist](DEPLOYMENT_CHECKLIST.md) - Step-by-step checklist
-- [📊 Conversion Summary](CONVERSION_SUMMARY.md) - What was converted
-
-**⚠️ Important:** See [SECURITY.md](SECURITY.md) for API authentication setup before deploying to production.
-
 ## 📐 Architecture
 
 ```
@@ -164,11 +157,6 @@ Constitution_Website/
 - [x] Bilingual support (English & Hindi)
 - [x] Material Design 3 UI
 - [x] Web application deployed on Netlify
-- [ ] Search functionality across all acts
-- [ ] Bookmarks and favorites
-- [ ] Dark mode
-- [ ] Download sections as PDF
-- [ ] Share sections via social media
 
 ## 🤝 Contributing
 
@@ -186,10 +174,9 @@ This project is licensed under the MIT License - see [LICENSE](LICENSE) for deta
 ## 🙏 Acknowledgments
 
 - Legal data from official Indian government sources
-- Built with Flutter & FastAPI
+- Built with Flutter
 - Icons from Material Design
 - Hosted on Netlify & Render
-- Open source contribution from the community
 
 ---
 
