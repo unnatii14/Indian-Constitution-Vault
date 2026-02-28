@@ -1,13 +1,17 @@
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import '../providers/bookmark_provider.dart';
 
-class MainNavigationScreen extends StatelessWidget {
+class MainNavigationScreen extends ConsumerWidget {
   const MainNavigationScreen({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final bookmarksAsync = ref.watch(bookmarksProvider);
+    final bookmarkCount = bookmarksAsync.valueOrNull?.length ?? 0;
     final isDark = Theme.of(context).brightness == Brightness.dark;
     final bgColors = isDark
         ? [const Color(0xFF1A1A1A), const Color(0xFF2C2C2C)]
@@ -41,82 +45,9 @@ class MainNavigationScreen extends StatelessWidget {
                     ),
                     textAlign: TextAlign.center,
                   ),
-                  const SizedBox(height: 8),
-                  const Text(
-                    'Simplifying Indian Laws',
-                    style: TextStyle(fontSize: 16, color: Colors.white70),
-                    textAlign: TextAlign.center,
-                  ),
                   const SizedBox(height: 32),
 
                   // Option 1: Browse Laws
-                  Expanded(
-                    child: _NavigationCard(
-                      icon: Icons.library_books_rounded,
-                      title: 'Browse Laws',
-                      description: 'Explore Indian legal acts and sections',
-                      gradient: LinearGradient(
-                        begin: Alignment.topLeft,
-                        end: Alignment.bottomRight,
-                        colors: [Colors.blue.shade400, Colors.blue.shade700],
-                      ),
-                      onTap: () => context.go('/acts'),
-                    ),
-                  ),
-                  const SizedBox(height: 12),
-
-                  // Option 2: Law Finder
-                  Expanded(
-                    child: _NavigationCard(
-                      icon: Icons.search_rounded,
-                      title: 'Law Finder',
-                      description: 'Find laws by category & topic',
-                      gradient: LinearGradient(
-                        begin: Alignment.topLeft,
-                        end: Alignment.bottomRight,
-                        colors: [Colors.green.shade400, Colors.green.shade700],
-                      ),
-                      onTap: () => context.go('/law-finder'),
-                    ),
-                  ),
-                  const SizedBox(height: 12),
-
-                  // Option 3: About Constitution
-                  Expanded(
-                    child: _NavigationCard(
-                      icon: Icons.account_balance_rounded,
-                      title: 'About Constitution',
-                      description: 'Learn about India\'s supreme law',
-                      gradient: LinearGradient(
-                        begin: Alignment.topLeft,
-                        end: Alignment.bottomRight,
-                        colors: [
-                          Colors.purple.shade400,
-                          Colors.purple.shade700,
-                        ],
-                      ),
-                      onTap: () => context.go('/about-constitution'),
-                    ),
-                  ),
-                  const SizedBox(height: 12),
-
-                  // Option 4: About this App
-                  Expanded(
-                    child: _NavigationCard(
-                      icon: Icons.info_outline_rounded,
-                      title: 'About this App',
-                      description: 'Settings, share & support',
-                      gradient: LinearGradient(
-                        begin: Alignment.topLeft,
-                        end: Alignment.bottomRight,
-                        colors: [Colors.teal.shade400, Colors.teal.shade700],
-                      ),
-                      onTap: () => context.go('/about-app'),
-                    ),
-                  ),
-                  const SizedBox(height: 24),
-
-                  // Disclaimer
                   Container(
                     padding: const EdgeInsets.all(16),
                     decoration: BoxDecoration(
@@ -183,7 +114,7 @@ class MainNavigationScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  const SizedBox(height: 32),
+                  const SizedBox(height: 14),
                   // App Title
                   const Text(
                     '⚖️ Legal Rights',
@@ -192,12 +123,6 @@ class MainNavigationScreen extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                       color: Colors.white,
                     ),
-                    textAlign: TextAlign.center,
-                  ),
-                  const SizedBox(height: 8),
-                  const Text(
-                    'Simplifying Indian Laws',
-                    style: TextStyle(fontSize: 16, color: Colors.white70),
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 32),
@@ -253,7 +178,25 @@ class MainNavigationScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 12),
 
-                  // Option 4: About this App
+                  // Option 4: Bookmarks
+                  Expanded(
+                    child: _NavigationCard(
+                      icon: Icons.bookmark_rounded,
+                      title: bookmarkCount > 0
+                          ? 'Bookmarks ($bookmarkCount)'
+                          : 'Bookmarks',
+                      description: 'Your saved sections',
+                      gradient: LinearGradient(
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                        colors: [Colors.amber.shade500, Colors.orange.shade700],
+                      ),
+                      onTap: () => context.go('/bookmarks'),
+                    ),
+                  ),
+                  const SizedBox(height: 12),
+
+                  // Option 5: About this App
                   Expanded(
                     child: _NavigationCard(
                       icon: Icons.info_outline_rounded,
@@ -310,13 +253,13 @@ class _NavigationCard extends StatelessWidget {
           ],
         ),
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 12.0),
+          padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 4.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             mainAxisSize: MainAxisSize.min,
             children: [
-              Icon(icon, size: 36, color: Colors.white),
-              const SizedBox(height: 8),
+              Icon(icon, size: 32, color: Colors.white),
+              const SizedBox(height: 4),
               Text(
                 title,
                 style: const TextStyle(
@@ -328,7 +271,7 @@ class _NavigationCard extends StatelessWidget {
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
               ),
-              const SizedBox(height: 3),
+              const SizedBox(height: 2),
               Text(
                 description,
                 style: const TextStyle(fontSize: 12, color: Colors.white70),

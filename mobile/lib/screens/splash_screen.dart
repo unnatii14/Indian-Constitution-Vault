@@ -1,3 +1,4 @@
+import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -88,6 +89,7 @@ class _SplashScreenState extends State<SplashScreen>
   Widget build(BuildContext context) {
     final screenHeight = MediaQuery.of(context).size.height;
     final screenWidth = MediaQuery.of(context).size.width;
+    final logoSize = min(screenWidth * 0.5, screenHeight * 0.38);
 
     return WillPopScope(
       onWillPop: () async => false, // Disable back button on splash
@@ -112,119 +114,120 @@ class _SplashScreenState extends State<SplashScreen>
                   opacity: _fadeAnimation,
                   child: ScaleTransition(
                     scale: _scaleAnimation,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        // Extra large Netflix-style logo
-                        Container(
-                          width:
-                              screenWidth * 0.65, // Bigger: 65% of screen width
-                          height: screenWidth * 0.65,
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(50),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black.withOpacity(0.4),
-                                blurRadius: 40,
-                                spreadRadius: 15,
-                              ),
-                            ],
-                          ),
-                          child: Icon(
-                            Icons.gavel,
-                            size: screenWidth * 0.4, // Bigger icon
-                            color: Colors.deepOrange.shade700,
-                          ),
-                        ),
-                        SizedBox(height: screenHeight * 0.06),
-                        // App title with glow effect
-                        Text(
-                          'Indian Law Guide',
-                          style: TextStyle(
-                            fontSize: 42,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                            letterSpacing: 2.5,
-                            shadows: [
-                              Shadow(
-                                color: Colors.orange.shade300,
-                                offset: const Offset(0, 0),
-                                blurRadius: 20,
-                              ),
-                              const Shadow(
-                                color: Colors.black26,
-                                offset: Offset(2, 2),
-                                blurRadius: 4,
-                              ),
-                            ],
-                          ),
-                          textAlign: TextAlign.center,
-                        ),
-                        const SizedBox(height: 16),
-                        // Hindi subtitle with glow
-                        Text(
-                          'भारतीय कानून गाइड',
-                          style: TextStyle(
-                            fontSize: 24,
-                            fontWeight: FontWeight.w600,
-                            color: Colors.white,
-                            letterSpacing: 1.5,
-                            shadows: [
-                              Shadow(
-                                color: Colors.orange.shade200,
-                                offset: const Offset(0, 0),
-                                blurRadius: 15,
-                              ),
-                            ],
-                          ),
-                        ),
-                        const SizedBox(height: 28),
-                        // Enhanced tagline
-                        Container(
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 28,
-                            vertical: 14,
-                          ),
-                          decoration: BoxDecoration(
-                            color: Colors.white.withOpacity(0.15),
-                            borderRadius: BorderRadius.circular(25),
-                            border: Border.all(
-                              color: Colors.white.withOpacity(0.4),
-                              width: 2,
-                            ),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black.withOpacity(0.2),
-                                blurRadius: 10,
-                                spreadRadius: 2,
-                              ),
-                            ],
-                          ),
-                          child: const Text(
-                            'Constitution • Rights • Laws • Justice',
-                            style: TextStyle(
-                              fontSize: 15,
+                    child: SingleChildScrollView(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          // Extra large Netflix-style logo
+                          Container(
+                            width: logoSize,
+                            height: logoSize,
+                            decoration: BoxDecoration(
                               color: Colors.white,
-                              letterSpacing: 1.2,
-                              fontWeight: FontWeight.w500,
+                              borderRadius: BorderRadius.circular(50),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black.withOpacity(0.4),
+                                  blurRadius: 40,
+                                  spreadRadius: 15,
+                                ),
+                              ],
+                            ),
+                            child: Icon(
+                              Icons.gavel,
+                              size: logoSize * 0.6,
+                              color: Colors.deepOrange.shade700,
+                            ),
+                          ),
+                          SizedBox(height: screenHeight * 0.06),
+                          // App title with glow effect
+                          Text(
+                            'Indian Law Guide',
+                            style: TextStyle(
+                              fontSize: 42,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                              letterSpacing: 2.5,
+                              shadows: [
+                                Shadow(
+                                  color: Colors.orange.shade300,
+                                  offset: const Offset(0, 0),
+                                  blurRadius: 20,
+                                ),
+                                const Shadow(
+                                  color: Colors.black26,
+                                  offset: Offset(2, 2),
+                                  blurRadius: 4,
+                                ),
+                              ],
                             ),
                             textAlign: TextAlign.center,
                           ),
-                        ),
-                        SizedBox(height: screenHeight * 0.05),
-                        // Loading indicator
-                        SizedBox(
-                          width: 40,
-                          height: 40,
-                          child: CircularProgressIndicator(
-                            strokeWidth: 3,
-                            valueColor: AlwaysStoppedAnimation<Color>(
-                              Colors.white.withOpacity(0.7),
+                          const SizedBox(height: 16),
+                          // Hindi subtitle with glow
+                          Text(
+                            'भारतीय कानून गाइड',
+                            style: TextStyle(
+                              fontSize: 24,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.white,
+                              letterSpacing: 1.5,
+                              shadows: [
+                                Shadow(
+                                  color: Colors.orange.shade200,
+                                  offset: const Offset(0, 0),
+                                  blurRadius: 15,
+                                ),
+                              ],
                             ),
                           ),
-                        ),
-                      ],
+                          const SizedBox(height: 28),
+                          // Enhanced tagline
+                          Container(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 28,
+                              vertical: 14,
+                            ),
+                            decoration: BoxDecoration(
+                              color: Colors.white.withOpacity(0.15),
+                              borderRadius: BorderRadius.circular(25),
+                              border: Border.all(
+                                color: Colors.white.withOpacity(0.4),
+                                width: 2,
+                              ),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black.withOpacity(0.2),
+                                  blurRadius: 10,
+                                  spreadRadius: 2,
+                                ),
+                              ],
+                            ),
+                            child: const Text(
+                              'Constitution • Rights • Laws • Justice',
+                              style: TextStyle(
+                                fontSize: 15,
+                                color: Colors.white,
+                                letterSpacing: 1.2,
+                                fontWeight: FontWeight.w500,
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
+                          SizedBox(height: screenHeight * 0.05),
+                          // Loading indicator
+                          SizedBox(
+                            width: 40,
+                            height: 40,
+                            child: CircularProgressIndicator(
+                              strokeWidth: 3,
+                              valueColor: AlwaysStoppedAnimation<Color>(
+                                Colors.white.withOpacity(0.7),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 );

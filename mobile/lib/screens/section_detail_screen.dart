@@ -3,6 +3,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../models/section_detail.dart';
 import '../providers/section_providers.dart';
+import '../providers/bookmark_provider.dart';
+import '../services/bookmark_service.dart';
+import '../services/tts_service.dart';
 
 // Provider for fetching section detail
 final sectionDetailProvider =
@@ -17,7 +20,7 @@ final sectionDetailProvider =
       );
     });
 
-class SectionDetailScreen extends ConsumerWidget {
+class SectionDetailScreen extends ConsumerStatefulWidget {
   final String actId;
   final String sectionNumber;
 
@@ -27,9 +30,18 @@ class SectionDetailScreen extends ConsumerWidget {
     required this.sectionNumber,
   });
 
+  @override
+  ConsumerState<SectionDetailScreen> createState() =>
+      _SectionDetailScreenState();
+}
+
+class _SectionDetailScreenState extends ConsumerState<SectionDetailScreen> {
+  late final TtsService _tts;
+  TtsState _ttsState = TtsState.stopped;
+
   Color _getActColor(String actId) {
-    if (actId.contains('BNS')) return Colors.orange.shade700;
     if (actId.contains('BNSS')) return Colors.green.shade700;
+    if (actId.contains('BNS')) return Colors.orange.shade700;
     if (actId.contains('BSA')) return Colors.blue.shade700;
     if (actId.contains('CONST')) return Colors.purple.shade700;
     if (actId.contains('CRPC')) return Colors.red.shade700;
@@ -38,11 +50,37 @@ class SectionDetailScreen extends ConsumerWidget {
   }
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  void initState() {
+    super.initState();
+    _tts = TtsService();
+    _tts.onStateChanged = (s) {
+      if (mounted) setState(() => _ttsState = s);
+    };
+  }
+
+  @override
+  void dispose() {
+    _tts.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
     final sectionAsync = ref.watch(
-      sectionDetailProvider((actId: actId, sectionNumber: sectionNumber)),
+      sectionDetailProvider((
+        actId: widget.actId,
+        sectionNumber: widget.sectionNumber,
+      )),
     );
-    final actColor = _getActColor(actId);
+    final actColor = _getActColor(widget.actId);
+    final bookmarksState = ref.watch(bookmarksProvider);
+    final isBookmarked =
+        bookmarksState.valueOrNull?.any(
+          (b) =>
+              b.actId == widget.actId &&
+              b.sectionNumber == widget.sectionNumber,
+        ) ??
+        false;
 
     return PopScope(
       canPop: true,
@@ -61,16 +99,79 @@ class SectionDetailScreen extends ConsumerWidget {
                     leading: IconButton(
                       icon: const Icon(Icons.arrow_back, color: Colors.white),
                       onPressed: () {
+                        _tts.stop();
                         if (Navigator.canPop(context)) {
                           Navigator.pop(context);
                         } else {
-                          context.go('/acts/$actId/sections');
+                          context.go('/acts/${widget.actId}/sections');
                         }
                       },
                     ),
+                    actions: [
+                      // Read Aloud
+                      IconButton(
+                        tooltip: _ttsState == TtsState.playing
+                            ? 'Stop reading'
+                            : 'Read aloud',
+                        icon: Icon(
+                          _ttsState == TtsState.playing
+                              ? Icons.stop_circle_outlined
+                              : Icons.volume_up_rounded,
+                          color: Colors.white,
+                        ),
+                        onPressed: () {
+                          sectionAsync.whenData((section) {
+                            _tts.speak(
+                              'Section ${widget.sectionNumber}. '
+                              '${section.heading}. '
+                              '${section.content}',
+                            );
+                          });
+                        },
+                      ),
+                      // Bookmark
+                      IconButton(
+                        tooltip: isBookmarked ? 'Remove bookmark' : 'Bookmark',
+                        icon: Icon(
+                          isBookmarked
+                              ? Icons.bookmark_rounded
+                              : Icons.bookmark_border_rounded,
+                          color: Colors.white,
+                        ),
+                        onPressed: () {
+                          sectionAsync.whenData((section) {
+                            ref
+                                .read(bookmarksProvider.notifier)
+                                .toggle(
+                                  BookmarkedSection(
+                                    actId: widget.actId,
+                                    sectionNumber: widget.sectionNumber,
+                                    heading: section.heading,
+                                    actName: widget.actId,
+                                  ),
+                                );
+                            final nowBookmarked = !isBookmarked;
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                content: Text(
+                                  nowBookmarked
+                                      ? 'Saved to bookmarks'
+                                      : 'Removed from bookmarks',
+                                ),
+                                duration: const Duration(seconds: 2),
+                                behavior: SnackBarBehavior.floating,
+                                backgroundColor: nowBookmarked
+                                    ? Colors.amber.shade700
+                                    : Colors.grey.shade600,
+                              ),
+                            );
+                          });
+                        },
+                      ),
+                    ],
                     flexibleSpace: FlexibleSpaceBar(
                       title: Text(
-                        'Section $sectionNumber',
+                        'Section ${widget.sectionNumber}',
                         style: const TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 18,
@@ -145,7 +246,7 @@ class SectionDetailScreen extends ConsumerWidget {
                                         borderRadius: BorderRadius.circular(8),
                                       ),
                                       child: Text(
-                                        actId,
+                                        widget.actId,
                                         style: TextStyle(
                                           fontSize: 12,
                                           fontWeight: FontWeight.bold,
@@ -176,7 +277,7 @@ class SectionDetailScreen extends ConsumerWidget {
                                           ),
                                           const SizedBox(width: 4),
                                           Text(
-                                            'Section $sectionNumber',
+                                            'Section ${widget.sectionNumber}',
                                             style: TextStyle(
                                               fontSize: 12,
                                               fontWeight: FontWeight.w600,
@@ -321,8 +422,8 @@ class SectionDetailScreen extends ConsumerWidget {
 
                           // Navigation buttons
                           _NavigationButtons(
-                            actId: actId,
-                            currentSectionNumber: sectionNumber,
+                            actId: widget.actId,
+                            currentSectionNumber: widget.sectionNumber,
                             actColor: actColor,
                           ),
 

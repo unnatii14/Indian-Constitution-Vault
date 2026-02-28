@@ -10,6 +10,7 @@ import 'screens/sections_list_screen.dart';
 import 'screens/section_detail_screen.dart';
 import 'screens/law_finder_screen.dart';
 import 'screens/about_constitution_screen.dart';
+import 'screens/bookmarks_screen.dart';
 import 'screens/splash_screen.dart';
 import 'screens/onboarding_screen.dart';
 
@@ -50,6 +51,10 @@ final goRouterProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: '/about-app',
         builder: (context, state) => const AboutAppScreen(),
+      ),
+      GoRoute(
+        path: '/bookmarks',
+        builder: (context, state) => const BookmarksScreen(),
       ),
       GoRoute(
         path: '/acts/:actId/sections',
