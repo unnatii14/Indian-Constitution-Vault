@@ -14,97 +14,102 @@ class _AboutConstitutionScreenState extends State<AboutConstitutionScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: CustomScrollView(
-        slivers: [
-          SliverAppBar(
-            expandedHeight: 200,
-            pinned: true,
-            leading: IconButton(
-              icon: const Icon(Icons.arrow_back),
-              onPressed: () => context.go('/'),
-            ),
-            actions: [
-              IconButton(
-                icon: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Icon(Icons.translate, size: 20),
-                    SizedBox(width: 4),
-                    Text(
-                      _isHindi ? 'हिं' : 'EN',
-                      style: TextStyle(
-                        fontSize: 12,
-                        fontWeight: FontWeight.bold,
+    return PopScope(
+      canPop: false,
+      onPopInvokedWithResult: (didPop, result) {
+        if (!didPop) context.go('/');
+      },
+      child: Scaffold(
+        body: CustomScrollView(
+          slivers: [
+            SliverAppBar(
+              expandedHeight: 200,
+              pinned: true,
+              leading: IconButton(
+                icon: const Icon(Icons.arrow_back),
+                onPressed: () => context.go('/'),
+              ),
+              actions: [
+                IconButton(
+                  icon: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Icon(Icons.translate, size: 20),
+                      SizedBox(width: 4),
+                      Text(
+                        _isHindi ? 'हिं' : 'EN',
+                        style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
+                  onPressed: () {
+                    setState(() {
+                      _isHindi = !_isHindi;
+                    });
+                  },
                 ),
-                onPressed: () {
-                  setState(() {
-                    _isHindi = !_isHindi;
-                  });
-                },
-              ),
-            ],
-            flexibleSpace: FlexibleSpaceBar(
-              title: Text(
-                _isHindi ? 'भारत का संविधान' : 'Constitution of India',
-                style: const TextStyle(
-                  fontWeight: FontWeight.bold,
-                  shadows: [
-                    Shadow(
-                      offset: Offset(0, 1),
-                      blurRadius: 3,
-                      color: Colors.black45,
-                    ),
-                  ],
-                ),
-              ),
-              background: Container(
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                    colors: [Colors.orange.shade700, Colors.green.shade600],
+              ],
+              flexibleSpace: FlexibleSpaceBar(
+                title: Text(
+                  _isHindi ? 'भारत का संविधान' : 'Constitution of India',
+                  style: const TextStyle(
+                    fontWeight: FontWeight.bold,
+                    shadows: [
+                      Shadow(
+                        offset: Offset(0, 1),
+                        blurRadius: 3,
+                        color: Colors.black45,
+                      ),
+                    ],
                   ),
                 ),
-                child: Center(
-                  child: Icon(
-                    Icons.account_balance,
-                    size: 80,
-                    color: Colors.white.withOpacity(0.3),
+                background: Container(
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                      colors: [Colors.orange.shade700, Colors.green.shade600],
+                    ),
+                  ),
+                  child: Center(
+                    child: Icon(
+                      Icons.account_balance,
+                      size: 80,
+                      color: Colors.white.withOpacity(0.3),
+                    ),
                   ),
                 ),
               ),
             ),
-          ),
-          SliverToBoxAdapter(
-            child: Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  _IntroCard(isHindi: _isHindi),
-                  const SizedBox(height: 16),
-                  _FramingProcessCard(isHindi: _isHindi),
-                  const SizedBox(height: 16),
-                  _KeyLeadersCard(isHindi: _isHindi),
-                  const SizedBox(height: 16),
-                  _DraftingCommitteeCard(isHindi: _isHindi),
-                  const SizedBox(height: 16),
-                  _OtherContributorsCard(isHindi: _isHindi),
-                  const SizedBox(height: 16),
-                  _NationalDaysCard(isHindi: _isHindi),
-                  const SizedBox(height: 16),
-                  _PrideAndValuesCard(isHindi: _isHindi),
-                  const SizedBox(height: 32),
-                ],
+            SliverToBoxAdapter(
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    _IntroCard(isHindi: _isHindi),
+                    const SizedBox(height: 16),
+                    _FramingProcessCard(isHindi: _isHindi),
+                    const SizedBox(height: 16),
+                    _KeyLeadersCard(isHindi: _isHindi),
+                    const SizedBox(height: 16),
+                    _DraftingCommitteeCard(isHindi: _isHindi),
+                    const SizedBox(height: 16),
+                    _OtherContributorsCard(isHindi: _isHindi),
+                    const SizedBox(height: 16),
+                    _NationalDaysCard(isHindi: _isHindi),
+                    const SizedBox(height: 16),
+                    _PrideAndValuesCard(isHindi: _isHindi),
+                    const SizedBox(height: 32),
+                  ],
+                ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
@@ -119,7 +124,6 @@ class _IntroCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       elevation: 2,
-      color: Colors.white,
       child: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Column(
@@ -146,7 +150,6 @@ class _IntroCard extends StatelessWidget {
                     style: const TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
-                      color: Colors.black87,
                     ),
                   ),
                 ),
@@ -157,11 +160,7 @@ class _IntroCard extends StatelessWidget {
               isHindi
                   ? 'भारत का संविधान देश का सर्वोच्च कानून है, जो यह परिभाषित करता है कि हमारे देश को कैसे शासित किया जाता है, राज्य के प्रत्येक अंग की शक्तियां, और प्रत्येक नागरिक के मौलिक अधिकार और कर्तव्य।'
                   : 'The Constitution of India is the supreme law of the land, defining how our country is governed, the powers of each organ of the state, and the fundamental rights and duties of every citizen.',
-              style: const TextStyle(
-                fontSize: 15,
-                height: 1.6,
-                color: Colors.black87,
-              ),
+              style: const TextStyle(fontSize: 15, height: 1.6),
             ),
             const SizedBox(height: 12),
             Container(
@@ -206,7 +205,6 @@ class _FramingProcessCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       elevation: 2,
-      color: Colors.white,
       child: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Column(
@@ -235,7 +233,6 @@ class _FramingProcessCard extends StatelessWidget {
                     style: const TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
-                      color: Colors.black87,
                     ),
                   ),
                 ),
@@ -246,22 +243,14 @@ class _FramingProcessCard extends StatelessWidget {
               isHindi
                   ? 'संविधान का निर्माण भारत की संविधान सभा द्वारा किया गया था, जिसकी पहली बैठक दिसंबर 1946 में हुई थी। 2 वर्ष, 11 महीने और 18 दिन के समर्पित कार्य के बाद, सभा ने 26 नवंबर 1949 को अंतिम संविधान को अपनाया।'
                   : 'The Constitution was framed by the Constituent Assembly of India, which first met in December 1946. After 2 years, 11 months and 18 days of dedicated work, the Assembly adopted the final Constitution on 26 November 1949.',
-              style: const TextStyle(
-                fontSize: 15,
-                height: 1.6,
-                color: Colors.black87,
-              ),
+              style: const TextStyle(fontSize: 15, height: 1.6),
             ),
             const SizedBox(height: 12),
             Text(
               isHindi
                   ? 'उस ऐतिहासिक दिन पर, 284 सदस्यों ने दस्तावेज़ पर हस्ताक्षर किए, इससे पहले कि यह 26 जनवरी 1950 को लागू हो, जिसने भारत के एक संप्रभु लोकतांत्रिक गणराज्य में परिवर्तन को चिह्नित किया।'
                   : 'On that historic day, 284 members signed the document before it came into force on 26 January 1950, marking India\'s transformation into a sovereign democratic republic.',
-              style: const TextStyle(
-                fontSize: 15,
-                height: 1.6,
-                color: Colors.black87,
-              ),
+              style: const TextStyle(fontSize: 15, height: 1.6),
             ),
           ],
         ),
@@ -279,7 +268,6 @@ class _KeyLeadersCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       elevation: 2,
-      color: Colors.white,
       child: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Column(
@@ -308,7 +296,6 @@ class _KeyLeadersCard extends StatelessWidget {
                     style: const TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
-                      color: Colors.black87,
                     ),
                   ),
                 ),
@@ -377,13 +364,16 @@ class _LeaderTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
     return Container(
       margin: const EdgeInsets.only(bottom: 16),
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
-        color: color.shade50,
+        color: isDark ? color.withOpacity(0.18) : color.shade50,
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: color.shade200),
+        border: Border.all(
+          color: isDark ? color.withOpacity(0.4) : color.shade200,
+        ),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -393,7 +383,7 @@ class _LeaderTile extends StatelessWidget {
             style: TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.bold,
-              color: color.shade900,
+              color: isDark ? color.shade200 : color.shade900,
             ),
           ),
           const SizedBox(height: 4),
@@ -402,18 +392,11 @@ class _LeaderTile extends StatelessWidget {
             style: TextStyle(
               fontSize: 13,
               fontWeight: FontWeight.w600,
-              color: color.shade700,
+              color: isDark ? color.shade300 : color.shade700,
             ),
           ),
           const SizedBox(height: 6),
-          Text(
-            description,
-            style: const TextStyle(
-              fontSize: 14,
-              height: 1.4,
-              color: Colors.black87,
-            ),
-          ),
+          Text(description, style: const TextStyle(fontSize: 14, height: 1.4)),
         ],
       ),
     );
@@ -458,7 +441,6 @@ class _DraftingCommitteeCard extends StatelessWidget {
 
     return Card(
       elevation: 2,
-      color: Colors.white,
       child: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Column(
@@ -485,7 +467,6 @@ class _DraftingCommitteeCard extends StatelessWidget {
                     style: const TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
-                      color: Colors.black87,
                     ),
                   ),
                 ),
@@ -496,11 +477,7 @@ class _DraftingCommitteeCard extends StatelessWidget {
               isHindi
                   ? 'सात प्रतिष्ठित सदस्य जिन्होंने संविधान के हर शब्द का मसौदा तैयार किया:'
                   : 'Seven distinguished members who drafted every word of the Constitution:',
-              style: const TextStyle(
-                fontSize: 14,
-                color: Colors.black87,
-                fontStyle: FontStyle.italic,
-              ),
+              style: const TextStyle(fontSize: 14, fontStyle: FontStyle.italic),
             ),
             const SizedBox(height: 12),
             ...members.map(
@@ -528,7 +505,6 @@ class _DraftingCommitteeCard extends StatelessWidget {
                             style: const TextStyle(
                               fontSize: 15,
                               fontWeight: FontWeight.w600,
-                              color: Colors.black87,
                             ),
                           ),
                           Text(
@@ -579,7 +555,6 @@ class _OtherContributorsCard extends StatelessWidget {
 
     return Card(
       elevation: 2,
-      color: Colors.white,
       child: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Column(
@@ -608,7 +583,6 @@ class _OtherContributorsCard extends StatelessWidget {
                     style: const TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
-                      color: Colors.black87,
                     ),
                   ),
                 ),
@@ -626,10 +600,7 @@ class _OtherContributorsCard extends StatelessWidget {
                     Expanded(
                       child: Text(
                         contributor,
-                        style: const TextStyle(
-                          fontSize: 15,
-                          color: Colors.black87,
-                        ),
+                        style: const TextStyle(fontSize: 15),
                       ),
                     ),
                   ],
@@ -652,7 +623,6 @@ class _NationalDaysCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       elevation: 2,
-      color: Colors.white,
       child: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Column(
@@ -677,7 +647,6 @@ class _NationalDaysCard extends StatelessWidget {
                     style: const TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
-                      color: Colors.black87,
                     ),
                   ),
                 ),
@@ -731,32 +700,36 @@ class _NationalDayTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
     return Container(
       padding: const EdgeInsets.all(14),
       decoration: BoxDecoration(
-        color: color.shade50,
+        color: isDark ? color.withOpacity(0.18) : color.shade50,
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: color.shade200),
+        border: Border.all(
+          color: isDark ? color.withOpacity(0.4) : color.shade200,
+        ),
       ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
             padding: const EdgeInsets.all(8),
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(8),
-            ),
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(8)),
             child: Column(
               children: [
-                Icon(icon, color: color.shade700, size: 24),
+                Icon(
+                  icon,
+                  color: isDark ? color.shade300 : color.shade700,
+                  size: 24,
+                ),
                 const SizedBox(height: 4),
                 Text(
                   date.split(' ')[0],
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
-                    color: color.shade900,
+                    color: isDark ? color.shade200 : color.shade900,
                   ),
                 ),
                 Text(
@@ -764,7 +737,7 @@ class _NationalDayTile extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 11,
                     fontWeight: FontWeight.w600,
-                    color: color.shade700,
+                    color: isDark ? color.shade300 : color.shade700,
                   ),
                 ),
               ],
@@ -780,7 +753,7 @@ class _NationalDayTile extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
-                    color: color.shade900,
+                    color: isDark ? color.shade200 : color.shade900,
                   ),
                 ),
                 Text(
@@ -788,17 +761,13 @@ class _NationalDayTile extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 13,
                     fontWeight: FontWeight.w500,
-                    color: color.shade700,
+                    color: isDark ? color.shade300 : color.shade700,
                   ),
                 ),
                 const SizedBox(height: 6),
                 Text(
                   description,
-                  style: const TextStyle(
-                    fontSize: 14,
-                    height: 1.4,
-                    color: Colors.black87,
-                  ),
+                  style: const TextStyle(fontSize: 14, height: 1.4),
                 ),
               ],
             ),
@@ -816,16 +785,21 @@ class _PrideAndValuesCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
     return Card(
       elevation: 2,
-      color: Colors.white,
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
           gradient: LinearGradient(
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
-            colors: [Colors.orange.shade50, Colors.green.shade50],
+            colors: isDark
+                ? [
+                    Colors.orange.withOpacity(0.15),
+                    Colors.green.withOpacity(0.15),
+                  ]
+                : [Colors.orange.shade50, Colors.green.shade50],
           ),
         ),
         child: Padding(
@@ -838,7 +812,6 @@ class _PrideAndValuesCard extends StatelessWidget {
                   Container(
                     padding: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
-                      color: Colors.white,
                       borderRadius: BorderRadius.circular(12),
                     ),
                     child: Icon(
@@ -856,7 +829,6 @@ class _PrideAndValuesCard extends StatelessWidget {
                       style: const TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
-                        color: Colors.black87,
                       ),
                     ),
                   ),
@@ -870,7 +842,6 @@ class _PrideAndValuesCard extends StatelessWidget {
                 style: const TextStyle(
                   fontSize: 15,
                   height: 1.6,
-                  color: Colors.black87,
                   fontWeight: FontWeight.w500,
                 ),
               ),
@@ -879,11 +850,7 @@ class _PrideAndValuesCard extends StatelessWidget {
                 isHindi
                     ? 'हमारे स्वतंत्रता सेनानियों के बलिदान और संविधान के निर्माताओं के अथक काम ने आज हमारे लिए मौलिक अधिकारों और लोकतांत्रिक सुरक्षा के साथ जीना संभव बनाया।'
                     : 'The sacrifices of our freedom fighters and the tireless work of the Constitution\'s framers made it possible for us to live with fundamental rights and democratic protections today.',
-                style: const TextStyle(
-                  fontSize: 15,
-                  height: 1.6,
-                  color: Colors.black87,
-                ),
+                style: const TextStyle(fontSize: 15, height: 1.6),
               ),
               const SizedBox(height: 12),
               Text(
@@ -893,7 +860,6 @@ class _PrideAndValuesCard extends StatelessWidget {
                 style: const TextStyle(
                   fontSize: 15,
                   height: 1.6,
-                  color: Colors.black87,
                   fontStyle: FontStyle.italic,
                 ),
               ),

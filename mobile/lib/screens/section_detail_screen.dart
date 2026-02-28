@@ -48,13 +48,6 @@ class SectionDetailScreen extends ConsumerWidget {
       canPop: true,
       child: Scaffold(
         body: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              colors: [actColor.withOpacity(0.1), Colors.white],
-            ),
-          ),
           child: SafeArea(
             child: sectionAsync.when(
               data: (section) => CustomScrollView(
@@ -65,33 +58,15 @@ class SectionDetailScreen extends ConsumerWidget {
                     pinned: true,
                     backgroundColor: actColor,
                     automaticallyImplyLeading: true,
-                    leading: Container(
-                      margin: const EdgeInsets.all(8),
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(12),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.black.withOpacity(0.1),
-                            blurRadius: 8,
-                            offset: const Offset(0, 2),
-                          ),
-                        ],
-                      ),
-                      child: IconButton(
-                        icon: const Icon(
-                          Icons.arrow_back,
-                          color: Colors.black87,
-                        ),
-                        onPressed: () {
-                          if (Navigator.canPop(context)) {
-                            Navigator.pop(context);
-                          } else {
-                            context.go('/acts/$actId/sections');
-                          }
-                        },
-                        padding: EdgeInsets.zero,
-                      ),
+                    leading: IconButton(
+                      icon: const Icon(Icons.arrow_back, color: Colors.white),
+                      onPressed: () {
+                        if (Navigator.canPop(context)) {
+                          Navigator.pop(context);
+                        } else {
+                          context.go('/acts/$actId/sections');
+                        }
+                      },
                     ),
                     flexibleSpace: FlexibleSpaceBar(
                       title: Text(
@@ -145,7 +120,7 @@ class SectionDetailScreen extends ConsumerWidget {
                           Container(
                             padding: const EdgeInsets.all(20),
                             decoration: BoxDecoration(
-                              color: Colors.white,
+                              color: Theme.of(context).colorScheme.surface,
                               borderRadius: BorderRadius.circular(16),
                               boxShadow: [
                                 BoxShadow(
@@ -185,7 +160,9 @@ class SectionDetailScreen extends ConsumerWidget {
                                         vertical: 6,
                                       ),
                                       decoration: BoxDecoration(
-                                        color: Colors.grey.shade100,
+                                        color: Theme.of(
+                                          context,
+                                        ).colorScheme.surfaceVariant,
                                         borderRadius: BorderRadius.circular(8),
                                       ),
                                       child: Row(
@@ -193,7 +170,9 @@ class SectionDetailScreen extends ConsumerWidget {
                                           Icon(
                                             Icons.numbers,
                                             size: 14,
-                                            color: Colors.grey.shade700,
+                                            color: Theme.of(
+                                              context,
+                                            ).colorScheme.onSurfaceVariant,
                                           ),
                                           const SizedBox(width: 4),
                                           Text(
@@ -201,7 +180,9 @@ class SectionDetailScreen extends ConsumerWidget {
                                             style: TextStyle(
                                               fontSize: 12,
                                               fontWeight: FontWeight.w600,
-                                              color: Colors.grey.shade700,
+                                              color: Theme.of(
+                                                context,
+                                              ).colorScheme.onSurfaceVariant,
                                             ),
                                           ),
                                         ],
@@ -215,7 +196,6 @@ class SectionDetailScreen extends ConsumerWidget {
                                   style: const TextStyle(
                                     fontSize: 22,
                                     fontWeight: FontWeight.bold,
-                                    color: Colors.black87,
                                   ),
                                 ),
                               ],
@@ -228,7 +208,7 @@ class SectionDetailScreen extends ConsumerWidget {
                           Container(
                             padding: const EdgeInsets.all(20),
                             decoration: BoxDecoration(
-                              color: Colors.white,
+                              color: Theme.of(context).colorScheme.surface,
                               borderRadius: BorderRadius.circular(16),
                               boxShadow: [
                                 BoxShadow(
@@ -246,7 +226,7 @@ class SectionDetailScreen extends ConsumerWidget {
                                     Container(
                                       padding: const EdgeInsets.all(8),
                                       decoration: BoxDecoration(
-                                        color: Colors.blue.shade50,
+                                        color: Colors.blue.withOpacity(0.1),
                                         borderRadius: BorderRadius.circular(8),
                                       ),
                                       child: Icon(
@@ -261,7 +241,6 @@ class SectionDetailScreen extends ConsumerWidget {
                                       style: TextStyle(
                                         fontSize: 18,
                                         fontWeight: FontWeight.bold,
-                                        color: Colors.black87,
                                       ),
                                     ),
                                   ],
@@ -272,7 +251,6 @@ class SectionDetailScreen extends ConsumerWidget {
                                   style: const TextStyle(
                                     fontSize: 15,
                                     height: 1.6,
-                                    color: Colors.black87,
                                   ),
                                 ),
                               ],
@@ -476,7 +454,7 @@ class _NavigationButtons extends ConsumerWidget {
                       ],
                     ),
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.white,
+                      backgroundColor: Theme.of(context).colorScheme.surface,
                       foregroundColor: actColor,
                       padding: const EdgeInsets.symmetric(
                         horizontal: 16,

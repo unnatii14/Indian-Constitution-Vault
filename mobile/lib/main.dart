@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
+import 'providers/app_providers.dart';
 import 'screens/main_navigation_screen.dart';
+import 'screens/about_app_screen.dart';
 import 'screens/acts_list_screen.dart';
 import 'screens/sections_list_screen.dart';
 import 'screens/section_detail_screen.dart';
@@ -46,6 +48,10 @@ final goRouterProvider = Provider<GoRouter>((ref) {
         builder: (context, state) => const AboutConstitutionScreen(),
       ),
       GoRoute(
+        path: '/about-app',
+        builder: (context, state) => const AboutAppScreen(),
+      ),
+      GoRoute(
         path: '/acts/:actId/sections',
         builder: (context, state) {
           final actId = state.pathParameters['actId']!;
@@ -73,10 +79,12 @@ class IndianConstitutionApp extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final router = ref.watch(goRouterProvider);
+    final themeMode = ref.watch(themeModeProvider);
 
     return MaterialApp.router(
       title: 'Indian Law Guide',
       debugShowCheckedModeBanner: false,
+      themeMode: themeMode,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
           seedColor: Colors.orange,

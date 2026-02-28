@@ -8,6 +8,11 @@ class MainNavigationScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+    final bgColors = isDark
+        ? [const Color(0xFF1A1A1A), const Color(0xFF2C2C2C)]
+        : [Colors.orange.shade400, Colors.deepOrange.shade600];
+
     // Disable PopScope on web since SystemNavigator.pop() doesn't work on web
     if (kIsWeb) {
       return Scaffold(
@@ -16,7 +21,7 @@ class MainNavigationScreen extends StatelessWidget {
             gradient: LinearGradient(
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
-              colors: [Colors.orange.shade400, Colors.deepOrange.shade600],
+              colors: bgColors,
             ),
           ),
           child: SafeArea(
@@ -91,6 +96,22 @@ class MainNavigationScreen extends StatelessWidget {
                         ],
                       ),
                       onTap: () => context.go('/about-constitution'),
+                    ),
+                  ),
+                  const SizedBox(height: 12),
+
+                  // Option 4: About this App
+                  Expanded(
+                    child: _NavigationCard(
+                      icon: Icons.info_outline_rounded,
+                      title: 'About this App',
+                      description: 'Settings, share & support',
+                      gradient: LinearGradient(
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                        colors: [Colors.teal.shade400, Colors.teal.shade700],
+                      ),
+                      onTap: () => context.go('/about-app'),
                     ),
                   ),
                   const SizedBox(height: 24),
@@ -153,7 +174,7 @@ class MainNavigationScreen extends StatelessWidget {
             gradient: LinearGradient(
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
-              colors: [Colors.orange.shade400, Colors.deepOrange.shade600],
+              colors: bgColors,
             ),
           ),
           child: SafeArea(
@@ -230,26 +251,20 @@ class MainNavigationScreen extends StatelessWidget {
                       onTap: () => context.go('/about-constitution'),
                     ),
                   ),
-                  const SizedBox(height: 24),
+                  const SizedBox(height: 12),
 
-                  // Disclaimer
-                  Container(
-                    padding: const EdgeInsets.all(16),
-                    decoration: BoxDecoration(
-                      color: Colors.white.withOpacity(0.2),
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                    child: Row(
-                      children: [
-                        Icon(Icons.info_outline, color: Colors.white, size: 20),
-                        const SizedBox(width: 12),
-                        Expanded(
-                          child: Text(
-                            'Educational purposes only. Not legal advice.',
-                            style: TextStyle(color: Colors.white, fontSize: 12),
-                          ),
-                        ),
-                      ],
+                  // Option 4: About this App
+                  Expanded(
+                    child: _NavigationCard(
+                      icon: Icons.info_outline_rounded,
+                      title: 'About this App',
+                      description: 'Settings, share & support',
+                      gradient: LinearGradient(
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                        colors: [Colors.teal.shade400, Colors.teal.shade700],
+                      ),
+                      onTap: () => context.go('/about-app'),
                     ),
                   ),
                 ],

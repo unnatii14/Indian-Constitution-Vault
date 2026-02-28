@@ -637,9 +637,9 @@ class _LawFinderScreenState extends State<LawFinderScreen> {
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
               colors: [
-                _selectedCategory?.color.withOpacity(0.1) ??
-                    Colors.green.shade50,
-                Colors.white,
+                _selectedCategory?.color.withOpacity(0.08) ??
+                    Colors.transparent,
+                Colors.transparent,
               ],
             ),
           ),
@@ -678,7 +678,7 @@ class _LawFinderScreenState extends State<LawFinderScreen> {
           if (_currentStep > 0)
             Container(
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: Theme.of(context).colorScheme.surface,
                 borderRadius: BorderRadius.circular(12),
                 boxShadow: [
                   BoxShadow(
@@ -696,7 +696,7 @@ class _LawFinderScreenState extends State<LawFinderScreen> {
           else
             Container(
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: Theme.of(context).colorScheme.surface,
                 borderRadius: BorderRadius.circular(12),
                 boxShadow: [
                   BoxShadow(
@@ -822,7 +822,7 @@ class _LawFinderScreenState extends State<LawFinderScreen> {
         Container(
           margin: const EdgeInsets.only(bottom: 20),
           decoration: BoxDecoration(
-            color: Colors.white,
+            color: Theme.of(context).colorScheme.surface,
             borderRadius: BorderRadius.circular(12),
             boxShadow: [
               BoxShadow(
@@ -1021,7 +1021,7 @@ class _LawFinderScreenState extends State<LawFinderScreen> {
                   Container(
                     padding: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: color.withOpacity(0.15),
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: Icon(Icons.lightbulb, color: color, size: 24),
@@ -1047,11 +1047,7 @@ class _LawFinderScreenState extends State<LawFinderScreen> {
               const SizedBox(height: 16),
               Text(
                 topic.summary,
-                style: const TextStyle(
-                  fontSize: 15,
-                  height: 1.5,
-                  color: Colors.black87,
-                ),
+                style: const TextStyle(fontSize: 15, height: 1.5),
               ),
             ],
           ),
@@ -1063,7 +1059,7 @@ class _LawFinderScreenState extends State<LawFinderScreen> {
         Container(
           padding: const EdgeInsets.all(20),
           decoration: BoxDecoration(
-            color: Colors.white,
+            color: Theme.of(context).colorScheme.surface,
             borderRadius: BorderRadius.circular(16),
             boxShadow: [
               BoxShadow(
@@ -1216,7 +1212,7 @@ class _CategoryCard extends StatelessWidget {
       borderRadius: BorderRadius.circular(16),
       child: Container(
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: Theme.of(context).colorScheme.surface,
           borderRadius: BorderRadius.circular(16),
           boxShadow: [
             BoxShadow(
@@ -1245,7 +1241,6 @@ class _CategoryCard extends StatelessWidget {
                 style: const TextStyle(
                   fontSize: 13,
                   fontWeight: FontWeight.bold,
-                  color: Colors.black87,
                 ),
                 textAlign: TextAlign.center,
                 maxLines: 2,
@@ -1291,7 +1286,7 @@ class _TopicCard extends StatelessWidget {
         child: Container(
           padding: const EdgeInsets.all(16),
           decoration: BoxDecoration(
-            color: Colors.white,
+            color: Theme.of(context).colorScheme.surface,
             borderRadius: BorderRadius.circular(12),
             boxShadow: [
               BoxShadow(
@@ -1321,7 +1316,6 @@ class _TopicCard extends StatelessWidget {
                       style: const TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
-                        color: Colors.black87,
                       ),
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
