@@ -299,7 +299,7 @@ class _AboutAppScreenState extends ConsumerState<AboutAppScreen> {
       onChanged: (ThemeMode? value) {
         if (value != null) {
           // Update theme using Riverpod provider
-          ref.read(themeModeProvider.notifier).state = value;
+          ref.read(themeModeProvider.notifier).setTheme(value);
           Navigator.pop(context);
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
@@ -316,7 +316,8 @@ class _AboutAppScreenState extends ConsumerState<AboutAppScreen> {
   Future<void> _shareApp() async {
     await Share.share(
       'Check out Indian Law Guide - Your pocket legal companion! '
-      'Browse BNS, BNSS, BSA laws offline. Fast, private, and easy to use.',
+      'Browse BNS, BNSS, BSA laws offline. Fast, private, and easy to use.\n\n'
+      '📲 Download: https://play.google.com/store/apps/details?id=com.indianlaw.indian_constitution_vault',
       subject: 'Indian Law Guide App',
     );
   }

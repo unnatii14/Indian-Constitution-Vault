@@ -330,7 +330,7 @@ class _MoreScreenState extends State<MoreScreen> {
   Future<void> _shareApp() async {
     await Share.share(
       'Check out Indian Law Guide - Your pocket legal companion! '
-      'Learn about Indian laws easily. Download: https://play.google.com/store/apps/details?id=com.yourpackage.indian_constitution_vault',
+      'Learn about Indian laws easily. Download: https://play.google.com/store/apps/details?id=com.indianlaw.indian_constitution_vault',
       subject: 'Indian Law Guide App',
     );
   }
