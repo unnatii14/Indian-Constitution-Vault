@@ -1,0 +1,367 @@
+{
+  "version": "1.0",
+  "description": "Curated offline knowledge base for the Indian Legal Vault app. Used by the AI Assistant when a query is not a direct BNS/BNSS/BSA section. Every entry is hand-verified — the assistant should NEVER paraphrase outside this content.",
+  "entries": [
+    {
+      "id": "art-12",
+      "category": "constitution-article",
+      "title": "Article 12 – Definition of State",
+      "keywords": ["article 12", "definition of state", "what is state"],
+      "answer": "Article 12 defines the term 'State' for Part III (Fundamental Rights). It includes:\n• The Government and Parliament of India\n• The Government and Legislature of each State\n• All local authorities (Municipalities, Panchayats)\n• Other authorities within India or under the Government of India\n\nThis definition matters because Fundamental Rights can usually be enforced only against the 'State', not against private individuals."
+    },
+    {
+      "id": "art-13",
+      "category": "constitution-article",
+      "title": "Article 13 – Laws Inconsistent with Fundamental Rights",
+      "keywords": ["article 13", "laws inconsistent", "void law"],
+      "answer": "Article 13 declares that any law (existing or future) that is inconsistent with or takes away any Fundamental Right shall be void to the extent of the inconsistency.\n\nThis is what gives the Supreme Court and High Courts the power of judicial review — the power to strike down unconstitutional laws."
+    },
+    {
+      "id": "art-14",
+      "category": "constitution-article",
+      "title": "Article 14 – Right to Equality",
+      "keywords": ["article 14", "equality before law", "equal protection", "right to equality"],
+      "answer": "\"The State shall not deny to any person equality before the law or the equal protection of the laws within the territory of India.\"\n\nKey ideas:\n• Equality before the law — no one is above the law\n• Equal protection of the laws — same law applied equally to all in similar situations\n• Prohibits arbitrary State action\n• Permits reasonable classification (treating different groups differently if there's a rational basis)"
+    },
+    {
+      "id": "art-15",
+      "category": "constitution-article",
+      "title": "Article 15 – Prohibition of Discrimination",
+      "keywords": ["article 15", "discrimination", "religion race caste sex"],
+      "answer": "Article 15 prohibits the State from discriminating against any citizen only on grounds of religion, race, caste, sex, or place of birth.\n\nIt also prohibits restrictions on access to:\n• Shops, public restaurants, hotels, places of public entertainment\n• Wells, tanks, bathing ghats, roads, places of public resort maintained by the State or open to public use\n\nIt allows special provisions for women, children, SCs/STs, and socially and educationally backward classes."
+    },
+    {
+      "id": "art-16",
+      "category": "constitution-article",
+      "title": "Article 16 – Equality of Opportunity in Public Employment",
+      "keywords": ["article 16", "equality opportunity", "public employment", "reservation"],
+      "answer": "Article 16 guarantees equality of opportunity for all citizens in matters of public employment.\n\nNo citizen can be discriminated against in public employment on grounds of religion, race, caste, sex, descent, place of birth, or residence.\n\nIt allows the State to make reservations in favour of any backward class not adequately represented in services."
+    },
+    {
+      "id": "art-17",
+      "category": "constitution-article",
+      "title": "Article 17 – Abolition of Untouchability",
+      "keywords": ["article 17", "untouchability", "abolition"],
+      "answer": "Article 17 abolishes 'untouchability' and forbids its practice in any form.\n\nThe enforcement of any disability arising out of untouchability is an offence punishable in accordance with law (the Protection of Civil Rights Act, 1955)."
+    },
+    {
+      "id": "art-19",
+      "category": "constitution-article",
+      "title": "Article 19 – Right to Freedom",
+      "keywords": ["article 19", "freedom of speech", "free speech", "freedom"],
+      "answer": "Article 19 guarantees six freedoms to citizens:\n1. Freedom of speech and expression\n2. Freedom to assemble peaceably and without arms\n3. Freedom to form associations or unions\n4. Freedom to move freely throughout India\n5. Freedom to reside and settle in any part of India\n6. Freedom to practise any profession, or to carry on any occupation, trade or business\n\n(The earlier seventh freedom — right to property — was removed by the 44th Amendment.)\n\nAll freedoms are subject to reasonable restrictions imposed by the State (security, public order, decency, morality, contempt of court, defamation, etc.)."
+    },
+    {
+      "id": "art-20",
+      "category": "constitution-article",
+      "title": "Article 20 – Protection in Respect of Conviction",
+      "keywords": ["article 20", "double jeopardy", "self incrimination", "ex post facto"],
+      "answer": "Article 20 grants three protections to every accused person:\n• No ex post facto law — you cannot be convicted of an act that wasn't an offence when committed\n• No double jeopardy — cannot be prosecuted and punished twice for the same offence\n• No self-incrimination — cannot be compelled to be a witness against yourself"
+    },
+    {
+      "id": "art-21",
+      "category": "constitution-article",
+      "title": "Article 21 – Right to Life and Personal Liberty",
+      "keywords": ["article 21", "right to life", "personal liberty", "life and liberty"],
+      "answer": "\"No person shall be deprived of his life or personal liberty except according to procedure established by law.\"\n\nThis is the most expansively interpreted Fundamental Right. The Supreme Court has read into it:\n• Right to privacy (Puttaswamy, 2017)\n• Right to a dignified life\n• Right to education (now Article 21A)\n• Right to a clean environment\n• Right to livelihood\n• Right to health and medical care\n• Right to shelter\n• Right to legal aid"
+    },
+    {
+      "id": "art-21a",
+      "category": "constitution-article",
+      "title": "Article 21A – Right to Education",
+      "keywords": ["article 21a", "right to education", "free education"],
+      "answer": "Article 21A makes free and compulsory education a Fundamental Right for all children aged 6 to 14 years.\n\nIt was inserted by the 86th Constitutional Amendment, 2002, and is implemented through the Right of Children to Free and Compulsory Education Act, 2009 (RTE Act)."
+    },
+    {
+      "id": "art-22",
+      "category": "constitution-article",
+      "title": "Article 22 – Protection Against Arbitrary Arrest",
+      "keywords": ["article 22", "arrest", "preventive detention", "rights when arrested"],
+      "answer": "Every person who is arrested has the right to:\n• Be informed of the grounds of arrest as soon as possible\n• Consult and be defended by a legal practitioner of choice\n• Be produced before the nearest Magistrate within 24 hours of arrest\n• Not be detained beyond 24 hours without the Magistrate's authorisation\n\nSpecial provisions apply for preventive detention and for enemy aliens."
+    },
+    {
+      "id": "art-23",
+      "category": "constitution-article",
+      "title": "Article 23 – Prohibition of Trafficking and Forced Labour",
+      "keywords": ["article 23", "human trafficking", "forced labour", "begar"],
+      "answer": "Article 23 prohibits human trafficking, begar (forced unpaid labour), and other similar forms of forced labour.\n\nAny contravention is an offence punishable in accordance with law (e.g., Bonded Labour System (Abolition) Act, 1976)."
+    },
+    {
+      "id": "art-24",
+      "category": "constitution-article",
+      "title": "Article 24 – Prohibition of Child Labour",
+      "keywords": ["article 24", "child labour", "factory employment"],
+      "answer": "Article 24 prohibits the employment of children below the age of 14 years in any factory, mine, or other hazardous occupation.\n\nThe Child Labour (Prohibition and Regulation) Act, 1986 (later strengthened in 2016) implements this protection."
+    },
+    {
+      "id": "art-25",
+      "category": "constitution-article",
+      "title": "Article 25 – Freedom of Religion",
+      "keywords": ["article 25", "freedom of religion", "practise religion"],
+      "answer": "Article 25 guarantees every person:\n• Freedom of conscience\n• Right to freely profess, practise, and propagate religion\n\nSubject to public order, morality, health, and other Fundamental Rights. The State may regulate secular activities associated with religious practice and provide for social welfare and reform."
+    },
+    {
+      "id": "art-32",
+      "category": "constitution-article",
+      "title": "Article 32 – Right to Constitutional Remedies",
+      "keywords": ["article 32", "constitutional remedies", "writs", "supreme court"],
+      "answer": "Article 32 gives every citizen the right to move the Supreme Court directly for the enforcement of Fundamental Rights.\n\nThe Supreme Court can issue five types of writs:\n• Habeas Corpus — \"produce the body\" (against unlawful detention)\n• Mandamus — \"we command\" (to compel a public duty)\n• Prohibition — to stop a lower court exceeding its jurisdiction\n• Certiorari — to quash an order of a lower court\n• Quo Warranto — \"by what authority\" (to question public office holders)\n\nDr. Ambedkar called this article \"the heart and soul of the Constitution.\""
+    },
+    {
+      "id": "art-44",
+      "category": "constitution-article",
+      "title": "Article 44 – Uniform Civil Code",
+      "keywords": ["article 44", "uniform civil code", "ucc"],
+      "answer": "Article 44 is a Directive Principle of State Policy. It directs the State to endeavour to secure for all citizens a Uniform Civil Code throughout the territory of India.\n\nIt is not directly enforceable in court but serves as a guiding principle for legislation."
+    },
+    {
+      "id": "art-51a",
+      "category": "constitution-article",
+      "title": "Article 51A – Fundamental Duties",
+      "keywords": ["article 51a", "fundamental duties"],
+      "answer": "Article 51A lists the eleven Fundamental Duties of every Indian citizen, including:\n• To abide by the Constitution and respect its ideals and institutions\n• To cherish and follow the noble ideals that inspired the freedom struggle\n• To uphold and protect the sovereignty, unity and integrity of India\n• To defend the country and render national service when called upon\n• To promote harmony and brotherhood\n• To value and preserve the rich heritage of our composite culture\n• To protect and improve the natural environment\n• To develop scientific temper, humanism and the spirit of inquiry\n• To safeguard public property and abjure violence\n• To strive towards excellence in all spheres\n• To provide opportunities for education to children aged 6–14 (added by 86th Amendment)"
+    },
+    {
+      "id": "art-368",
+      "category": "constitution-article",
+      "title": "Article 368 – Power of Parliament to Amend the Constitution",
+      "keywords": ["article 368", "amendment", "amend constitution"],
+      "answer": "Article 368 empowers Parliament to amend the Constitution by following the prescribed procedure.\n\nHowever, the Supreme Court (in Kesavananda Bharati, 1973) held that Parliament cannot alter the 'basic structure' of the Constitution — features like supremacy of the Constitution, secularism, federalism, judicial review, and Fundamental Rights cannot be destroyed by amendment."
+    },
+    {
+      "id": "fundamental-rights",
+      "category": "topic",
+      "title": "Fundamental Rights – Overview",
+      "keywords": ["fundamental rights", "basic rights", "part iii"],
+      "answer": "Fundamental Rights (Part III, Articles 12–35) are guaranteed to every citizen and, in some cases, to every person.\n\nSix categories:\n1. Right to Equality (Articles 14–18)\n2. Right to Freedom (Articles 19–22)\n3. Right Against Exploitation (Articles 23–24)\n4. Right to Freedom of Religion (Articles 25–28)\n5. Cultural and Educational Rights (Articles 29–30)\n6. Right to Constitutional Remedies (Article 32)\n\nThe Right to Property (Article 31) was removed and made a legal right under Article 300A by the 44th Amendment in 1978."
+    },
+    {
+      "id": "directive-principles",
+      "category": "topic",
+      "title": "Directive Principles of State Policy",
+      "keywords": ["directive principles", "dpsp", "part iv"],
+      "answer": "Directive Principles (Part IV, Articles 36–51) are guidelines for the State to follow when framing laws and policies.\n\nThey are not enforceable in court but are 'fundamental in the governance of the country' (Article 37). Examples:\n• Article 39 — equal pay for equal work; adequate means of livelihood\n• Article 40 — organisation of village panchayats\n• Article 44 — Uniform Civil Code\n• Article 45 — early childhood care and education\n• Article 48A — protection and improvement of environment\n• Article 50 — separation of judiciary from executive"
+    },
+    {
+      "id": "preamble",
+      "category": "topic",
+      "title": "Preamble of the Indian Constitution",
+      "keywords": ["preamble", "we the people"],
+      "answer": "The Preamble declares India to be a Sovereign, Socialist, Secular, Democratic Republic and aims to secure for all its citizens:\n• Justice — social, economic and political\n• Liberty — of thought, expression, belief, faith and worship\n• Equality — of status and of opportunity\n• Fraternity — assuring the dignity of the individual and the unity and integrity of the Nation\n\nThe words 'Socialist', 'Secular' and 'Integrity' were added by the 42nd Amendment, 1976.\n\nThe Preamble is part of the Constitution but cannot, by itself, override express provisions."
+    },
+    {
+      "id": "act-rti",
+      "category": "act",
+      "title": "Right to Information Act, 2005 (RTI Act)",
+      "keywords": ["rti", "rti act", "right to information"],
+      "answer": "The RTI Act, 2005 gives every Indian citizen the right to request information from any 'public authority' (Government bodies and bodies substantially financed by Government).\n\nKey points:\n• Apply in writing (or electronically) to the Public Information Officer (PIO) with a fee of ₹10\n• Information must be provided within 30 days (48 hours if it concerns life or liberty)\n• Some information is exempt (national security, cabinet papers, personal information without public interest, etc.)\n• Appeals can be made to the First Appellate Authority and then to the Information Commission\n• BPL applicants are exempt from fees"
+    },
+    {
+      "id": "act-pwd-rpwd",
+      "category": "act",
+      "title": "Rights of Persons with Disabilities Act, 2016 (RPwD Act)",
+      "keywords": ["pwd act", "rpwd", "persons with disabilities", "disability act", "disabled rights"],
+      "answer": "The Rights of Persons with Disabilities Act, 2016 (also called the RPwD Act) replaced the older Persons with Disabilities Act, 1995.\n\nKey points:\n• Recognises 21 types of disabilities (up from 7 earlier), including autism, cerebral palsy, dwarfism, acid attack victims, learning disabilities, and mental illness\n• 4% reservation in government jobs (1% each for blindness/low-vision, deaf/hard-of-hearing, locomotor disability, and 1% for autism/intellectual/multiple disabilities)\n• 5% reservation in higher education in government-aided institutions\n• Free education for children with benchmark disabilities aged 6–18\n• Penalty for discrimination: imprisonment up to 6 months or fine up to ₹10,000 (or both); enhanced punishment for repeat offenders\n\nNote: 'PWD Act' commonly refers to this Act today."
+    },
+    {
+      "id": "act-mv",
+      "category": "act",
+      "title": "Motor Vehicles Act, 1988 (as amended 2019)",
+      "keywords": ["motor vehicles act", "mv act", "traffic rules", "driving licence"],
+      "answer": "The Motor Vehicles Act, 1988, governs road transport in India. The 2019 amendment significantly increased penalties.\n\nKey 2019 amendments:\n• Driving without a licence: ₹5,000\n• Drunk driving: ₹10,000 + 6 months imprisonment (first offence)\n• Over-speeding: ₹1,000 (LMV) / ₹2,000 (HMV)\n• Driving without insurance: ₹2,000\n• Not wearing a seat belt: ₹1,000\n• Not wearing a helmet: ₹1,000 + licence suspension for 3 months\n• Use of mobile while driving: ₹1,000–5,000\n• Juvenile offences: guardians held responsible\n• Compulsory third-party insurance\n• Increased compensation in hit-and-run cases (₹2 lakh for death; ₹50,000 for grievous injury)"
+    },
+    {
+      "id": "act-it",
+      "category": "act",
+      "title": "Information Technology Act, 2000 (IT Act)",
+      "keywords": ["it act", "information technology act", "cybercrime", "online crime"],
+      "answer": "The IT Act, 2000 is the primary law dealing with electronic transactions and cybercrime in India.\n\nMajor provisions:\n• Section 43 — Civil liability for unauthorised access, data theft, virus introduction\n• Section 65 — Tampering with computer source documents (3 years/₹2 lakh)\n• Section 66 — Computer-related offences (hacking) (3 years/₹5 lakh)\n• Section 66C — Identity theft (3 years/₹1 lakh)\n• Section 66D — Cheating by personation using computer (3 years/₹1 lakh)\n• Section 66E — Violation of privacy (capturing/publishing private images) (3 years/₹2 lakh)\n• Section 67 — Publishing obscene material online (3 years/₹5 lakh; 5 years for repeat)\n• Section 67A — Sexually explicit material (5 years/₹10 lakh)\n• Section 67B — Child pornography (5 years/₹10 lakh)\n• Section 69 — Power to issue directions for interception/monitoring\n• Section 79 — Intermediary liability (safe-harbour for platforms)"
+    },
+    {
+      "id": "act-consumer",
+      "category": "act",
+      "title": "Consumer Protection Act, 2019",
+      "keywords": ["consumer protection", "consumer act", "consumer rights", "consumer court"],
+      "answer": "The Consumer Protection Act, 2019 replaced the 1986 Act and protects consumers from unfair trade practices.\n\nKey features:\n• Six consumer rights: right to safety, information, choice, hearing, redressal, and consumer education\n• Three-tier dispute resolution: District (up to ₹1 crore), State (₹1 crore to ₹10 crore), National (above ₹10 crore)\n• Online complaint filing now permitted; jurisdiction is where the consumer resides\n• New Central Consumer Protection Authority (CCPA) with power to recall products and impose penalties\n• Product liability: manufacturer, seller, service provider can all be held liable for defective products/services\n• Misleading advertisements: penalty up to ₹10 lakh and imprisonment up to 2 years; for repeat offences, fines up to ₹50 lakh and 5 years' imprisonment\n• E-commerce platforms now covered\n• Mediation as a first-step alternative dispute resolution"
+    },
+    {
+      "id": "act-domestic-violence",
+      "category": "act",
+      "title": "Protection of Women from Domestic Violence Act, 2005 (PWDV Act)",
+      "keywords": ["domestic violence", "pwdv", "domestic violence act", "women protection"],
+      "answer": "The PWDV Act, 2005 provides civil remedies to women facing domestic violence.\n\nKey points:\n• Covers physical, sexual, verbal, emotional, and economic abuse\n• Protected relationships include wife, live-in partner, mother, sister, daughter, widow\n• Reliefs available:\n  — Protection orders (stop abuse)\n  — Residence orders (right to reside in shared household)\n  — Monetary relief (maintenance, medical expenses)\n  — Custody orders for children\n  — Compensation\n• Application made to Magistrate; Protection Officers assist the woman\n• Free legal aid available\n• Breach of protection order is a criminal offence (1 year/₹20,000)"
+    },
+    {
+      "id": "act-dowry",
+      "category": "act",
+      "title": "Dowry Prohibition Act, 1961",
+      "keywords": ["dowry prohibition act", "dowry act", "dahej"],
+      "answer": "The Dowry Prohibition Act, 1961 makes giving, taking, or demanding dowry a criminal offence.\n\nKey points:\n• Dowry = property/valuable security given or agreed to be given in connection with marriage\n• Penalty for giving/taking dowry: minimum 5 years' imprisonment + fine of ₹15,000 or value of dowry, whichever is more\n• Penalty for demanding dowry: 6 months to 2 years + fine up to ₹10,000\n• Burden of proof shifts to the accused if a married woman dies within 7 years of marriage in unnatural circumstances\n• Related: BNS Section 80 (Dowry Death) prescribes minimum 7 years to life imprisonment"
+    },
+    {
+      "id": "act-pocso",
+      "category": "act",
+      "title": "Protection of Children from Sexual Offences Act, 2012 (POCSO Act)",
+      "keywords": ["pocso", "pocso act", "child sexual offence", "child abuse law"],
+      "answer": "The POCSO Act, 2012 (amended 2019) is a special law for the protection of children (under 18) from sexual offences.\n\nKey features:\n• Gender-neutral — protects all children regardless of sex\n• Defines penetrative and non-penetrative sexual assault, sexual harassment, child pornography\n• Aggravated offences carry harsher punishment when committed by a person in authority (police, teacher, family member)\n• Punishments: from 3 years to imprisonment for life and even the death penalty (for aggravated penetrative sexual assault, post 2019)\n• Mandatory reporting — anyone who has knowledge of an offence must report it (failure is itself an offence)\n• Special Courts and child-friendly trial procedure\n• Identity of the child must not be disclosed\n• Time limit: trial to be completed within 1 year of cognisance"
+    },
+    {
+      "id": "act-pmla",
+      "category": "act",
+      "title": "Prevention of Money Laundering Act, 2002 (PMLA)",
+      "keywords": ["pmla", "money laundering", "prevention of money laundering"],
+      "answer": "The PMLA, 2002 is the principal law dealing with money laundering in India, enforced primarily by the Enforcement Directorate (ED).\n\nKey points:\n• 'Money laundering' = process of converting proceeds of crime into legitimate-looking property\n• Schedule of 'predicate offences' includes various offences under BNS, NDPS Act, etc.\n• Punishment: 3 to 7 years imprisonment + fine (up to 10 years for offences under NDPS Act)\n• Provisional attachment of property suspected to be proceeds of crime\n• Bail conditions are stricter (twin conditions, recently revisited by Supreme Court)\n• Reporting obligations on banks, financial institutions, intermediaries"
+    },
+    {
+      "id": "act-ndps",
+      "category": "act",
+      "title": "Narcotic Drugs and Psychotropic Substances Act, 1985 (NDPS Act)",
+      "keywords": ["ndps", "ndps act", "drugs law", "narcotics"],
+      "answer": "The NDPS Act, 1985 governs the manufacture, possession, sale, transport, and consumption of narcotic drugs and psychotropic substances.\n\nPunishments depend on the quantity:\n• Small quantity — up to 1 year imprisonment + fine up to ₹10,000\n• Lesser than commercial — up to 10 years + fine up to ₹1 lakh\n• Commercial quantity — 10 to 20 years + ₹1–2 lakh fine\n• Repeat offences for commercial quantities can attract the death penalty (rarely imposed)\n\nKey features:\n• Strict bail conditions under Section 37\n• Statements to NCB officers admissible (subject to Tofan Singh judgment, 2020)\n• Search and seizure procedures under Sections 41–57 must be strictly followed; lapses can lead to acquittal"
+    },
+    {
+      "id": "act-juvenile",
+      "category": "act",
+      "title": "Juvenile Justice (Care and Protection of Children) Act, 2015",
+      "keywords": ["juvenile justice", "jj act", "minor crime", "child in conflict"],
+      "answer": "The JJ Act, 2015 deals with children in conflict with law (alleged offenders) and children in need of care and protection.\n\nKey points:\n• 'Child' = below 18 years\n• Children in conflict with law are dealt with by Juvenile Justice Boards (not regular criminal courts)\n• Heinous offences (punishment 7+ years) by 16–18 year-olds: JJB can transfer the case to be tried as an adult after preliminary assessment\n• Maximum stay in observation home: 3 years\n• Children needing care and protection (orphans, abandoned, abused): Child Welfare Committee\n• Adoption procedures via CARA (Central Adoption Resource Authority)\n• Stringent provisions against corporal punishment, ragging, employing children in hazardous work"
+    },
+    {
+      "id": "act-uapa",
+      "category": "act",
+      "title": "Unlawful Activities (Prevention) Act, 1967 (UAPA)",
+      "keywords": ["uapa", "unlawful activities", "terror law", "anti terror"],
+      "answer": "The UAPA, 1967 is India's principal anti-terror and anti-secession law.\n\nKey points:\n• Empowers the Government to declare an organisation 'unlawful' or 'terrorist'\n• Punishment for membership of/support to a terrorist organisation: up to 10 years/life imprisonment + fine\n• Punishment for terrorist act causing death: death or life imprisonment\n• Police can detain a person up to 180 days without charge-sheet (vs. 60/90 days under regular CrPC/BNSS)\n• Bail is very difficult — court must be satisfied of innocence to grant it (Section 43D(5))\n• 2019 amendment empowers the Government to designate individuals as terrorists\n• Investigated by NIA"
+    },
+    {
+      "id": "act-sc-st",
+      "category": "act",
+      "title": "Scheduled Castes and Scheduled Tribes (Prevention of Atrocities) Act, 1989",
+      "keywords": ["sc st act", "atrocities act", "atrocities", "prevention of atrocities", "caste discrimination", "scheduled caste", "scheduled tribe"],
+      "answer": "The SC/ST (Prevention of Atrocities) Act, 1989 (amended 2015 and 2018) prevents atrocities against members of SCs and STs.\n\nKey features:\n• Lists specific offences against SC/ST persons (humiliation, social/economic boycott, sexual exploitation, denial of voting rights, etc.)\n• Punishment: minimum 6 months to 5 years; up to life imprisonment for grave offences\n• Special Courts for speedy trial\n• No anticipatory bail under Section 18 (subject to certain Supreme Court rulings)\n• Compensation and rehabilitation for victims\n• Public servants who neglect duties under the Act can be punished"
+    },
+    {
+      "id": "topic-fir",
+      "category": "topic",
+      "title": "How to File an FIR",
+      "keywords": ["fir", "first information report", "file fir", "police complaint", "register fir"],
+      "answer": "An FIR (First Information Report) is the first written record of a cognisable offence at a police station. Procedure (BNSS Section 173):\n\n1. Visit the police station with jurisdiction over where the offence occurred (any police station can register a Zero FIR for cognisable offences and forward it).\n2. Narrate the incident; the SHO/duty officer must reduce it to writing in the FIR register.\n3. The FIR is read back to you. Sign it after verifying.\n4. You are entitled to a free copy of the FIR. Keep it.\n\nIf the police refuse to register the FIR:\n• Send a written complaint by post to the SP\n• Approach the Magistrate under BNSS Section 175(3) (corresponding to old CrPC 156(3))\n• File a writ petition before the High Court\n\nFor non-cognisable offences, the police record an NCR and you must approach the Magistrate."
+    },
+    {
+      "id": "topic-bail",
+      "category": "topic",
+      "title": "Bail – Bailable vs Non-Bailable",
+      "keywords": ["bail", "bailable", "non bailable", "anticipatory bail"],
+      "answer": "Indian criminal law distinguishes between bailable and non-bailable offences (BNSS, First Schedule).\n\nBailable offence:\n• Bail is a matter of right\n• The police or court must release the accused on furnishing bail bond\n\nNon-bailable offence:\n• Bail is at the discretion of the court\n• Court considers gravity of offence, evidence, flight risk, likelihood of tampering with evidence\n\nAnticipatory bail (BNSS Section 482):\n• Apply BEFORE arrest, when you apprehend arrest in a non-bailable matter\n• Granted by the Sessions Court or High Court\n• Can be conditional (cooperation, no leaving country, etc.)\n\nDefault bail (BNSS Section 187(3)):\n• If charge-sheet is not filed within 60/90/180 days, accused is entitled to bail as a matter of right."
+    },
+    {
+      "id": "topic-arrest-rights",
+      "category": "topic",
+      "title": "Your Rights When Arrested",
+      "keywords": ["rights when arrested", "arrest rights", "arrested by police"],
+      "answer": "If you are arrested in India, you are entitled to the following rights:\n\nUnder Article 22 of the Constitution:\n• Right to know the grounds of arrest\n• Right to consult a legal practitioner of your choice\n• Right to be produced before the nearest Magistrate within 24 hours (excluding travel time)\n• Right not to be detained beyond 24 hours without Magistrate's authorisation\n\nUnder BNSS 2023 and D.K. Basu guidelines:\n• Police must wear a clearly visible name tag with designation\n• An arrest memo must be prepared, attested by a witness, and a copy given to you\n• You can have a friend, relative, or other known person informed of your arrest and place of detention\n• Right to medical examination at the time of arrest (and every 48 hours thereafter)\n• Entries about the arrest must be made in the police diary\n• Right against self-incrimination (Article 20(3)) — you cannot be forced to confess\n• Right to free legal aid if you cannot afford a lawyer (Article 39A)"
+    },
+    {
+      "id": "topic-cognizable",
+      "category": "topic",
+      "title": "Cognizable vs Non-Cognizable Offences",
+      "keywords": ["cognizable", "non cognizable", "cognisable"],
+      "answer": "Cognizable offence:\n• Police can arrest WITHOUT a warrant\n• Police must register an FIR and start investigation immediately\n• Generally serious offences (murder, rape, theft above a certain value, kidnapping)\n\nNon-cognizable offence:\n• Police CANNOT arrest without a warrant\n• Police record an NCR (Non-Cognizable Report) and refer the complainant to the Magistrate\n• Investigation only with Magistrate's permission\n• Generally less serious (defamation, simple hurt, public nuisance)\n\nThe BNSS First Schedule classifies every offence as cognizable or non-cognizable, and as bailable or non-bailable."
+    },
+    {
+      "id": "topic-summon-warrant",
+      "category": "topic",
+      "title": "Summons vs Warrant",
+      "keywords": ["summons", "warrant", "court summons"],
+      "answer": "Summons (BNSS Sections 63–71):\n• Written order from the court directing a person to appear before it\n• Used in summons-cases (less serious offences)\n• Failure to appear can be treated as contempt; a warrant can then be issued\n\nWarrant (BNSS Sections 72–86):\n• Written authority directing the police to arrest a person\n• Used when the person has not appeared despite summons, or in warrant-cases\n• Bailable warrant — person can be released on bail by the police on furnishing bond\n• Non-bailable warrant — person must be produced before the court\n• A warrant remains in force until executed or cancelled by the court that issued it"
+    },
+    {
+      "id": "topic-difference-bns-ipc",
+      "category": "topic",
+      "title": "BNS 2023 vs IPC 1860",
+      "keywords": ["bns vs ipc", "ipc bns difference", "new criminal law"],
+      "answer": "The Bharatiya Nyaya Sanhita (BNS) 2023 replaced the Indian Penal Code, 1860 with effect from 1 July 2024.\n\nKey differences:\n• 358 sections (BNS) vs 511 sections (IPC) — streamlined and reorganised\n• Many old colonial-era offences renumbered (e.g., murder is now Section 103, not 302; theft is Section 303, not 378)\n• New offences added — mob lynching, terrorist act, organised crime, hit-and-run with abandonment\n• Sedition (old Sec 124A) replaced with a narrower offence: 'acts endangering sovereignty, unity and integrity of India' (BNS Sec 152)\n• Community service introduced as a punishment for petty offences (first time in Indian criminal law)\n• Time-bound trial provisions in BNSS\n• Gender-neutral provisions in some areas; some areas still gendered\n• Recognition of digital evidence and electronic records\n\nFor offences committed before 1 July 2024, the IPC continues to apply (savings clause)."
+    },
+    {
+      "id": "topic-bnss-vs-crpc",
+      "category": "topic",
+      "title": "BNSS 2023 vs CrPC 1973",
+      "keywords": ["bnss vs crpc", "crpc bnss difference"],
+      "answer": "The Bharatiya Nagarik Suraksha Sanhita (BNSS) 2023 replaced the Code of Criminal Procedure, 1973 from 1 July 2024.\n\nKey changes:\n• 531 sections (BNSS) vs 484 sections (CrPC)\n• Time-bound investigation, trial, and judgment\n• Mandatory videography of search and seizure\n• Forensic investigation made compulsory for offences punishable with 7+ years\n• Zero FIR formalised\n• Trial in absentia for proclaimed offenders\n• Enhanced witness protection scheme\n• Use of electronic communications (e-summons, video-conference evidence)\n• Police custody can extend up to 60 days in some cases\n• Sanction for prosecution of public servants must be given/refused within 120 days\n• Plea bargaining made easier"
+    },
+    {
+      "id": "topic-bsa-vs-evidence-act",
+      "category": "topic",
+      "title": "BSA 2023 vs Indian Evidence Act 1872",
+      "keywords": ["bsa vs evidence act", "evidence act bsa", "indian evidence act"],
+      "answer": "The Bharatiya Sakshya Adhiniyam (BSA) 2023 replaced the Indian Evidence Act, 1872 from 1 July 2024.\n\nKey changes:\n• 170 sections (BSA) vs 167 (Evidence Act)\n• Electronic and digital records given equal legal status to paper records\n• Secondary evidence definition expanded to include oral admissions, written admissions, and evidence from a person who has examined the document\n• Joint trials provisions clarified\n• Confessions to police officers continue to be inadmissible (Section 23)\n• Updated provisions on witness examination and presumption of documents"
+    },
+    {
+      "id": "topic-pil",
+      "category": "topic",
+      "title": "Public Interest Litigation (PIL)",
+      "keywords": ["pil", "public interest litigation"],
+      "answer": "PIL (Public Interest Litigation) is a writ petition filed in the Supreme Court (Article 32) or a High Court (Article 226) to enforce a right or address a wrong of public importance.\n\nKey features:\n• Locus standi relaxed — ANY public-spirited person can file (you don't need to be the affected party)\n• Even a postcard or a letter to the Court can be treated as a petition (in some cases)\n• Used to address: environmental issues, custodial violence, bonded labour, prisoners' rights, women's safety, child rights, etc.\n• Court can issue directions to Government and monitor compliance\n• Frivolous PILs are penalised — the Court may impose costs"
+    },
+    {
+      "id": "topic-writs",
+      "category": "topic",
+      "title": "Five Writs Under Articles 32 and 226",
+      "keywords": ["writs", "habeas corpus", "mandamus", "certiorari", "quo warranto", "prohibition"],
+      "answer": "The Supreme Court (Article 32) and High Courts (Article 226) can issue five writs:\n\n• Habeas Corpus — \"produce the body.\" Issued to free a person held in unlawful custody.\n• Mandamus — \"we command.\" Directs a public authority to perform a public duty it has wrongly refused to do.\n• Prohibition — to a lower court/tribunal to stop it from acting beyond its jurisdiction (used while proceedings are pending).\n• Certiorari — to a lower court/tribunal to quash an order already passed without jurisdiction or in violation of natural justice.\n• Quo Warranto — \"by what authority.\" Questions the legal right of a person to hold a public office."
+    },
+    {
+      "id": "topic-divorce",
+      "category": "topic",
+      "title": "Divorce in India – Overview",
+      "keywords": ["divorce", "talaq", "khula", "judicial separation"],
+      "answer": "Divorce in India is governed by personal laws based on religion:\n\n• Hindus, Buddhists, Jains, Sikhs — Hindu Marriage Act, 1955\n• Muslims — Dissolution of Muslim Marriages Act, 1939; talaq for men, khula for women, mubarat (mutual)\n• Christians — Indian Divorce Act, 1869\n• Parsis — Parsi Marriage and Divorce Act, 1936\n• Inter-faith / civil marriage — Special Marriage Act, 1954\n\nCommon grounds (Hindu Marriage Act Section 13):\n• Adultery, cruelty, desertion (2 years)\n• Conversion to another religion\n• Mental disorder\n• Communicable disease\n• Renunciation of the world\n• Presumption of death (not heard from for 7 years)\n\nMutual consent divorce (Sec 13B): both spouses agree; minimum 6-month waiting period (can be waived in some cases by the Supreme Court)."
+    },
+    {
+      "id": "topic-maintenance",
+      "category": "topic",
+      "title": "Maintenance – Wife, Children, Parents",
+      "keywords": ["maintenance", "alimony", "wife maintenance", "section 144 bnss"],
+      "answer": "Maintenance is the legal duty to financially support certain dependants.\n\nUnder BNSS Section 144 (corresponds to old CrPC Section 125):\n• A husband must maintain his wife, legitimate or illegitimate minor children, and aged parents who cannot maintain themselves.\n• 'Wife' includes a divorced wife who has not remarried.\n• The Magistrate can order monthly maintenance.\n• Wife loses the claim if she lives in adultery, refuses to live with husband without reason, or both live separately by mutual consent.\n\nUnder personal laws:\n• Hindu Adoptions and Maintenance Act, 1956\n• Muslim Women (Protection of Rights on Divorce) Act, 1986\n• Special Marriage Act, 1954, Section 36–37\n• PWDV Act, 2005 — monetary relief during proceedings"
+    },
+    {
+      "id": "topic-property-women",
+      "category": "topic",
+      "title": "Property Rights of Women in India",
+      "keywords": ["women property rights", "daughter property", "hindu succession"],
+      "answer": "After the Hindu Succession (Amendment) Act, 2005, daughters have equal coparcenary rights in joint family property as sons.\n\nKey points:\n• A daughter is now a coparcener by birth (Vineeta Sharma judgment, 2020) — even if the father died before 2005\n• Daughter has the same rights and liabilities as a son in the Mitakshara coparcenary\n• Mother is a Class I heir of the deceased son\n• Widow inherits along with children\n• In intestate succession (no will), Class I heirs (sons, daughters, mother, widow) inherit equally\n\nFor Muslim women: Under Muslim Personal Law, daughters typically inherit half the share of sons (different schools have different rules); the widow gets 1/8 of the husband's estate (with children) or 1/4 (without children)."
+    },
+    {
+      "id": "topic-cyber-complaint",
+      "category": "topic",
+      "title": "How to Report a Cybercrime",
+      "keywords": ["cybercrime", "cyber complaint", "online fraud", "report cybercrime"],
+      "answer": "If you are a victim of online fraud, hacking, identity theft, online harassment, or financial fraud:\n\n• National Cybercrime Helpline: 1930 (call within 24 hours of financial fraud for best chance of recovery)\n• National Cybercrime Reporting Portal: cybercrime.gov.in\n• You can also file an FIR at the local police station; cyber-cells in most cities can investigate\n\nFor banking/UPI fraud:\n• Immediately call your bank to block the card/account\n• Call 1930 within the 'Golden Hour' (3 hours)\n• File a complaint at cybercrime.gov.in\n• Lodge an FIR\n\nKey laws involved: BNS sections on cheating, IT Act 2000 (Sections 66, 66C, 66D, 67, etc.)."
+    },
+    {
+      "id": "topic-traffic-fine",
+      "category": "topic",
+      "title": "Traffic Fines and Challans (2019 Amendment)",
+      "keywords": ["traffic fine", "challan", "traffic rules", "e challan"],
+      "answer": "After the Motor Vehicles (Amendment) Act, 2019:\n\nCommon fines:\n• Driving without licence: ₹5,000\n• Driving without registration: ₹5,000\n• Driving without insurance: ₹2,000\n• No seat belt: ₹1,000\n• No helmet (rider or pillion): ₹1,000 + 3-month licence suspension\n• Over-speeding: ₹1,000 (LMV) / ₹2,000 (HMV)\n• Drunk driving: ₹10,000 + 6 months imprisonment (first); ₹15,000 + 2 years (subsequent)\n• Mobile phone while driving: ₹1,000–5,000\n• Dangerous/rash driving: ₹1,000–5,000\n• Driving without ticket/permit: ₹10,000\n• Racing on public road: ₹5,000 (first); ₹10,000 (subsequent)\n• Juvenile traffic offences: guardian/owner punished with up to 3 years' imprisonment + ₹25,000 fine; vehicle registration cancelled\n\nChallans can be paid online via the State Transport Department portals or the Parivahan Sewa app."
+    },
+    {
+      "id": "topic-rti-procedure",
+      "category": "topic",
+      "title": "How to File an RTI Application",
+      "keywords": ["file rti", "rti application", "how to rti"],
+      "answer": "Procedure to file an RTI application under the RTI Act, 2005:\n\n1. Identify the Public Authority that holds the information (Central/State/Public Sector Undertaking).\n2. Locate the Public Information Officer (PIO) for that authority — usually published on the office's website.\n3. Write the application:\n   • Address it to the PIO\n   • Specify the information sought (be precise)\n   • Attach the fee (₹10 for Central; varies by State; BPL applicants are exempt)\n   • Include your name, address, contact details\n4. File modes:\n   • Online for Central Government: rtionline.gov.in\n   • By post or in person at the office of the PIO\n5. Reply timeline: 30 days (48 hours if it concerns the life or liberty of a person).\n6. If unsatisfied: First Appeal to First Appellate Authority (within 30 days); then Second Appeal to Central/State Information Commission (within 90 days)."
+    },
+    {
+      "id": "topic-court-hierarchy",
+      "category": "topic",
+      "title": "Court Hierarchy in India",
+      "keywords": ["court hierarchy", "supreme court", "high court", "district court"],
+      "answer": "India's judiciary is unified and follows a hierarchy:\n\n1. Supreme Court of India (Delhi)\n   • Final court of appeal\n   • Original jurisdiction in disputes between Centre-State or among States; Article 32 writ jurisdiction\n   • Article 142 — power to do 'complete justice'\n\n2. High Courts (one or more per State/UT)\n   • Article 226 writ jurisdiction (broader than SC)\n   • Appellate authority over District Courts\n   • Supervisory authority under Article 227\n\n3. District Courts (and Sessions Court for criminal matters)\n   • Civil: District Judge\n   • Criminal: Sessions Judge tries serious offences\n\n4. Subordinate Courts\n   • Civil Judges (Senior/Junior Division)\n   • Magistrate Courts (Chief Judicial Magistrate, Judicial Magistrate I and II Class)\n\nSpecial tribunals (CAT, NCLT, NGT, ITAT, etc.) handle specific subjects."
+    }
+  ]
+}
+ ITAT, etc.) handle specific subjects."
+    }
+  ]
+}

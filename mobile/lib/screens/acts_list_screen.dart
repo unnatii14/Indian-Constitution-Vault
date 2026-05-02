@@ -149,18 +149,24 @@ class _ActCard extends StatelessWidget {
   }
 
   List<Color> _getGradientColors(String actId) {
-    if (actId.contains('BNS'))
+    if (actId.contains('BNS')) {
       return [Colors.orange.shade400, Colors.deepOrange.shade600];
-    if (actId.contains('BNSS'))
+    }
+    if (actId.contains('BNSS')) {
       return [Colors.green.shade400, Colors.teal.shade600];
-    if (actId.contains('BSA'))
+    }
+    if (actId.contains('BSA')) {
       return [Colors.blue.shade400, Colors.indigo.shade600];
-    if (actId.contains('CONST'))
+    }
+    if (actId.contains('CONST')) {
       return [Colors.purple.shade400, Colors.deepPurple.shade600];
-    if (actId.contains('CRPC'))
+    }
+    if (actId.contains('CRPC')) {
       return [Colors.red.shade400, Colors.pink.shade600];
-    if (actId.contains('IPC'))
+    }
+    if (actId.contains('IPC')) {
       return [Colors.cyan.shade400, Colors.blue.shade700];
+    }
     return [Colors.grey.shade400, Colors.grey.shade600];
   }
 

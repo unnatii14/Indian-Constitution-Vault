@@ -13,206 +13,156 @@ class MainNavigationScreen extends ConsumerWidget {
     final bookmarksAsync = ref.watch(bookmarksProvider);
     final bookmarkCount = bookmarksAsync.valueOrNull?.length ?? 0;
     final isDark = Theme.of(context).brightness == Brightness.dark;
-    final bgColors = isDark
-        ? [const Color(0xFF1A1A1A), const Color(0xFF2C2C2C)]
-        : [Colors.orange.shade400, Colors.deepOrange.shade600];
+    final colorScheme = Theme.of(context).colorScheme;
 
-    // Disable PopScope on web since SystemNavigator.pop() doesn't work on web
-    if (kIsWeb) {
-      return Scaffold(
-        body: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: bgColors,
-            ),
+    return Scaffold(
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: isDark
+                ? [const Color(0xFF0F172A), const Color(0xFF1E293B)]
+                : [const Color(0xFFF8FAFC), Colors.white],
           ),
-          child: SafeArea(
-            child: Padding(
-              padding: const EdgeInsets.all(24.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  const SizedBox(height: 32),
-                  // App Title
-                  const Text(
-                    '⚖️ Legal Rights',
-                    style: TextStyle(
-                      fontSize: 32,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                    ),
-                    textAlign: TextAlign.center,
+        ),
+        child: SafeArea(
+          child: CustomScrollView(
+            physics: const BouncingScrollPhysics(),
+            slivers: [
+              // Header
+              SliverToBoxAdapter(
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(20, 16, 20, 8),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'CONSTITUTION',
+                        style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w700,
+                          color: colorScheme.primary.withOpacity(0.7),
+                          letterSpacing: 1.5,
+                        ),
+                      ),
+                      Text(
+                        'Vault',
+                        style: TextStyle(
+                          fontSize: 28,
+                          fontWeight: FontWeight.w800,
+                          color: isDark ? Colors.white : const Color(0xFF0F172A),
+                        ),
+                      ),
+                    ],
                   ),
-                  const SizedBox(height: 32),
+                ),
+              ),
 
-                  // Option 1: Browse Laws
-                  Container(
-                    padding: const EdgeInsets.all(16),
+              // Compact Article of the Day
+              SliverToBoxAdapter(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+                  child: Container(
+                    padding: const EdgeInsets.all(20),
                     decoration: BoxDecoration(
-                      color: Colors.white.withOpacity(0.2),
-                      borderRadius: BorderRadius.circular(12),
+                      gradient: LinearGradient(
+                        colors: isDark 
+                          ? [const Color(0xFF1E40AF), const Color(0xFF1E3A8A)]
+                          : [const Color(0xFF2563EB), const Color(0xFF1E40AF)],
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                      ),
+                      borderRadius: BorderRadius.circular(20),
+                      boxShadow: [
+                        BoxShadow(
+                          color: const Color(0xFF1E40AF).withOpacity(0.3),
+                          blurRadius: 15,
+                          offset: const Offset(0, 6),
+                        ),
+                      ],
                     ),
-                    child: Row(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Icon(Icons.info_outline, color: Colors.white, size: 20),
-                        const SizedBox(width: 12),
-                        Expanded(
-                          child: Text(
-                            'Educational purposes only. Not legal advice.',
-                            style: TextStyle(color: Colors.white, fontSize: 12),
+                        Row(
+                          children: [
+                            const Icon(Icons.auto_awesome, color: Colors.white, size: 16),
+                            const SizedBox(width: 8),
+                            Text(
+                              'ARTICLE OF THE DAY',
+                              style: TextStyle(
+                                color: Colors.white.withOpacity(0.8),
+                                fontSize: 10,
+                                fontWeight: FontWeight.w800,
+                                letterSpacing: 1,
+                              ),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(height: 10),
+                        const Text(
+                          'Article 21: Life & Liberty',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                            fontWeight: FontWeight.w700,
+                          ),
+                        ),
+                        const SizedBox(height: 6),
+                        Text(
+                          'Protection of life and personal liberty as per procedure established by law.',
+                          style: TextStyle(
+                            color: Colors.white.withOpacity(0.9),
+                            fontSize: 13,
+                            height: 1.4,
                           ),
                         ),
                       ],
                     ),
                   ),
-                ],
+                ),
               ),
-            ),
-          ),
-        ),
-      );
-    }
 
-    // For mobile platforms, use PopScope for exit confirmation
-    return PopScope(
-      canPop: false,
-      onPopInvokedWithResult: (didPop, result) {
-        if (!didPop) {
-          showDialog(
-            context: context,
-            builder: (context) => AlertDialog(
-              title: const Text('Exit App'),
-              content: const Text('Are you sure you want to exit?'),
-              actions: [
-                TextButton(
-                  onPressed: () => Navigator.pop(context),
-                  child: const Text('Cancel'),
-                ),
-                TextButton(
-                  onPressed: () => SystemNavigator.pop(),
-                  child: const Text('Exit'),
-                ),
-              ],
-            ),
-          );
-        }
-      },
-      child: Scaffold(
-        body: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: bgColors,
-            ),
-          ),
-          child: SafeArea(
-            child: Padding(
-              padding: const EdgeInsets.all(24.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  const SizedBox(height: 14),
-                  // App Title
-                  const Text(
-                    '⚖️ Legal Rights',
-                    style: TextStyle(
-                      fontSize: 32,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                    ),
-                    textAlign: TextAlign.center,
+              // Grid Section
+              SliverPadding(
+                padding: const EdgeInsets.fromLTRB(20, 16, 20, 24),
+                sliver: SliverGrid(
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    mainAxisSpacing: 16,
+                    crossAxisSpacing: 16,
+                    childAspectRatio: 1.1,
                   ),
-                  const SizedBox(height: 32),
-
-                  // Option 1: Browse Laws
-                  Expanded(
-                    child: _NavigationCard(
-                      icon: Icons.library_books_rounded,
+                  delegate: SliverChildListDelegate([
+                    _DashboardCard(
                       title: 'Browse Laws',
-                      description: 'Explore Indian legal acts and sections',
-                      gradient: LinearGradient(
-                        begin: Alignment.topLeft,
-                        end: Alignment.bottomRight,
-                        colors: [Colors.blue.shade400, Colors.blue.shade700],
-                      ),
+                      icon: Icons.library_books_rounded,
+                      color: const Color(0xFF6366F1), // Indigo
                       onTap: () => context.go('/acts'),
                     ),
-                  ),
-                  const SizedBox(height: 12),
-
-                  // Option 2: Law Finder
-                  Expanded(
-                    child: _NavigationCard(
-                      icon: Icons.search_rounded,
+                    _DashboardCard(
                       title: 'Law Finder',
-                      description: 'Find laws by category & topic',
-                      gradient: LinearGradient(
-                        begin: Alignment.topLeft,
-                        end: Alignment.bottomRight,
-                        colors: [Colors.green.shade400, Colors.green.shade700],
-                      ),
+                      icon: Icons.search_rounded,
+                      color: const Color(0xFF10B981), // Emerald/Teal
                       onTap: () => context.go('/law-finder'),
                     ),
-                  ),
-                  const SizedBox(height: 12),
-
-                  // Option 3: About Constitution
-                  Expanded(
-                    child: _NavigationCard(
+                    _DashboardCard(
+                      title: 'Constitution',
                       icon: Icons.account_balance_rounded,
-                      title: 'About Constitution',
-                      description: 'Learn about India\'s supreme law',
-                      gradient: LinearGradient(
-                        begin: Alignment.topLeft,
-                        end: Alignment.bottomRight,
-                        colors: [
-                          Colors.purple.shade400,
-                          Colors.purple.shade700,
-                        ],
-                      ),
+                      color: const Color(0xFF8B5CF6), // Purple
                       onTap: () => context.go('/about-constitution'),
                     ),
-                  ),
-                  const SizedBox(height: 12),
-
-                  // Option 4: Bookmarks
-                  Expanded(
-                    child: _NavigationCard(
+                    _DashboardCard(
+                      title: bookmarkCount > 0 ? 'Saved ($bookmarkCount)' : 'Bookmarks',
                       icon: Icons.bookmark_rounded,
-                      title: bookmarkCount > 0
-                          ? 'Bookmarks ($bookmarkCount)'
-                          : 'Bookmarks',
-                      description: 'Your saved sections',
-                      gradient: LinearGradient(
-                        begin: Alignment.topLeft,
-                        end: Alignment.bottomRight,
-                        colors: [Colors.amber.shade500, Colors.orange.shade700],
-                      ),
+                      color: const Color(0xFFF59E0B), // Amber
                       onTap: () => context.go('/bookmarks'),
                     ),
-                  ),
-                  const SizedBox(height: 12),
-
-                  // Option 5: About this App
-                  Expanded(
-                    child: _NavigationCard(
-                      icon: Icons.info_outline_rounded,
-                      title: 'About this App',
-                      description: 'Settings, share & support',
-                      gradient: LinearGradient(
-                        begin: Alignment.topLeft,
-                        end: Alignment.bottomRight,
-                        colors: [Colors.teal.shade400, Colors.teal.shade700],
-                      ),
-                      onTap: () => context.go('/about-app'),
-                    ),
-                  ),
-                ],
+                  ]),
+                ),
               ),
-            ),
+            ],
           ),
         ),
       ),
@@ -220,64 +170,64 @@ class MainNavigationScreen extends ConsumerWidget {
   }
 }
 
-class _NavigationCard extends StatelessWidget {
-  final IconData icon;
+class _DashboardCard extends StatelessWidget {
   final String title;
-  final String description;
-  final Gradient gradient;
+  final IconData icon;
+  final Color color;
   final VoidCallback onTap;
 
-  const _NavigationCard({
-    required this.icon,
+  const _DashboardCard({
     required this.title,
-    required this.description,
-    required this.gradient,
+    required this.icon,
+    required this.color,
     required this.onTap,
   });
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: onTap,
-      borderRadius: BorderRadius.circular(20),
-      child: Container(
-        decoration: BoxDecoration(
-          gradient: gradient,
-          borderRadius: BorderRadius.circular(20),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withOpacity(0.2),
-              blurRadius: 10,
-              offset: const Offset(0, 5),
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+
+    return Material(
+      color: Colors.transparent,
+      child: InkWell(
+        onTap: onTap,
+        borderRadius: BorderRadius.circular(20),
+        child: Container(
+          padding: const EdgeInsets.all(16),
+          decoration: BoxDecoration(
+            color: isDark ? Colors.white.withOpacity(0.05) : Colors.white,
+            borderRadius: BorderRadius.circular(20),
+            border: Border.all(
+              color: isDark ? Colors.white10 : color.withOpacity(0.1),
             ),
-          ],
-        ),
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 4.0),
+            boxShadow: [
+              if (!isDark)
+                BoxShadow(
+                  color: color.withOpacity(0.05),
+                  blurRadius: 10,
+                  offset: const Offset(0, 4),
+                ),
+            ],
+          ),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Icon(icon, size: 32, color: Colors.white),
-              const SizedBox(height: 4),
+              Container(
+                padding: const EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  color: color.withOpacity(0.1),
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Icon(icon, color: color, size: 24),
+              ),
               Text(
                 title,
-                style: const TextStyle(
-                  fontSize: 17,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
+                style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w700,
+                  color: isDark ? Colors.white : const Color(0xFF1E293B),
                 ),
-                textAlign: TextAlign.center,
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
-              ),
-              const SizedBox(height: 2),
-              Text(
-                description,
-                style: const TextStyle(fontSize: 12, color: Colors.white70),
-                textAlign: TextAlign.center,
-                maxLines: 2,
-                overflow: TextOverflow.ellipsis,
               ),
             ],
           ),

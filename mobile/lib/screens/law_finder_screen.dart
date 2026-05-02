@@ -888,7 +888,7 @@ class _LawFinderScreenState extends State<LawFinderScreen> {
                 _selectTopic(topic);
               },
             );
-          }).toList(),
+          }),
         ] else if (_searchQuery.isNotEmpty && searchResults.isEmpty) ...[
           Container(
             padding: const EdgeInsets.all(32),

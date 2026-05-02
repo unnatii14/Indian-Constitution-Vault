@@ -57,6 +57,7 @@ dependencies:
   url_launcher: ^6.3.1
   share_plus: ^10.1.2
   package_info_plus: ^8.1.0
+  http: ^1.6.0
 
 dev_dependencies:
   flutter_test:
@@ -94,6 +95,7 @@ flutter:
     - assets/data/bns_en.json
     - assets/data/bnss_en.json
     - assets/data/bsa_en.json
+    - assets/data/knowledge_base.json
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

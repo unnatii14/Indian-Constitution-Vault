@@ -95,14 +95,14 @@ class _SplashScreenState extends State<SplashScreen>
       onWillPop: () async => false, // Disable back button on splash
       child: Scaffold(
         body: Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             gradient: LinearGradient(
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
               colors: [
-                Colors.orange.shade800,
-                Colors.deepOrange.shade600,
-                Colors.orange.shade900,
+                Color(0xFF1E3A8A), // Deep Blue (app seed)
+                Color(0xFF1E40AF), // Royal Blue
+                Color(0xFF0F172A), // Slate 900
               ],
             ),
           ),
@@ -118,7 +118,7 @@ class _SplashScreenState extends State<SplashScreen>
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          // Extra large Netflix-style logo
+                          // Extra large logo
                           Container(
                             width: logoSize,
                             height: logoSize,
@@ -136,12 +136,12 @@ class _SplashScreenState extends State<SplashScreen>
                             child: Icon(
                               Icons.gavel,
                               size: logoSize * 0.6,
-                              color: Colors.deepOrange.shade700,
+                              color: const Color(0xFF1E3A8A),
                             ),
                           ),
                           SizedBox(height: screenHeight * 0.06),
                           // App title with glow effect
-                          Text(
+                          const Text(
                             'Indian Law Guide',
                             style: TextStyle(
                               fontSize: 42,
@@ -150,11 +150,11 @@ class _SplashScreenState extends State<SplashScreen>
                               letterSpacing: 2.5,
                               shadows: [
                                 Shadow(
-                                  color: Colors.orange.shade300,
-                                  offset: const Offset(0, 0),
+                                  color: Color(0xFF60A5FA),
+                                  offset: Offset(0, 0),
                                   blurRadius: 20,
                                 ),
-                                const Shadow(
+                                Shadow(
                                   color: Colors.black26,
                                   offset: Offset(2, 2),
                                   blurRadius: 4,
@@ -165,7 +165,7 @@ class _SplashScreenState extends State<SplashScreen>
                           ),
                           const SizedBox(height: 16),
                           // Hindi subtitle with glow
-                          Text(
+                          const Text(
                             'भारतीय कानून गाइड',
                             style: TextStyle(
                               fontSize: 24,
@@ -174,8 +174,8 @@ class _SplashScreenState extends State<SplashScreen>
                               letterSpacing: 1.5,
                               shadows: [
                                 Shadow(
-                                  color: Colors.orange.shade200,
-                                  offset: const Offset(0, 0),
+                                  color: Color(0xFF93C5FD),
+                                  offset: Offset(0, 0),
                                   blurRadius: 15,
                                 ),
                               ],

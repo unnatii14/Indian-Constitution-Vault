@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'main_navigation_screen.dart';
-import 'settings_screen.dart';
+import 'ai_assistant_screen.dart';
 import 'more_screen.dart';
 
 class RootNavigationScreen extends StatefulWidget {
@@ -15,33 +16,50 @@ class _RootNavigationScreenState extends State<RootNavigationScreen> {
 
   final List<Widget> _screens = [
     const MainNavigationScreen(),
-    const SettingsScreen(),
+    const AiAssistantScreen(),
     const MoreScreen(),
   ];
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: IndexedStack(index: _selectedIndex, children: _screens),
-      bottomNavigationBar: Container(
-        decoration: BoxDecoration(
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withOpacity(0.1),
-              blurRadius: 8,
-              offset: const Offset(0, -2),
+    return PopScope(
+      canPop: false,
+      onPopInvokedWithResult: (didPop, result) {
+        if (didPop) return;
+
+        if (_selectedIndex != 0) {
+          setState(() {
+            _selectedIndex = 0;
+          });
+        } else {
+          showDialog(
+            context: context,
+            builder: (context) => AlertDialog(
+              title: const Text('Exit App'),
+              content: const Text('Are you sure you want to exit?'),
+              actions: [
+                TextButton(
+                  onPressed: () => Navigator.pop(context),
+                  child: const Text('Cancel'),
+                ),
+                TextButton(
+                  onPressed: () => SystemNavigator.pop(),
+                  child: const Text('Exit'),
+                ),
+              ],
             ),
-          ],
-        ),
-        child: NavigationBar(
+          );
+        }
+      },
+      child: Scaffold(
+        body: IndexedStack(index: _selectedIndex, children: _screens),
+        bottomNavigationBar: NavigationBar(
           selectedIndex: _selectedIndex,
           onDestinationSelected: (index) {
             setState(() {
               _selectedIndex = index;
             });
           },
-          backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-          indicatorColor: Colors.orange.withOpacity(0.2),
           elevation: 0,
           destinations: const [
             NavigationDestination(
@@ -50,9 +68,9 @@ class _RootNavigationScreenState extends State<RootNavigationScreen> {
               label: 'Home',
             ),
             NavigationDestination(
-              icon: Icon(Icons.settings_outlined),
-              selectedIcon: Icon(Icons.settings),
-              label: 'Settings',
+              icon: Icon(Icons.smart_toy_outlined),
+              selectedIcon: Icon(Icons.smart_toy),
+              label: 'AI Assistant',
             ),
             NavigationDestination(
               icon: Icon(Icons.more_horiz),

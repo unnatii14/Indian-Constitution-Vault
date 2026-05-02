@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import 'providers/app_providers.dart';
+import 'screens/root_navigation_screen.dart';
 import 'screens/main_navigation_screen.dart';
 import 'screens/about_app_screen.dart';
 import 'screens/acts_list_screen.dart';
@@ -34,7 +35,7 @@ final goRouterProvider = Provider<GoRouter>((ref) {
       ),
       GoRoute(
         path: '/',
-        builder: (context, state) => const MainNavigationScreen(),
+        builder: (context, state) => const RootNavigationScreen(),
       ),
       GoRoute(
         path: '/acts',
@@ -91,20 +92,80 @@ class IndianConstitutionApp extends ConsumerWidget {
       debugShowCheckedModeBanner: false,
       themeMode: themeMode,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.orange,
-          brightness: Brightness.light,
-        ),
         useMaterial3: true,
-        appBarTheme: const AppBarTheme(centerTitle: true, elevation: 0),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color(0xFF1E3A8A), // Deep Blue
+          brightness: Brightness.light,
+          primary: const Color(0xFF1E3A8A),
+          onPrimary: Colors.white,
+          secondary: const Color(0xFF3B82F6), // Blue
+        ),
+        scaffoldBackgroundColor: Colors.white,
+        appBarTheme: const AppBarTheme(
+          centerTitle: true,
+          elevation: 0,
+          backgroundColor: Colors.white,
+          foregroundColor: Color(0xFF1E3A8A),
+        ),
+        cardTheme: CardThemeData(
+          elevation: 0,
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+          color: const Color(0xFFF8FAFC),
+        ),
+        navigationBarTheme: NavigationBarThemeData(
+          backgroundColor: Colors.white,
+          indicatorColor: const Color(0xFF1E3A8A).withOpacity(0.1),
+          labelTextStyle: WidgetStateProperty.resolveWith((states) {
+            if (states.contains(WidgetState.selected)) {
+              return const TextStyle(color: Color(0xFF1E3A8A), fontWeight: FontWeight.bold);
+            }
+            return const TextStyle(color: Colors.grey);
+          }),
+          iconTheme: WidgetStateProperty.resolveWith((states) {
+            if (states.contains(WidgetState.selected)) {
+              return const IconThemeData(color: Color(0xFF1E3A8A));
+            }
+            return const IconThemeData(color: Colors.grey);
+          }),
+        ),
       ),
       darkTheme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.orange,
-          brightness: Brightness.dark,
-        ),
         useMaterial3: true,
-        appBarTheme: const AppBarTheme(centerTitle: true, elevation: 0),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color(0xFF1E3A8A),
+          brightness: Brightness.dark,
+          primary: const Color(0xFF3B82F6),
+          surface: const Color(0xFF0F172A), // Slate 900
+          onSurface: Colors.white,
+        ),
+        scaffoldBackgroundColor: const Color(0xFF0F172A),
+        appBarTheme: const AppBarTheme(
+          centerTitle: true,
+          elevation: 0,
+          backgroundColor: Color(0xFF0F172A),
+          foregroundColor: Colors.white,
+        ),
+        cardTheme: CardThemeData(
+          elevation: 0,
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+          color: const Color(0xFF1E293B), // Slate 800
+        ),
+        navigationBarTheme: NavigationBarThemeData(
+          backgroundColor: const Color(0xFF1E293B),
+          indicatorColor: Colors.blue.withOpacity(0.2),
+          labelTextStyle: WidgetStateProperty.resolveWith((states) {
+            if (states.contains(WidgetState.selected)) {
+              return const TextStyle(color: Colors.blue, fontWeight: FontWeight.bold);
+            }
+            return const TextStyle(color: Colors.white70);
+          }),
+          iconTheme: WidgetStateProperty.resolveWith((states) {
+            if (states.contains(WidgetState.selected)) {
+              return const IconThemeData(color: Colors.blue);
+            }
+            return const IconThemeData(color: Colors.white70);
+          }),
+        ),
       ),
       routerConfig: router,
     );

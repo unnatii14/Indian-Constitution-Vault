@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:package_info_plus/package_info_plus.dart';
+import '../providers/app_providers.dart';
 
-class MoreScreen extends StatefulWidget {
+class MoreScreen extends ConsumerStatefulWidget {
   const MoreScreen({super.key});
 
   @override
-  State<MoreScreen> createState() => _MoreScreenState();
+  ConsumerState<MoreScreen> createState() => _MoreScreenState();
 }
 
-class _MoreScreenState extends State<MoreScreen> {
+class _MoreScreenState extends ConsumerState<MoreScreen> {
   String _appVersion = '';
 
   @override
@@ -21,164 +23,156 @@ class _MoreScreenState extends State<MoreScreen> {
 
   Future<void> _loadAppInfo() async {
     final info = await PackageInfo.fromPlatform();
-    setState(() {
-      _appVersion = 'v${info.version} (${info.buildNumber})';
-    });
+    if (mounted) {
+      setState(() {
+        _appVersion = 'v${info.version} (${info.buildNumber})';
+      });
+    }
   }
 
   @override
   Widget build(BuildContext context) {
+    final themeMode = ref.watch(themeModeProvider);
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+    final colorScheme = Theme.of(context).colorScheme;
+
     return Scaffold(
-      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       body: SafeArea(
-        child: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const SizedBox(height: 16),
-
-                // Title
-                const Text(
-                  'More',
-                  style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(20, 8, 20, 12),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'More',
+                style: TextStyle(
+                  fontSize: 26,
+                  fontWeight: FontWeight.w800,
+                  color: isDark ? Colors.white : const Color(0xFF0F172A),
                 ),
+              ),
+              const SizedBox(height: 14),
 
-                const SizedBox(height: 24),
-
-                // Premium Banner (placeholder)
-                Container(
-                  width: double.infinity,
-                  height: 50,
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      colors: [
-                        Colors.orange.shade400,
-                        Colors.deepOrange.shade500,
-                      ],
-                    ),
-                    borderRadius: BorderRadius.circular(16),
-                  ),
+              // Appearance Section
+              _buildSectionHeader('Appearance', isDark),
+              const SizedBox(height: 8),
+              _buildMenuCard([
+                _buildMenuItem(
+                  icon: Icons.brightness_6_rounded,
+                  iconColor: colorScheme.primary,
+                  title: 'Theme Mode',
+                  subtitle: _getThemeName(themeMode),
+                  onTap: () => _showThemeDialog(context, themeMode),
+                  isDark: isDark,
                 ),
+              ], isDark),
 
-                const SizedBox(height: 32),
+              const SizedBox(height: 14),
 
-                // Appearance Section
-                _buildSectionHeader('Appearance'),
-                const SizedBox(height: 8),
-                _buildMenuCard([
-                  _buildMenuItem(
-                    icon: Icons.brightness_6_outlined,
-                    title: 'Theme',
-                    subtitle: 'System default',
-                    onTap: () => _showThemeDialog(context),
-                  ),
-                ]),
+              // Feedback & Support Section
+              _buildSectionHeader('Feedback & Support', isDark),
+              const SizedBox(height: 8),
+              _buildMenuCard([
+                _buildMenuItem(
+                  icon: Icons.alternate_email_rounded,
+                  iconColor: Colors.blue,
+                  title: 'Contact Developer',
+                  subtitle: 'unnatitank14@gmail.com',
+                  onTap: () => _sendEmail('Feedback'),
+                  isDark: isDark,
+                ),
+                _buildDivider(isDark),
+                _buildMenuItem(
+                  icon: Icons.star_rounded,
+                  iconColor: Colors.amber,
+                  title: 'Rate App',
+                  subtitle: 'Show your support on Play Store',
+                  onTap: () => _rateApp(),
+                  isDark: isDark,
+                ),
+                _buildDivider(isDark),
+                _buildMenuItem(
+                  icon: Icons.share_rounded,
+                  iconColor: Colors.green,
+                  title: 'Share App',
+                  subtitle: 'Invite friends to use the app',
+                  onTap: () => _shareApp(),
+                  isDark: isDark,
+                ),
+              ], isDark),
 
-                const SizedBox(height: 24),
+              const SizedBox(height: 14),
 
-                // Feedback & Support Section
-                _buildSectionHeader('Feedback & Support'),
-                const SizedBox(height: 8),
-                _buildMenuCard([
-                  _buildMenuItem(
-                    icon: Icons.feedback_outlined,
-                    iconColor: Colors.cyan,
-                    title: 'Send feedback',
-                    subtitle: 'Help us improve Indian Law Guide',
-                    onTap: () => _sendFeedback(),
-                  ),
-                  _buildDivider(),
-                  _buildMenuItem(
-                    icon: Icons.lightbulb_outline,
-                    iconColor: Colors.amber,
-                    title: 'Suggest a feature',
-                    subtitle: 'Have an idea? We\'d love to hear it',
-                    onTap: () => _suggestFeature(),
-                  ),
-                  _buildDivider(),
-                  _buildMenuItem(
-                    icon: Icons.bug_report_outlined,
-                    iconColor: Colors.red,
-                    title: 'Report a bug',
-                    subtitle: 'Something not working right?',
-                    onTap: () => _reportBug(),
-                  ),
-                ]),
+              // Legal & About Section
+              _buildSectionHeader('Legal & About', isDark),
+              const SizedBox(height: 8),
+              _buildMenuCard([
+                _buildMenuItem(
+                  icon: Icons.privacy_tip_rounded,
+                  iconColor: Colors.indigo,
+                  title: 'Privacy Policy',
+                  subtitle: 'Your data is safe and offline',
+                  onTap: () => _showPrivacyInfo(),
+                  isDark: isDark,
+                ),
+              ], isDark),
 
-                const SizedBox(height: 24),
-
-                // About Section
-                _buildSectionHeader('About'),
-                const SizedBox(height: 8),
-                _buildMenuCard([
-                  _buildMenuItem(
-                    icon: Icons.star_outline,
-                    iconColor: Colors.amber,
-                    title: 'Rate Indian Law Guide',
-                    subtitle: 'Love the app? Leave a review!',
-                    onTap: () => _rateApp(),
-                  ),
-                  _buildDivider(),
-                  _buildMenuItem(
-                    icon: Icons.share_outlined,
-                    iconColor: Colors.blue,
-                    title: 'Share app',
-                    subtitle: 'Tell your friends about Indian Law Guide',
-                    onTap: () => _shareApp(),
-                  ),
-                  _buildDivider(),
-                  _buildMenuItem(
-                    icon: Icons.privacy_tip_outlined,
-                    iconColor: Colors.grey,
-                    title: 'Privacy & data',
-                    subtitle: 'Learn how we handle your data',
-                    onTap: () => _showPrivacyInfo(),
-                  ),
-                ]),
-
-                const SizedBox(height: 32),
-
-                // Version
-                Center(
-                  child: Text(
-                    _appVersion,
-                    style: TextStyle(color: Colors.grey.shade600, fontSize: 14),
+              const Spacer(),
+              Center(
+                child: Text(
+                  _appVersion,
+                  style: TextStyle(
+                    color: isDark ? Colors.white38 : Colors.grey.shade500,
+                    fontSize: 12,
+                    fontWeight: FontWeight.w500,
                   ),
                 ),
-
-                const SizedBox(height: 32),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),
     );
   }
 
-  Widget _buildSectionHeader(String title) {
+  String _getThemeName(ThemeMode mode) {
+    switch (mode) {
+      case ThemeMode.system:
+        return 'System default';
+      case ThemeMode.light:
+        return 'Light mode';
+      case ThemeMode.dark:
+        return 'Dark mode';
+    }
+  }
+
+  Widget _buildSectionHeader(String title, bool isDark) {
     return Text(
-      title,
+      title.toUpperCase(),
       style: TextStyle(
-        fontSize: 18,
-        fontWeight: FontWeight.w600,
-        color: Colors.grey.shade700,
+        fontSize: 12,
+        fontWeight: FontWeight.w800,
+        color: isDark ? Colors.blue.shade300 : Colors.blue.shade800,
+        letterSpacing: 1.2,
       ),
     );
   }
 
-  Widget _buildMenuCard(List<Widget> children) {
+  Widget _buildMenuCard(List<Widget> children, bool isDark) {
     return Container(
       decoration: BoxDecoration(
-        color: Theme.of(context).cardColor,
-        borderRadius: BorderRadius.circular(16),
+        color: isDark ? const Color(0xFF1E293B) : Colors.white,
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(
+          color: isDark ? Colors.white10 : Colors.black.withOpacity(0.05),
+        ),
         boxShadow: [
-          BoxShadow(
-            color: Colors.black.withOpacity(0.05),
-            blurRadius: 10,
-            offset: const Offset(0, 2),
-          ),
+          if (!isDark)
+            BoxShadow(
+              color: Colors.black.withOpacity(0.03),
+              blurRadius: 10,
+              offset: const Offset(0, 4),
+            ),
         ],
       ),
       child: Column(children: children),
@@ -190,22 +184,23 @@ class _MoreScreenState extends State<MoreScreen> {
     required String title,
     required String subtitle,
     required VoidCallback onTap,
-    Color? iconColor,
+    required Color iconColor,
+    required bool isDark,
   }) {
     return InkWell(
       onTap: onTap,
-      borderRadius: BorderRadius.circular(16),
+      borderRadius: BorderRadius.circular(20),
       child: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
         child: Row(
           children: [
             Container(
-              padding: const EdgeInsets.all(12),
+              padding: const EdgeInsets.all(10),
               decoration: BoxDecoration(
-                color: (iconColor ?? Colors.grey).withOpacity(0.1),
+                color: iconColor.withOpacity(0.1),
                 borderRadius: BorderRadius.circular(12),
               ),
-              child: Icon(icon, color: iconColor ?? Colors.grey, size: 24),
+              child: Icon(icon, color: iconColor, size: 22),
             ),
             const SizedBox(width: 16),
             Expanded(
@@ -214,111 +209,91 @@ class _MoreScreenState extends State<MoreScreen> {
                 children: [
                   Text(
                     title,
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontSize: 16,
-                      fontWeight: FontWeight.w600,
+                      fontWeight: FontWeight.w700,
+                      color: isDark ? Colors.white : const Color(0xFF1E293B),
                     ),
                   ),
                   const SizedBox(height: 2),
                   Text(
                     subtitle,
-                    style: TextStyle(fontSize: 13, color: Colors.grey.shade600),
+                    style: TextStyle(
+                      fontSize: 13, 
+                      color: isDark ? Colors.white38 : Colors.grey.shade600,
+                    ),
                   ),
                 ],
               ),
             ),
-            const Icon(Icons.chevron_right, color: Colors.grey),
+            Icon(Icons.chevron_right_rounded, 
+              color: isDark ? Colors.white10 : Colors.grey.shade300,
+            ),
           ],
         ),
       ),
     );
   }
 
-  Widget _buildDivider() {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16.0),
-      child: Divider(height: 1, color: Colors.grey.shade200),
+  Widget _buildDivider(bool isDark) {
+    return Divider(
+      height: 1, 
+      color: isDark ? Colors.white.withOpacity(0.05) : Colors.black.withOpacity(0.05),
+      indent: 60,
     );
   }
 
-  // Theme Dialog
-  void _showThemeDialog(BuildContext context) {
+  void _showThemeDialog(BuildContext context, ThemeMode currentMode) {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
         title: const Text('Choose Theme'),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
         content: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            _buildThemeOption('System default', ThemeMode.system),
-            _buildThemeOption('Light', ThemeMode.light),
-            _buildThemeOption('Dark', ThemeMode.dark),
+            _buildThemeOption('System default', ThemeMode.system, currentMode),
+            _buildThemeOption('Light', ThemeMode.light, currentMode),
+            _buildThemeOption('Dark', ThemeMode.dark, currentMode),
           ],
         ),
       ),
     );
   }
 
-  Widget _buildThemeOption(String title, ThemeMode mode) {
+  Widget _buildThemeOption(String title, ThemeMode mode, ThemeMode currentMode) {
+    final isSelected = mode == currentMode;
     return ListTile(
-      title: Text(title),
-      trailing: const Icon(Icons.check, color: Colors.transparent),
+      title: Text(title, style: TextStyle(fontWeight: isSelected ? FontWeight.bold : FontWeight.normal)),
+      trailing: isSelected ? const Icon(Icons.check_circle_rounded, color: Colors.blue) : null,
       onTap: () {
-        // TODO: Implement theme switching with Riverpod
+        ref.read(themeModeProvider.notifier).setTheme(mode);
         Navigator.pop(context);
-        ScaffoldMessenger.of(
-          context,
-        ).showSnackBar(SnackBar(content: Text('$title theme selected')));
       },
     );
   }
 
-  // Feedback Actions
-  Future<void> _sendFeedback() async {
+  Future<void> _sendEmail(String subject) async {
     final Uri emailUri = Uri(
       scheme: 'mailto',
       path: 'unnatitank14@gmail.com',
-      query:
-          'subject=Indian Law Guide - Feedback&body=Please share your feedback:',
+      query: 'subject=Indian Law Guide - $subject',
     );
-    if (await canLaunchUrl(emailUri)) {
-      await launchUrl(emailUri);
-    } else {
-      _showSnackBar('Could not open email app');
+    try {
+      if (await canLaunchUrl(emailUri)) {
+        await launchUrl(emailUri, mode: LaunchMode.externalApplication);
+      } else {
+        // Fallback for some devices
+        await launchUrl(emailUri);
+      }
+    } catch (e) {
+      _showSnackBar('Could not open email app. Please email unnatitank14@gmail.com');
     }
   }
 
-  Future<void> _suggestFeature() async {
-    final Uri emailUri = Uri(
-      scheme: 'mailto',
-      path: 'unnatitank14@gmail.com',
-      query: 'subject=Indian Law Guide - Feature Suggestion&body=Feature idea:',
-    );
-    if (await canLaunchUrl(emailUri)) {
-      await launchUrl(emailUri);
-    } else {
-      _showSnackBar('Could not open email app');
-    }
-  }
-
-  Future<void> _reportBug() async {
-    final Uri emailUri = Uri(
-      scheme: 'mailto',
-      path: 'unnatitank14@gmail.com',
-      query: 'subject=Indian Law Guide - Bug Report&body=Bug description:',
-    );
-    if (await canLaunchUrl(emailUri)) {
-      await launchUrl(emailUri);
-    } else {
-      _showSnackBar('Could not open email app');
-    }
-  }
-
-  // App Actions
   Future<void> _rateApp() async {
-    // TODO: Replace with actual Play Store URL once published
     final Uri storeUri = Uri.parse(
-      'https://play.google.com/store/apps/details?id=com.yourpackage.indian_constitution_vault',
+      'https://play.google.com/store/apps/details?id=com.indianlaw.indian_constitution_vault',
     );
     if (await canLaunchUrl(storeUri)) {
       await launchUrl(storeUri, mode: LaunchMode.externalApplication);
@@ -331,7 +306,6 @@ class _MoreScreenState extends State<MoreScreen> {
     await Share.share(
       'Check out Indian Law Guide - Your pocket legal companion! '
       'Learn about Indian laws easily. Download: https://play.google.com/store/apps/details?id=com.indianlaw.indian_constitution_vault',
-      subject: 'Indian Law Guide App',
     );
   }
 
@@ -340,34 +314,16 @@ class _MoreScreenState extends State<MoreScreen> {
       context: context,
       builder: (context) => AlertDialog(
         title: const Text('Privacy & Data'),
-        content: const SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Text(
-                'Data Collection',
-                style: TextStyle(fontWeight: FontWeight.bold),
-              ),
-              SizedBox(height: 8),
-              Text(
-                '• This app works 100% offline\n'
-                '• No personal data is collected\n'
-                '• No analytics or tracking\n'
-                '• All data stays on your device',
-              ),
-              SizedBox(height: 16),
-              Text(
-                'Permissions',
-                style: TextStyle(fontWeight: FontWeight.bold),
-              ),
-              SizedBox(height: 8),
-              Text(
-                '• Voice input (optional): For voice search\n'
-                '• Storage: For caching legal content',
-              ),
-            ],
-          ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+        content: const Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text('• This app works 100% offline'),
+            Text('• No personal data is collected'),
+            Text('• No analytics or tracking'),
+            Text('• All data stays on your device'),
+          ],
         ),
         actions: [
           TextButton(
@@ -380,8 +336,6 @@ class _MoreScreenState extends State<MoreScreen> {
   }
 
   void _showSnackBar(String message) {
-    ScaffoldMessenger.of(
-      context,
-    ).showSnackBar(SnackBar(content: Text(message)));
+    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(message)));
   }
 }

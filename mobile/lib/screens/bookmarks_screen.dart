@@ -8,8 +8,9 @@ class BookmarksScreen extends ConsumerWidget {
   const BookmarksScreen({super.key});
 
   Color _getActColor(String actId) {
-    if (actId.contains('BNS') && !actId.contains('BNSS'))
+    if (actId.contains('BNS') && !actId.contains('BNSS')) {
       return Colors.orange.shade700;
+    }
     if (actId.contains('BNSS')) return Colors.green.shade700;
     if (actId.contains('BSA')) return Colors.blue.shade700;
     if (actId.contains('CONST')) return Colors.purple.shade700;

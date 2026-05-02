@@ -263,7 +263,7 @@ class _SectionDetailScreenState extends ConsumerState<SectionDetailScreen> {
                                       decoration: BoxDecoration(
                                         color: Theme.of(
                                           context,
-                                        ).colorScheme.surfaceVariant,
+                                        ).colorScheme.surfaceContainerHighest,
                                         borderRadius: BorderRadius.circular(8),
                                       ),
                                       child: Row(
@@ -536,7 +536,7 @@ class _NavigationButtons extends ConsumerWidget {
                   child: ElevatedButton.icon(
                     onPressed: () {
                       context.go(
-                        '/acts/$actId/sections/${previousSection!.sectionNumber}',
+                        '/acts/$actId/sections/${previousSection.sectionNumber}',
                       );
                     },
                     icon: const Icon(Icons.arrow_back, size: 18),
@@ -579,7 +579,7 @@ class _NavigationButtons extends ConsumerWidget {
                   child: ElevatedButton(
                     onPressed: () {
                       context.go(
-                        '/acts/$actId/sections/${nextSection!.sectionNumber}',
+                        '/acts/$actId/sections/${nextSection.sectionNumber}',
                       );
                     },
                     style: ElevatedButton.styleFrom(
