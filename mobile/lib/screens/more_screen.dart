@@ -164,12 +164,12 @@ class _MoreScreenState extends ConsumerState<MoreScreen> {
         color: isDark ? const Color(0xFF1E293B) : Colors.white,
         borderRadius: BorderRadius.circular(20),
         border: Border.all(
-          color: isDark ? Colors.white10 : Colors.black.withOpacity(0.05),
+          color: isDark ? Colors.white10 : Colors.black.withValues(alpha: 0.05),
         ),
         boxShadow: [
           if (!isDark)
             BoxShadow(
-              color: Colors.black.withOpacity(0.03),
+              color: Colors.black.withValues(alpha: 0.03),
               blurRadius: 10,
               offset: const Offset(0, 4),
             ),
@@ -197,7 +197,7 @@ class _MoreScreenState extends ConsumerState<MoreScreen> {
             Container(
               padding: const EdgeInsets.all(10),
               decoration: BoxDecoration(
-                color: iconColor.withOpacity(0.1),
+                color: iconColor.withValues(alpha: 0.1),
                 borderRadius: BorderRadius.circular(12),
               ),
               child: Icon(icon, color: iconColor, size: 22),
@@ -238,7 +238,7 @@ class _MoreScreenState extends ConsumerState<MoreScreen> {
   Widget _buildDivider(bool isDark) {
     return Divider(
       height: 1, 
-      color: isDark ? Colors.white.withOpacity(0.05) : Colors.black.withOpacity(0.05),
+      color: isDark ? Colors.white.withValues(alpha: 0.05) : Colors.black.withValues(alpha: 0.05),
       indent: 60,
     );
   }

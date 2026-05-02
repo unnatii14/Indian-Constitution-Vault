@@ -1,6 +1,4 @@
-import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../providers/bookmark_provider.dart';
@@ -42,7 +40,7 @@ class MainNavigationScreen extends ConsumerWidget {
                         style: TextStyle(
                           fontSize: 12,
                           fontWeight: FontWeight.w700,
-                          color: colorScheme.primary.withOpacity(0.7),
+                          color: colorScheme.primary.withValues(alpha: 0.7),
                           letterSpacing: 1.5,
                         ),
                       ),
@@ -76,7 +74,7 @@ class MainNavigationScreen extends ConsumerWidget {
                       borderRadius: BorderRadius.circular(20),
                       boxShadow: [
                         BoxShadow(
-                          color: const Color(0xFF1E40AF).withOpacity(0.3),
+                          color: const Color(0xFF1E40AF).withValues(alpha: 0.3),
                           blurRadius: 15,
                           offset: const Offset(0, 6),
                         ),
@@ -92,7 +90,7 @@ class MainNavigationScreen extends ConsumerWidget {
                             Text(
                               'ARTICLE OF THE DAY',
                               style: TextStyle(
-                                color: Colors.white.withOpacity(0.8),
+                                color: Colors.white.withValues(alpha: 0.8),
                                 fontSize: 10,
                                 fontWeight: FontWeight.w800,
                                 letterSpacing: 1,
@@ -113,7 +111,7 @@ class MainNavigationScreen extends ConsumerWidget {
                         Text(
                           'Protection of life and personal liberty as per procedure established by law.',
                           style: TextStyle(
-                            color: Colors.white.withOpacity(0.9),
+                            color: Colors.white.withValues(alpha: 0.9),
                             fontSize: 13,
                             height: 1.4,
                           ),
@@ -195,15 +193,15 @@ class _DashboardCard extends StatelessWidget {
         child: Container(
           padding: const EdgeInsets.all(16),
           decoration: BoxDecoration(
-            color: isDark ? Colors.white.withOpacity(0.05) : Colors.white,
+            color: isDark ? Colors.white.withValues(alpha: 0.05) : Colors.white,
             borderRadius: BorderRadius.circular(20),
             border: Border.all(
-              color: isDark ? Colors.white10 : color.withOpacity(0.1),
+              color: isDark ? Colors.white10 : color.withValues(alpha: 0.1),
             ),
             boxShadow: [
               if (!isDark)
                 BoxShadow(
-                  color: color.withOpacity(0.05),
+                  color: color.withValues(alpha: 0.05),
                   blurRadius: 10,
                   offset: const Offset(0, 4),
                 ),
@@ -216,7 +214,7 @@ class _DashboardCard extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                  color: color.withOpacity(0.1),
+                  color: color.withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: Icon(icon, color: color, size: 24),

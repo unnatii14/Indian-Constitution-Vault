@@ -61,7 +61,7 @@ class SectionsListScreen extends ConsumerWidget {
               // Header
               Container(
                 padding: const EdgeInsets.all(20),
-                decoration: BoxDecoration(color: actColor.withOpacity(0.08)),
+                decoration: BoxDecoration(color: actColor.withValues(alpha: 0.08)),
                 child: Column(
                   children: [
                     Row(
@@ -73,7 +73,7 @@ class SectionsListScreen extends ConsumerWidget {
                             borderRadius: BorderRadius.circular(12),
                             boxShadow: [
                               BoxShadow(
-                                color: Colors.black.withOpacity(0.1),
+                                color: Colors.black.withValues(alpha: 0.1),
                                 blurRadius: 8,
                                 offset: const Offset(0, 2),
                               ),
@@ -93,7 +93,7 @@ class SectionsListScreen extends ConsumerWidget {
                               Container(
                                 padding: const EdgeInsets.all(12),
                                 decoration: BoxDecoration(
-                                  color: actColor.withOpacity(0.15),
+                                  color: actColor.withValues(alpha: 0.15),
                                   borderRadius: BorderRadius.circular(12),
                                 ),
                                 child: Icon(actIcon, color: actColor, size: 24),
@@ -237,7 +237,7 @@ class SectionsListScreen extends ConsumerWidget {
                                           end: Alignment.bottomRight,
                                           colors: [
                                             actColor,
-                                            actColor.withOpacity(0.7),
+                                            actColor.withValues(alpha: 0.7),
                                           ],
                                         ),
                                         borderRadius: BorderRadius.circular(12),
@@ -289,7 +289,7 @@ class SectionsListScreen extends ConsumerWidget {
                                     Icon(
                                       Icons.arrow_forward_ios,
                                       size: 16,
-                                      color: actColor.withOpacity(0.5),
+                                      color: actColor.withValues(alpha: 0.5),
                                     ),
                                   ],
                                 ),

@@ -9,12 +9,8 @@ final localDataServiceProvider = Provider<LocalDataService>((ref) {
 
 // Acts List Provider
 final actsProvider = FutureProvider<List<ActSummary>>((ref) async {
-  print('[PROVIDER] actsProvider called');
   final localDataService = ref.watch(localDataServiceProvider);
-  print('[PROVIDER] Loading acts from local data');
-  final result = await localDataService.listActs();
-  print('[PROVIDER] Acts loaded: ${result.length}');
-  return result;
+  return localDataService.listActs();
 });
 
 // Selected Act Provider

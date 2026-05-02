@@ -93,7 +93,7 @@ class _AiAssistantScreenState extends ConsumerState<AiAssistantScreen> {
           Container(
             padding: const EdgeInsets.all(20),
             decoration: BoxDecoration(
-              color: colorScheme.primary.withOpacity(0.1),
+              color: colorScheme.primary.withValues(alpha: 0.1),
               shape: BoxShape.circle,
             ),
             child: Icon(Icons.smart_toy_rounded, size: 56, color: colorScheme.primary),
@@ -136,7 +136,7 @@ class _AiAssistantScreenState extends ConsumerState<AiAssistantScreen> {
           onPressed: () => ref.read(aiChatProvider.notifier).sendMessage(query),
           style: OutlinedButton.styleFrom(
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-            side: BorderSide(color: colorScheme.primary.withOpacity(0.2)),
+            side: BorderSide(color: colorScheme.primary.withValues(alpha: 0.2)),
             padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
             minimumSize: const Size(0, 36),
           ),
@@ -182,7 +182,7 @@ class _AiAssistantScreenState extends ConsumerState<AiAssistantScreen> {
       padding: const EdgeInsets.fromLTRB(20, 10, 20, 20),
       decoration: BoxDecoration(
         color: Theme.of(context).scaffoldBackgroundColor,
-        border: Border(top: BorderSide(color: isDark ? Colors.white10 : Colors.black.withOpacity(0.05))),
+        border: Border(top: BorderSide(color: isDark ? Colors.white10 : Colors.black.withValues(alpha: 0.05))),
       ),
       child: Row(
         children: [

@@ -182,7 +182,7 @@ class _SectionDetailScreenState extends ConsumerState<SectionDetailScreen> {
                           gradient: LinearGradient(
                             begin: Alignment.topLeft,
                             end: Alignment.bottomRight,
-                            colors: [actColor, actColor.withOpacity(0.7)],
+                            colors: [actColor, actColor.withValues(alpha: 0.7)],
                           ),
                         ),
                         child: SafeArea(
@@ -225,7 +225,7 @@ class _SectionDetailScreenState extends ConsumerState<SectionDetailScreen> {
                               borderRadius: BorderRadius.circular(16),
                               boxShadow: [
                                 BoxShadow(
-                                  color: actColor.withOpacity(0.1),
+                                  color: actColor.withValues(alpha: 0.1),
                                   blurRadius: 10,
                                   offset: const Offset(0, 4),
                                 ),
@@ -242,7 +242,7 @@ class _SectionDetailScreenState extends ConsumerState<SectionDetailScreen> {
                                         vertical: 6,
                                       ),
                                       decoration: BoxDecoration(
-                                        color: actColor.withOpacity(0.15),
+                                        color: actColor.withValues(alpha: 0.15),
                                         borderRadius: BorderRadius.circular(8),
                                       ),
                                       child: Text(
@@ -313,7 +313,7 @@ class _SectionDetailScreenState extends ConsumerState<SectionDetailScreen> {
                               borderRadius: BorderRadius.circular(16),
                               boxShadow: [
                                 BoxShadow(
-                                  color: Colors.black.withOpacity(0.05),
+                                  color: Colors.black.withValues(alpha: 0.05),
                                   blurRadius: 10,
                                   offset: const Offset(0, 4),
                                 ),
@@ -327,7 +327,7 @@ class _SectionDetailScreenState extends ConsumerState<SectionDetailScreen> {
                                     Container(
                                       padding: const EdgeInsets.all(8),
                                       decoration: BoxDecoration(
-                                        color: Colors.blue.withOpacity(0.1),
+                                        color: Colors.blue.withValues(alpha: 0.1),
                                         borderRadius: BorderRadius.circular(8),
                                       ),
                                       child: Icon(
@@ -358,65 +358,7 @@ class _SectionDetailScreenState extends ConsumerState<SectionDetailScreen> {
                             ),
                           ),
 
-                          // Hindi content removed
-                          if (false && section.contentHi != null) ...[
-                            const SizedBox(height: 20),
-                            Container(
-                              padding: const EdgeInsets.all(20),
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(16),
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: Colors.black.withOpacity(0.05),
-                                    blurRadius: 10,
-                                    offset: const Offset(0, 4),
-                                  ),
-                                ],
-                              ),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Row(
-                                    children: [
-                                      Container(
-                                        padding: const EdgeInsets.all(8),
-                                        decoration: BoxDecoration(
-                                          color: Colors.orange.shade50,
-                                          borderRadius: BorderRadius.circular(
-                                            8,
-                                          ),
-                                        ),
-                                        child: Icon(
-                                          Icons.translate,
-                                          color: Colors.orange.shade700,
-                                          size: 18,
-                                        ),
-                                      ),
-                                      const SizedBox(width: 10),
-                                      const Text(
-                                        'हिंदी',
-                                        style: TextStyle(
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.black87,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                  const SizedBox(height: 16),
-                                  Text(
-                                    section.contentHi!,
-                                    style: const TextStyle(
-                                      fontSize: 15,
-                                      height: 1.6,
-                                      color: Colors.black87,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
+                          // Hindi content section was previously here; removed.
 
                           const SizedBox(height: 32),
 
@@ -524,9 +466,9 @@ class _NavigationButtons extends ConsumerWidget {
         return Container(
           padding: const EdgeInsets.all(16),
           decoration: BoxDecoration(
-            color: actColor.withOpacity(0.05),
+            color: actColor.withValues(alpha: 0.05),
             borderRadius: BorderRadius.circular(16),
-            border: Border.all(color: actColor.withOpacity(0.2), width: 1),
+            border: Border.all(color: actColor.withValues(alpha: 0.2), width: 1),
           ),
           child: Row(
             children: [
@@ -563,7 +505,7 @@ class _NavigationButtons extends ConsumerWidget {
                       ),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(12),
-                        side: BorderSide(color: actColor.withOpacity(0.3)),
+                        side: BorderSide(color: actColor.withValues(alpha: 0.3)),
                       ),
                     ),
                   ),

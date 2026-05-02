@@ -91,8 +91,8 @@ class _SplashScreenState extends State<SplashScreen>
     final screenWidth = MediaQuery.of(context).size.width;
     final logoSize = min(screenWidth * 0.5, screenHeight * 0.38);
 
-    return WillPopScope(
-      onWillPop: () async => false, // Disable back button on splash
+    return PopScope(
+      canPop: false, // Disable back button on splash
       child: Scaffold(
         body: Container(
           decoration: const BoxDecoration(
@@ -127,7 +127,7 @@ class _SplashScreenState extends State<SplashScreen>
                               borderRadius: BorderRadius.circular(50),
                               boxShadow: [
                                 BoxShadow(
-                                  color: Colors.black.withOpacity(0.4),
+                                  color: Colors.black.withValues(alpha: 0.4),
                                   blurRadius: 40,
                                   spreadRadius: 15,
                                 ),
@@ -189,15 +189,15 @@ class _SplashScreenState extends State<SplashScreen>
                               vertical: 14,
                             ),
                             decoration: BoxDecoration(
-                              color: Colors.white.withOpacity(0.15),
+                              color: Colors.white.withValues(alpha: 0.15),
                               borderRadius: BorderRadius.circular(25),
                               border: Border.all(
-                                color: Colors.white.withOpacity(0.4),
+                                color: Colors.white.withValues(alpha: 0.4),
                                 width: 2,
                               ),
                               boxShadow: [
                                 BoxShadow(
-                                  color: Colors.black.withOpacity(0.2),
+                                  color: Colors.black.withValues(alpha: 0.2),
                                   blurRadius: 10,
                                   spreadRadius: 2,
                                 ),
@@ -222,7 +222,7 @@ class _SplashScreenState extends State<SplashScreen>
                             child: CircularProgressIndicator(
                               strokeWidth: 3,
                               valueColor: AlwaysStoppedAnimation<Color>(
-                                Colors.white.withOpacity(0.7),
+                                Colors.white.withValues(alpha: 0.7),
                               ),
                             ),
                           ),

@@ -1,16 +1,8 @@
-// DEPRECATED: This file is no longer used.
-// The app now runs completely offline using LocalDataService.
-// All law data is bundled in assets/data/ and loaded locally.
-
+// This file used to hold remote-API configuration. The app is now fully
+// offline (data is bundled under `assets/data/`) so no API config is
+// needed. The file is kept so any older references still resolve.
 class AppConfig {
-  // OFFLINE MODE: No API configuration needed
-  // The app now uses LocalDataService instead of ApiService
-
-  @Deprecated('App is now fully offline. API not used.')
-  static const String apiBaseUrl = '';
-
-  @Deprecated('App is now fully offline. API not used.')
-  static const String apiKey = '';
-
-  static const bool isDebug = bool.fromEnvironment('dart.vm.product') == false;
+  /// True only in debug builds.
+  static const bool isDebug =
+      bool.fromEnvironment('dart.vm.product') == false;
 }

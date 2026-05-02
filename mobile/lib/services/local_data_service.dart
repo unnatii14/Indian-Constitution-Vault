@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:developer' as developer;
 import 'package:flutter/services.dart';
 import '../models/act_summary.dart';
 import '../models/section_summary.dart';
@@ -37,28 +38,26 @@ class LocalDataService {
   Future<void> initialize() async {
     if (_isInitialized) return;
 
-    print('[LocalData] Initializing local data service...');
-
     for (final actMeta in _actMetadata) {
       try {
         final actId = actMeta['act_id'] as String;
         final filePath = actMeta['file'] as String;
 
-        print('[LocalData] Loading $actId from $filePath');
         final jsonString = await rootBundle.loadString(filePath);
         final data = jsonDecode(jsonString) as Map<String, dynamic>;
         _dataCache[actId] = data;
-        print('[LocalData] Loaded $actId successfully');
-      } catch (e) {
-        print('[LocalData] Error loading ${actMeta['act_id']}: $e');
+      } catch (e, st) {
+        developer.log(
+          'Failed to load ${actMeta['act_id']}',
+          name: 'LocalDataService',
+          error: e,
+          stackTrace: st,
+        );
         // Continue loading other files even if one fails
       }
     }
 
     _isInitialized = true;
-    print(
-      '[LocalData] Initialization complete. Loaded ${_dataCache.length} acts',
-    );
   }
 
   /// Health check - always returns true since data is local

@@ -78,7 +78,7 @@ class _AboutConstitutionScreenState extends State<AboutConstitutionScreen> {
                     child: Icon(
                       Icons.account_balance,
                       size: 80,
-                      color: Colors.white.withOpacity(0.3),
+                      color: Colors.white.withValues(alpha: 0.3),
                     ),
                   ),
                 ),
@@ -369,10 +369,10 @@ class _LeaderTile extends StatelessWidget {
       margin: const EdgeInsets.only(bottom: 16),
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
-        color: isDark ? color.withOpacity(0.18) : color.shade50,
+        color: isDark ? color.withValues(alpha: 0.18) : color.shade50,
         borderRadius: BorderRadius.circular(12),
         border: Border.all(
-          color: isDark ? color.withOpacity(0.4) : color.shade200,
+          color: isDark ? color.withValues(alpha: 0.4) : color.shade200,
         ),
       ),
       child: Column(
@@ -704,10 +704,10 @@ class _NationalDayTile extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(14),
       decoration: BoxDecoration(
-        color: isDark ? color.withOpacity(0.18) : color.shade50,
+        color: isDark ? color.withValues(alpha: 0.18) : color.shade50,
         borderRadius: BorderRadius.circular(12),
         border: Border.all(
-          color: isDark ? color.withOpacity(0.4) : color.shade200,
+          color: isDark ? color.withValues(alpha: 0.4) : color.shade200,
         ),
       ),
       child: Row(
@@ -796,8 +796,8 @@ class _PrideAndValuesCard extends StatelessWidget {
             end: Alignment.bottomRight,
             colors: isDark
                 ? [
-                    Colors.orange.withOpacity(0.15),
-                    Colors.green.withOpacity(0.15),
+                    Colors.orange.withValues(alpha: 0.15),
+                    Colors.green.withValues(alpha: 0.15),
                   ]
                 : [Colors.orange.shade50, Colors.green.shade50],
           ),

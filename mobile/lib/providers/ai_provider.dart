@@ -520,7 +520,6 @@ class OfflineLegalEngine {
         if (sectionFilter == null && headingHits < minHeadingHits) {
           score = 0;
         }
-
         // Section-number boost only when the user explicitly asked for one.
         if (sectionFilter != null && sectionFilter == secNum) {
           score += 30;
@@ -529,7 +528,7 @@ class OfflineLegalEngine {
           }
         }
 
-        // Wrong Act → heavy penalty (don't drop entirely, in case the user
+        // Wrong Act -> heavy penalty (don't drop entirely, in case the user
         // was vague, but make a same-Act match dominate).
         if (actFilter != null && !actMatch) {
           score *= 0.2;
@@ -549,28 +548,16 @@ class OfflineLegalEngine {
     }
 
     results.sort((a, b) => b.score.compareTo(a.score));
-
-    // Confidence threshold — refuse low-quality matches.
     if (results.isEmpty || results.first.score < 5) return [];
-
     return results.take(limit).toList();
   }
 
   /// Smart search across the curated knowledge base.
-  ///
-  /// Scoring:
-  /// • Direct keyword phrase match (case-insensitive substring on query) → +50
-  /// • IDF-weighted word overlap with the entry title → +5×IDF per word
-  /// • IDF-weighted word overlap with the entry answer → +1×IDF per word
-  /// • Article-number match (e.g. "article 21" → entry id "art-21") → +60
-  ///
-  /// Returns at most `limit` results above the confidence threshold.
   List<KbResult> searchKb(String query, {int limit = 3}) {
     if (!_isLoaded || _kb.isEmpty || query.trim().isEmpty) return [];
 
     final q = query.toLowerCase().trim();
 
-    // Article-number direct routing.
     final artMatch =
         RegExp(r'article\s*(\d+[a-z]?)', caseSensitive: false).firstMatch(q);
     final articleNum = artMatch?.group(1)?.toLowerCase();
@@ -581,8 +568,6 @@ class OfflineLegalEngine {
     for (final entry in _kb) {
       double score = 0;
 
-      // Direct phrase match in keywords list — longer phrases score higher
-      // (more specific phrases like "domestic violence" beat single words).
       for (final kw in entry.keywords) {
         if (q.contains(kw)) {
           score += 50 + kw.length;
@@ -590,12 +575,10 @@ class OfflineLegalEngine {
         }
       }
 
-      // Article-number direct routing — exact id match
       if (articleNum != null && entry.id == 'art-$articleNum') {
         score += 60;
       }
 
-      // IDF-weighted word overlap
       for (final w in keywords) {
         final wt = _idfOf(w);
         if (entry.titleWords.contains(w)) score += 5 * wt;
@@ -613,29 +596,17 @@ class OfflineLegalEngine {
       }
     }
 
-    // For "Article N" queries, only the exact art-N entry should win.
-    // If we don't have one, return empty so the "I don't know about
-    // Article N" fallback fires — never a wrong sibling article.
     List<KbResult> filtered = results;
     if (articleNum != null) {
       filtered = results.where((r) => r.id == 'art-$articleNum').toList();
     }
 
     filtered.sort((a, b) => b.score.compareTo(a.score));
-
-    // Confidence threshold — anything below 15 means we're guessing
-    // from a single weak word match. Don't show it.
     if (filtered.isEmpty || filtered.first.score < 15) return [];
 
     return filtered.take(limit).toList();
   }
 
-  /// Generate a natural-language response.
-  ///
-  /// Strategy: run BOTH the section search and the KB search, then return
-  /// whichever has the higher confidence score. KB wins ties because curated
-  /// answers are usually more user-friendly than raw legal text. If neither
-  /// scored above the threshold, return an honest "I don't know".
   String generateResponse(String query, List<LegalResult> results) {
     final kbResults = searchKb(query);
     final sectionTop = results.isNotEmpty ? results.first.score : 0;
@@ -647,105 +618,71 @@ class OfflineLegalEngine {
     if (useSection) {
       final top = results.first;
       final buf = StringBuffer();
-
-      buf.writeln('📚 **${top.actName}**');
+      buf.writeln('\u{1F4DA} **${top.actName}**');
       buf.writeln('**Section ${top.sectionNumber}**: ${_cleanHeading(top.heading)}');
       buf.writeln();
       buf.writeln(_cleanText(top.text, 600));
-
       if (results.length > 1) {
         buf.writeln();
-        buf.writeln('📌 **Also related:**');
+        buf.writeln('\u{1F4CC} **Also related:**');
         for (final r in results.skip(1).take(3)) {
-          buf.writeln(
-              '• ${r.actName} › Sec ${r.sectionNumber}: ${_cleanHeading(r.heading)}');
+          buf.writeln('\u2022 ${r.actName} > Sec ${r.sectionNumber}: ${_cleanHeading(r.heading)}');
         }
       }
-
       buf.writeln();
-      buf.writeln('─────────────────');
-      buf.writeln('ℹ️ This is educational information only, not legal advice.');
+      buf.writeln('-----------------');
+      buf.writeln('\u2139\uFE0F This is educational information only, not legal advice.');
       return buf.toString();
     }
 
     if (useKb) {
       final top = kbResults.first;
       final buf = StringBuffer();
-
       final emoji = switch (top.category) {
-        'constitution-article' => '📜',
-        'act' => '⚖️',
-        'topic' => '💡',
-        _ => '📖',
+        'constitution-article' => '\u{1F4DC}',
+        'act' => '\u2696\uFE0F',
+        'topic' => '\u{1F4A1}',
+        _ => '\u{1F4D6}',
       };
-
       buf.writeln('$emoji **${top.title}**');
       buf.writeln();
       buf.writeln(top.answer);
-
       if (kbResults.length > 1) {
         buf.writeln();
-        buf.writeln('📌 **Also related:**');
+        buf.writeln('\u{1F4CC} **Also related:**');
         for (final r in kbResults.skip(1).take(2)) {
-          buf.writeln('• ${r.title}');
+          buf.writeln('\u2022 ${r.title}');
         }
       }
-
       buf.writeln();
-      buf.writeln('─────────────────');
-      buf.writeln('ℹ️ Educational information only, not legal advice.');
+      buf.writeln('-----------------');
+      buf.writeln('\u2139\uFE0F Educational information only, not legal advice.');
       return buf.toString();
     }
 
-    // Honest "I don't know"
     return _handleNoResults(query);
   }
 
   String _handleNoResults(String query) {
-    // Article-number specific fallback — the user asked about an Article we
-    // don't have curated yet. Be honest about what we DO cover.
     final artMatch =
         RegExp(r'article\s*(\d+[a-z]?)', caseSensitive: false).firstMatch(query);
     if (artMatch != null) {
       final n = artMatch.group(1);
-      return '''🤷 **I don't have offline information on Article $n.**
-
-I'd rather tell you the truth than make something up.
-
-My offline knowledge currently covers:
-• Articles 12–17, 19–25, 32, 44, 51A, 368
-• Fundamental Rights, Directive Principles, Preamble
-• Common Acts (RTI, RPwD/PWD, MV, IT, Consumer Protection, POCSO, NDPS, UAPA, JJ, PMLA, SC/ST, Domestic Violence, Dowry Prohibition)
-• BNS 2023, BNSS 2023, BSA 2023 — every section
-
-If Article $n is important for your case, please consult a lawyer or the official Constitution text.
-
-─────────────────
-ℹ️ Educational information only.''';
+      return "I don't have offline information on Article $n.\n\n"
+          "My offline knowledge covers: Articles 12-17, 19-25, 32, 44, 51A, 368, "
+          "Fundamental Rights, DPSP, Preamble; common Acts (RTI, RPwD/PWD, MV, IT, "
+          "Consumer Protection, POCSO, NDPS, UAPA, JJ, PMLA, SC/ST, Domestic Violence, "
+          "Dowry); BNS/BNSS/BSA 2023 sections.\n\n"
+          "If Article $n matters for your case, please consult a lawyer.";
     }
-
-    // Generic fallback — honest "I don't know"
-    return '''🤷 **I couldn't find a confident answer for "$query".**
-
-I'd rather say "I don't know" than give you a wrong answer on a legal matter.
-
-**What I CAN help with (offline):**
-• Indian Constitution — Articles 12–17, 19–25, 32, 44, 51A, 368, Fundamental Rights, DPSP, Preamble
-• BNS 2023 — every section by name or number (e.g. "BNS Section 103", "punishment for theft")
-• BNSS 2023 — every section (e.g. "arrest procedure", "BNSS Section 35")
-• BSA 2023 — every section
-• Acts — RTI, RPwD (PWD), Motor Vehicles, IT Act, Consumer Protection, POCSO, NDPS, UAPA, Domestic Violence, Dowry Prohibition, JJ Act, SC/ST Atrocities Act, PMLA
-• Topics — how to file FIR, bail, your rights when arrested, divorce, maintenance, women's property rights, court hierarchy, PIL, writs, cyber complaints, traffic fines
-
-**Try rephrasing**, or ask about a specific section, Article, or Act from the list above.
-
-─────────────────
-ℹ️ Educational information only. For your specific situation, please consult a qualified lawyer.''';
+    return "I couldn't find a confident answer for \"$query\".\n\n"
+        "I'd rather say I don't know than give you a wrong answer on a legal matter.\n\n"
+        "Try: a section (\"BNS Section 103\"), a topic (theft, murder, bail, FIR, dowry), "
+        "or an Article (\"Article 21\").";
   }
 
   String _cleanHeading(String heading) {
-    // Remove trailing long sentences often found in JSON
-    final parts = heading.split('—');
+    final parts = heading.split('\u2014');
     if (parts.isNotEmpty) {
       final cleaned = parts.first.trim();
       if (cleaned.length > 80) return '${cleaned.substring(0, 80)}...';
@@ -756,22 +693,15 @@ I'd rather say "I don't know" than give you a wrong answer on a legal matter.
   }
 
   String _cleanText(String text, int maxLength) {
-    final cleaned = text
-        .replaceAll(RegExp(r'\s+'), ' ')
-        .replaceAll('\n', ' ')
-        .trim();
+    final cleaned = text.replaceAll(RegExp(r'\s+'), ' ').replaceAll('\n', ' ').trim();
     if (cleaned.length <= maxLength) return cleaned;
-    // Cut at last full stop before maxLength
     final cut = cleaned.substring(0, maxLength);
     final lastDot = cut.lastIndexOf('.');
     if (lastDot > maxLength / 2) return cut.substring(0, lastDot + 1);
     return '$cut...';
   }
-}
 
-// ──────────────────────────────────────────────────────────────────────────────
-// Chat State & Provider
-// ──────────────────────────────────────────────────────────────────────────────
+}
 
 class ChatMessage {
   final String text;
@@ -803,10 +733,6 @@ class AiChatNotifier extends StateNotifier<AiChatState> {
   final OfflineLegalEngine _engine = OfflineLegalEngine();
 
   AiChatNotifier() : super(AiChatState(messages: [])) {
-    // Kick off the load eagerly so the engine is usually ready by the time
-    // the user types a message. We don't track the result — sendMessage
-    // awaits engine.load() unconditionally, which de-duplicates with this
-    // initial call thanks to OfflineLegalEngine's _loadingFuture cache.
     _engine.load();
   }
 
@@ -814,21 +740,15 @@ class AiChatNotifier extends StateNotifier<AiChatState> {
     final query = text.trim();
     if (query.isEmpty) return;
 
-    final userMsg = ChatMessage(text: query, isUser: true, timestamp: DateTime.now());
+    final userMsg =
+        ChatMessage(text: query, isUser: true, timestamp: DateTime.now());
     state = state.copyWith(messages: [...state.messages, userMsg], isLoading: true);
 
     try {
-      // Always await load — if it's already done this returns immediately;
-      // if it's in flight we share the same future. Either way, by the time
-      // we call search() the engine is fully ready.
       await _engine.load();
-
-      // Small delay for UX (feels natural, not instant)
       await Future.delayed(const Duration(milliseconds: 300));
-
       final results = _engine.search(query);
       final response = _engine.generateResponse(query, results);
-
       final botMsg = ChatMessage(
         text: response,
         isUser: false,
@@ -846,8 +766,7 @@ class AiChatNotifier extends StateNotifier<AiChatState> {
         stackTrace: st,
       );
       final errorMsg = ChatMessage(
-        text: '⚠️ Something went wrong while answering. Please try again — '
-            'or rephrase your question.',
+        text: 'Something went wrong while answering. Please try again or rephrase your question.',
         isUser: false,
         timestamp: DateTime.now(),
       );
@@ -863,6 +782,7 @@ class AiChatNotifier extends StateNotifier<AiChatState> {
   }
 }
 
-final aiChatProvider = StateNotifierProvider<AiChatNotifier, AiChatState>((ref) {
+final aiChatProvider =
+    StateNotifierProvider<AiChatNotifier, AiChatState>((ref) {
   return AiChatNotifier();
 });

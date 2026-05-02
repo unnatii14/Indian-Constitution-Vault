@@ -4,7 +4,6 @@ import 'package:go_router/go_router.dart';
 
 import 'providers/app_providers.dart';
 import 'screens/root_navigation_screen.dart';
-import 'screens/main_navigation_screen.dart';
 import 'screens/about_app_screen.dart';
 import 'screens/acts_list_screen.dart';
 import 'screens/sections_list_screen.dart';
@@ -114,7 +113,7 @@ class IndianConstitutionApp extends ConsumerWidget {
         ),
         navigationBarTheme: NavigationBarThemeData(
           backgroundColor: Colors.white,
-          indicatorColor: const Color(0xFF1E3A8A).withOpacity(0.1),
+          indicatorColor: const Color(0xFF1E3A8A).withValues(alpha: 0.1),
           labelTextStyle: WidgetStateProperty.resolveWith((states) {
             if (states.contains(WidgetState.selected)) {
               return const TextStyle(color: Color(0xFF1E3A8A), fontWeight: FontWeight.bold);
@@ -152,7 +151,7 @@ class IndianConstitutionApp extends ConsumerWidget {
         ),
         navigationBarTheme: NavigationBarThemeData(
           backgroundColor: const Color(0xFF1E293B),
-          indicatorColor: Colors.blue.withOpacity(0.2),
+          indicatorColor: Colors.blue.withValues(alpha: 0.2),
           labelTextStyle: WidgetStateProperty.resolveWith((states) {
             if (states.contains(WidgetState.selected)) {
               return const TextStyle(color: Colors.blue, fontWeight: FontWeight.bold);
